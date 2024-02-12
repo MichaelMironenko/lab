@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Panel</title>
+    <link href="/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Верхняя панель -->
+    <div
+      class="bg-slate-100 px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b"
+    >
+      <a
+        href="https://badminton4u.ru"
+        class="flex items-center flex-shrink min-w-30 space-x-2"
+      >
+        <img src="/img/lab-logo.svg" alt="logo" class="h-8" />
+        <div class="flex flex-col flex-shrink min-w-0 items-start gap-1">
+          <img
+            src="/img/lab-logo-text.svg"
+            alt="ЛАБ"
+            class="h-4 shrink-0 hidden xs:block"
+          />
+          <span
+            class="text-xs tracking-tight xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full"
+            >Нижний Новгород</span
+          >
+        </div>
+      </a>
+      <div
+        class="flex items-center flex-grow shrink-0 justify-between max-w-[210px] min-w-[190px] ml-4"
+      >
+        <a href="notifications.html" class="relative shrink-0">
+          <img
+            src="/img/notification-icon.svg"
+            alt="Notifications"
+            class="h-6 w-6 shrink-0"
+          />
+          <span
+            class="absolute px-1 pt-[1px] pb-[2px] -top-1 -right-1 inline-block leading-none text-center text-white bg-red-600 rounded-full text-[10px]"
+            >99</span
+          >
+        </a>
+        <a href="messages.html" class="relative shrink-0">
+          <img
+            src="/img/messages-icon.svg"
+            alt="Messages"
+            class="h-6 w-6 shrink-0"
+          />
+          <span
+            class="absolute px-1 pt-[1px] pb-[2px] -top-1 -right-1 inline-block leading-none text-center text-white bg-red-600 rounded-full text-[10px]"
+            >99</span
+          >
+        </a>
+        <a class="inline-flex gap-2">
+          <div class="text-right">
+            <div class="text-xs text-slate-700 font-semibold">Kolesnikov82</div>
+            <div class="flex items-center justify-end">
+              <img
+                src="/img/gradient-star.svg"
+                alt="Rating"
+                class="h-3 w-3 relative z-10"
+              />
+              <img
+                src="/img/gradient-star.svg"
+                alt="Rating"
+                class="h-3 w-3 -ml-4 relative"
+              />
+              <span class="text-lab-color font-bold text-xs ml-1.5">1376</span>
+            </div>
+          </div>
+          <div
+            class="inline-block p-0.5 bg-gradient-to-r from-green-600 to-sky-500 rounded-full"
+          >
+            <img
+              src="/dynamic-img/user2.jpg"
+              alt="avatar"
+              class="h-7 w-7 rounded-full"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <nav class="bg-slate-100 inset-x-0 fixed bottom-0 border-t">
+      <div class="flex justify-between">
+        <!-- Турниры -->
+        <a
+          href="/tournaments"
+          class="flex-1 text-center py-1 w-1/6 leading-4 text-black font-semibold"
+        >
+          <!-- Для всех активных состояний иконка с суффиксом "-active" -->
+          <img
+            src="/img/tabbar/tournaments-active.svg"
+            class="mx-auto h-7 w-7"
+            alt="Турниры"
+          />
+
+          <span class="text-[10px] tracking-tighter text-nowrap">Турниры</span>
+        </a>
+        <!-- Тренировки -->
+        <a
+          href="/trainings"
+          class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500"
+        >
+          <img
+            src="/img/tabbar/trainings.svg"
+            class="mx-auto h-7 w-7"
+            alt="Тренировки"
+          />
+          <span class="text-[10px] tracking-tighter text-nowrap"
+            >Тренировки</span
+          >
+        </a>
+        <!-- Корты -->
+        <a
+          href="/courts"
+          class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500"
+        >
+          <img
+            src="/img/tabbar/courts.svg"
+            class="mx-auto h-7 w-7"
+            alt="Корты"
+          />
+          <span class="text-[10px] tracking-tighter text-nowrap">Корты</span>
+        </a>
+        <!-- Игроки -->
+        <a
+          href="/players"
+          class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500"
+        >
+          <img
+            src="/img/tabbar/players.svg"
+            class="mx-auto h-7 w-7"
+            alt="Игроки"
+          />
+          <span class="text-[10px] tracking-tighter text-nowrap">Игроки</span>
+        </a>
+        <!-- Вокруг игры -->
+        <a
+          href="/aroundgame"
+          class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500"
+        >
+          <img
+            src="/img/tabbar/around-game.svg"
+            class="mx-auto h-7 w-7"
+            alt="Вокруг игры"
+          />
+          <span class="text-[10px] tracking-tighter text-nowrap"
+            >Вокруг игры</span
+          >
+        </a>
+        <!-- Маркет -->
+        <a
+          href="/market"
+          class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500"
+        >
+          <img
+            src="/img/tabbar/market.svg"
+            class="mx-auto h-7 w-7"
+            alt="Маркет"
+          />
+          <span class="text-[10px] tracking-tighter text-nowrap">Маркет</span>
+        </a>
+      </div>
+    </nav>
+  </body>
+</html>
