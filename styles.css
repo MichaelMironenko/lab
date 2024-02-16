@@ -698,6 +698,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
   height: 1rem;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .h-6 {
   height: 1.5rem;
 }
@@ -779,6 +783,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
   max-width: 210px;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
@@ -858,10 +866,6 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
   justify-content: space-between;
 }
 
-.justify-around {
-  justify-content: space-around;
-}
-
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -898,6 +902,12 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .whitespace-normal {
@@ -985,6 +995,21 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
 .border-lab-color {
   --tw-border-opacity: 1;
   border-color: rgb(0 134 153 / var(--tw-border-opacity));
+}
+
+.border-slate-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
+}
+
+.border-slate-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
+.border-slate-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
 
 .border-t-transparent {
@@ -1102,6 +1127,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
   padding: 2px;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1165,6 +1194,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pt-3 {
@@ -1257,6 +1290,11 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
 .text-lab-color {
   --tw-text-opacity: 1;
   color: rgb(0 134 153 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-slate-500 {
