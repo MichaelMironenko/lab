@@ -662,14 +662,6 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
   margin-top: 93px;
 }
 
-.ml-0 {
-  margin-left: 0px;
-}
-
-.mr-0 {
-  margin-right: 0px;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -924,6 +916,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
   border-radius: 0.25rem;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -942,10 +938,6 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-2xl {
-  border-radius: 1rem;
 }
 
 .rounded-t-2xl {
@@ -1053,13 +1045,13 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-transparent {
-  background-color: transparent;
 }
 
 .bg-opacity-50 {
@@ -1108,10 +1100,6 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
 
 .p-\[2px\] {
   padding: 2px;
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .px-1 {
@@ -1300,18 +1288,6 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
   --tw-text-opacity: 0.5;
 }
 
-.underline {
-  text-decoration-line: underline;
-}
-
-.decoration-dotted {
-  text-decoration-style: dotted;
-}
-
-.decoration-dashed {
-  text-decoration-style: dashed;
-}
-
 .opacity-50 {
   opacity: 0.5;
 }
@@ -1364,10 +1340,6 @@ a {
 
   .xs\:leading-none {
     line-height: 1;
-  }
-
-  .xs\:leading-4 {
-    line-height: 1rem;
   }
 }
 
