@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Panel</title>
+    <link href="/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-20"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="/img/lab-logo.svg" alt="logo"/>
+        <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><img class="h-4 shrink-0 hidden xs:block" src="/img/lab-logo-text.svg" alt="ЛАБ"/><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
+      <div class="flex items-center flex-grow shrink-0 justify-between max-w-[210px] min-w-[190px] ml-4"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="/img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 pt-[1px] pb-[2px] rounded-full text-[10px] -top-1 -right-1 inline-block leading-none text-center text-white bg-red-600">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="/img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 pt-[1px] pb-[2px] rounded-full text-[10px] -top-1 -right-1 inline-block leading-none text-center text-white bg-red-600">99</span></a><a class="inline-flex gap-2">
+          <div class="text-right">
+            <div class="text-xs text-slate-700 font-semibold">Kolesnikov82</div>
+            <div class="flex items-center justify-end"><img class="h-3 w-3 relative z-10" src="/img/gradient-star.svg" alt="Rating"/><img class="h-3 w-3 -ml-4 relative" src="/img/gradient-star.svg" alt="Rating"/><span class="text-lab-color font-bold text-xs ml-1">1376</span></div>
+          </div>
+          <div class="p-[2px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center h-8 w-8">
+            <!-- Если нет аватара - показываем инициалы имени и фамилии на фоне для лучшего различения пользователей в комментариях и в целом на сайте.-->
+            <!-- Фон выбирается случайно при регистрации из вариантов bg-lab-blue, bg-lab-green, bg-lab-red, bg-lab-yellow (прописаны в css)-->
+            <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-white w-full text-xs font-bold text-center">НП</span></div>
+          </div>
+          <!-- Если есть аватар - показываем его-->
+          <!--  <img src="../dynamic-img/user2.jpg" alt="avatar" class="h-full w-full rounded-full"/> --></a></div>
+    </div>
+    <div class="fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-10">
+      <div class="max-h-80vh absolute bottom-0 left-0 w-full z-20 bg-white rounded-t-2xl overflow-y-auto">
+        <div class="w-20 h-1 bg-slate-200 rounded-xl mx-auto mt-2"></div>
+        <div class="flex flex-col pb-2">
+          <label class="p-4 pb-3 font-bold">Ограничение по рейтингу</label>
+          <div class="flex overflow-x-auto space-x-2 pl-4">
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-lab-color text-white font-bold"><span>Все турниры</span></div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-100 text-black"><span>Открытые</span></div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-100 text-black"><span>&lt;</span></div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-100 text-black"><span>&gt;</span></div>
+          </div>
+          <div class="mt-2 flex gap-2 px-4 py-2 items-center"><span class="text-sm">С минимальным рейтингом игрока</span>
+            <div class="flex"></div>
+            <input class="border p-2 w-16 rounded-lg leading-none" type="text" placeholder="от"/><span>—</span>
+            <input class="border p-2 w-16 rounded-lg leading-none" type="text" placeholder="до"/>
+          </div>
+        </div>
+        <div class="flex flex-col pb-2">
+          <div class="flex justify-between p-4 pb-2">
+            <label class="font-bold">Тип</label><span class="text-lab-color text-sm">Включить все</span>
+          </div>
+          <div class="flex flex-row gap-2 px-4 py-2">
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-lab-color text-white font-bold"><span>🧍🏽</span><span class="ml-2">S</span>
+            </div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-200 text-black"><span>👨🏻</span><span class="ml-2">MS</span>
+            </div>
+          </div>
+          <div class="flex flex-row gap-2 px-4 py-2">
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-200 text-black"><span>🧍🏽</span><span class="-ml-2">🧍🏽</span><span class="ml-2">D</span>
+            </div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-200 text-black"><span>👨🏻</span><span class="-ml-2">👨🏻</span><span class="ml-2">MD</span>
+            </div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-200 text-black"><span>👩</span><span class="-ml-2">👩</span><span class="ml-2">WD</span>
+            </div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-200 text-black"><span>👩</span><span class="-ml-2">👨🏻</span><span class="ml-2">XD</span>
+            </div>
+          </div>
+          <div class="flex flex-row gap-2 px-4 py-2">
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-200 text-black"><span>🧑🏽</span><span class="-ml-2">👨🏻</span><span class="-ml-2">👩</span><span class="ml-2">Team</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex justify-between p-4 pb-1 items-center">
+            <label class="font-bold">День недели</label><span class="text-lab-color text-sm">Включить все</span>
+          </div>
+          <div class="flex p-4 justify-between max-w-sm">
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-lab-color text-white font-bold"><span>Пн</span></div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-lab-color text-white font-bold"><span>Вт</span></div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-lab-color text-white font-bold"><span>Ср</span></div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-100 text-black"><span>Чт</span></div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-lab-color text-white font-bold"><span>Пт</span></div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-100 text-black"><span>Сб</span></div>
+            <div class="px-3 py-2 rounded-3xl cursor-pointer text-nowrap text-sm bg-slate-100 text-black"><span>Вс</span></div>
+          </div>
+        </div>
+        <div class="flex flex-col p-4 pb-1">
+          <label class="font-bold pb-3">Регион/город</label>
+          <div class="border p-2 w-full rounded-lg leading-none">
+            <div class="px-3 py-2 font-bold text-sm bg-lab-color rounded-md text-white w-fit">Санкт-Петербург <span class="ml-2">✕</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
