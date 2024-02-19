@@ -8,21 +8,56 @@
   </head>
   <body>
     <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-20"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
-        <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><img class="h-4 shrink-0 hidden xs:block" src="img/lab-logo-text.svg" alt="ЛАБ"/><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
-      <div class="flex items-center flex-grow shrink-0 justify-between max-w-[210px] min-w-[190px] ml-4"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 pt-[1px] pb-[2px] rounded-full text-[10px] -top-1 -right-1 inline-block leading-none text-center text-white bg-red-600">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 pt-[1px] pb-[2px] rounded-full text-[10px] -top-1 -right-1 inline-block leading-none text-center text-white bg-red-600">99</span></a><a class="inline-flex gap-2">
-          <div class="text-right">
+        <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
+      <div class="flex items-center shrink-0 justify-end gap-4 ml-4 flex-grow"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 pt-[1px] pb-[2px] rounded-full text-[10px] -top-1 -right-1 inline-block leading-none text-center text-white bg-red-600">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 pt-[1px] pb-[2px] rounded-full text-[10px] -top-1 -right-1 inline-block leading-none text-center text-white bg-red-600">99</span></a><a class="inline-flex gap-2">
+          <div class="text-right hidden sm:block">
             <div class="text-xs text-slate-700 font-semibold">Kolesnikov82</div>
             <div class="flex items-center justify-end"><img class="h-3 w-3 relative z-10" src="img/gradient-star.svg" alt="Rating"/><img class="h-3 w-3 -ml-4 relative" src="img/gradient-star.svg" alt="Rating"/><span class="text-lab-color font-bold text-xs ml-1">1376</span></div>
           </div>
-          <div class="p-[2px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center h-8 w-8">
+          <div class="relative cursor-pointer p-[2px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center h-8 w-8" id="avatarContainer">
             <!-- Если нет аватара - показываем инициалы имени и фамилии на фоне для лучшего различения пользователей в комментариях и в целом на сайте.-->
             <!-- Фон выбирается случайно при регистрации из вариантов bg-lab-blue, bg-lab-green, bg-lab-red, bg-lab-yellow (прописаны в css)-->
             <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-white w-full text-xs font-bold text-center">НП</span></div>
-          </div>
-          <!-- Если есть аватар - показываем его-->
-          <!--  <img src="../dynamic-img/user2.jpg" alt="avatar" class="h-full w-full rounded-full"/> --></a></div>
+          </div></a></div>
     </div>
-    <nav class="bg-slate-100 inset-x-0 fixed bottom-0 border-t z-50">
+    <div class="hidden" id="userMenu">
+      <div class="max-w-full min-w-60 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-50 absolute top-10 right-4 drop-shadow-around">
+        <div class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1">
+          <div class="text-slate-900 font-semibold text-sm leading-tight">Никита Полянский</div>
+          <div class="text-center text-lab-color text-xs font-normal">@Kolesnikov82</div>
+          <div class="w-13 h-5 px-1 py-0.5 bg-avatar-gradient rounded justify-center items-center gap-px inline-flex">
+            <div class="justify-center items-start flex">
+              <div class="flex shrink-0"><img class="h-3 w-3" src="img/rating-star.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star.svg"/></div>
+              <div class="text-center text-stone-50 text-xs font-semibold leading-none">1378</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col self-stretch py-2 border-b border-blue-950 border-opacity-10 justify-start items-start">
+          <div class="py-2 flex items-center gap-3"><img class="w-4 h-4 justify-center items-center" src="img/person.svg"/>
+            <div class="text-blue-950 text-sm font-normal  leading-tight">Мой профиль</div>
+          </div>
+          <div class="py-2 flex items-center gap-3"><img class="w-4 h-4 justify-center items-center" src="img/settings.svg"/>
+            <div class="text-blue-950 text-sm font-normal  leading-tight">Настройки</div>
+          </div>
+          <div class="py-2 flex items-center gap-3"><img class="w-4 h-4 justify-center items-center" src="img/price.svg"/>
+            <div class="text-blue-950 text-sm font-normal  leading-tight">Финансы</div>
+          </div>
+        </div>
+        <div class="pt-2 pb-1 flex justify-start items-center mt-2 gap-3"><img class="w-4 h-4 justify-center items-center" src="img/exit.svg"/>
+          <div class="text-blue-950 text-sm font-normal">Выйти</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var avatar = document.getElementById('avatarContainer');
+        var userMenu = document.getElementById('userMenu');
+        avatar.addEventListener('click', function() {
+          userMenu.classList.toggle('hidden');
+        });
+      });
+    </script>
+    <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-50">
       <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/tournaments"><img class="mx-auto h-7 w-7" src="img/tabbar/tournaments-active.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/trainings"><img class="mx-auto h-7 w-7" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/courts"><img class="mx-auto h-7 w-7" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/players"><img class="mx-auto h-7 w-7" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/aroundgame"><img class="mx-auto h-7 w-7" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/market"><img class="mx-auto h-7 w-7" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap">Маркет</span></a>
       </div>
     </nav>
