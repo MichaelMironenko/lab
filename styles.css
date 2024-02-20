@@ -658,6 +658,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
   z-index: 50;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -1413,6 +1417,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
 
 .pt-0 {
   padding-top: 0px;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
 }
 
 .text-left {
