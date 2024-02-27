@@ -654,10 +654,6 @@ select {
   top: 90px;
 }
 
-.right-0 {
-  right: 0px;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -1006,10 +1002,6 @@ select {
   max-width: 24rem;
 }
 
-.max-w-md {
-  max-width: 28rem;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1299,7 +1291,7 @@ select {
 
 .border-lab-color {
   --tw-border-opacity: 1;
-  border-color: rgb(32 135 155 / var(--tw-border-opacity));
+  border-color: rgb(23 141 174 / var(--tw-border-opacity));
 }
 
 .border-slate-300 {
@@ -1351,7 +1343,7 @@ select {
 
 .bg-lab-color {
   --tw-bg-opacity: 1;
-  background-color: rgb(32 135 155 / var(--tw-bg-opacity));
+  background-color: rgb(23 141 174 / var(--tw-bg-opacity));
 }
 
 .bg-lab-color-10 {
@@ -1539,6 +1531,14 @@ select {
   padding-bottom: 1rem;
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
+.pb-0\.5 {
+  padding-bottom: 0.125rem;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1557,10 +1557,6 @@ select {
 
 .pb-5 {
   padding-bottom: 1.25rem;
-}
-
-.pb-\[2px\] {
-  padding-bottom: 2px;
 }
 
 .pb-\[50px\] {
@@ -1591,6 +1587,10 @@ select {
   padding-top: 0px;
 }
 
+.pt-0\.5 {
+  padding-top: 0.125rem;
+}
+
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -1615,24 +1615,8 @@ select {
   padding-top: 104px;
 }
 
-.pt-\[1px\] {
-  padding-top: 1px;
-}
-
 .pt-\[88px\] {
   padding-top: 88px;
-}
-
-.pb-0 {
-  padding-bottom: 0px;
-}
-
-.pb-0\.5 {
-  padding-bottom: 0.125rem;
-}
-
-.pt-0\.5 {
-  padding-top: 0.125rem;
 }
 
 .text-left {
@@ -1771,7 +1755,7 @@ select {
 
 .text-lab-color {
   --tw-text-opacity: 1;
-  color: rgb(32 135 155 / var(--tw-text-opacity));
+  color: rgb(23 141 174 / var(--tw-text-opacity));
 }
 
 .text-lab-red {
@@ -1866,7 +1850,7 @@ select {
 
 .ring-lab-color {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(32 135 155 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(23 141 174 / var(--tw-ring-opacity));
 }
 
 .ring-offset-2 {
@@ -1935,7 +1919,7 @@ select {
 
 a {
   cursor: pointer;
-  color: #008699;
+  color: #178dae;
 }
 
 .after\:absolute::after {
@@ -2009,7 +1993,7 @@ a {
 
 .focus-within\:ring-lab-color:focus-within {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(32 135 155 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(23 141 174 / var(--tw-ring-opacity));
 }
 
 .focus\:border-blue-500:focus {
@@ -2029,7 +2013,7 @@ a {
 
 .peer:checked ~ .peer-checked\:bg-lab-color {
   --tw-bg-opacity: 1;
-  background-color: rgb(32 135 155 / var(--tw-bg-opacity));
+  background-color: rgb(23 141 174 / var(--tw-bg-opacity));
 }
 
 .peer:checked ~ .peer-checked\:after\:translate-x-5::after {
