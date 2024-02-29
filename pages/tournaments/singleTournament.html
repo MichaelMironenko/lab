@@ -67,6 +67,194 @@
         });
       });
     </script>
+    <div class="fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20"></div>
+    <div class="max-h-90 fixed bottom-0 left-0 w-full h-full z-30 bg-white rounded-t-2xl flex flex-col">
+      <div class="pb-2">
+        <div class="w-20 h-1 bg-slate-200 rounded-xl mx-auto mt-2 relative"> </div>
+      </div>
+      <div class="flex-1 overflow-y-auto scroll-smooth no-scrollbar p-4 pt-2"> 
+        <h2 class="mb-4">Добавить партнёра</h2>
+        <div class="flex items-center border px-3 py-2 rounded-lg gap-3 bg-white flex-grow focus-within:ring-2 focus-within:ring-lab-color"><img class="w-4 h-4" src="img/search-icon.svg" alt="Search"/>
+          <input class="flex-grow outline-none leading-none bg-transparent" id="searchBar" type="text"/>
+        </div>
+        <div id="partners">
+          <div class="leading-tight text-lab-black-50 text-sm mt-4">Партнёра нет на сайте?</div>
+          <button class="text-lab-color bg-transparent text-sm transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Пригласить</button>
+          <div class="flex gap-4 items-center mt-4 justify-between mb-2"><span class="font-bold">Предыдущие партнёры </span>
+            <div class="text-lab-black-50">Сбросить</div>
+          </div>
+          <div class="flex gap-4 items-center py-2 justify-between border-t border-lab-black-10"><img class="saturate-0 opacity-50" src="img/history.svg"/>
+            <div class="text-lab-black-50 grow">Андрей Красильников</div><img class="saturate-0 opacity-50" src="img/close.svg"/>
+          </div>
+          <div class="flex gap-4 items-center py-2 justify-between border-t border-lab-black-10"><img class="saturate-0 opacity-50" src="img/history.svg"/>
+            <div class="text-lab-black-50 grow">Елена Беркова</div><img class="saturate-0 opacity-50" src="img/close.svg"/>
+          </div>
+          <div class="flex gap-4 items-center py-2 justify-between border-t border-lab-black-10"><img class="saturate-0 opacity-50" src="img/history.svg"/>
+            <div class="text-lab-black-50 grow">Михаил Иванов</div><img class="saturate-0 opacity-50" src="img/close.svg"/>
+          </div>
+          <div class="flex gap-4 items-center py-2 justify-between border-t border-lab-black-10"><img class="saturate-0 opacity-50" src="img/history.svg"/>
+            <div class="text-lab-black-50 grow">Ольга Петрова</div><img class="saturate-0 opacity-50" src="img/close.svg"/>
+          </div>
+          <div class="flex gap-4 items-center py-2 justify-between border-t border-lab-black-10"><img class="saturate-0 opacity-50" src="img/history.svg"/>
+            <div class="text-lab-black-50 grow">Сергей Николаев</div><img class="saturate-0 opacity-50" src="img/close.svg"/>
+          </div>
+        </div>
+        <div class="mt-2" id="suggestions">
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">АК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Карпов Алексей
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">450</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Москва, 28 лет</div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-green rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">РК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Каримов Рустам
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">520</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Самара, 32 лет</div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-red rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">МК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Карлов Михаил
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">610</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Казань, 24 лет</div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-yellow rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">ОК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Карасева Ольга
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">400</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Нижний Новгород, 30 лет</div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-color rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">ДК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Карпенко Дмитрий
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">780</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Екатеринбург, 35 лет</div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">ЕК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Карташова Елена
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">350</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Пермь, 29 лет</div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-green rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">АК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Карнеев Андрей
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">560</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Воронеж, 33 лет</div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-red rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">СК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Каргинова Светлана
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">660</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Сочи, 27 лет</div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-yellow rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">АК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Карась Анатолий
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">720</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Красноярск, 31 лет</div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center py-2 justify-between border-b border-lab-black-10">
+            <div class="cursor-pointer p-[2px] w-[40px] h-[40px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+              <div class="bg-lab-color rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(40px/2.66)] text-white w-full font-bold text-center leading-none">ВК</span></div>
+            </div>
+            <div class="grow">
+              <div class="flex items-center gap-1 text-lab-color font-bold"> Карпухин Виктор
+                <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                  <div class="text-center text-lab-color text-sm font-semibold leading-none">530</div>
+                </div>
+              </div>
+              <div class="text-lab-black-50 text-sm">Иркутск, 26 лет</div>
+            </div>
+          </div>
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+              const searchBar = document.querySelector('#searchBar'); 
+              const partnersDiv = document.querySelector('#partners'); 
+              const suggestionsDiv = document.querySelector('#suggestions'); 
+          
+              // Изначально скрываем предложения
+              suggestionsDiv.style.display = 'none';
+          
+              searchBar.addEventListener('input', function() {
+                  if(searchBar.value.trim() !== '') {
+                      // Показываем suggestions и скрываем partners, когда в инпуте есть текст
+                      suggestionsDiv.style.display = '';
+                      partnersDiv.style.display = 'none';
+                  } else {
+                      // Показываем partners и скрываем suggestions, когда инпут пуст
+                      suggestionsDiv.style.display = 'none';
+                      partnersDiv.style.display = '';
+                  }
+              });
+          });
+        </script>
+      </div>
+    </div>
     <div class="bg-page-background min-h-screen w-full fixed top-0 left-0 z-[-1]"></div>
     <div class="fixed bottom-16 w-full z-20"> 
       <div class="flex gap-5 justify-between px-3 py-0.5 border-lab-color border-2 leading-5 drop-shadow-xl whitespace-nowrap bg-white text-slate-900 text-opacity-50 w-fit mx-auto rounded-full">
@@ -112,7 +300,9 @@
       
       
     </script>
-    <div class="tab-content hidden scroll-smooth flex flex-col gap-4 no-scrollbar px-4 pt-16 pb-28" id="information">
+    <div class="tab-content scroll-smooth flex flex-col gap-4 no-scrollbar px-4 pt-16 pb-28" id="information">
+      <div class="flex w-full gap-2"><a href="#"><img src="img/admin-bar-edit.svg" alt="Редактировать"/></a><a href="#"><img src="img/admin-bar-add-photo.svg" alt="Добавить фото"/></a><a href="#"><img src="img/admin-bar-add-video.svg" alt="Добавить видео"/></a><a href="#"><img src="img/admin-bar-copy.svg" alt="Создать аналогичный турнир"/></a><a href="#"><img src="img/admin-bar-logs.svg" alt="Логи"/></a><a href="#"><img src="img/admin-bar-close.svg" alt="Закрыть"/></a><a href="#"><img src="img/admin-bar-delete.svg" alt="Удалить"/></a>
+      </div>
       <div class="p-4 bg-white rounded-lg">
         <div class="flex justify-between gap-3 items-center">
           <div class="flex px-1 py-0.5 text-xs text-white font-bold items-center justify-center shrink-0 rounded min-w-6 bg-avatar-gradient">XDF+</div>
@@ -134,17 +324,17 @@
             <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/price.svg" alt="Цена"><span>800₽</span></div>
           </div>
           <div class="flex gap-4 max-w-sm text-[15px] w-full sm:w-1/2">
-            <div class="flex flex-col gap-2 text-sm flex-grow min-w-44">
+            <div class="flex flex-col gap-2 text-sm flex-grow min-w-40">
               <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/home.svg" alt="Клуб"><a href="">Сколково</a></div>
               <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/location-icon.svg" alt="Адрес"><span>г. Москва, ул. Зворыкина, д. 21</span></div>
               <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/phone.svg" alt="Контакты"><span>+7-926-200-40-22  </span></div>
             </div>
             <div class="aspect-square h-full max-h-32"><img class="object-cover h-full w-full" src="dynamic-img/map.png"></div>
           </div>
-          <button class="w-full  bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Регистрация</button>
+          <button class="w-full  bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Регистрация</button>
           <div class="flex flex-grow justify-between items-center">
             <div class="inline-flex gap-2"><img class="w-5 aspect-square" src="img/checkmark.svg" alt="Галочка"><span>Вы зарегистрированы</span></div>
-            <button class="text-lab-red bg-transparent  transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отменить</button>
+            <button class="text-lab-red bg-transparent  transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отменить</button>
           </div><span class="text-sm">Регистрация откроется <span class="font-bold text-lab-color">12 сентября в 13:00</span></span>
         </div>
       </div>
@@ -185,17 +375,19 @@
             </div>
           </div>
         </div>
-        <label class="flex items-center cursor-pointer py-4 justify-between gap-2"><span class="text-sm leading-6">Показать коэффициенты игроков для прогнозов</span>
-          <input class="sr-only peer" id="playerToggle" type="checkbox" value="">
-          <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
-        </label>
+        <div class="flex items-center cursor-pointer py-4 justify-between gap-2">
+          <label class="flex items-center gap-3 text-sm leading-tight" for="playerToggle">Показать коэффициенты игроков для прогнозов
+            <input class="sr-only peer" id="playerToggle" type="checkbox" value="">
+            <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
+          </label>
+        </div>
         <!-- Список с true-->
         <div class="hidden" id="playersTrue">
           <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
               <div><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-purple rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АН</span></div>
+                    <div class="bg-lab-red rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АН</span></div>
                   </div></a></div>
             </div>
             <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
@@ -209,7 +401,7 @@
             </div>
             <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
               <div class="text-center text-lab-color text-sm font-semibold leading-none">945</div>
-            </div><span class="font-bold leading-none">2.5</span>
+            </div><span class="font-bold leading-none text-center w-6">2.5</span>
           </div>
           <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
@@ -229,7 +421,7 @@
             </div>
             <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
               <div class="text-center text-lab-color text-sm font-semibold leading-none">876</div>
-            </div><span class="font-bold leading-none">1.8</span>
+            </div><span class="font-bold leading-none text-center w-6">1.8</span>
           </div>
           <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
@@ -238,7 +430,7 @@
                   </div></a></div>
               <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-purple rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АП</span></div>
+                    <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АП</span></div>
                   </div></a></div>
             </div>
             <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
@@ -253,13 +445,13 @@
             </div>
             <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
               <div class="text-center text-lab-color text-sm font-semibold leading-none">789</div>
-            </div><span class="font-bold leading-none">3.2</span>
+            </div><span class="font-bold leading-none text-center w-6">3.2</span>
           </div>
           <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
               <div><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-yellow rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">ДС</span></div>
+                    <div class="bg-lab-green rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">ДС</span></div>
                   </div></a></div>
               <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-2.jpg" alt="Аватар"/>
@@ -282,13 +474,13 @@
             </div>
             <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
               <div class="text-center text-lab-color text-sm font-semibold leading-none">832</div>
-            </div><span class="font-bold leading-none">1.4</span>
+            </div><span class="font-bold leading-none text-center w-6">1.4</span>
           </div>
           <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
               <div><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">СР</span></div>
+                    <div class="bg-lab-purple rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">СР</span></div>
                   </div></a></div>
             </div>
             <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
@@ -302,13 +494,13 @@
             </div>
             <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
               <div class="text-center text-lab-color text-sm font-semibold leading-none">668</div>
-            </div><span class="font-bold leading-none">3.9</span>
+            </div><span class="font-bold leading-none text-center w-6">3.9</span>
           </div>
           <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
               <div><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-yellow rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АФ</span></div>
+                    <div class="bg-lab-red rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АФ</span></div>
                   </div></a></div>
             </div>
             <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
@@ -322,13 +514,13 @@
             </div>
             <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
               <div class="text-center text-lab-color text-sm font-semibold leading-none">812</div>
-            </div><span class="font-bold leading-none">1.7</span>
+            </div><span class="font-bold leading-none text-center w-6">1.7</span>
           </div>
           <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
               <div><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-yellow rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">НК</span></div>
+                    <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">НК</span></div>
                   </div></a></div>
             </div>
             <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
@@ -342,7 +534,7 @@
             </div>
             <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
               <div class="text-center text-lab-color text-sm font-semibold leading-none">900</div>
-            </div><span class="font-bold leading-none">2.4</span>
+            </div><span class="font-bold leading-none text-center w-6">2.4</span>
           </div>
         </div>
         <!-- Список с false-->
@@ -355,7 +547,7 @@
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
               <div><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-green rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АН</span></div>
+                    <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АН</span></div>
                   </div></a></div>
             </div>
             <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
@@ -406,7 +598,7 @@
                   </div></a></div>
               <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-yellow rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АП</span></div>
+                    <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АП</span></div>
                   </div></a></div>
             </div>
             <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
@@ -431,7 +623,7 @@
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
               <div><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-yellow rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">ДС</span></div>
+                    <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">ДС</span></div>
                   </div></a></div>
               <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-2.jpg" alt="Аватар"/>
@@ -488,7 +680,7 @@
             <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
               <div><a href="https://badminton4u.ru/players/undefined?type=d">
                   <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
-                    <div class="bg-lab-green rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АФ</span></div>
+                    <div class="bg-lab-red rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АФ</span></div>
                   </div></a></div>
             </div>
             <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
@@ -618,7 +810,7 @@
               <option class="truncate w-10">Команда Тигры (★530) x2.20</option>
               <option class="truncate w-10">Кузнецов (★495)  x1.85</option>
             </select>
-            <button class="w-full border-2 border-white mt-2 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Сделать прогноз</button>
+            <button class="w-full border-2 border-white mt-2 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Сделать прогноз</button>
           </div>
           <div class="flex flex-col justify-between py-4 sm:w-1/2 sm:py-0"><span class="font-bold">Правила начисления очков                </span>
             <div class="flex flex-col flex-grow gap-3 py-3">
@@ -644,8 +836,8 @@
           <div class="flex flex-col flex-grow gap-3">
             <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=3; this.style.overflow='hidden'; document.getElementById('commentSubmitButton').classList.remove('hidden'); document.getElementById('cancelButton').classList.remove('hidden'); document.getElementById('commentSubmitButton').disabled = true;" oninput="document.getElementById('commentSubmitButton').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton').classList.remove('hidden'); document.getElementById('cancelButton').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton').classList.add('hidden'); document.getElementById('cancelButton').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton').classList.add('hidden'); document.getElementById('cancelButton').classList.add('hidden');}"></textarea>
             <div class="flex items-center gap-4">
-              <button class="text-lab-black-50 bg-transparent hidden transition-transform duration-150 ease-in-out hidden" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-              <button class="w-full hidden bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+              <button class="text-lab-black-50 bg-transparent hidden transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+              <button class="w-full hidden bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
             </div>
           </div>
         </div>
@@ -713,8 +905,8 @@
         <div class="flex flex-col flex-grow gap-3 hidden" id="commentForm-1">
           <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
           <div class="flex items-center gap-4">
-            <button class="text-lab-black-50 bg-transparent cancelButton-1 transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-            <button class="w-full commentSubmitButton-1 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+            <button class="text-lab-black-50 bg-transparent cancelButton-1 transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+            <button class="w-full commentSubmitButton-1 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
           </div>
         </div>
         <script>
@@ -800,8 +992,8 @@
           <div class="flex flex-col flex-grow gap-3 hidden" id="commentForm-2">
             <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
             <div class="flex items-center gap-4">
-              <button class="text-lab-black-50 bg-transparent cancelButton-2 transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-              <button class="w-full commentSubmitButton-2 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+              <button class="text-lab-black-50 bg-transparent cancelButton-2 transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+              <button class="w-full commentSubmitButton-2 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
             </div>
           </div>
           <script>
@@ -879,8 +1071,8 @@
             <div class="flex flex-col flex-grow gap-3 hidden" id="commentForm-3">
               <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
               <div class="flex items-center gap-4">
-                <button class="text-lab-black-50 bg-transparent cancelButton-3 transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-                <button class="w-full commentSubmitButton-3 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+                <button class="text-lab-black-50 bg-transparent cancelButton-3 transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+                <button class="w-full commentSubmitButton-3 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
               </div>
             </div>
             <script>
@@ -1236,8 +1428,8 @@
           <div class="flex flex-col flex-grow gap-3">
             <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=3; this.style.overflow='hidden'; document.getElementById('commentSubmitButton').classList.remove('hidden'); document.getElementById('cancelButton').classList.remove('hidden'); document.getElementById('commentSubmitButton').disabled = true;" oninput="document.getElementById('commentSubmitButton').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton').classList.remove('hidden'); document.getElementById('cancelButton').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton').classList.add('hidden'); document.getElementById('cancelButton').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton').classList.add('hidden'); document.getElementById('cancelButton').classList.add('hidden');}"></textarea>
             <div class="flex items-center gap-4">
-              <button class="text-lab-black-50 bg-transparent hidden transition-transform duration-150 ease-in-out hidden" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-              <button class="w-full hidden bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+              <button class="text-lab-black-50 bg-transparent hidden transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+              <button class="w-full hidden bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
             </div>
           </div>
         </div>
@@ -1305,8 +1497,8 @@
         <div class="flex flex-col flex-grow gap-3 hidden" id="commentForm-1">
           <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
           <div class="flex items-center gap-4">
-            <button class="text-lab-black-50 bg-transparent cancelButton-1 transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-            <button class="w-full commentSubmitButton-1 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+            <button class="text-lab-black-50 bg-transparent cancelButton-1 transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+            <button class="w-full commentSubmitButton-1 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
           </div>
         </div>
         <script>
@@ -1392,8 +1584,8 @@
           <div class="flex flex-col flex-grow gap-3 hidden" id="commentForm-2">
             <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
             <div class="flex items-center gap-4">
-              <button class="text-lab-black-50 bg-transparent cancelButton-2 transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-              <button class="w-full commentSubmitButton-2 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+              <button class="text-lab-black-50 bg-transparent cancelButton-2 transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+              <button class="w-full commentSubmitButton-2 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
             </div>
           </div>
           <script>
@@ -1471,8 +1663,8 @@
             <div class="flex flex-col flex-grow gap-3 hidden" id="commentForm-3">
               <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
               <div class="flex items-center gap-4">
-                <button class="text-lab-black-50 bg-transparent cancelButton-3 transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-                <button class="w-full commentSubmitButton-3 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+                <button class="text-lab-black-50 bg-transparent cancelButton-3 transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+                <button class="w-full commentSubmitButton-3 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
               </div>
             </div>
             <script>
@@ -1495,7 +1687,7 @@
         </div>
       </div>
     </div>
-    <div class="tab-content scroll-smooth flex flex-col gap-4 no-scrollbar px-4 pt-16 pb-28" id="results">
+    <div class="tab-content scroll-smooth hidden flex flex-col gap-4 no-scrollbar px-4 pt-16 pb-28" id="results">
       <div class="p-4 bg-white rounded-lg">
         <div class="flex justify-between gap-3 items-center">
           <h1 class="text-lg leading-6 text-lab-black text-center flex-grow font-bold">Майский фестиваль микстов в Сколково</h1>
@@ -1976,8 +2168,8 @@
           <div class="flex flex-col flex-grow gap-3">
             <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=3; this.style.overflow='hidden'; document.getElementById('commentSubmitButton').classList.remove('hidden'); document.getElementById('cancelButton').classList.remove('hidden'); document.getElementById('commentSubmitButton').disabled = true;" oninput="document.getElementById('commentSubmitButton').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton').classList.remove('hidden'); document.getElementById('cancelButton').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton').classList.add('hidden'); document.getElementById('cancelButton').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton').classList.add('hidden'); document.getElementById('cancelButton').classList.add('hidden');}"></textarea>
             <div class="flex items-center gap-4">
-              <button class="text-lab-black-50 bg-transparent hidden transition-transform duration-150 ease-in-out hidden" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-              <button class="w-full hidden bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+              <button class="text-lab-black-50 bg-transparent hidden transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+              <button class="w-full hidden bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
             </div>
           </div>
         </div>
@@ -2045,8 +2237,8 @@
         <div class="flex flex-col flex-grow gap-3 hidden" id="commentForm-1">
           <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
           <div class="flex items-center gap-4">
-            <button class="text-lab-black-50 bg-transparent cancelButton-1 transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-            <button class="w-full commentSubmitButton-1 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+            <button class="text-lab-black-50 bg-transparent cancelButton-1 transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+            <button class="w-full commentSubmitButton-1 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
           </div>
         </div>
         <script>
@@ -2132,8 +2324,8 @@
           <div class="flex flex-col flex-grow gap-3 hidden" id="commentForm-2">
             <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
             <div class="flex items-center gap-4">
-              <button class="text-lab-black-50 bg-transparent cancelButton-2 transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-              <button class="w-full commentSubmitButton-2 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+              <button class="text-lab-black-50 bg-transparent cancelButton-2 transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+              <button class="w-full commentSubmitButton-2 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
             </div>
           </div>
           <script>
@@ -2211,8 +2403,8 @@
             <div class="flex flex-col flex-grow gap-3 hidden" id="commentForm-3">
               <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
               <div class="flex items-center gap-4">
-                <button class="text-lab-black-50 bg-transparent cancelButton-3 transition-transform duration-150 ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
-                <button class="w-full commentSubmitButton-3 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out hidden" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
+                <button class="text-lab-black-50 bg-transparent cancelButton-3 transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отмена</button>
+                <button class="w-full commentSubmitButton-3 bg-lab-color rounded-lg font-bold py-3 px-4 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Отправить</button>
               </div>
             </div>
             <script>
