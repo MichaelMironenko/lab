@@ -456,7 +456,7 @@ body h2 {
 
 select {
   width: 100%;
-  border: 1px solid var(--black30);
+  border: 1px solid lab-black-10;
   border-radius: 8px;
   padding: 8px 12px;
   -webkit-appearance: none;
@@ -694,6 +694,16 @@ select {
   margin: auto;
 }
 
+.-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -788,8 +798,8 @@ select {
   margin-top: 1.5rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -966,6 +976,10 @@ select {
   width: 5rem;
 }
 
+.w-28 {
+  width: 7rem;
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -1043,16 +1057,8 @@ select {
   width: 100%;
 }
 
-.w-32 {
-  width: 8rem;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
-.w-28 {
-  width: 7rem;
+.w-11 {
+  width: 2.75rem;
 }
 
 .min-w-0 {
@@ -1079,6 +1085,10 @@ select {
   max-width: 18rem;
 }
 
+.max-w-80 {
+  max-width: 20rem;
+}
+
 .max-w-\[180px\] {
   max-width: 180px;
 }
@@ -1101,14 +1111,6 @@ select {
 
 .max-w-sm {
   max-width: 24rem;
-}
-
-.max-w-40 {
-  max-width: 10rem;
-}
-
-.max-w-80 {
-  max-width: 20rem;
 }
 
 .flex-1 {
@@ -1298,10 +1300,6 @@ select {
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
 }
 
-.self-center {
-  align-self: center;
-}
-
 .self-stretch {
   align-self: stretch;
 }
@@ -1346,10 +1344,6 @@ select {
 
 .rounded-2xl {
   border-radius: 1rem;
-}
-
-.rounded-3xl {
-  border-radius: 1.5rem;
 }
 
 .rounded-full {
@@ -1401,6 +1395,10 @@ select {
   border-top-width: 2px;
 }
 
+.border-r {
+  border-right-width: 1px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -1436,11 +1434,6 @@ select {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .border-t-transparent {
@@ -1676,6 +1669,11 @@ select {
   padding-bottom: 0.375rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1713,6 +1711,10 @@ select {
 
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .pb-\[50px\] {
@@ -1777,6 +1779,14 @@ select {
 
 .pt-\[88px\] {
   padding-top: 88px;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-left {
@@ -2198,6 +2208,11 @@ a {
 .focus-within\:ring-lab-color:focus-within {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(23 141 174 / var(--tw-ring-opacity));
+}
+
+.hover\:bg-blue-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .focus\:border-blue-500:focus {

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игры турнира</title>
+    <link href="../../styles.css" rel="stylesheet">
+    <base href="../../">
+  </head>
+  <body class="bg-page-background py-12">
+    <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-10"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+        <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
+      <div class="flex items-center shrink-0 justify-end gap-4 ml-4 flex-grow"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="inline-flex gap-2">
+          <div class="text-right hidden sm:block">
+            <div class="text-xs text-slate-700 font-semibold">nikpol</div>
+            <div class="flex items-center justify-end"><img class="h-3 w-3 relative z-10" src="img/gradient-star.svg" alt="Rating"/><img class="h-3 w-3 -ml-4 relative" src="img/gradient-star.svg" alt="Rating"/><span class="text-lab-color font-bold text-xs ml-1">1376</span></div>
+          </div>
+          <div class="cursor-pointer p-[2px] w-[32px] h-[32px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+            <div class="bg-lab-blue rounded-full flex justify-center items-center w-full h-full"><span class="text-[calc(32px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
+          </div></a></div>
+    </div>
+    <div class="hidden" id="userMenu">
+      <div class="max-w-full min-w-48 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-50 absolute top-10 right-4 drop-shadow-around">
+        <div class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1">
+          <div class="text-slate-900 font-semibold text-sm leading-tight">Никита Полянский</div>
+          <div class="text-center text-lab-black-50 text-sm font-normal leading-none">@nikpol</div>
+          <div class="flex flex-row gap-2 mt-1">
+            <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+              <div class="text-center text-lab-color text-sm font-semibold leading-none">713</div>
+            </div>
+            <div class="items-center inline-flex gap-px w-12 shrink-0 align-middle justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+              <div class="text-center text-lab-color text-sm font-semibold leading-none">321</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col self-stretch py-2 border-b border-blue-950 border-opacity-10 justify-start items-start">
+          <div class="py-2 flex items-center gap-3"><img class="w-4 h-4 justify-center items-center" src="img/person.svg"/>
+            <div class="text-blue-950 text-sm font-normal  leading-tight">Мой профиль</div>
+          </div>
+          <div class="py-2 flex items-center gap-3"><img class="w-4 h-4 justify-center items-center" src="img/settings.svg"/>
+            <div class="text-blue-950 text-sm font-normal  leading-tight">Настройки</div>
+          </div>
+          <div class="py-2 flex items-center gap-3"><img class="w-4 h-4 justify-center items-center" src="img/price.svg"/>
+            <div class="text-blue-950 text-sm font-normal  leading-tight">Финансы</div>
+          </div>
+        </div>
+        <div class="pt-1 flex justify-start items-center mt-2 gap-3"><img class="w-4 h-4 justify-center items-center" src="img/exit.svg"/>
+          <div class="text-blue-950 text-sm font-normal">Выйти</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var avatar = document.getElementById('avatarContainer');
+        var userMenu = document.getElementById('userMenu');
+        avatar.addEventListener('click', function() {
+          userMenu.classList.toggle('hidden');
+        });
+      });
+    </script>
+    <nav class="p-4">
+      <ol class="flex items-center flex-wrap gap-1">
+        <li class="inline-flex items-center">
+          <div class="inline-flex items-center text-xs font-medium" href="/"><img src="img/home.svg" alt="На главную страницу"/><a class="ml-1">Главная</a></div>
+        </li>
+        <li class="inline-flex items-center"><img class="rotate-90 size-4" src="img/expand-arrow.svg" alt="Стрелка"/></li>
+        <li class="inline-flex items-center"><a class="text-xs font-medium" href="#">Турнир Майский фестиваль микстов</a>
+        </li>
+        <li class="inline-flex items-center"><img class="rotate-90 size-4" src="img/expand-arrow.svg" alt="Стрелка"/></li>
+        <li class="inline-flex items-center"><span class="text-xs text-lab-black-50 font-medium">Редактирование</span>
+        </li>
+      </ol>
+    </nav>
+    <div class="text-lab-black-50 px-4 pt-4 pb-2">Шаблоны<span class="text-lab-black-50 px-4 text-xs"></span></div>
+    <div class="bg-white p-4">
+      <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth">
+        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+          <div>Среда 14:00</div><span class="mx-2 cursor-pointer text-white">✕</span>
+        </div>
+        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-black">
+          <div>Вторник 17:30</div><span class="mx-2 cursor-pointer text-lab-black-50">✕</span>
+        </div>
+      </div>
+    </div>
+    <div class="text-lab-black-50 px-4 pt-4 pb-2">Основная информация<span class="text-lab-black-50 px-4 text-xs"></span></div>
+    <div class="bg-white p-4">
+      <div class="flex items-center mb-2 gap-2">
+        <label class="block text-lab-black text-sm font-medium " for="Тип турнира">Тип турнира</label>
+      </div>
+      <div class="flex gap-2 scroll-smooth overflow-x-auto -mx-4 px-4 no-scrollbar mb-8">
+        <div class="bg-lab-color px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧍🏽</span><span class="text-white font-semibold ml-2">S</span>
+        </div>
+        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👨🏻</span><span class="ml-2">MS</span>
+        </div>
+        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧍🏽</span><span class="-ml-2">🧍🏽</span><span class="ml-2">D</span>
+        </div>
+        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👨🏻</span><span class="-ml-2">👨🏻</span><span class="ml-2">MD</span>
+        </div>
+        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👩🏼</span><span class="-ml-2">👩🏼</span><span class="ml-2">WD</span>
+        </div>
+        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👩🏼</span><span class="-ml-2">👨🏻</span><span class="ml-2">XD</span>
+        </div>
+        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧑🏽</span><span class="-ml-2">👨🏻</span><span class="-ml-2">👩🏼</span><span class="ml-2">Team</span>
+        </div>
+      </div>
+      <div class="pb-4">
+        <div class="flex items-center mb-2 gap-2">
+          <label class="block text-lab-black text-sm font-medium " for="Заголовок">Заголовок</label>
+        </div>
+        <select class="block appearance-none border border-lab-black-10 p-2 rounded-lg mb-4 text-sm pr-10 leading-tight focus:outline-none focus:shadow-outline">
+          <option value="" disabled="disabled" selected="selected" hidden="hidden">Выберите заголовок</option>
+          <option>Вариант 1</option>
+          <option>Вариант 2</option>
+          <option>Вариант 3</option>
+        </select>
+      </div>
+      <div class="flex items-center mb-2 gap-2">
+        <label class="block text-lab-black text-sm font-medium " for="Полное название">Полное название</label>
+      </div>
+      <input class="border p-2 w-full rounded-lg leading-none" type="text" placeholder="Название"/>
+    </div>
+    <div class="text-lab-black-50 px-4 pt-4 pb-2">Дата и время<span class="text-lab-black-50 px-4 text-xs"></span></div>
+    <div class="bg-white p-4">
+      <div class="flex items-center mb-2 gap-2">
+        <label class="block text-lab-black text-sm font-medium " for="Открытие регистрации">Открытие регистрации</label>
+      </div>
+      <div class="flex border rounded-lg overflow-hidden mb-8">
+        <button class="minus-button bg-white px-4 py-2 w-11 focus:outline-none">–</button>
+        <div class="flex flex-col items-center justify-center py-1 flex-1 border-l border-r" id="info">
+          <div class="leading-tight" id="days">за 1 день</div>
+          <div class="text-lab-black-50 text-xs" id="price">+100₽</div>
+        </div>
+        <button class="plus-button bg-white px-3 py-2 w-11 focus:outline-none">+</button>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const minusButton = document.querySelector('.minus-button');
+            const plusButton = document.querySelector('.plus-button');
+            const daysDiv = document.getElementById('days');
+            const priceDiv = document.getElementById('price');
+        
+            let dayCount = 1;
+            let pricePerDay = 100;
+        
+            const getDayWord = (count) => {
+                if (count === 1) {
+                    return 'день';
+                } else if (count > 1 && count < 5) {
+                    return 'дня';
+                } else {
+                    return 'дней';
+                }
+            }
+        
+            const updateInfo = () => {
+                daysDiv.textContent = `за ${dayCount} ${getDayWord(dayCount)}`;
+                priceDiv.textContent = `+${pricePerDay * dayCount}₽`;
+            }
+        
+            minusButton.addEventListener('click', () => {
+                if(dayCount > 1) {
+                    dayCount--;
+                    updateInfo();
+                }
+            });
+        
+            plusButton.addEventListener('click', () => {
+                dayCount++;
+                updateInfo();
+            });
+        
+            updateInfo(); // Update on load
+        });
+      </script>
+      <div class="flex items-center mb-2 gap-2">
+        <label class="block text-lab-black text-sm font-medium " for="Время">Время</label><img class="size-4" src="img/info.svg"/>
+      </div>
+      <div class="flex items-center cursor-pointer py-4 justify-between gap-2"></div>
+      <label class="flex items-center gap-3 text-sm leading-tight justify-between">Регистрация сверх лимита
+        <input class="sr-only peer" id="playerToggle" type="checkbox" value="">
+        <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
+      </label>
+    </div>
+    <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10">
+      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/tournaments"><img class="mx-auto h-7 w-7" src="img/tabbar/tournaments-active.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/trainings"><img class="mx-auto h-7 w-7" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/courts"><img class="mx-auto h-7 w-7" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/players"><img class="mx-auto h-7 w-7" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/aroundgame"><img class="mx-auto h-7 w-7" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/market"><img class="mx-auto h-7 w-7" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap">Маркет</span></a>
+      </div>
+    </nav>
+  </body>
+</html>
