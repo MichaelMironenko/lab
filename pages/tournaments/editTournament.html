@@ -7,7 +7,7 @@
     <link href="../../styles.css" rel="stylesheet">
     <base href="../../">
   </head>
-  <body class="bg-page-background py-12">
+  <body class="bg-page-background py-12 pb-32">
     <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-10"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
       <div class="flex items-center shrink-0 justify-end gap-4 ml-4 flex-grow"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="inline-flex gap-2">
@@ -71,188 +71,454 @@
         </li>
       </ol>
     </nav>
-    <div class="text-lab-black-50 px-4 pt-4 pb-2">Шаблоны<span class="text-lab-black-50 px-4 text-xs"></span></div>
-    <div class="bg-white p-4">
-      <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth">
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
-          <div class="leading-5">Среда 14:00</div><span class="mx-2 cursor-pointer text-white">✕</span>
+    <div class="420:px-4 mx-auto">
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4 py-2">Шаблоны<span class="text-lab-black-50 px-4 text-xs"></span></div>
         </div>
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-black">
-          <div class="leading-5">Вторник 17:30</div><span class="mx-2 cursor-pointer text-lab-black-50">✕</span>
-        </div>
-      </div>
-    </div>
-    <div class="text-lab-black-50 px-4 pt-4 pb-2">Основная информация<span class="text-lab-black-50 px-4 text-xs"></span></div>
-    <div class="bg-white p-4">
-      <div class="flex items-center gap-2 mb-2">
-        <label class="block text-lab-black text-sm font-medium " for="Тип турнира">Тип турнира</label>
-      </div>
-      <div class="flex gap-2 scroll-smooth overflow-x-auto -mx-4 px-4 no-scrollbar mb-8">
-        <div class="bg-lab-color px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧍🏽</span><span class="text-white font-semibold ml-2">S</span>
-        </div>
-        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👨🏻</span><span class="ml-2">MS</span>
-        </div>
-        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧍🏽</span><span class="-ml-2">🧍🏽</span><span class="ml-2">D</span>
-        </div>
-        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👨🏻</span><span class="-ml-2">👨🏻</span><span class="ml-2">MD</span>
-        </div>
-        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👩🏼</span><span class="-ml-2">👩🏼</span><span class="ml-2">WD</span>
-        </div>
-        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👩🏼</span><span class="-ml-2">👨🏻</span><span class="ml-2">XD</span>
-        </div>
-        <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧑🏽</span><span class="-ml-2">👨🏻</span><span class="-ml-2">👩🏼</span><span class="ml-2">Team</span>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full">
+          <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth">
+            <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+              <div class="leading-5">Среда 14:00</div><span class="mx-2 deleteButton cursor-pointer text-white">✕</span>
+            </div>
+            <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-black">
+              <div class="leading-5">Вторник 17:30</div><span class="mx-2 deleteButton cursor-pointer text-lab-black-50">✕</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="pb-4">
-        <div class="flex items-center gap-2 mb-2">
-          <label class="block text-lab-black text-sm font-medium " for="Заголовок">Заголовок</label>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4 py-2">Основная информация<span class="text-lab-black-50 px-4 text-xs"></span></div>
         </div>
-        <select class="block appearance-none border border-lab-black-30 p-2 rounded-lg mb-4 text-sm pr-10 max-w-sm leading-tight shadow-sm focus:outline-none focus:shadow-outline">
-          <option value="" disabled="disabled" selected="selected" hidden="hidden">Выберите заголовок</option>
-          <option>Вариант 1</option>
-          <option>Вариант 2</option>
-          <option>Вариант 3</option>
-        </select>
-      </div>
-      <div class="flex items-center gap-2 mb-2">
-        <label class="block text-lab-black text-sm font-medium " for="Полное название">Полное название</label>
-      </div>
-      <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="Название"/>
-    </div>
-    <div class="text-lab-black-50 px-4 pt-4 pb-2">Дата и время<span class="text-lab-black-50 px-4 text-xs"></span></div>
-    <div class="bg-white p-4">
-      <div class="flex items-center gap-2 mb-2">
-        <label class="block text-lab-black text-sm font-medium " for="Дата">Дата</label>
-      </div>
-      <input class="border border-lab-black-30 p-2  rounded-lg mb-6 focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="warmup" type="date" placeholder=""/>
-      <div class="flex items-center gap-2 mb-2">
-        <label class="block text-lab-black text-sm font-medium " for="Время">Время</label>
-      </div>
-      <div class="flex gap-1 justify-between max-w-sm mb-6">
-        <div class="flex flex-col">
-          <label class="text-xs text-lab-black-50">Начало</label>
-          <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="from" type="time" placeholder=""/>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full">
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Тип турнира">Тип турнира</label>
+          </div>
+          <div class="flex gap-2 scroll-smooth overflow-x-auto -mx-4 px-4 no-scrollbar mb-8">
+            <div class="bg-lab-color px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧍🏽</span><span class="text-white font-semibold ml-2">S</span>
+            </div>
+            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👨🏻</span><span class="ml-2">MS</span>
+            </div>
+            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧍🏽</span><span class="-ml-2">🧍🏽</span><span class="ml-2">D</span>
+            </div>
+            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👨🏻</span><span class="-ml-2">👨🏻</span><span class="ml-2">MD</span>
+            </div>
+            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👩🏼</span><span class="-ml-2">👩🏼</span><span class="ml-2">WD</span>
+            </div>
+            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👩🏼</span><span class="-ml-2">👨🏻</span><span class="ml-2">XD</span>
+            </div>
+            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧑🏽</span><span class="-ml-2">👨🏻</span><span class="-ml-2">👩🏼</span><span class="ml-2">Team</span>
+            </div>
+          </div>
+          <div class="pb-4">
+            <div class="flex items-center gap-2 mb-2">
+              <label class="block text-lab-black text-sm " for="Заголовок">Заголовок</label>
+            </div>
+            <select class="block appearance-none border border-lab-black-30 p-2 rounded-lg mb-4 text-sm pr-10 max-w-sm leading-tight shadow-sm focus:outline-none focus:shadow-outline">
+              <option value="" disabled="disabled" selected="selected" hidden="hidden">Выберите заголовок</option>
+              <option>Вариант 1</option>
+              <option>Вариант 2</option>
+              <option>Вариант 3</option>
+            </select>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Полное название">Полное название</label>
+          </div>
+          <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="Название"/>
         </div>
-        <div class="flex flex-col">
-          <label class="text-xs text-lab-black-50">Конец</label>
-          <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="to" type="time" placeholder=""/>
-        </div>
-        <div class="flex flex-col">
-          <label class="text-xs text-lab-black-50">Разминка</label>
-          <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="warmup" type="time" placeholder=""/>
-        </div>
       </div>
-      <div class="flex items-center gap-2 mb-2">
-        <label class="block text-lab-black text-sm font-medium " for="Открытие регистрации">Открытие регистрации</label>
-      </div>
-      <div class="flex border border-lab-black-30 rounded-lg overflow-hidden mb-8 max-w-sm">
-        <button class="minus-button text-2xl bg-white px-3 py-1 w-11 focus:outline-none">–</button>
-        <div class="flex flex-col items-center justify-center py-1 flex-1 border-l border-r border-lab-black-30" id="info">
-          <div class="text-lab-color leading-tight" id="days">за 1 день</div>
-          <div class="text-lab-black-50 text-xs" id="price">+100₽</div>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4 py-2">Дата и время<span class="text-lab-black-50 px-4 text-xs"></span></div>
         </div>
-        <button class="plus-button text-2xl bg-white px-3 py-1 w-11 focus:outline-none">+</button>
-      </div>
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const minusButton = document.querySelector('.minus-button');
-            const plusButton = document.querySelector('.plus-button');
-            const daysDiv = document.getElementById('days');
-            const priceDiv = document.getElementById('price');
-        
-            let dayCount = 1;
-            let pricePerDay = 100;
-        
-            const getDayWord = (count) => {
-                if (count === 1) {
-                    return 'день';
-                } else if (count > 1 && count < 5) {
-                    return 'дня';
-                } else {
-                    return 'дней';
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full">
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Дата">Дата</label>
+          </div>
+          <input class="border border-lab-black-30 p-2  rounded-lg mb-6 focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="" type="date" placeholder=""/>
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Время">Время</label>
+          </div>
+          <div class="flex gap-1 justify-between mb-6">
+            <div class="flex flex-col">
+              <label class="text-xs text-lab-black-50">Начало</label>
+              <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="from" type="time" placeholder=""/>
+            </div>
+            <div class="flex flex-col">
+              <label class="text-xs text-lab-black-50">Конец</label>
+              <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="to" type="time" placeholder=""/>
+            </div>
+            <div class="flex flex-col">
+              <label class="text-xs text-lab-black-50">Разминка</label>
+              <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="warmup" type="time" placeholder=""/>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Открытие регистрации">Открытие регистрации</label>
+          </div>
+          <div class="flex border border-lab-black-30 rounded-lg overflow-hidden mb-8">
+            <button class="minus-button text-2xl bg-white px-3 py-1 w-11 focus:outline-none">–</button>
+            <div class="flex flex-col items-center justify-center py-1 flex-1 border-l border-r border-lab-black-30" id="info">
+              <div class="text-lab-color leading-tight" id="days">за 1 день</div>
+              <div class="text-lab-black-50 text-xs" id="price">+100₽</div>
+            </div>
+            <button class="plus-button text-2xl bg-white px-3 py-1 w-11 focus:outline-none">+</button>
+          </div>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const minusButton = document.querySelector('.minus-button');
+                const plusButton = document.querySelector('.plus-button');
+                const daysDiv = document.getElementById('days');
+                const priceDiv = document.getElementById('price');
+            
+                let dayCount = 1;
+                let pricePerDay = 100;
+            
+                const getDayWord = (count) => {
+                    if (count === 1) {
+                        return 'день';
+                    } else if (count > 1 && count < 5) {
+                        return 'дня';
+                    } else {
+                        return 'дней';
+                    }
                 }
-            }
-        
-            const updateInfo = () => {
-                daysDiv.textContent = `за ${dayCount} ${getDayWord(dayCount)}`;
-                priceDiv.textContent = `+${pricePerDay * dayCount}₽`;
-            }
-        
-            minusButton.addEventListener('click', () => {
-                if(dayCount > 1) {
-                    dayCount--;
+            
+                const updateInfo = () => {
+                    daysDiv.textContent = `за ${dayCount} ${getDayWord(dayCount)}`;
+                    priceDiv.textContent = `+${pricePerDay * dayCount}₽`;
+                }
+            
+                minusButton.addEventListener('click', () => {
+                    if(dayCount > 1) {
+                        dayCount--;
+                        updateInfo();
+                    }
+                });
+            
+                plusButton.addEventListener('click', () => {
+                    dayCount++;
                     updateInfo();
+                });
+            
+                updateInfo(); // Update on load
+            });
+            
+            
+          </script>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4 py-2">Участники<span class="text-lab-black-50 px-4 text-xs"></span></div>
+        </div>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full">
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Рейтинг для допуска">Рейтинг для допуска</label><img class="size-4" id="rating-info" src="img/info.svg"/>
+          </div>
+          <div class="flex items-center gap-2 justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center -space-x-2"><span>👨🏻</span><span>👨🏻</span></div>
+              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="от"/>
+              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
+            </div>
+            <div class="flex items-center gap-2"><span>👨🏻</span>
+              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center -space-x-2"><span>👩🏼</span><span>👩🏼</span></div>
+              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="от"/>
+              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
+            </div>
+            <div class="flex items-center gap-2"><span>👩🏼</span>
+              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 justify-between mb-6">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center -space-x-2"><span>👩🏼</span><span>👨🏻</span></div>
+              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="от"/>
+              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
+            </div>
+            <div class="flex items-center gap-2"><span>👨🏻</span>
+              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
+            </div>
+          </div>
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="flex items-center gap-2 w-full">
+              <label class="block text-lab-black text-sm " for="Максимальное кол-во участников">Максимальное кол-во участников</label>
+            </div>
+            <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder=""/>
+          </div>
+          <div class="flex items-center cursor-pointer py-4 justify-between gap-2 max-w-sm">
+            <label class="flex items-center gap-3 text-sm text-lab-black leading-tight justify-between">Регистрация сверх лимита</label>
+            <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
+            <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
+          </div>
+          <div class="flex items-center justify-between gap-2 mt-2 mb-6">
+            <div class="flex items-center gap-2 w-full">
+              <label class="block text-lab-black text-sm " for="Взнос с участника">Взнос с участника</label>
+            </div>
+            <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder=""/>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Примечание к взносу">Примечание к взносу</label>
+          </div>
+          <textarea class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" placeholder="Примечание" oninput="autoResizeTextarea(this)"></textarea>
+          <script>
+            function autoResizeTextarea(elem) {
+                elem.style.height = 'auto'; // Сбрасываем высоту, чтобы правильно пересчитать
+                elem.style.height = elem.scrollHeight + 'px'; // Устанавливаем высоту равной высоте содержимого
+            }
+          </script>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4 py-2">О турнире<span class="text-lab-black-50 px-4 text-xs"></span></div>
+        </div>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full"> 
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Система проведения">Система проведения</label>
+          </div>
+          <textarea class="border border-lab-black-30 p-2 w-full mb-4 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" placeholder="" oninput="autoResizeTextarea(this)"></textarea>
+          <script>
+            function autoResizeTextarea(elem) {
+                elem.style.height = 'auto'; // Сбрасываем высоту, чтобы правильно пересчитать
+                elem.style.height = elem.scrollHeight + 'px'; // Устанавливаем высоту равной высоте содержимого
+            }
+          </script>
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Призовой фонд">Призовой фонд</label>
+          </div>
+          <textarea class="border border-lab-black-30 p-2 w-full mb-4 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" placeholder="" oninput="autoResizeTextarea(this)"></textarea>
+          <script>
+            function autoResizeTextarea(elem) {
+                elem.style.height = 'auto'; // Сбрасываем высоту, чтобы правильно пересчитать
+                elem.style.height = elem.scrollHeight + 'px'; // Устанавливаем высоту равной высоте содержимого
+            }
+          </script>
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Описание в свободной форме">Описание в свободной форме</label>
+          </div>
+          <textarea class="border border-lab-black-30 p-2 w-full mb-4 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" placeholder="" oninput="autoResizeTextarea(this)"></textarea>
+          <script>
+            function autoResizeTextarea(elem) {
+                elem.style.height = 'auto'; // Сбрасываем высоту, чтобы правильно пересчитать
+                elem.style.height = elem.scrollHeight + 'px'; // Устанавливаем высоту равной высоте содержимого
+            }
+          </script>
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Положение">Положение</label>
+          </div>
+          <textarea class="border border-lab-black-30 p-2 w-full mb-4 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" placeholder="" oninput="autoResizeTextarea(this)"></textarea>
+          <script>
+            function autoResizeTextarea(elem) {
+                elem.style.height = 'auto'; // Сбрасываем высоту, чтобы правильно пересчитать
+                elem.style.height = elem.scrollHeight + 'px'; // Устанавливаем высоту равной высоте содержимого
+            }
+          </script>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4 py-2">Дополнительные опции<span class="text-lab-black-50 px-4 text-xs"></span></div>
+        </div>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full"> 
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="flex items-center gap-2 w-full">
+              <label class="block text-lab-black text-sm " for="Допуск по дате рейтинга">Допуск по дате рейтинга</label>
+            </div>
+            <input class="border border-lab-black-30 p-2  rounded-lg shrink-0 focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="warmup" type="date" placeholder=""/>
+          </div>
+          <div class="flex items-center cursor-pointer py-4 justify-between gap-2 max-w-sm">
+            <label class="flex items-center gap-3 text-sm text-lab-black leading-tight justify-between">Закрытая регистрация</label>
+            <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
+            <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
+          </div>
+          <div class="flex items-center justify-between gap-2 mt-2">
+            <div class="flex items-center gap-2 w-full">
+              <label class="block text-lab-black text-sm " for="Корты под турнир">Корты под турнир</label>
+            </div><span class="shrink-0 grow">№3, 4</span><a class="text-sm" href="gotobooking">Изменить </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4 py-2">Повторять<span class="text-lab-black-50 px-4 text-xs"></span></div>
+        </div>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full">
+          <div class="flex items-center cursor-pointer py-0 justify-between gap-2 max-w-sm">
+            <label class="flex items-center gap-3 text-sm text-lab-black leading-tight justify-between">Повторить турнир через неделю</label>
+            <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
+            <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4">Контакты<span class="text-lab-black-50 px-4 text-xs"></span></div>
+          <div class="text-xs text-lab-black-50 px-4 pb-2 w-full">Если не заполнено, отображается контакт клуба</div>
+        </div>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full">
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Имя">Имя</label>
+          </div>
+          <input class="border border-lab-black-30 p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="Введите имя контактного лица"/>
+          <div class="flex items-center gap-2 mb-2">
+            <label class="block text-lab-black text-sm " for="Телефон">Телефон</label>
+          </div>
+          <input class="border border-lab-black-30 p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="Телефон"/>
+          <button class="w-full border bg-slate-100 rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text- leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Добавить дополнительный контакт</button>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4 py-2">Афиша турнира для главной страницы (+100₽)<span class="text-lab-black-50 px-4 text-xs"></span></div>
+        </div>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full"><img class="mx-auto w-full pb-4" src="dynamic-img/banner.png">
+          <div class="flex gap-2 mb-4">
+            <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Загрузить</button>
+            <button class="w-full border border-lab-red bg-white rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-lab-red leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Удалить</button>
+          </div><span class="text-sm font-bold">Требования к афише<br></span><span class="text-xs">Не менее 200х100 пикселей<br>Формат файла - JPG, PNG, WebP<br>Пропорции - 2:1</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4 py-2">Онлайн-трансляции<span class="text-lab-black-50 px-4 text-xs"></span></div>
+        </div>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full">
+          <div class="flex flex-col gap-2 mb-6">
+            <div class="flex gap-1">
+              <label class="text-sm text-lab-black-50 w-16">№ корта</label>
+              <label class="text-sm text-lab-black-50">Ссылка на трансляцию в Youtube</label>
+            </div>
+            <div class="flex gap-3 justify-between items-center">
+              <input class="border border-lab-black-30 p-2 w-14 rounded-lg h-14 text-center focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="" type="" value="1" placeholder=""/>
+              <textarea class="border border-lab-black-30 p-2  rounded-lg leading-tight grow focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" id="" placeholder="https://www.youtube.com/watch?v=..." oninput="autoResizeTextarea(this)">https://www.youtube.com/watch?v=vJTf_NtwyUo</textarea>
+              <script>
+                function autoResizeTextarea(elem) {
+                    elem.style.height = 'auto'; // Сбрасываем высоту, чтобы правильно пересчитать
+                    elem.style.height = elem.scrollHeight + 'px'; // Устанавливаем высоту равной высоте содержимого
                 }
-            });
-        
-            plusButton.addEventListener('click', () => {
-                dayCount++;
-                updateInfo();
-            });
-        
-            updateInfo(); // Update on load
-        });
-        
-        
-      </script>
+              </script>
+              <div class="text-lab-black-50">✕</div>
+            </div>
+            <div class="flex gap-3 justify-between items-center">
+              <input class="border border-lab-black-30 p-2 w-14 rounded-lg h-14 text-center focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" id="" type="" value="" placeholder=""/>
+              <textarea class="border border-lab-black-30 p-2  rounded-lg leading-tight grow focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" id="" placeholder="https://www.youtube.com/watch?v=..." oninput="autoResizeTextarea(this)"></textarea>
+              <script>
+                function autoResizeTextarea(elem) {
+                    elem.style.height = 'auto'; // Сбрасываем высоту, чтобы правильно пересчитать
+                    elem.style.height = elem.scrollHeight + 'px'; // Устанавливаем высоту равной высоте содержимого
+                }
+              </script>
+            </div>
+          </div>
+          <button class="w-full border bg-slate-100 rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text- leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">+ Добавить трансляцию</button>
+        </div>
+      </div>
+      <div class="flex flex-wrap mb-4">
+        <div class="w-full 420:max-w-64 sm:py-4">
+          <div class="text-lab-black-50 px-4">Шаблоны<span class="text-lab-black-50 px-4 text-xs"></span></div>
+          <div class="text-xs text-lab-black-50 px-4 pb-2 w-full">Сохранить для будущих турниров</div>
+        </div>
+        <div class="bg-white p-4 max-w-sm rounded-lg w-full">
+          <div class="flex items-center gap-1"> 
+            <div class="flex items-center gap-2 w-full">
+              <label class="block text-lab-black text-sm " for="Сохранить шаблон как">Сохранить шаблон как</label>
+            </div>
+            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="Название шаблона"/>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="text-lab-black-50 px-4 pt-4 pb-2">Участники<span class="text-lab-black-50 px-4 text-xs"></span></div>
-    <div class="bg-white p-4">
-      <div class="flex items-center gap-2 mb-2">
-        <label class="block text-lab-black text-sm font-medium " for="Рейтинг для допуска">Рейтинг для допуска</label><img class="size-4" src="img/info.svg"/>
-      </div>
-      <div class="flex items-center gap-2 justify-between mb-4">
-        <div class="flex items-center gap-2">
-          <div class="flex items-center -space-x-2"><span>👨🏻</span><span>👨🏻</span></div>
-          <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="от"/>
-          <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
-        </div>
-        <div class="flex items-center gap-2"><span>👨🏻</span>
-          <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
-        </div>
-      </div>
-      <div class="flex items-center gap-2 justify-between mb-4">
-        <div class="flex items-center gap-2">
-          <div class="flex items-center -space-x-2"><span>👩🏼</span><span>👩🏼</span></div>
-          <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="от"/>
-          <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
-        </div>
-        <div class="flex items-center gap-2"><span>👩🏼</span>
-          <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
-        </div>
-      </div>
-      <div class="flex items-center gap-2 justify-between mb-6">
-        <div class="flex items-center gap-2">
-          <div class="flex items-center -space-x-2"><span>👩🏼</span><span>👨🏻</span></div>
-          <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="от"/>
-          <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
-        </div>
-        <div class="flex items-center gap-2"><span>👨🏻</span>
-          <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="до"/>
-        </div>
-      </div>
-      <div class="flex items-center gap-2 mb-2">
-        <div class="flex items-center gap-2 w-24">
-          <label class="block text-lab-black text-sm font-medium " for="Лимит(чел)">Лимит(чел)</label>
-        </div>
-        <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder=""/>
-      </div>
-      <div class="flex items-center cursor-pointer py-4 justify-between gap-2 max-w-sm">
-        <label class="flex items-center gap-3 font-medium text-sm text-lab-black leading-tight justify-between">labelText</label>
-        <input class="sr-only peer" id="playerToggle" type="checkbox" value="">
-        <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
-      </div>
-      <div class="flex items-center gap-2 mt-2 mb-6">
-        <div class="flex items-center gap-2 w-24">
-          <label class="block text-lab-black text-sm font-medium " for="Взнос">Взнос</label>
-        </div>
-        <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder=""/>
-      </div>
-      <div class="flex items-center gap-2 mb-2">
-        <label class="block text-lab-black text-sm font-medium " for="Примечание к взносу">Примечание к взносу</label>
-      </div>
-      <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color leading-none shadow-sm max-w-sm" placeholder="Примечание"/>
+    <div class="fixed pb-safe-extra-panel w-full z-20 bg-white drop-shadow-top p-4 border-b">
+      <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Сохранить изменения</button>
     </div>
+    <div class="modal-container fixed inset-0 bg-gray-900 flex justify-center items-center bg-opacity-50 backdrop-blur-sm p-4 z-20" id="modal-delete-template" style="display: none;">
+      <div class="relative bg-white rounded-xl shadow w-full max-w-xs">
+        <div class="p-4 text-center md:p-5">
+          <div class="mt-12 mb-8 text-lg font-medium text-gray-800">Удалить шаблон</div>
+          <div class="pb-6"> 
+          </div>
+          <div class="flex justify-betweena">
+            <button class="w-full mr-2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="button1" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Нет</button>
+            <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="button2" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Да</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const closeButton = document.querySelector('.close-modal');
+          if (closeButton) {
+              closeButton.addEventListener('click', function() {
+                  document.querySelector('.modal-container').style.display = 'none';
+          });
+      }
+      
+          const modalContainer = document.querySelector('.modal-container');
+          modalContainer.addEventListener('click', function(event) {
+              if (event.target === this) {
+                  this.style.display = 'none';
+              }
+          });
+      });
+    </script>
+    <div class="modal-container fixed inset-0 bg-gray-900 flex justify-center items-center bg-opacity-50 backdrop-blur-sm p-4 z-20" id="modal-info" style="display: none;">
+      <div class="relative bg-white rounded-xl shadow w-full max-w-xs">
+        <div class="p-4 text-center md:p-5">
+          <div class="pb-6"> 
+            <h3 class="font-bold mb-3">Ограничение рейтинга пар и игроков</h3>
+            <p class="text-sm text-left leading-tight">Для <strong>одиночных</strong> турниров укажите ограничение рейтинга игрока, либо оставьте поля пустыми для открытого турнира. </p>
+            <p class="text-sm text-left leading-tight">Для <strong>парных</strong> турниров можно указать ограничение среднего рейтинга пары и максимальный рейтинг игрока в паре. </p>
+            <p class="text-sm text-left leading-tight">Рейтинг пары — среднее из рейтингов игроков в паре. </p>
+          </div>
+          <div class="flex justify-betweena">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const closeButton = document.querySelector('.close-modal');
+          if (closeButton) {
+              closeButton.addEventListener('click', function() {
+                  document.querySelector('.modal-container').style.display = 'none';
+          });
+      }
+      
+          const modalContainer = document.querySelector('.modal-container');
+          modalContainer.addEventListener('click', function(event) {
+              if (event.target === this) {
+                  this.style.display = 'none';
+              }
+          });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const deleteButtons = document.querySelectorAll('.deleteButton'); 
+          const modalDeleteTemplate = document.querySelector('#modal-delete-template'); // Используем идентификатор
+          const infoButton = document.querySelector('#rating-info'); // Убедитесь, что используете правильный селектор
+          const modalInfo = document.querySelector('#modal-info'); // Используем идентификатор
+      
+          deleteButtons.forEach(button => {
+              button.addEventListener('click', () => {
+                  modalDeleteTemplate.style.display = 'flex'; 
+              });
+          });
+      
+          infoButton.addEventListener('click', () => {
+              modalInfo.style.display = 'flex'; 
+          });
+      });
+      
+    </script>
     <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
       <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/tournaments"><img class="mx-auto h-7 w-7" src="img/tabbar/tournaments-active.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/trainings"><img class="mx-auto h-7 w-7" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/courts"><img class="mx-auto h-7 w-7" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/players"><img class="mx-auto h-7 w-7" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/aroundgame"><img class="mx-auto h-7 w-7" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="/market"><img class="mx-auto h-7 w-7" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap">Маркет</span></a>
       </div>
