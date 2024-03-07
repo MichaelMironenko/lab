@@ -634,10 +634,6 @@ select {
   bottom: 1.5rem;
 }
 
-.bottom-\[3\.3rem\] {
-  bottom: 3.3rem;
-}
-
 .left-0 {
   left: 0px;
 }
@@ -2223,6 +2219,10 @@ select {
 
 .pb-safe {
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+.pb-safe-extra-panel {
+  bottom: calc(3.3rem + env(safe-area-inset-bottom))
 }
 
 a {
