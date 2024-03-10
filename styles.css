@@ -463,6 +463,7 @@ select {
   width: 100%;
   border: 1px solid lab-black-10;
   border-radius: 8px;
+  background-color: white;
   padding: 8px 12px;
   -webkit-appearance: none;
   -moz-appearance: none;
