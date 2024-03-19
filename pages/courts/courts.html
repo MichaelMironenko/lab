@@ -59,7 +59,24 @@
       });
     </script>
     <div class="p-4 bg-white shadow-md rounded-lg mb-3"> 
-      <h2 class="leading-tight mb-4">Аренда кортов в <span class="underline text-lab-color underline-offset-4 decoration-dotted">Нижнем Новгороде</span></h2>
+      <div class="flex justify-between items-center pb-2">
+        <h2 class="leading-tight">Аренда кортов в 
+          <div class="gap-1 items-center py-2 inline-flex">
+            <select class="appearance-none bg-transparent leading-none rounded-2xl border-none bg-none p-0 text-lab-color text-sm font-semibold focus-visible:outline-none  !underline !text-lg text-lab-color !rounded-none !underline-offset-4 !decoration-dotted ">
+              <option value="0" selected="selected">Все города</option>
+              <option value="781">Алексин</option>
+              <option value="38">Казань</option>
+              <option value="120">Калининград</option>
+              <option value="197">Калуга</option>
+              <option value="35">Кемерово</option>
+              <option value="8">Красногорск</option>
+              <option value="1">Москва</option>
+              <option value="67">Новосибирск</option>
+              <option value="312">Одинцово</option>
+            </select>
+          </div>
+        </h2><a href="pages/courts/myBookings.html"> <img class="size-8 p-2 bg-lab-color-10 rounded-md" src="img/booking.svg"/></a>
+      </div>
       <div class="flex overflow-x-auto -mx-4 px-4 gap-2 no-scrollbar">
         <div class="flex-shrink-0"><span class="sticky left-0 text-sm  text-lab-black-50 py-2 z-10">Март</span>
           <div class="flex gap-2 mt-2">
@@ -114,7 +131,7 @@
           </div>
         </div>
       </div>
-      <div class="flex gap-4 py-4">
+      <div class="flex gap-4 py-4 items-end">
         <div>
           <div class="text-sm text-lab-black-50 py-2">Кортов</div>
           <div class="flex items-center bg-lab-color-10 rounded-lg">
@@ -130,51 +147,50 @@
           </div>
         </div>
       </div>
-      <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')">Найти корты</button>
+      <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="window.location.href='pages/courts/rentCourt.html'">Найти корты</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Степпер для количества кортов
+            const courtsCount = document.querySelector('#courts-count');
+            const decreaseCourtsButton = document.querySelector('#decrease-courts');
+            const increaseCourtsButton = document.querySelector('#increase-courts');
+        
+            decreaseCourtsButton.addEventListener('click', () => {
+                const currentCount = parseInt(courtsCount.textContent, 10);
+                courtsCount.textContent = currentCount > 1 ? currentCount - 1 : 1;
+            });
+        
+            increaseCourtsButton.addEventListener('click', () => {
+                const currentCount = parseInt(courtsCount.textContent, 10);
+                courtsCount.textContent = currentCount + 1;
+            });
+        
+            // Степпер для времени игры
+            const playTimeHours = document.querySelector('#play-time .hours');
+            const playTimeMinutes = document.querySelector('#play-time .minutes');
+            const decreaseTimeButton = document.querySelector('#decrease-time');
+            const increaseTimeButton = document.querySelector('#increase-time');
+            let timeInMinutes = 90; // Начальное значение 1 ч 30 м
+        
+            const updateTimeText = () => {
+                const hours = Math.floor(timeInMinutes / 60);
+                const minutes = timeInMinutes % 60;
+                playTimeHours.textContent = `${hours} `;
+                playTimeMinutes.textContent = `${minutes} `;
+            };
+        
+            decreaseTimeButton.addEventListener('click', () => {
+                timeInMinutes = timeInMinutes > 30 ? timeInMinutes - 30 : 30;
+                updateTimeText();
+            });
+        
+            increaseTimeButton.addEventListener('click', () => {
+                timeInMinutes += 30;
+                updateTimeText();
+            });
+        });
+      </script>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          // Степпер для количества кортов
-          const courtsCount = document.querySelector('#courts-count');
-          const decreaseCourtsButton = document.querySelector('#decrease-courts');
-          const increaseCourtsButton = document.querySelector('#increase-courts');
-      
-          decreaseCourtsButton.addEventListener('click', () => {
-              const currentCount = parseInt(courtsCount.textContent, 10);
-              courtsCount.textContent = currentCount > 1 ? currentCount - 1 : 1;
-          });
-      
-          increaseCourtsButton.addEventListener('click', () => {
-              const currentCount = parseInt(courtsCount.textContent, 10);
-              courtsCount.textContent = currentCount + 1;
-          });
-      
-          // Степпер для времени игры
-          const playTimeHours = document.querySelector('#play-time .hours');
-          const playTimeMinutes = document.querySelector('#play-time .minutes');
-          const decreaseTimeButton = document.querySelector('#decrease-time');
-          const increaseTimeButton = document.querySelector('#increase-time');
-          let timeInMinutes = 90; // Начальное значение 1 ч 30 м
-      
-          const updateTimeText = () => {
-              const hours = Math.floor(timeInMinutes / 60);
-              const minutes = timeInMinutes % 60;
-              playTimeHours.textContent = `${hours} `;
-              playTimeMinutes.textContent = `${minutes} `;
-          };
-      
-          decreaseTimeButton.addEventListener('click', () => {
-              timeInMinutes = timeInMinutes > 30 ? timeInMinutes - 30 : 30;
-              updateTimeText();
-          });
-      
-          increaseTimeButton.addEventListener('click', () => {
-              timeInMinutes += 30;
-              updateTimeText();
-          });
-      });
-      
-    </script>
     <div class="p-4 bg-white shadow-md rounded-lg mb-3">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
@@ -188,7 +204,7 @@
             <div class="font-semibold leading-tight">Территория мяча и грача</div>
             <div class="flex items-center text-sm"><span>4.4</span><img class="h-4 ml-1" src="img/star.svg"/><span class="text-lab-black-50 ml-2">22 отзыва</span></div>
             <div><img class="inline opacity-50 saturate-50 mr-1" src="img/location-icon.svg"/><span class="inline text-lab-black-50 text-sm h-4">Нижний Новгород</span></div>
-            <div class="flex justify-between items-center grow justify-self-stretch">
+            <div class="flex items-center grow justify-self-stretch">
               <div class="inline"><img class="inline size-4 mr-1 align-middle saturate-50 opacity-75" src="img/court.svg"/><span class="inline text-sm align-middle leading-none">14</span></div>
               <div class="inline"><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/wifi.svg" alt="wifi"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/shower.svg" alt="shower"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/cafe.svg" alt="cafe"/>
               </div>
@@ -201,9 +217,9 @@
             <div class="font-semibold leading-tight">Короли корта</div>
             <div class="flex items-center text-sm"><span>4.7</span><img class="h-4 ml-1" src="img/star.svg"/><span class="text-lab-black-50 ml-2">18 отзыва</span></div>
             <div>
-              <div class="bg-blue-700 inline-block size-2 bg-teal-200 rounded-full mr-1 shrink-0 align-middle"></div><span class="inline text-lab-black-50 leading-tight align-middle text-sm">Славянский бульвар</span>
+              <div class="bg-blue-700 inline-block size-2 rounded-full mr-1 shrink-0 align-middle"></div><span class="inline text-lab-black-50 leading-tight align-middle text-sm">Славянский бульвар</span>
             </div>
-            <div class="flex justify-between items-center grow justify-self-stretch">
+            <div class="flex items-center grow justify-self-stretch">
               <div class="inline"><img class="inline size-4 mr-1 align-middle saturate-50 opacity-75" src="img/court.svg"/><span class="inline text-sm align-middle leading-none">8</span></div>
               <div class="inline"><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/wifi.svg" alt="wifi"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/ac.svg" alt="ac"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/parking.svg" alt="parking"/>
               </div>
@@ -216,7 +232,7 @@
             <div class="font-semibold leading-tight">Ракетка и мяч</div>
             <div class="flex items-center text-sm"><span>4.5</span><img class="h-4 ml-1" src="img/star.svg"/><span class="text-lab-black-50 ml-2">34 отзыва</span></div>
             <div><img class="inline opacity-50 saturate-50 mr-1" src="img/location-icon.svg"/><span class="inline text-lab-black-50 text-sm h-4">Санкт-Петербург</span></div>
-            <div class="flex justify-between items-center grow justify-self-stretch">
+            <div class="flex items-center grow justify-self-stretch">
               <div class="inline"><img class="inline size-4 mr-1 align-middle saturate-50 opacity-75" src="img/court.svg"/><span class="inline text-sm align-middle leading-none">12</span></div>
               <div class="inline"><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/market.svg" alt="market"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/wifi.svg" alt="wifi"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/water.svg" alt="water"/>
               </div>
@@ -229,9 +245,9 @@
             <div class="font-semibold leading-tight">Сет и матч</div>
             <div class="flex items-center text-sm"><span>4.9</span><img class="h-4 ml-1" src="img/star.svg"/><span class="text-lab-black-50 ml-2">29 отзыва</span></div>
             <div>
-              <div class="bg-slate-300 inline-block size-2 bg-teal-200 rounded-full mr-1 shrink-0 align-middle"></div><span class="inline text-lab-black-50 leading-tight align-middle text-sm">Чертановская</span>
+              <div class="bg-slate-300 inline-block size-2 rounded-full mr-1 shrink-0 align-middle"></div><span class="inline text-lab-black-50 leading-tight align-middle text-sm">Чертановская</span>
             </div>
-            <div class="flex justify-between items-center grow justify-self-stretch">
+            <div class="flex items-center grow justify-self-stretch">
               <div class="inline"><img class="inline size-4 mr-1 align-middle saturate-50 opacity-75" src="img/court.svg"/><span class="inline text-sm align-middle leading-none">10</span></div>
               <div class="inline"><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/ac.svg" alt="ac"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/shower.svg" alt="shower"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/cafe.svg" alt="cafe"/>
               </div>
@@ -244,7 +260,7 @@
             <div class="font-semibold leading-tight">Волейбольная лига</div>
             <div class="flex items-center text-sm"><span>4.6</span><img class="h-4 ml-1" src="img/star.svg"/><span class="text-lab-black-50 ml-2">15 отзыва</span></div>
             <div><img class="inline opacity-50 saturate-50 mr-1" src="img/location-icon.svg"/><span class="inline text-lab-black-50 text-sm h-4">Казань</span></div>
-            <div class="flex justify-between items-center grow justify-self-stretch">
+            <div class="flex items-center grow justify-self-stretch">
               <div class="inline"><img class="inline size-4 mr-1 align-middle saturate-50 opacity-75" src="img/court.svg"/><span class="inline text-sm align-middle leading-none">9</span></div>
               <div class="inline"><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/wifi.svg" alt="wifi"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/water.svg" alt="water"/><img class="inline saturate-50 opacity-75 size-3.5 mr-0.5" src="img/parking.svg" alt="parking"/>
               </div>
@@ -262,18 +278,18 @@
       </div>
       <div class="flex flex-col gap-4"><a class="flex gap-3 items-center" href="#"><img class="size-16 shrink-0 rounded object-cover" src="dynamic-img/club-1.jpg"/>
           <div class="flex flex-col gap-1">
-            <h3 class="font-semibold text-[15px] leading-tight line-clamp-3">23 мая состоится студенческий турнир Москвы</h3><span class="text-xs text-lab-black-50"><span class="font-semibold text-lab-black-50">Naten ЮГ Ярославль</span><span class="text-lab-black-50 ml-2">4 апреля 16:30</span></span>
-          </div></a><a class="flex gap-3 items-center" href="#"><img class="size-16 shrink-0 rounded object-cover" src="dynamic-img/club-2.jpg"/>
+            <h3 class="font-semibold text-[15px] leading-tight line-clamp-2">23 мая состоится студенческий турнир Москвы</h3><span class="text-xs text-lab-black-50"><span class="font-semibold text-lab-black-50">Naten ЮГ Ярославль</span><span class="text-lab-black-50 ml-2">4 апреля 16:30</span></span>
+          </div></a><a class="flex gap-3 items-center" href="#">
           <div class="flex flex-col gap-1">
-            <h3 class="font-semibold text-[15px] leading-tight line-clamp-3">Открытые тренировки для всех желающих</h3><span class="text-xs text-lab-black-50"><span class="font-semibold text-lab-black-50">Спартак М</span><span class="text-lab-black-50 ml-2">12 мая 18:00</span></span>
+            <h3 class="font-semibold text-[15px] leading-tight line-clamp-2">Открытые тренировки для всех желающих</h3><span class="text-xs text-lab-black-50"><span class="font-semibold text-lab-black-50">Спартак М</span><span class="text-lab-black-50 ml-2">12 мая 18:00</span></span>
           </div></a><a class="flex gap-3 items-center" href="#"><img class="size-16 shrink-0 rounded object-cover" src="dynamic-img/club-3.jpg"/>
           <div class="flex flex-col gap-1">
-            <h3 class="font-semibold text-[15px] leading-tight line-clamp-3">Финал городского чемпионата по баскетболу</h3><span class="text-xs text-lab-black-50"><span class="font-semibold text-lab-black-50">Динамо СПб</span><span class="text-lab-black-50 ml-2">20 июня 20:00</span></span>
+            <h3 class="font-semibold text-[15px] leading-tight line-clamp-2">Финал городского чемпионата по баскетболу</h3><span class="text-xs text-lab-black-50"><span class="font-semibold text-lab-black-50">Динамо СПб</span><span class="text-lab-black-50 ml-2">20 июня 20:00</span></span>
           </div></a>
       </div>
     </div>
     <div class="p-4 bg-white shadow-md rounded-lg mb-3">
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-3 justify-between">
         <h2>Новые спарринг-партнёры в <span class="underline text-lab-color underline-offset-4 decoration-dotted">Нижнем Новгороде</span></h2><a href="pages/courts/sparrings.html">Все </a>
       </div>
       <div class="flex -mx-4 p-4 overflow-x-auto no-scrollbar gap-3"><a class="flex flex-col w-32 items-center gap-2 shrink-0" href="player.html">
