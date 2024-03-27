@@ -15,7 +15,7 @@
             <div class="text-xs text-slate-700 font-semibold">nikpol</div>
             <div class="flex items-center justify-end"><img class="h-3 w-3 relative z-10" src="img/gradient-star.svg" alt="Rating"/><img class="h-3 w-3 -ml-4 relative" src="img/gradient-star.svg" alt="Rating"/><span class="text-lab-color font-bold text-xs ml-1">1376</span></div>
           </div>
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] bg-gradient-to-r from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0 flex-" id="avatarContainer">
+          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0" id="avatarContainer">
             <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(32px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
@@ -24,10 +24,10 @@
             <div class="text-slate-900 font-semibold text-sm leading-tight">Никита Полянский</div>
             <div class="text-center text-lab-black-50 text-sm font-normal leading-none">@nikpol</div>
             <div class="flex flex-row gap-2 mt-1">
-              <div class="undefined items-center inline-flex px-1.5 py-1 bg-[#e8f3f7] border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10 border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">713</div>
               </div>
-              <div class="undefined items-center inline-flex px-1.5 py-1 bg-[#e8f3f7] border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10 border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">321</div>
               </div>
             </div>
@@ -80,8 +80,8 @@
       <div class="flex overflow-x-auto -mx-4 px-4 gap-2 no-scrollbar">
         <div class="flex-shrink-0"><span class="sticky left-0 text-sm  text-lab-black-50 py-2 z-10">Март</span>
           <div class="flex gap-2 mt-2">
-            <div class="bg-lab-color-10 flex flex-col w-12 h-12 items-center justify-center p-2 rounded-2xl">
-              <div class="text-xs text-lab-red opacity-50">Вс</div>
+            <div class="font-semibold bg-lab-color-10 flex flex-col w-12 h-12 items-center justify-center p-2 rounded-2xl">
+              <div class="text-xs text-lab-red opacity-50 font-semibold">Вс</div>
               <div class="text-base text-lab-red">27</div>
             </div>
             <div class="bg-lab-color-10 flex flex-col w-12 h-12 items-center justify-center p-2 rounded-2xl">
@@ -193,7 +193,7 @@
     </div>
     <div class="p-4 flex justify-between items-center">
       <button class="sort-button  undefined " type="button"><img class="inline align-middle size-4" src="img/sort.svg"/><span class="inline align-middle text-lab-color text-sm ml-1">По популярности</span></button>
-      <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" data-action="hide">
+      <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="undefined" data-action="hide">
         <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
           <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><span class="flex-1 text-center text-lab-color">По рейтингу</span>
           </div>
@@ -237,7 +237,7 @@
         <div class="px-2 py-1 flex flex-col bg-white rounded-lg border border-lab-black-30 shadow-lg"><span class="text-sm font-semibold">Naten-ЮГ</span>
           <div class="flex gap-3">
             <div> <img class="inline align-middle h-4 mr-1" src="img/star.svg"/><span class="text-xs inline font-semibold align-middle">4.4</span></div>
-            <div><img class="inline align-middle h-4 mr-1" src="img/price.svg"/><span class="text-xs inline align-middle">500-700&#8202;₽</span></div>
+            <div><img class="inline align-middle h-4 mr-1" src="img/price.svg"/><span class="text-xs inline align-middle">1200-1500&#8202;₽</span></div>
           </div>
         </div>
       </div>
@@ -434,7 +434,7 @@
       <div class="text-lab-green font-bold py-2">Ваше пожелание отправлено!</div>
     </div>
     <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
-      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7" src="img/tabbar/courts-active.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundgame.html"><img class="mx-auto h-7 w-7" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap">Маркет</span></a>
+      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7" src="img/tabbar/courts-active.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundgame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
       </div>
     </nav>
     <script>
@@ -494,43 +494,43 @@
                 <thead class="sticky top-0 bg-white z-20 h-10 mb-4">
                   <tr>
                     <th class="px-2 text-center text-xs sticky bg-white left-0 align-middle min-w-14 w-14 z-20">Корт</th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>1</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>2</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>3</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>4</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>5</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>6</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>7</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>8</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>9</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
-                    <th class="text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                    <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
                       <div>10</div>
                       <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                     </th>
@@ -975,6 +975,52 @@
                 </tbody>
               </table>
             </div>
+            <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="court-modal" style="display: none;">
+              <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
+                <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
+                <div class="p-4 text-center md:p-5"> 
+                  <h2>Корт №5</h2>
+                  <p class="text-lab-black-50 text-sm pt-0 pb-2">Стандартный  </p><img class="mt-2 rounded-sm pb-2" src="dynamic-img/court5.jpg" alt=""/>
+                  <div class="flex justify-between items-center gap-2 py-1 text-sm"><span class="text-lab-black-50">Размер зала</span>
+                    <div class="grow border-b-2 border-dotted h-3"></div><span class="text-right">17x10 м</span>
+                  </div>
+                  <div class="flex justify-between items-center gap-2 py-1 text-sm"><span class="text-lab-black-50">Высота потолков</span>
+                    <div class="grow border-b-2 border-dotted h-3"></div><span class="text-right">8 м</span>
+                  </div>
+                  <div class="flex justify-between items-center gap-2 py-1 text-sm"><span class="text-lab-black-50">Покрытие</span>
+                    <div class="grow border-b-2 border-dotted h-3"></div><span class="text-right">Тарафлекс</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const closeButton = document.querySelector('.close-modal');
+                  closeButton?.addEventListener('click', function() {
+                      document.getElementById('court-modal').style.display = 'none';
+                  });
+              
+                  document.getElementById('court-modal').addEventListener('click', function(event) {
+                      if (event.target === this) {
+                          this.style.display = 'none';
+                      }
+                  });
+              });
+            </script>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const courtDivs = document.querySelectorAll('.court');
+                  
+                  courtDivs.forEach(function(div) {
+                      div.addEventListener('click', function() {
+                          const modal = document.getElementById('court-modal');
+                          if (modal) {
+                              modal.style.display = 'block';
+                          }
+                      });
+                  });
+              });
+            </script>
           </div>
         </div>
         <div class="fixed bottom-0 left-0 right-0 w-full z-40 p-4 rounded-t-2xl overflow-hidden bg-white drop-shadow-top pb-safe-16">
@@ -989,7 +1035,7 @@
             <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
             <div> <img class="inline align-middle saturate-50 opacity-50" src="img/price.svg" alt="Цена"/><span class="inline align-middle ml-2">1800&#8202;₽</span></div>
           </div>
-          <div class="modal-container fixed inset-0 bg-gray-900 flex justify-center items-center bg-opacity-50 backdrop-blur-sm p-4 z-20" id="court-modal" style="display: none;">
+          <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="court-modal" style="display: none;">
             <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
               <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
               <div class="p-4 text-center md:p-5"> 
