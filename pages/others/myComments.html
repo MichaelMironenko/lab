@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Panel</title>
+    <title>Мои комментарии</title>
     <link href="../../styles.css" rel="stylesheet">
     <base href="../../">
   </head>
-  <body>
+  <body class="bg-white pt-12 pb-32">
     <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-20"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
       <div class="flex items-center shrink-0 justify-end gap-4 ml-4 flex-grow"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="inline-flex gap-2">
@@ -58,98 +58,53 @@
         });
       });
     </script>
-    <div class="fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20"></div>
-    <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-      <div class="pb-2">
-        <div class="w-20 h-1 bg-slate-200 rounded-xl mx-auto mt-2 relative"></div>
+    <h2 class="p-4">Мои комментарии</h2>
+    <div class="flex items-center justify-between gap-4  pb-4 px-4 ">
+      <div class="flex items-center border px-3 py-2 rounded-lg gap-3 bg-white flex-grow focus-within:ring-2 focus-within:ring-lab-color"><img class="w-4 h-4" src="img/search-icon.svg" alt="Search"/>
+        <input class="flex-grow outline-none leading-none bg-transparent" id="searchBar" type="text" placeholder="Текст комментария"/>
       </div>
-      <div class="flex-1 overflow-y-auto scroll-smooth no-scrollbar">
-        <div class="p-4">
-          <div class="flex flex-col pb-2">
-            <label class="font-bold pb-3">Ограничение по рейтингу</label>
-            <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth undefined">
-              <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
-                <div>Все турниры</div>
-              </div>
-              <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-                <div>Открытые</div>
-              </div>
-              <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-                <div>&lt;</div>
-              </div>
-              <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-                <div>&gt;</div>
-              </div>
-            </div>
-            <div class="mt-2 flex gap-2 py-2 items-center"><span class="text-sm">С минимальным рейтингом игрока</span>
-              <div class="flex"></div>
-              <input class="border border-lab-black-30 p-2 undefined rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="от"/><span>—</span>
-              <input class="border border-lab-black-30 p-2 undefined rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="до"/>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col pb-2">
-          <div class="flex justify-between p-4 pb-2">
-            <label class="font-bold">Тип</label><span class="text-lab-color text-sm">Включить все</span>
-          </div>
-          <div class="flex flex-row gap-2 px-4 py-2">
-            <div class="bg-lab-color px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧍🏽</span><span class="text-white font-semibold ml-2">S</span>
-            </div>
-            <div class="bg-lab-color px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👨🏻</span><span class="text-white font-semibold ml-2">MS</span>
-            </div>
-          </div>
-          <div class="flex flex-row gap-2 px-4 py-2">
-            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧍🏽</span><span class="-ml-2">🧍🏽</span><span class="ml-2">D</span>
-            </div>
-            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👨🏻</span><span class="-ml-2">👨🏻</span><span class="ml-2">MD</span>
-            </div>
-            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👩🏼</span><span class="-ml-2">👩🏼</span><span class="ml-2">WD</span>
-            </div>
-            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>👩🏼</span><span class="-ml-2">👨🏻</span><span class="ml-2">XD</span>
-            </div>
-          </div>
-          <div class="flex flex-row gap-2 px-4 py-2">
-            <div class="bg-lab-color-10 px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm"> <span>🧑🏽</span><span class="-ml-2">👨🏻</span><span class="-ml-2">👩🏼</span><span class="ml-2">Team</span>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <div class="flex justify-between p-4 pb-1 items-center">
-            <label class="font-bold">День недели</label><span class="text-lab-color text-sm">Включить все</span>
-          </div>
-          <div class="flex p-4 justify-between max-w-sm">
-            <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
-              <div>Пн</div>
-            </div>
-            <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
-              <div>Вт</div>
-            </div>
-            <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
-              <div>Ср</div>
-            </div>
-            <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-              <div>Чт</div>
-            </div>
-            <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
-              <div>Пт</div>
-            </div>
-            <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-              <div>Сб</div>
-            </div>
-            <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-              <div>Вс</div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col p-4 pb-1">
-          <label class="font-bold pb-3">Регион/город</label>
-          <div class="border p-2 w-full rounded-lg leading-none">
-            <div class="px-2 py-2 font-semibold text-xs bg-lab-color text-white rounded-lg shadow-sm leading-none w-fit">Санкт-Петербург<span class="ml-2 text-white">✕</span></div>
-          </div>
-        </div>
-        <div class="w-full text-center p-4">  
-        </div>
+    </div>
+    <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth pb-4 px-4">
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+        <div>Фото</div>
       </div>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>Новости</div>
+      </div>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>Турниры</div>
+      </div>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>Форум</div>
+      </div>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>Другое</div>
+      </div>
+    </div>
+    <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth py-4 border-t px-4">
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-xs flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+        <div>2024</div>
+      </div>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-xs flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>2023</div>
+      </div>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-xs flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>2022</div>
+      </div>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-xs flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>2021</div>
+      </div>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-xs flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>2020</div>
+      </div>
+    </div>
+    <div class="bg-white p-4 mb-1 border-b">
+      <div class="flex gap-3 items-center"><span class="text-xs">Вчера 12:30</span><span class="text-xs px-1 py-0.5 bg-lab-green rounded text-white font-semibold">Форум </span></div>
+      <div class="text-lab-black-50 text-xs mt-2">Тема <a class="font-semibold ml-1" href="#"> Кто где покупает ракетки?</a></div><span class="mt-3 line-clamp-3">Я покупал ракетку в Декатлоне. Конечно любительская, но своё дело делает. Буду в следующем месяце покупать новую, пока не знаю где</span>
+    </div>
+    <div class="bg-white p-4 mb-1">
+      <div class="flex gap-3 items-center"><span class="text-xs">7 апреля 12:30</span><span class="text-xs px-1 py-0.5 bg-lab-red rounded text-white font-semibold">Турниры </span></div>
+      <div class="text-lab-black-50 text-xs mt-2">Турнир <a class="font-semibold ml-1" href="#"> XDF+ Макс Арена, 11 сентября 19:00</a></div><span class="mt-3 line-clamp-3">Пацаны ваще ребята!</span>
     </div>
     <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
       <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundgame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>

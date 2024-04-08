@@ -8,14 +8,14 @@
     <base href="../../">
   </head>
   <body class="bg-page-background pt-14 pb-32 px-2 xs:px-3 sm:px-4 ">
-    <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-10"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-20"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
       <div class="flex items-center shrink-0 justify-end gap-4 ml-4 flex-grow"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="inline-flex gap-2">
           <div class="text-right hidden sm:block">
             <div class="text-xs text-slate-700 font-semibold">nikpol</div>
             <div class="flex items-center justify-end"><img class="h-3 w-3 relative z-10" src="img/gradient-star.svg" alt="Rating"/><img class="h-3 w-3 -ml-4 relative" src="img/gradient-star.svg" alt="Rating"/><span class="text-lab-color font-bold text-xs ml-1">1376</span></div>
           </div>
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0" id="avatarContainer">
+          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
             <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(32px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
@@ -58,13 +58,13 @@
         });
       });
     </script>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex gap-4">
         <div class="flex flex-col -space-y-4 items-center">
-          <div class="cursor-pointer p-[3px] w-[80px] h-[80px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0" id="avatarContainer">
+          <div class="cursor-pointer p-[3px] w-[80px] h-[80px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
             <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(80px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
           </div>
-          <div class="bg-lab-red text-xs px-1 py-0.5 text-white font-medium rounded w-fit">Админ</div>
+          <div class="bg-lab-red text-xs px-1 py-0.5 text-white font-medium rounded w-fit z-10">Админ</div>
         </div>
         <div class="flex-col flex gap-2">
           <h1 class="text-base">Кудайбердиев Адилет Кудайбердиевич</h1><span class="text-lab-color text-sm">@Adiko_Adiko</span>
@@ -91,7 +91,7 @@
       </div>
       <div>
         <div class="text-center text-xs text-lab-black-50 mb-2">Был онлайн 12.06.2023    </div>
-        <div class="flex gap-2 pb-4">
+        <div class="flex gap-2 pb-4 justify-center">
           <button class="px-2 py-1.5 bg-lab-color rounded-lg font-semibold max-h-12 transition-transform duration-150 text- leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick=""> <img src="img/message-white.svg"/></button>
           <button class="px-2 py-1.5 bg-lab-color rounded-lg font-semibold max-h-12 transition-transform duration-150 text- leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick=""> <img src="img/add-friend-white.svg"/></button>
           <button class="px-2 py-1.5 bg-lab-color rounded-lg font-semibold max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick=""> <img class="inline align-middle" src="img/history-white.svg"/><span class="inline align-middle ml-1 text-xs text-white xs:text-sm">Мои игры с этим игроком</span></button>
@@ -101,7 +101,7 @@
         <div class="flex flex-wrap items-center gap-x-4 justify-between">
           <h3 class="font-semibold shrink-0">Моя заметка об игрокe</h3><span class="text-xs text-lab-black-50">Видна только вам</span>
         </div>
-        <div class="px-4 py-3 bg-amber-200 mt-2 rounded-lg min-h-20 text-lab-black italic"> Бьёт обычно в левый угол</div>
+        <div class="px-4 py-3 bg-amber-100 mt-2 rounded-lg min-h-20 text-lab-black italic"> Бьёт обычно в левый угол</div>
         <div class="flex justify-end gap-4 py-2">  <span class="text-sm text-lab-color">Редактировать</span><span class="text-sm text-lab-red">Удалить </span></div>
       </div>
     </div>
@@ -136,7 +136,7 @@
       <div class="flex items-center justify-between py-3 pl-4 pr-3 bg-white gap-4  border-b"><img class="h-6" src="img/forum.svg"/><span class="grow">Темы на форуме</span><img class="-rotate-90" src="img/expand-arrow.svg"/></div>
       <div class="flex items-center justify-between py-3 pl-4 pr-3 bg-white gap-4"><img class="h-6" src="img/second-hand.svg"/><span class="grow">Объявления</span><img class="-rotate-90" src="img/expand-arrow.svg"/></div>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Инвентарь</h2>
@@ -159,15 +159,15 @@
     </div>
     <div class="sticky top-14 -mx-2 py-2 mb-2 bg-page-background z-10 px-2 xs:px-3 xs:-mx-3 sm:px-4 sm:-mx-4">
       <div class="flex gap-4 items-center justify-center">   <span class="text-sm text-lab-black-50">Рейтинг </span>
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
-          <div class="leading-5">Парный</div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+          <div>Парный</div>
         </div>
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-          <div class="leading-5">Одиночный</div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+          <div>Одиночный</div>
         </div>
       </div>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Статистика</h2>
@@ -206,7 +206,7 @@
         </div>
       </div>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Мои ближайшие мероприятия</h2>
@@ -233,18 +233,18 @@
       <h3 class="font-bold pb-2 pt-4">Сборы</h3>
       <div class="flex gap-2 bg-green-50 px-3 py-2 rounded-lg mb-2 border items-center"><span class="text-sm grow font-semibold">Сборы в Светлогорске с Андреем Дегтярёвым</span><span class="text-sm shrink-0">23.08 - 13.09</span></div>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Прогнозы</h2>
         </div><a class="text-lab-color leading-none" href="pages/others/forecasts.html">Все</a>
       </div>
       <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth -mx-4 mb-4 px-4">
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
-          <div class="leading-5">Актуальные</div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+          <div>Актуальные</div>
         </div>
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-          <div class="leading-5">Прошедшие</div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+          <div>Прошедшие</div>
         </div>
       </div>
       <div class="flex overflow-x-auto gap-2 no-scrollbar -m-4 p-4">
@@ -301,7 +301,7 @@
         </div>
       </div>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Рейтинг S</h2>
@@ -313,7 +313,7 @@
         </div><span class="text-lab-black-50 text-sm">11.04.2022</span>
       </div>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Награды</h2>
@@ -432,7 +432,7 @@
         </tbody>
       </table>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Последние турниры</h2>
@@ -683,7 +683,7 @@
         </div>
       </div>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Соперники</h2>
@@ -854,24 +854,24 @@
         </tr>
       </table>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Лучшие победы</h2>
         </div>
       </div>
       <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth -mx-4 mb-4 px-4">
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
-          <div class="leading-5">Неделя</div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+          <div>Неделя</div>
         </div>
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-          <div class="leading-5">Месяц</div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+          <div>Месяц</div>
         </div>
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-          <div class="leading-5">Год</div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+          <div>Год</div>
         </div>
-        <div class="px-2.5 py-1.5 rounded-lg cursor-pointer text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
-          <div class="leading-5">Всё время</div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+          <div>Всё время</div>
         </div>
       </div>
       <div class="pt-2 border-b border-lab-black-10">
@@ -879,7 +879,7 @@
         </div>
         <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-2">
           <div class="flex justify-between gap-2 items-center">
-            <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0" id="avatarContainer">
+            <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
               <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
             </div><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap font-semibold">Клейменов А. 
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
@@ -887,7 +887,7 @@
               </div><span class="text-lab-green text-xs text-center leading-none flex-shrink-0">+14.2</span></span><span class="text-sm text-center w-4 flex-shrink-0 font-semibold">2</span>
           </div>
           <div class="flex justify-between gap-2 items-center">
-            <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0" id="avatarContainer">
+            <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
               <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
             </div><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap text-slate-500">Преображенский В. 
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
@@ -902,10 +902,10 @@
         <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-2">
           <div class="flex justify-between gap-2 items-center">
             <div class="flex -space-x-2">
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0" id="avatarContainer">
+              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
                 <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
               </div>
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0" id="avatarContainer">
+              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
                 <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">АК</span></div>
               </div>
             </div><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap text-slate-500">Гуреев А. / Богданова С. 
@@ -915,10 +915,10 @@
           </div>
           <div class="flex justify-between gap-2 items-center">
             <div class="flex -space-x-2">
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0" id="avatarContainer">
+              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
                 <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
               </div>
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center shrink-0" id="avatarContainer">
+              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
                 <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">АК</span></div>
               </div>
             </div><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap font-semibold">Кобыляцкий С. / Кобыляцкая Л. 
@@ -945,7 +945,7 @@
         </div>
       </div>
     </div>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Фото с турнира</h2><a href="addvideo"><img class="size-5" src="img/plus-button.svg"/></a>
@@ -982,7 +982,7 @@
           }
       }
     </script>
-    <div class="p-4 bg-white rounded-lg overflow-hidden  mb-3">
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
           <h2 class="leading-tight">Видео с турнира</h2><a href="addvideo"><img class="size-5" src="img/plus-button.svg"/></a>
