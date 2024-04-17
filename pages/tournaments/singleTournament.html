@@ -19,8 +19,7 @@
             <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(32px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
-        <div class="max-w-full min-w-48 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-50 absolute top-10 right-4 drop-shadow-around">
-          <div class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1">
+        <div class="max-w-full min-w-56 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-50 absolute top-10 right-4 drop-shadow-around"><a class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1" href="pages/others/profile.html">
             <div class="text-slate-900 font-semibold text-sm leading-tight">Никита Полянский</div>
             <div class="text-center text-lab-black-50 text-sm font-normal leading-none">@nikpol</div>
             <div class="flex flex-row gap-2 mt-1">
@@ -30,21 +29,22 @@
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">321</div>
               </div>
-            </div>
-          </div>
-          <div class="flex flex-col self-stretch py-2 border-b border-blue-950 border-opacity-10 justify-start items-start">
-            <div class="py-2 flex items-center gap-3"><img class="w-4 h-4 justify-center items-center" src="img/person.svg"/>
-              <div class="text-blue-950 text-sm font-normal  leading-tight">Мой профиль</div>
-            </div>
-            <div class="py-2 flex items-center gap-3"><img class="w-4 h-4 justify-center items-center" src="img/settings.svg"/>
-              <div class="text-blue-950 text-sm font-normal  leading-tight">Настройки</div>
-            </div>
-            <div class="py-2 flex items-center gap-3"><img class="w-4 h-4 justify-center items-center" src="img/price.svg"/>
-              <div class="text-blue-950 text-sm font-normal  leading-tight">Финансы</div>
-            </div>
+            </div></a>
+          <div class="flex flex-col self-stretch py-2 border-b w-full"><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myFinance.html"><img class="w-4 h-4 justify-center items-center" src="img/price-outline.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Финансы</div><span class="text-xs leading-tight">1500 ₽</span></a><a class="py-2 flex justify-between items-center gap-3" href="pages/courts/myBookings.html"><img class="w-4 h-4 justify-center items-center" src="img/booking.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myOrders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Заказы</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myBookmarks.html"><img class="w-4 h-4 justify-center items-center" src="img/bookmark-empty.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Закладки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTournaments.html"><img class="w-4 h-4 justify-center items-center" src="img/cup-outlined.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Турниры</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTrainings.html"><img class="w-4 h-4 justify-center items-center" src="img/trainer.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Тренировки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/friends.html"><img class="w-4 h-4 justify-center items-center" src="img/friends.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Лента друзей</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myComments.html"><img class="w-4 h-4 justify-center items-center" src="img/comment-outlined.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Комментарии</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myReviews.html"><img class="w-4 h-4 justify-center items-center" src="img/star-outlined.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Отзывы</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTopics.html"><img class="w-4 h-4 justify-center items-center" src="img/forum.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Темы на форуме</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myClassifieds.html"><img class="w-4 h-4 justify-center items-center" src="img/second-hand.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Объявления</div></a>
           </div>
           <div class="pt-1 flex justify-start items-center mt-2 gap-3"><img class="w-4 h-4 justify-center items-center" src="img/exit.svg"/>
-            <div class="text-blue-950 text-sm font-normal">Выйти</div>
+            <div class="text-lab-black text-sm font-normal">Выйти</div>
           </div>
         </div>
       </div>
@@ -514,407 +514,503 @@
           </label>
         </div>
         <!-- Список с true-->
-        <div class="hidden" id="playersTrue">
-          <div class="inline-flex gap-2 items-center"><img class="w-4 h-4 saturate-50 opacity-75" src="img/warning.svg" alt="Предупреждение"><span class="text-xs text-lab-black-50 leading-tight">Нажимайте на кружок справа строки для выбора места или сброса голоса </span></div>
+        <table class="w-full hidden" id="playersTrue">
+          <div class="inline-flex gap-2 items-center"><img class="w-4 h-4 saturate-50 opacity-75" src="img/warning.svg" alt="Предупреждение"><span class="text-xs text-lab-black-50 leading-tight">Нажимайте на кружок справа строки для выбора места или сброса голоса. После выбора трех мест нажмите кнопку "Сделать прогноз"</span></div>
           <button class="w-full border-2 border-white my-2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Сделать прогноз</button>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-purple rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АН</span></div>
-                      </div></a></div>
-                </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Алексей Николаев </a>
+          <tr class="text-xs text-lab-color font-semibold border-b">
+            <th class="text-left py-2">Игрок</th>
+            <th>Рейтинг</th>
+            <th>Х</th>
+            <th>#  </th>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АН</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Алексей Николаев</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Алексей Николаев </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Алексей Николаев</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">945</div>
-                </div><span class="font-bold leading-none text-center w-6">2.5</span><img class="w-6 h-6" src="img/medal-bronze.svg" alt="Bronze Medal"/>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-red rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">МД</span></div>
-                      </div></a></div>
-                </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Михаил Дмитриев </a>
+            </td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">945</div>
+              </div>
+            </td>
+            <td class="text-center"><span class="font-medium leading-none px-2">2.5</span></td>
+            <td><img class="w-6 h-6 mx-auto" src="img/medal-bronze.svg" alt="Bronze Medal"/>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">МД</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Михаил Дмитриев</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Михаил Дмитриев </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Михаил Дмитриев</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">876</div>
-                </div><span class="font-bold leading-none text-center w-6">1.8</span>
-                <div class="rounded-full border border-lab-black-10 size-6"></div>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
-                      </div></a></div>
-                  <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-purple rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АП</span></div>
-                      </div></a></div>
-                </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">Е. Иванов </span><span class="text-xs text-lab-color h-4">★789  </span></a><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">А. Петров </span><span class="text-xs text-lab-color h-4">★654  </span></a>
+            </td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">876</div>
+              </div>
+            </td>
+            <td class="text-center"><span class="font-medium leading-none px-2">1.8</span></td>
+            <td>
+              <div class="rounded-full border border-lab-black-10 size-6 mx-auto"></div>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
+                        </div></a></div>
+                    <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-red rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АП</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">Е. Иванов</span><span class="text-xs text-lab-color h-4 ml-1">★789</span></a><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">А. Петров</span><span class="text-xs text-lab-color h-4 ml-1">★654</span></a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Е. Иванов /</a></div>
-                      <div><a href="https://badminton4u.ru/players/undefined">А. Петров </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Е. Иванов/</a></div>
+                      <div><a href="https://badminton4u.ru/players/undefined">А. Петров</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">789</div>
-                </div><span class="font-bold leading-none text-center w-6">3.2</span><img class="w-6 h-6" src="img/medal-gold.svg" alt="Gold Medal"/>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="flex flex-col grow">
-              <div class="font-semibold mb-1 leading-tight text-lab-black">Трое в лодке не считая волана</div>
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">ДС</span></div>
-                      </div></a></div>
-                  <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-2.jpg" alt="Аватар"/>
-                      </div></a></div>
-                  <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-3.jpg" alt="Аватар"/>
-                      </div></a></div>
-                </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">Д. Сергеев </span><span class="text-xs text-lab-color h-4">★832  </span></a><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">А. Александров </span><span class="text-xs text-lab-color h-4">★919  </span></a><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">В. Михайлов </span><span class="text-xs text-lab-color h-4">★751  </span></a>
+            </td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">789</div>
+              </div>
+            </td>
+            <td class="text-center"><span class="font-medium leading-none px-2">3.2</span></td>
+            <td><img class="w-6 h-6 mx-auto" src="img/medal-gold.svg" alt="Gold Medal"/>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="font-semibold mb-1 leading-tight text-lab-black">Трое в лодке не считая волана</div>
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">ДС</span></div>
+                        </div></a></div>
+                    <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-2.jpg" alt="Аватар"/>
+                        </div></a></div>
+                    <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-3.jpg" alt="Аватар"/>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">Д. Сергеев</span><span class="text-xs text-lab-color h-4 ml-1">★832</span></a><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">А. Александров</span><span class="text-xs text-lab-color h-4 ml-1">★919</span></a><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">В. Михайлов</span><span class="text-xs text-lab-color h-4 ml-1">★751</span></a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Д. Сергеев /</a></div>
-                      <div><a href="https://badminton4u.ru/players/undefined">А. Александров /</a></div>
-                      <div><a href="https://badminton4u.ru/players/undefined">В. Михайлов </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Д. Сергеев/</a></div>
+                      <div><a href="https://badminton4u.ru/players/undefined">А. Александров/</a></div>
+                      <div><a href="https://badminton4u.ru/players/undefined">В. Михайлов</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">832</div>
-                </div><span class="font-bold leading-none text-center w-6">1.4</span>
-                <div class="rounded-full border border-lab-black-10 size-6"></div>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-red rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">СР</span></div>
-                      </div></a></div>
-                </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Сергей Романов </a>
+            </td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">832</div>
+              </div>
+            </td>
+            <td class="text-center"><span class="font-medium leading-none px-2">1.4</span></td>
+            <td>
+              <div class="rounded-full border border-lab-black-10 size-6 mx-auto"></div>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-purple rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">СР</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Сергей Романов</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Сергей Романов </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Сергей Романов</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">668</div>
-                </div><span class="font-bold leading-none text-center w-6">3.9</span><img class="w-6 h-6" src="img/medal-silver.svg" alt="Silver Medal"/>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-purple rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АФ</span></div>
-                      </div></a></div>
-                </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Андрей Федоров </a>
+            </td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">668</div>
+              </div>
+            </td>
+            <td class="text-center"><span class="font-medium leading-none px-2">3.9</span></td>
+            <td><img class="w-6 h-6 mx-auto" src="img/medal-silver.svg" alt="Silver Medal"/>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-purple rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АФ</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Андрей Федоров</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Андрей Федоров </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Андрей Федоров</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">812</div>
-                </div><span class="font-bold leading-none text-center w-6">1.7</span>
-                <div class="rounded-full border border-lab-black-10 size-6"></div>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">НК</span></div>
-                      </div></a></div>
-                </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Никита Кузнецов </a>
+            </td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">812</div>
+              </div>
+            </td>
+            <td class="text-center"><span class="font-medium leading-none px-2">1.7</span></td>
+            <td>
+              <div class="rounded-full border border-lab-black-10 size-6 mx-auto"></div>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-purple rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">НК</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Никита Кузнецов</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Никита Кузнецов </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Никита Кузнецов</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">900</div>
-                </div><span class="font-bold leading-none text-center w-6">2.4</span>
-                <div class="rounded-full border border-lab-black-10 size-6"></div>
               </div>
-            </div>
-          </div>
-        </div>
+            </td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">900</div>
+              </div>
+            </td>
+            <td class="text-center"><span class="font-medium leading-none px-2">2.4</span></td>
+            <td>
+              <div class="rounded-full border border-lab-black-10 size-6 mx-auto"></div>
+            </td>
+          </tr>
+        </table>
         <!-- Список с false-->
-        <div id="playersFalse">
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="w-5 shrink-0 flex-shrink-0">
-              <div class="relative inline-block"><span>1</span>
-              </div>
-            </div>
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-green rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АН</span></div>
-                      </div></a></div>
+        <table class="w-full" id="playersFalse">
+          <tr class="text-xs text-lab-color !font-semibold border-b">
+            <th class="text-left"># ▲</th>
+            <th class="text-left py-2">Игрок</th>
+            <th class="sm:table-cell hidden">Регистрация</th>
+            <th>Рейтинг                     </th>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td>
+              <div class="flex items-center shrink-0 w-5">
+                <div class="relative inline-block"><span>1</span>
                 </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Алексей Николаев </a>
+              </div>
+            </td>
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АН</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Алексей Николаев</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Алексей Николаев </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Алексей Николаев</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">945</div>
-                </div><span class="hidden sm:block text-lab-black-50">11 марта 14:30</span>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="w-5 shrink-0 flex-shrink-0">
-              <div class="relative inline-block"><span>2</span><img class="absolute -top-1 -right-3 w-3 h-3 max-w-none" src="img/player-phone.svg"/>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">11 марта 14:30</td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">945</div>
               </div>
-            </div>
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-purple rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">МД</span></div>
-                      </div></a></div>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td>
+              <div class="flex items-center shrink-0 w-5">
+                <div class="relative inline-block"><span>2</span><img class="absolute -top-1 -right-3 w-3 h-3 max-w-none" src="img/player-phone.svg"/>
                 </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Михаил Дмитриев </a>
+              </div>
+            </td>
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-green rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">МД</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Михаил Дмитриев</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Михаил Дмитриев </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Михаил Дмитриев</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">876</div>
-                </div><span class="hidden sm:block text-lab-black-50">11 марта 15:00</span>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="w-5 shrink-0 flex-shrink-0">
-              <div class="relative inline-block"><span>3</span>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">11 марта 15:00</td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">876</div>
               </div>
-            </div>
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
-                      </div></a></div>
-                  <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АП</span></div>
-                      </div></a></div>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td>
+              <div class="flex items-center shrink-0 w-5">
+                <div class="relative inline-block"><span>3</span>
                 </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">Е. Иванов </span><span class="text-xs text-lab-color h-4">★789  </span></a><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">А. Петров </span><span class="text-xs text-lab-color h-4">★654  </span></a>
+              </div>
+            </td>
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
+                        </div></a></div>
+                    <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АП</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">Е. Иванов</span><span class="text-xs text-lab-color h-4 ml-1">★789</span></a><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">А. Петров</span><span class="text-xs text-lab-color h-4 ml-1">★654</span></a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Е. Иванов /</a></div>
-                      <div><a href="https://badminton4u.ru/players/undefined">А. Петров </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Е. Иванов/</a></div>
+                      <div><a href="https://badminton4u.ru/players/undefined">А. Петров</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">789</div>
-                </div><span class="hidden sm:block text-lab-black-50">11 марта 12:21</span>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="w-5 shrink-0 flex-shrink-0">
-              <div class="relative inline-block"><span>5</span>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">11 марта 12:21</td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">789</div>
               </div>
-            </div>
-            <div class="flex flex-col grow">
-              <div class="font-semibold mb-1 leading-tight text-lab-black">Трое в лодке не считая волана</div>
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">ДС</span></div>
-                      </div></a></div>
-                  <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-2.jpg" alt="Аватар"/>
-                      </div></a></div>
-                  <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-3.jpg" alt="Аватар"/>
-                      </div></a></div>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td>
+              <div class="flex items-center shrink-0 w-5">
+                <div class="relative inline-block"><span>5</span>
                 </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">Д. Сергеев </span><span class="text-xs text-lab-color h-4">★832  </span></a><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">А. Александров </span><span class="text-xs text-lab-color h-4">★919  </span></a><a class="block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">В. Михайлов </span><span class="text-xs text-lab-color h-4">★751  </span></a>
+              </div>
+            </td>
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="font-semibold mb-1 leading-tight text-lab-black">Трое в лодке не считая волана</div>
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-green rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">ДС</span></div>
+                        </div></a></div>
+                    <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-2.jpg" alt="Аватар"/>
+                        </div></a></div>
+                    <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer"><img class="w-full h-full rounded-full object-cover" src="dynamic-img/user-3.jpg" alt="Аватар"/>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">Д. Сергеев</span><span class="text-xs text-lab-color h-4 ml-1">★832</span></a><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">А. Александров</span><span class="text-xs text-lab-color h-4 ml-1">★919</span></a><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">В. Михайлов</span><span class="text-xs text-lab-color h-4 ml-1">★751</span></a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Д. Сергеев /</a></div>
-                      <div><a href="https://badminton4u.ru/players/undefined">А. Александров /</a></div>
-                      <div><a href="https://badminton4u.ru/players/undefined">В. Михайлов </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Д. Сергеев/</a></div>
+                      <div><a href="https://badminton4u.ru/players/undefined">А. Александров/</a></div>
+                      <div><a href="https://badminton4u.ru/players/undefined">В. Михайлов</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">832</div>
-                </div><span class="hidden sm:block text-lab-black-50">11 марта 15:30</span>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="w-5 shrink-0 flex-shrink-0">
-              <div class="relative inline-block"><span>8</span><img class="absolute -top-1 -right-3 w-3 h-3 max-w-none" src="img/player-warning.svg"/>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">11 марта 15:30</td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">832</div>
               </div>
-            </div>
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-green rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">СР</span></div>
-                      </div></a></div>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td>
+              <div class="flex items-center shrink-0 w-5">
+                <div class="relative inline-block"><span>8</span><img class="absolute -top-1 -right-3 w-3 h-3 max-w-none" src="img/player-warning.svg"/>
                 </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Сергей Романов </a>
+              </div>
+            </td>
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">СР</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Сергей Романов</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Сергей Романов </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Сергей Романов</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">668</div>
-                </div><span class="hidden sm:block text-lab-black-50">11 марта 18:20</span>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="w-5 shrink-0 flex-shrink-0">
-              <div class="relative inline-block"><span>9</span>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">11 марта 18:20</td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">668</div>
               </div>
-            </div>
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-green rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АФ</span></div>
-                      </div></a></div>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td>
+              <div class="flex items-center shrink-0 w-5">
+                <div class="relative inline-block"><span>9</span>
                 </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Андрей Федоров </a>
+              </div>
+            </td>
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АФ</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Андрей Федоров</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Андрей Федоров </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Андрей Федоров</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">812</div>
-                </div><span class="hidden sm:block text-lab-black-50">11 марта 12:34</span>
               </div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2 text-sm">
-            <div class="w-5 shrink-0 flex-shrink-0">
-              <div class="relative inline-block"><span>10</span>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">11 марта 12:34</td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">812</div>
               </div>
-            </div>
-            <div class="flex flex-col grow">
-              <div class="flex gap-2 items-center">
-                <div class="flex flex-col sm:flex-row flex-shrink-0 shrink-0 items-center">
-                  <div><a href="https://badminton4u.ru/players/undefined?type=d">
-                      <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
-                        <div class="bg-lab-purple rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">НК</span></div>
-                      </div></a></div>
+            </td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td>
+              <div class="flex items-center shrink-0 w-5">
+                <div class="relative inline-block"><span>10</span>
                 </div>
-                <div class="flex flex-col flex-grow sm:flex-row items-start gap-2">
-                  <div class="block sm:hidden"><a class="block" href="https://badminton4u.ru/players/undefined">Никита Кузнецов </a>
+              </div>
+            </td>
+            <td class="py-2">
+              <div class="flex flex-col">
+                <div class="flex gap-2 items-center">
+                  <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
+                    <div><a href="https://badminton4u.ru/players/undefined?type=d">
+                        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
+                          <div class="bg-lab-purple rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">НК</span></div>
+                        </div></a></div>
                   </div>
+                  <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Никита Кузнецов</a>
+                  </div>
+                  <!-- Десктоп версия-->
                   <div class="hidden sm:block">
-                    <div class="flex flex-row gap-1"> 
-                      <div><a href="https://badminton4u.ru/players/undefined">Никита Кузнецов </a></div>
+                    <div class="flex flex-row gap-1">
+                      <div><a href="https://badminton4u.ru/players/undefined">Никита Кузнецов</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
-                  <div class="text-center text-lab-black text-xs font-semibold leading-none">900</div>
-                </div><span class="hidden sm:block text-lab-black-50">11 марта 18:22</span>
               </div>
-            </div>
-          </div>
-        </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">11 марта 18:22</td>
+            <td class="text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">900</div>
+              </div>
+            </td>
+          </tr>
+        </table>
         <div class="flex items-center justify-between border-b border-lab-black-10 py-2 gap-2">
           <div class="cursor-pointer p-[1px] w-[28px] h-[28px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
             <div class="bg-color-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(28px/2.66)] text-white w-full font-bold text-center leading-none">АН</span></div>
@@ -1491,9 +1587,9 @@
           </div><a class="text-lab-color leading-none" href="/pages/tournaments/allGames.html">Все игры</a>
         </div>
         <div class="pt-2 border-b border-lab-black-10">
-          <div class="flex items-center gap-4"><span class="text-sm text-lab-black-50">1/16</span><span class="text-lab-black-50 text-sm">14 мин</span>
+          <div class="flex items-center gap-4 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="text-lab-black-50">14 мин</span>
           </div>
-          <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-2">
+          <div class="flex-grow flex flex-col justify-center py-3 w-full flex-shrink gap-3">
             <div class="flex justify-between gap-2 items-center">
               <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
                 <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
@@ -1513,9 +1609,9 @@
           </div>
         </div>
         <div class="pt-2 border-b border-lab-black-10">
-          <div class="flex items-center gap-4"><span class="text-sm text-lab-black-50">1/16</span><span class="text-lab-black-50 text-sm">12 мин</span>
+          <div class="flex items-center gap-4 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="text-lab-black-50">12 мин</span>
           </div>
-          <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-2">
+          <div class="flex-grow flex flex-col justify-center py-3 w-full flex-shrink gap-3">
             <div class="flex justify-between gap-2 items-center">
               <div class="flex -space-x-2">
                 <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
@@ -1545,9 +1641,9 @@
           </div>
         </div>
         <div class="pt-2">
-          <div class="flex items-center gap-4"><span class="text-sm text-lab-black-50">1/16</span><span class="text-lab-black-50 text-sm">13 мин</span>
+          <div class="flex items-center gap-4 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="text-lab-black-50">13 мин</span>
           </div>
-          <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-2">
+          <div class="flex-grow flex flex-col justify-center py-3 w-full flex-shrink gap-3">
             <div class="flex justify-between gap-2 items-center"><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap font-semibold">Бадминтонные пауки 
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                   <div class="text-center text-lab-black text-xs font-semibold leading-none">420</div>
@@ -2448,9 +2544,9 @@
           </div><a class="text-lab-color leading-none" href="/pages/tournaments/allGames.html">Все игры</a>
         </div>
         <div class="pt-2 border-b border-lab-black-10">
-          <div class="flex items-center gap-4"><span class="text-sm text-lab-black-50">1/16</span><span class="text-lab-black-50 text-sm">14 мин</span>
+          <div class="flex items-center gap-4 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="text-lab-black-50">14 мин</span>
           </div>
-          <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-2">
+          <div class="flex-grow flex flex-col justify-center py-3 w-full flex-shrink gap-3">
             <div class="flex justify-between gap-2 items-center">
               <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
                 <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
@@ -2470,9 +2566,9 @@
           </div>
         </div>
         <div class="pt-2 border-b border-lab-black-10">
-          <div class="flex items-center gap-4"><span class="text-sm text-lab-black-50">1/16</span><span class="text-lab-black-50 text-sm">12 мин</span>
+          <div class="flex items-center gap-4 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="text-lab-black-50">12 мин</span>
           </div>
-          <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-2">
+          <div class="flex-grow flex flex-col justify-center py-3 w-full flex-shrink gap-3">
             <div class="flex justify-between gap-2 items-center">
               <div class="flex -space-x-2">
                 <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full flex justify-center items-center relative shrink-0" id="avatarContainer">
@@ -2502,9 +2598,9 @@
           </div>
         </div>
         <div class="pt-2">
-          <div class="flex items-center gap-4"><span class="text-sm text-lab-black-50">1/16</span><span class="text-lab-black-50 text-sm">13 мин</span>
+          <div class="flex items-center gap-4 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="text-lab-black-50">13 мин</span>
           </div>
-          <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-2">
+          <div class="flex-grow flex flex-col justify-center py-3 w-full flex-shrink gap-3">
             <div class="flex justify-between gap-2 items-center"><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap font-semibold">Бадминтонные пауки 
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                   <div class="text-center text-lab-black text-xs font-semibold leading-none">420</div>
