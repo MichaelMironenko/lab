@@ -8,15 +8,15 @@
     <base href="../../">
   </head>
   <body class="h-screen overflow-hidden">
-    <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-20"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
-        <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
-      <div class="flex items-center shrink-0 justify-end gap-4 ml-4 flex-grow"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="inline-flex gap-2"> 
-          <div class="text-right hidden sm:block">
-            <div class="text-xs text-slate-700 font-semibold">nikpol</div>
-            <div class="flex items-center justify-end"><img class="h-3 w-3 relative z-10" src="img/gradient-star.svg" alt="Rating"/><img class="h-3 w-3 -ml-4 relative" src="img/gradient-star.svg" alt="Rating"/><span class="text-lab-color font-bold text-xs ml-1">1376</span></div>
+    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+        <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
+      <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
+          <div class="hidden text-right xs:block">
+            <div class="text-xs font-semibold text-slate-700">nikpol</div>
+            <div class="flex items-center justify-end"><img class="relative z-10 h-3 w-3" src="img/gradient-star.svg" alt="Rating"/><img class="relative -ml-4 h-3 w-3" src="img/gradient-star.svg" alt="Rating"/><span class="ml-1 text-xs font-bold text-lab-color">1376</span></div>
           </div>
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full undefined flex justify-center items-center relative shrink-0" id="avatarContainer">
-            <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(32px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
+          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
         <div class="max-w-full min-w-56 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-[1000] absolute top-10 right-4 drop-shadow-around"><a class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1" href="pages/others/profile.html">
@@ -46,14 +46,14 @@
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        var avatar = document.getElementById('avatarContainer');
-        var userMenu = document.getElementById('userMenu');
-        avatar.addEventListener('click', function() {
-          userMenu.classList.toggle('hidden');
-        });
-      });
+        var avatar = document.getElementById('avatarContainer')
+        var userMenu = document.getElementById('userMenu')
+        avatar.addEventListener('click', function () {
+          userMenu.classList.toggle('hidden')
+        })
+      })
     </script>
-    <div class="fixed inset-x-0 top-[49px] z-30">
+    <div class="fixed inset-x-0 z-30 top-[49px]">
       <!-- +timezoneMessage-->
       <!-- Панель сообщения о другом часовом поясе-->
       <!--  <div class="w-full h-14 px-3 py-2 bg-amber-100 border-blue-950 border-opacity-10 justify-start items-center gap-2 inline-flex">
@@ -83,9 +83,9 @@
         </div>
       </div>
     </div>
-    <div class="bg-page-background min-h-screen w-full fixed top-0 left-0 z-[-1]"></div>
-    <div class="overflow-y-auto h-screen no-scrollbar">
-      <div class="tab-content pt-[104px] pb-[50px] p-4" id="registration">
+    <div class="fixed left-0 top-0 min-h-screen w-full bg-page-background z-[-1]"></div>
+    <div class="no-scrollbar h-screen overflow-y-auto">
+      <div class="tab-content p-4 pb-[50px] pt-[104px]" id="registration" >
         <div class="gap-1 items-center py-2 inline-flex"><img class="h-4 w-4" src="img/location-icon.svg"/>
           <select class="appearance-none bg-transparent leading-none rounded-2xl border-none bg-none p-0 text-lab-color text-sm font-semibold focus-visible:outline-none undefined">
             <option value="0" selected="selected">Все города</option>
@@ -205,7 +205,7 @@
           </div>
         </div>
       </div>
-      <div class="tab-content hidden pt-[104px] pb-[50px] p-4" id="live">
+      <div class="tab-content hidden p-4 pb-[50px] pt-[104px]" id="live" >
         <div class="flex flex-col items-center">
           <div class="bg-white w-full rounded-lg overflow-hidden shadow-lg max-w-sm mb-3 border-2 border-lab-color">
             <div class="flex pl-3 pr-4 pt-3 pb-2 gap-2 bg-white items-center">
@@ -368,11 +368,11 @@
           </div>
         </div>
       </div>
-      <div class="tab-content hidden pt-[104px] pb-[50px] p-4" id="results">
+      <div class="tab-content hidden p-4 pb-[50px] pt-[104px]" id="results" >
         <div class="flex items-center justify-between gap-4  undefined ">
           <div class="flex items-center border px-3 py-2 rounded-lg gap-3 bg-white flex-grow focus-within:ring-2 focus-within:ring-lab-color"><img class="w-4 h-4" src="img/search-icon.svg" alt="Search"/>
-            <input class="flex-grow outline-none leading-none bg-transparent" id="searchBar" type="text"/>
-          </div>
+            <input class="flex-grow outline-none leading-none bg-transparent" id="searchBar" type="text" placeholder="Город, клуб, фамилия"/>
+          </div><img class="filters-panel-button h-6 w-6" src="img/filters-icon.svg"/>
         </div>
         <div class="flex flex-wrap gap-2 pt-4">
           <div class="px-2 py-2 font-semibold text-xs bg-slate-200 text-lab-black rounded-lg shadow-sm leading-none border w-fit">Рейтинг 200-400<span class="ml-2 text-lab-black">✕</span></div>
@@ -382,7 +382,7 @@
             <div class="text-lab-black text-sm font-semibold leading-none">Вторник, 25 ноября</div>
           </div>
         </div>
-        <div class="flex flex-wrap gap-2 justify-center">
+        <div class="flex flex-wrap justify-center gap-2">
           <div class="shadow-lg rounded-lg overflow-hidden mb-2 max-w-sm">
             <div class="flex pl-3 pr-4 pt-3 pb-2 gap-2 bg-white border-b border-black-10 items-center"><span class="w-10 text-sm text-center shrink-0">11:30</span>
               <div class="flex px-1 py-0.5 text-xs text-white font-bold items-center justify-center shrink-0 rounded min-w-6 bg-avatar-gradient h-5">XDF</div>
@@ -474,12 +474,12 @@
           </div>
         </div>
       </div>
-      <div class="tab-content hidden pt-[88px] pb-[50px] bg-white" id="calendar">
-        <div class="p-4"> 
+      <div class="tab-content hidden bg-white pb-[50px] pt-[88px]" id="calendar" >
+        <div class="p-4">
           <div class="flex items-center justify-between gap-4  undefined ">
             <div class="flex items-center border px-3 py-2 rounded-lg gap-3 bg-white flex-grow focus-within:ring-2 focus-within:ring-lab-color"><img class="w-4 h-4" src="img/search-icon.svg" alt="Search"/>
-              <input class="flex-grow outline-none leading-none bg-transparent" id="searchBar" type="text"/>
-            </div>
+              <input class="flex-grow outline-none leading-none bg-transparent" id="searchBar" type="text" placeholder="Город, клуб, фамилия"/>
+            </div><img class="filters-panel-button h-6 w-6" src="img/filters-icon.svg"/>
           </div>
           <div class="flex flex-wrap gap-2 pt-4">
             <div class="px-2 py-2 font-semibold text-xs bg-slate-100 text-lab-black rounded-lg shadow-sm leading-none border w-fit">Рейтинг 200-400<span class="ml-2 text-lab-black">✕</span></div>
@@ -501,7 +501,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">14</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -509,7 +509,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">15</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -517,7 +517,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700 font-bold">16</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -525,7 +525,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">17</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -541,7 +541,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">19</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -549,7 +549,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">20</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
             </div>
@@ -559,7 +559,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">21</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -567,7 +567,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">22</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -575,7 +575,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">23</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -583,15 +583,15 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">24</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
                 <div class="text-sm text-lab-black-50">Пт</div>
                 <div class="w-10 h-10 flex justify-center">
-                  <div class="w-9 h-9 flex items-center justify-center rounded-full bg-lab-color text-white">25</div>
+                  <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">25</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -599,7 +599,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">26</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -607,7 +607,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">27</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span>
                 </div>
               </div>
             </div>
@@ -617,7 +617,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">28</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -625,7 +625,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">29</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -633,7 +633,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">30</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -641,13 +641,13 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">31</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5">
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="bg-page-background p-4 z-1 flex flex-col items-center">
+        <div class="z-1 flex flex-col items-center bg-page-background p-4">
           <div class="justify-center items-center gap-2 py-4 inline-flex m-auto w-full"><img class="w-4 h-4" src="img/calendar.svg" alt="Календарь"/>
             <div class="text-lab-black text-sm font-semibold leading-none">Воскресенье, 20 ноября</div>
           </div>
@@ -763,27 +763,27 @@
       </div>
     </nav>
     <script>
-      document.querySelectorAll('.tournaments-panel-tab').forEach(tab => {
-        tab.addEventListener('click', function() {
-          let activeTab = this.getAttribute('data-tab');
+      document.querySelectorAll('.tournaments-panel-tab').forEach((tab) => {
+        tab.addEventListener('click', function () {
+          let activeTab = this.getAttribute('data-tab')
       
           // Скрываем все контенты
-          document.querySelectorAll('.tab-content').forEach(content => {
-            content.classList.add('hidden');
-          });
+          document.querySelectorAll('.tab-content').forEach((content) => {
+            content.classList.add('hidden')
+          })
       
           // Показываем контент активной вкладки
-          document.getElementById(activeTab).classList.remove('hidden');
+          document.getElementById(activeTab).classList.remove('hidden')
       
           // Удаляем класс active-tab у всех вкладок
-          document.querySelectorAll('.tournaments-panel-tab').forEach(tab => {
-            tab.classList.remove('font-bold', 'border-b-2', 'border-solid', 'border-t-2', 'border-t-transparent', 'text-blue-950', 'border-lab-color');
-          });
+          document.querySelectorAll('.tournaments-panel-tab').forEach((tab) => {
+            tab.classList.remove('font-bold', 'border-b-2', 'border-solid', 'border-t-2', 'border-t-transparent', 'text-blue-950', 'border-lab-color')
+          })
       
           // Добавляем класс active-tab к активной вкладке
-          this.classList.add('font-bold', 'border-b-2', 'border-solid', 'border-t-2', 'border-t-transparent', 'text-blue-950', 'border-lab-color');
-        });
-      });
+          this.classList.add('font-bold', 'border-b-2', 'border-solid', 'border-t-2', 'border-t-transparent', 'text-blue-950', 'border-lab-color')
+        })
+      })
     </script>
   </body>
 </html>

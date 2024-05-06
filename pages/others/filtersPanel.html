@@ -8,15 +8,15 @@
     <base href="../../">
   </head>
   <body>
-    <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-20"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
-        <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
-      <div class="flex items-center shrink-0 justify-end gap-4 ml-4 flex-grow"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="inline-flex gap-2"> 
-          <div class="text-right hidden sm:block">
-            <div class="text-xs text-slate-700 font-semibold">nikpol</div>
-            <div class="flex items-center justify-end"><img class="h-3 w-3 relative z-10" src="img/gradient-star.svg" alt="Rating"/><img class="h-3 w-3 -ml-4 relative" src="img/gradient-star.svg" alt="Rating"/><span class="text-lab-color font-bold text-xs ml-1">1376</span></div>
+    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+        <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
+      <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
+          <div class="hidden text-right xs:block">
+            <div class="text-xs font-semibold text-slate-700">nikpol</div>
+            <div class="flex items-center justify-end"><img class="relative z-10 h-3 w-3" src="img/gradient-star.svg" alt="Rating"/><img class="relative -ml-4 h-3 w-3" src="img/gradient-star.svg" alt="Rating"/><span class="ml-1 text-xs font-bold text-lab-color">1376</span></div>
           </div>
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full undefined flex justify-center items-center relative shrink-0" id="avatarContainer">
-            <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(32px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
+          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
         <div class="max-w-full min-w-56 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-[1000] absolute top-10 right-4 drop-shadow-around"><a class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1" href="pages/others/profile.html">
@@ -46,22 +46,22 @@
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        var avatar = document.getElementById('avatarContainer');
-        var userMenu = document.getElementById('userMenu');
-        avatar.addEventListener('click', function() {
-          userMenu.classList.toggle('hidden');
-        });
-      });
+        var avatar = document.getElementById('avatarContainer')
+        var userMenu = document.getElementById('userMenu')
+        avatar.addEventListener('click', function () {
+          userMenu.classList.toggle('hidden')
+        })
+      })
     </script>
-    <div class="fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20"></div>
-    <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-      <div class="pb-2">
-        <div class="w-20 h-1 bg-slate-200 rounded-xl mx-auto mt-2 relative"></div>
-      </div>
-      <div class="flex-1 overflow-y-auto scroll-smooth no-scrollbar">
+    <div class="filters-panel">
+      <div class="fixed inset-0 z-20 bg-gray-900 bg-opacity-50 backdrop-blur-sm"></div>
+      <div class="absolute bottom-0 left-0 z-30 flex max-h-90 w-full flex-col rounded-t-2xl bg-white">
+        <div class="pb-2"></div>
+        <div class="relative mx-auto mt-2 h-1 w-20 rounded-xl bg-slate-200"></div>
+        <div class="no-scrollbar flex-1 overflow-y-auto scroll-smooth"></div>
         <div class="p-4">
           <div class="flex flex-col pb-2">
-            <label class="font-bold pb-3">Ограничение по рейтингу</label>
+            <label class="pb-3 font-bold">Ограничение по рейтингу</label>
             <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth undefined">
               <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
                 <div>Все турниры</div>
@@ -76,10 +76,9 @@
                 <div>&gt;</div>
               </div>
             </div>
-            <div class="mt-2 flex gap-2 py-2 items-center"><span class="text-sm">С минимальным рейтингом игрока</span>
-              <div class="flex"></div>
-              <input class="border border-lab-black-30 p-2 undefined rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="от"/><span>—</span>
-              <input class="border border-lab-black-30 p-2 undefined rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="до"/>
+            <div class="mt-2 flex items-center gap-2 py-2"><span class="text-sm">С минимальным рейтингом игрока</span>
+              <input class="border border-lab-black-30 p-2 w-14 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="от"/><span>—</span>
+              <input class="border border-lab-black-30 p-2 w-14 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="до"/>
             </div>
           </div>
         </div>
@@ -142,9 +141,20 @@
             <div class="px-2 py-2 font-semibold text-xs bg-lab-color text-white rounded-lg shadow-sm leading-none border w-fit">Санкт-Петербург<span class="ml-2 text-white">✕</span></div>
           </div>
         </div>
-        <div class="w-full text-center p-4">  
+        <div class="w-full p-4 text-center">
+          <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Применить</button>
         </div>
       </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const backdrop = document.querySelector('.backdrop-blur-sm')
+          const filtersPanel = document.querySelector('.filters-panel')
+        
+          backdrop.addEventListener('click', function () {
+            filtersPanel.classList.add('hidden')
+          })
+        })
+      </script>
     </div>
     <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
       <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundgame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>

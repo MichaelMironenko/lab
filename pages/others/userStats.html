@@ -8,15 +8,15 @@
     <base href="../../">
   </head>
   <body class="bg-page-background pt-12 pb-32 px-2 xs:px-3 sm:px-4 ">
-    <div class="bg-white px-3 py-2 flex justify-between items-center fixed inset-x-0 top-0 border-b z-20"><a class="flex items-center flex-shrink min-w-30 space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
-        <div class="flex flex-col flex-shrink min-w-0 items-start gap-1"><span class="text-xs tracking-tight leading-4 xs:truncate xs:overflow-visible xs:leading-none text-slate-500 xs:text-ellipsis xs:whitespace-nowrap whitespace-normal w-full">Нижний Новгород</span></div></a>
-      <div class="flex items-center shrink-0 justify-end gap-4 ml-4 flex-grow"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute px-1 rounded-full text-xxs -top-1 -right-1 inline-block text-center text-white bg-lab-red">99</span></a><a class="inline-flex gap-2"> 
-          <div class="text-right hidden sm:block">
-            <div class="text-xs text-slate-700 font-semibold">nikpol</div>
-            <div class="flex items-center justify-end"><img class="h-3 w-3 relative z-10" src="img/gradient-star.svg" alt="Rating"/><img class="h-3 w-3 -ml-4 relative" src="img/gradient-star.svg" alt="Rating"/><span class="text-lab-color font-bold text-xs ml-1">1376</span></div>
+    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+        <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
+      <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
+          <div class="hidden text-right xs:block">
+            <div class="text-xs font-semibold text-slate-700">nikpol</div>
+            <div class="flex items-center justify-end"><img class="relative z-10 h-3 w-3" src="img/gradient-star.svg" alt="Rating"/><img class="relative -ml-4 h-3 w-3" src="img/gradient-star.svg" alt="Rating"/><span class="ml-1 text-xs font-bold text-lab-color">1376</span></div>
           </div>
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full undefined flex justify-center items-center relative shrink-0" id="avatarContainer">
-            <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(32px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
+          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
         <div class="max-w-full min-w-56 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-[1000] absolute top-10 right-4 drop-shadow-around"><a class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1" href="pages/others/profile.html">
@@ -46,12 +46,12 @@
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        var avatar = document.getElementById('avatarContainer');
-        var userMenu = document.getElementById('userMenu');
-        avatar.addEventListener('click', function() {
-          userMenu.classList.toggle('hidden');
-        });
-      });
+        var avatar = document.getElementById('avatarContainer')
+        var userMenu = document.getElementById('userMenu')
+        avatar.addEventListener('click', function () {
+          userMenu.classList.toggle('hidden')
+        })
+      })
     </script>
     <div class="py-4 flex gap-3 items-center justify-between"><a href="pages/others/profile.html"> <img class="rotate-90 shrink-0" src="img/expand-arrow.svg" alt=""/></a>
       <h1 class="text-lg text-center grow mr-8 max-w-[calc(100%-24px)]">Кудайбердиев Адилет Кудайбердиевич</h1>
@@ -670,72 +670,72 @@
         </div>
       </div>
       <div class="pt-2 border-b border-lab-black-10">
-        <div class="flex items-center gap-4 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="text-lab-black-50 whitespace-nowrap">14 мин</span>
+        <div class="flex items-center gap-3 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">14 мин</span>
         </div>
-        <div class="flex-grow flex flex-col justify-center py-3 w-full flex-shrink gap-3">
-          <div class="flex justify-between gap-2 items-center">
-            <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full undefined flex justify-center items-center relative shrink-0" id="avatarContainer">
-              <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
-            </div><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap font-semibold">Клейменов А. 
+        <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
+          <div class="flex items-center justify-between gap-2">
+            <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+              <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">НП</span></div>
+            </div><span class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm font-semibold">Клейменов А. 
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">420</div>
-              </div><span class="text-lab-green text-xs text-center leading-none flex-shrink-0">+14.2</span></span><span class="text-sm text-center w-4 flex-shrink-0 font-semibold">2</span>
+              </div><span class="flex-shrink-0 text-center text-xs leading-none text-lab-green">+14.2</span></span><span class="w-4 flex-shrink-0 text-center text-sm font-semibold">2</span>
           </div>
-          <div class="flex justify-between gap-2 items-center">
-            <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full undefined flex justify-center items-center relative shrink-0" id="avatarContainer">
-              <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
-            </div><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap text-slate-500">Преображенский В. 
+          <div class="flex items-center justify-between gap-2">
+            <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+              <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">НП</span></div>
+            </div><span class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm text-slate-500">Преображенский В. 
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">389</div>
-              </div><span class="text-lab-red text-xs text-center leading-none flex-shrink-0">-11.5</span></span><span class="text-sm text-center w-4 flex-shrink-0 text-slate-500">1</span>
+              </div><span class="flex-shrink-0 text-center text-xs leading-none text-lab-red">-11.5</span></span><span class="w-4 flex-shrink-0 text-center text-sm text-slate-500">1</span>
           </div>
         </div>
       </div>
       <div class="pt-2 border-b border-lab-black-10">
-        <div class="flex items-center gap-4 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="text-lab-black-50 whitespace-nowrap">12 мин</span>
+        <div class="flex items-center gap-3 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">12 мин</span>
         </div>
-        <div class="flex-grow flex flex-col justify-center py-3 w-full flex-shrink gap-3">
-          <div class="flex justify-between gap-2 items-center">
+        <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
+          <div class="flex items-center justify-between gap-2">
             <div class="flex -space-x-2">
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full undefined flex justify-center items-center relative shrink-0" id="avatarContainer">
-                <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
+              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">НП</span></div>
               </div>
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full undefined flex justify-center items-center relative shrink-0" id="avatarContainer">
-                <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">АК</span></div>
+              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">АК</span></div>
               </div>
-            </div><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap text-slate-500">Гуреев А. / Богданова С. 
+            </div><span class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm text-slate-500">Гуреев А. / Богданова С. 
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">420</div>
-              </div><span class="text-lab-red text-xs text-center leading-none flex-shrink-0">-14.2</span></span><span class="text-sm text-center w-4 flex-shrink-0 text-slate-500">1</span>
+              </div><span class="flex-shrink-0 text-center text-xs leading-none text-lab-red">-14.2</span></span><span class="w-4 flex-shrink-0 text-center text-sm text-slate-500">1</span>
           </div>
-          <div class="flex justify-between gap-2 items-center">
+          <div class="flex items-center justify-between gap-2">
             <div class="flex -space-x-2">
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full undefined flex justify-center items-center relative shrink-0" id="avatarContainer">
-                <div class="bg-lab-blue rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">НП</span></div>
+              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">НП</span></div>
               </div>
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] bg-gradient-to-r  from-green-600 to-sky-500 rounded-full undefined flex justify-center items-center relative shrink-0" id="avatarContainer">
-                <div class="bg-lab-yellow rounded-full flex justify-center border border-white border-opacity-75 items-center w-full h-full"><span class="text-[calc(24px/2.66)] text-white w-full font-bold text-center leading-none">АК</span></div>
+              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">АК</span></div>
               </div>
-            </div><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap font-semibold">Кобыляцкий С. / Кобыляцкая Л. 
+            </div><span class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm font-semibold">Кобыляцкий С. / Кобыляцкая Л. 
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">389</div>
-              </div><span class="text-lab-green text-xs text-center leading-none flex-shrink-0">+11.5</span></span><span class="text-sm text-center w-4 flex-shrink-0 font-semibold">2</span>
+              </div><span class="flex-shrink-0 text-center text-xs leading-none text-lab-green">+11.5</span></span><span class="w-4 flex-shrink-0 text-center text-sm font-semibold">2</span>
           </div>
         </div>
       </div>
       <div class="pt-2">
-        <div class="flex items-center gap-4 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="text-lab-black-50 whitespace-nowrap">13 мин</span>
+        <div class="flex items-center gap-3 text-xs 420:text-sm"><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">13 мин</span>
         </div>
-        <div class="flex-grow flex flex-col justify-center py-3 w-full flex-shrink gap-3">
-          <div class="flex justify-between gap-2 items-center"><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap font-semibold">Бадминтонные пауки 
+        <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
+          <div class="flex items-center justify-between gap-2"><span class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm font-semibold">Бадминтонные пауки 
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">420</div>
-              </div><span class="text-lab-green text-xs text-center leading-none flex-shrink-0">+14.2</span></span><span class="text-sm text-center w-4 flex-shrink-0 font-semibold">2</span>
+              </div><span class="flex-shrink-0 text-center text-xs leading-none text-lab-green">+14.2</span></span><span class="w-4 flex-shrink-0 text-center text-sm font-semibold">2</span>
           </div>
-          <div class="flex justify-between gap-2 items-center"><span class="inline-flex items-center text-sm min-w-0 gap-1 flex-grow flex-shrink flex-wrap text-slate-500">Подмосковные ястребы 
+          <div class="flex items-center justify-between gap-2"><span class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm text-slate-500">Подмосковные ястребы 
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">389</div>
-              </div><span class="text-lab-red text-xs text-center leading-none flex-shrink-0">-11.5</span></span><span class="text-sm text-center w-4 flex-shrink-0 text-slate-500">1</span>
+              </div><span class="flex-shrink-0 text-center text-xs leading-none text-lab-red">-11.5</span></span><span class="w-4 flex-shrink-0 text-center text-sm text-slate-500">1</span>
           </div>
         </div>
       </div>
