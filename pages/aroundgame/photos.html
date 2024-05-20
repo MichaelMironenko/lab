@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Журнал событий</title>
+    <title>Фотографии</title>
     <link href="../../styles.css" rel="stylesheet">
     <base href="../../">
   </head>
-  <body>
+  <body class="bg-page-background pb-28 pt-12">
     <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
@@ -53,60 +53,29 @@
         })
       })
     </script>
-    <div class="bg-white pt-16 pb-16">
-      <div class="flex justify-between gap-3 items-center px-4">
-        <h1 class="text-lg leading-6 text-lab-black text-center flex-grow font-bold">Майский фестиваль микстов в Сколково</h1>
+    <div class="flex items-center justify-between gap-3 p-4">
+      <h1>Фотографии</h1><img class="size-6" src="img/plus-button.svg" alt="">
+    </div>
+    <div class="flex items-center justify-between gap-4  px-4 ">
+      <div class="flex items-center border px-3 py-2 rounded-lg gap-3 bg-white flex-grow focus-within:ring-2 focus-within:ring-lab-color"><img class="w-4 h-4" src="img/search-icon.svg" alt="Search"/>
+        <input class="flex-grow outline-none leading-none bg-transparent" id="searchBar" type="text" placeholder="Имя, клуб, фотограф"/>
+      </div><img class="filters-panel-button h-6 w-6" src="img/filters-icon.svg"/>
+    </div>
+    <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth mt-4 px-4">
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+        <div>🔥 Самые интересные</div>
       </div>
-      <div class="flex gap-4 items-center pt-3 justify-center text-sm">
-        <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XDF+</div>
-        <div class="flex gap-2"><img class="w-4 aspect-square" src="img/calendar.svg" alt="Дата"><span>11 сентября, четверг</span></div><span>12:30</span>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>Новые</div>
       </div>
-      <table class="w-full divide-y divide-gray-200 mt-4 text-sm">
-        <thead class="bg-gray-50">
-          <tr>
-            <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Пользователь</th>
-            <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Время</th>
-            <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Статус</th>
-          </tr>
-        </thead>
-        <tbody class="bg-white divide-y divide-gray-200">
-          <tr class="even:bg-white odd:bg-slate-100">
-            <td class="px-3 py-2"> <a href="player">Администратор (TTL-Savel)</a></td>
-            <td class="px-3 py-2 text-lab-black">11 сентября 13:35</td>
-            <td class="px-3 py-2  text-lab-black"><span class="font-semibold">Завершен</span>
-            </td>
-          </tr>
-          <tr class="even:bg-white odd:bg-slate-100">
-            <td class="px-3 py-2"> <a href="player">Администратор (TTL-Savel)</a></td>
-            <td class="px-3 py-2 text-lab-black">10 сентября 23:35</td>
-            <td class="px-3 py-2  text-lab-black"><span class="font-semibold">Отмена</span>
-              <div class="text-lab-green">+100₽</div>
-            </td>
-          </tr>
-          <tr class="even:bg-white odd:bg-slate-100">
-            <td class="px-3 py-2"> <a href="player">Администратор (TTL-Savel)</a></td>
-            <td class="px-3 py-2 text-lab-black">11 сентября 12:00</td>
-            <td class="px-3 py-2  text-lab-black"><span class="font-semibold">Online</span>
-            </td>
-          </tr>
-          <tr class="even:bg-white odd:bg-slate-100">
-            <td class="px-3 py-2"> <a href="player">Администратор (TTL-Savel)</a></td>
-            <td class="px-3 py-2 text-lab-black">9 сентября 10:15</td>
-            <td class="px-3 py-2  text-lab-black"><span class="font-semibold">Более 16 чел</span>
-            </td>
-          </tr>
-          <tr class="even:bg-white odd:bg-slate-100">
-            <td class="px-3 py-2"> <a href="player">Администратор (TTL-Savel)</a></td>
-            <td class="px-3 py-2 text-lab-black">5 сентября 21:30</td>
-            <td class="px-3 py-2  text-lab-black"><span class="font-semibold">Создание</span>
-              <div class="text-lab-black-50">-200₽</div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+        <div>Самые комментируемые</div>
+      </div>
+    </div>
+    <div class="mb-4 grid grid-cols-3 gap-1 420:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 mt-4"><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundGame/photo.html"> <img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a>
     </div>
     <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
-      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7" src="img/tabbar/tournaments-active.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundgame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
+      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundgame.html"><img class="mx-auto h-7 w-7" src="img/tabbar/around-game-active.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
       </div>
     </nav>
   </body>
