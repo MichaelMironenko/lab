@@ -1,0 +1,74 @@
+include /components/atoms/avatar.pug
+include /components/atoms/button.pug
+include /components/atoms/userRating.pug
+include /components/tabBar.pug
+include /components/topBar.pug
+include /components/block.pug
+include /components/modal.pug
+include /components/rentCourt.pug
+include /components/clubCard.pug
+include /components/newsCard.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Корты
+        link(href="../../styles.css" rel="stylesheet")
+        base(href="../../")
+    body.bg-page-background.pt-16.pb-32(class="px-[3vw]")
+        +topBar
+
+            
+        +block 
+            +rentCourt(true)
+
+        +block('Клубы', { href:"pages/courts/clubs.html", text:'Все'})  
+            - 
+                var clubs = [
+                { image: 'dynamic-img/club-1.jpg', rating: '4.4', reviewsCount: '22', title: 'Территория мяча и грача', location: {city: 'Нижний Новгород'}, courtsCount: '14', services: ['wifi', 'shower', 'cafe'] },
+                { image: 'dynamic-img/club-2.jpg', rating: '4.7', reviewsCount: '18', title: 'Короли корта', location: {metro: 'Славянский бульвар', metroColor: 'blue-700'}, courtsCount: '8', services: ['wifi', 'ac', 'parking'] },
+                { image: 'dynamic-img/club-3.jpg', rating: '4.5', reviewsCount: '34', title: 'Ракетка и мяч', location: {city: 'Санкт-Петербург'}, courtsCount: '12', services: ['market', 'wifi', 'water'] },
+                { image: 'dynamic-img/club-4.jpg', rating: '4.9', reviewsCount: '29', title: 'Сет и матч', location: {metro: 'Чертановская', metroColor: 'slate-300'}, courtsCount: '10', services: ['ac', 'shower', 'cafe'] },
+                { image: 'dynamic-img/club-1.jpg', rating: '4.6', reviewsCount: '15', title: 'Волейбольная лига', location: {city: 'Казань'}, courtsCount: '9', services: ['wifi', 'water', 'parking'] }
+                ]
+
+            .flex.overflow-x-auto.no-scrollbar.-m-4.p-4.gap-2
+                each club in clubs
+                    +clubCard(club.image, club.rating, club.reviewsCount, club.title, club.location, club.courtsCount, club.services)
+            div.text-sm.text-lab-black-50.mt-4.leading-tight Вашего зала нет в списке? 
+                a(href="addclub.html") Добавьте его бесплатно
+
+        +block('Новости клубов', { href:"pages/others/news.html", text:'Все'})
+            .flex.flex-col.gap-4
+                +newsCard('23 мая состоится студенческий турнир Москвы', 'dynamic-img/club-1.jpg', 'Naten ЮГ Ярославль', '4 апреля 16:30', '#')
+                +newsCard('Открытые тренировки для всех желающих', '', 'Спартак М', '12 мая 18:00', '#')
+                +newsCard('Финал городского чемпионата по баскетболу', 'dynamic-img/club-3.jpg', 'Динамо СПб', '20 июня 20:00', '#')
+
+        +block()
+            .flex.items-center.gap-3.justify-between
+                h2 Новые спарринг-партнёры в #[span(class="underline text-lab-color underline-offset-4 decoration-dotted") Нижнем Новгороде]
+                a(href="pages/courts/sparrings.html") Все 
+            .flex.-mx-4.p-4.overflow-x-auto.no-scrollbar.gap-3
+                mixin player(avatarClass, name, rating, isRatingActive, ratingRange, locations)
+                    a(href="player.html").flex.flex-col.w-32.items-center.gap-2.shrink-0
+                        +avatar(avatarClass, name[0] + name.split(' ')[1][0], 64)
+                        div.text-center.shrink-0.max-h-16.grow
+                            div.text-sm.text-lab-color.font-semibold.mb-1 #{name}
+                            +userRating(rating, isRatingActive)
+                        div.self-start.grow.max-h-24
+                            div.self-start.my-2
+                                img(src="img/star-lab-color.svg").inline.align-middle.opacity-50.saturate-50
+                                span.inline.align-middle.ml-2.text-sm #{ratingRange}
+                            div.flex.self-start.gap-2.items-start
+                                img(src="img/location-icon.svg" class="mt-0.5").opacity-50.saturate-50
+                                div.text-sm.flex.flex-col
+                                    each loc in locations
+                                        span #{loc}   
+                +player('bg-lab-yellow', 'Алексей Борисов', 532, true, '100-300', ['Naten-1905', 'Фили-ТТ'])
+                +player('bg-lab-green', 'Мария Иванова', 428, true, '200-400', ['Space Химки', 'Выхино', 'NATEN-Юг'])
+                +player('bg-lab-red', 'Игорь Смирнов', 600, true, '500-700', ['Impact-Луж', 'NewTon', 'WC Митино'])
+            
+
+        +tabBar('Корты')

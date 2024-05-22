@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>История игр</title>
     <link href="../../styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&amp;display=swap">
     <base href="../../">
   </head>
   <body class="bg-page-background pb-28 pt-12">
@@ -55,29 +56,44 @@
     </script>
     <h1 class="p-4">История игр</h1>
     <div class="px-4">
-      <div class="flex flex-wrap gap-x-4">
-        <div class="flex w-full items-center gap-3 pb-3 sm:w-[49%]">
-          <h3 class="w-14 shrink-0 text-15">Игрок 1</h3>
-          <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Фамилия первого игрока"/>
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-8">
+        <div class="flex items-center gap-3 pb-4">
+          <h3 class="w-14 shrink-0 text-15">Клуб</h3>
+          <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Название"/>
         </div>
-        <div class="flex w-full items-center gap-3 pb-3 sm:w-[49%]">
-          <h3 class="w-14 shrink-0 text-15">Игрок 2</h3>
-          <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Фамилия второго игрока"/>
+        <div class="flex items-center gap-3 pb-4">
+          <h3 class="w-14 shrink-0 text-15">Турнир</h3>
+          <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Название"/>
         </div>
       </div>
-      <div class="flex items-center gap-3 pb-3">
+      <div class="flex items-center gap-3 pb-4">
         <h3 class="shrink-0 text-15 xs:w-14">Дата</h3>
-        <input class="min-w-32 rounded-lg border border-lab-black-30 p-2" id="dateInput" type="text" placeholder="От" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
-        <input class="min-w-32 rounded-lg border border-lab-black-30 p-2" id="dateInput" type="text" placeholder="До" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
+        <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="От" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
+        <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="До" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
       </div>
-      <div class="flex items-center gap-3 pb-3">
-        <h3 class="w-14 shrink-0 text-15">Клуб</h3>
-        <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Название"/>
+      <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] sm:gap-2">
+        <div class="px-3 pt-2 bg-lab-color-10 rounded-lg mb-2">
+          <div class="pb-2 text-lab-black">Первая пара *</div>
+          <div class="flex w-full items-center gap-3 pb-3">
+            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Игрок 1"/>
+          </div>
+          <div class="flex w-full items-center gap-3 pb-3">
+            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Игрок 2"/>
+          </div>
+        </div>
+        <div class="text-center text-lab-black-50 my-auto text-sm pb-2">против</div>
+        <div class="px-3 pt-2 bg-lab-color-10 rounded-lg mb-2">
+          <div class="pb-2 text-lab-black">Вторая пара *</div>
+          <div class="flex w-full items-center gap-3 pb-3">
+            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Игрок 1"/>
+          </div>
+          <div class="flex w-full items-center gap-3 pb-3">
+            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Игрок 2"/>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center gap-3 pb-3">
-        <h3 class="w-14 shrink-0 text-15">Турнир</h3>
-        <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Название"/>
-      </div>
+      <div class="text-xs text-lab-black leading-tight pb-4">* для одиночных игр оставьте поле второго игрока пустым</div>
+      <button class="w-full  w-1/2 mb-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Найти</button>
     </div>
     <div class="bg-white p-4">
       <div class="pt-2 border-b border-lab-black-10">
@@ -161,7 +177,7 @@
       </div>
     </div>
     <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
-      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7" src="img/tabbar/players-active.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundgame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
+      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7" src="img/tabbar/players-active.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
       </div>
     </nav>
   </body>

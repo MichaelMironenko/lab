@@ -1,0 +1,5 @@
+mixin stepper(baseValue)
+    div(class="flex items-center bg-lab-color-10 rounded-lg h-9")
+        button#decrease-courts(class="size-10 text-xl text-lab-black-50") –
+        span#courts-count(class="w-4 h-3.5 text-center leading-none")= baseValue
+        button#increase-courts(class="size-10 text-xl text-lab-black-50") +

@@ -1,0 +1,88 @@
+include /components/tabBar.pug
+include /components/topBar.pug
+include /components/comments.pug
+include /components/atoms/tournamentTypeBadge.pug
+include /components/atoms/breadcrumbs.pug
+include /components/photoTiles.pug
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Фото
+    link(href='../../styles.css' rel='stylesheet')
+      link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap")
+    base(href='../../')
+  body.bg-page-background.pb-16.pt-12
+    +topBar
+    +breadcrumbs([{name: 'Фото', href: 'pages/aroundGame/photos.html'}, {name: 'Турнир <320 Space Химки'}])
+
+    #image-container.w-full.overflow-hidden
+    script.
+      const imgContainer = document.querySelector('#image-container')
+      const img = new Image()
+      img.src = 'dynamic-img/photo-3.jpeg'
+      img.onload = function () {
+        const height = img.height * (window.innerWidth / img.width)
+        imgContainer.style.height = Math.min(height, window.innerWidth * 1.25) + 'px'
+        imgContainer.style.background = `url(${img.src}) center / cover no-repeat`
+      }
+
+    .bg-white.px-4.pt-4
+      h1.text-base Победители
+      .flex.gap-4.border-b.pb-4.pt-2.text-sm
+        .flex.items-center.gap-1
+          img.size-5.cursor-pointer.opacity-50.saturate-50(
+            src='img/heart-empty.svg',
+            onclick='toggleHeart(this)'
+          )
+          span 13
+        .flex.items-center.gap-1
+          img.size-5.opacity-50.saturate-50(src='img/views.svg')
+          span 1534
+        .flex.items-center.gap-1
+          img.size-5.opacity-50.saturate-50(src='img/comment.svg')
+          span 3
+      script.
+        function toggleHeart(img) {
+          const heartEmpty = 'img/heart-empty.svg'
+          const heartFill = 'img/heart-fill.svg'
+          if (img.src.includes(heartEmpty)) {
+            img.src = heartFill
+            img.classList.remove('opacity-50', 'saturate-50') // Удаляем классы для heart-empty
+          } else {
+            img.src = heartEmpty
+            img.classList.add('opacity-50', 'saturate-50') // Добавляем классы обратно для heart-empty
+          }
+        }
+      .mt-4.flex.flex-col.gap-4.border-b.pb-4
+        .flex.items-center.gap-3.text-sm
+          img.size-4.opacity-50.saturate-50(src='img/cup.svg' alt='')
+          a(href="pages/tournaments/singleTournament.html") 
+            +tournamentTypeBadge('XDF') 
+            span.inline.ml-2 Naten-Юг
+            span.inline.ml-2 22.03.2024 12:30
+        .flex.items-center.gap-3.text-sm
+          img.size-4.opacity-50.saturate-50(src='img/home.svg' alt='')
+          a(href='pages/courts/singleCourt.html') Naten-Юг
+        .flex.items-center.gap-3.text-sm
+          img.size-4.opacity-50.saturate-50(src='img/calendar.svg' alt='')
+          span 22.03.2024
+        .flex.items-start.gap-3.text-sm
+          img.size-4.opacity-50.saturate-50(src='img/player.svg' alt='' class="mt-0.5")
+          div
+            a.inline(href='pages/others/profile.html') Василий Артемьев, 
+            |
+            a.inline(href='pages/others/profile.html') Артур Скобелев, 
+            |
+            a.inline(href='pages/others/profile.html') Игорь Маслов
+        .flex.items-center.gap-3.text-sm
+          img.size-4.opacity-50.saturate-50(src='img/camera.svg' alt='')
+          a(href='pages/others/profile.html') Юрий Любимов
+
+    +comments
+    .bg-white.px-4 
+      h2.border-t.py-4 Похожие фотографии 
+    +photoTiles
+    +tabBar('Вокруг игры')

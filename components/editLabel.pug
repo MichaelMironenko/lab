@@ -1,0 +1,5 @@
+mixin editLabel(label, hint, oneRow, extraClass)
+    .flex.items-center.gap-2(class=`${oneRow ? 'w-full' : 'mb-2'} ${extraClass}`)
+        label(for=label class="block text-lab-black-50 ")= label 
+        if hint 
+            img(id=hint, src="img/info.svg").size-4

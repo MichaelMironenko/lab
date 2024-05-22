@@ -1,0 +1,41 @@
+include /components/atoms/button.pug
+include /components/atoms/stepper.pug
+include /components/tabBar.pug
+include /components/topBar.pug
+include /components/modal.pug
+include /components/rentCourt.pug
+include /components/rentCard.pug
+include /components/inputs/select.pug
+include /components/inputs/input.pug
+include /components/inputs/switch.pug
+include /components/editLabel.pug
+include /components/selectedCourts.pug
+include /components/bottomPanel.pug
+include /components/bookingData.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Бронирование отменено
+        link(href="../../styles.css" rel="stylesheet")
+        base(href="../../")
+    body.bg-white.mt-12.pb-32
+        +topBar
+        .p-4
+            div.text-lg.text-center.grow.font-bold.text-lab-black.pb-4 Бронирование №123456 отменено
+            +bookingData
+            div.pb-4.text-wrap
+                img(src="img/price.svg", alt="").inline-block.align-middle.saturate-50.opacity-50
+                span.inline-block.align-middle.ml-2 2000₽ 
+                span.inline-block.align-middle.py-1.px-2.bg-lab-green.text-white.ml-2.text-sm.rounded-md.font-semibold Оплачено
+                span.inline-block.align-middle.py-1.px-2.bg-lab-yellow.text-white.ml-2.text-sm.rounded-md.font-semibold.text-nowrap Оплата в клубе
+                span.inline-block.align-middle.py-1.px-2.bg-lab-color.text-white.ml-2.text-sm.rounded-md.font-semibold Абонемент
+
+            p Возврат средств в размере 50% будет осуществлен на ваш счет в течение 3 рабочих дней, но обычно быстрее.
+
+            p В случае возникновения вопросов, обращайтесь в нашу службу поддержки: 
+                a(href="mailto:info@badminton4u.ru") info@badminton4u.ru
+
+            a(href="pages/courts/rentCourt.html").p-4.w-full.block.font-bold.text-center Забронировать другой корт

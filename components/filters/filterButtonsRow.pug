@@ -1,0 +1,6 @@
+include filterButton.pug
+
+mixin filterButtonsRow(buttons, padding, extraClass, fontSize)
+  div(class=`flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth ${extraClass}` + (padding ? ' px-4' : ''))
+    each button in buttons
+      +filterButton(button.label, button.active, button.number, button.deleteButton, fontSize)

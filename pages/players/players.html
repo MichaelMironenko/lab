@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Игроки</title>
     <link href="../../styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&amp;display=swap">
     <base href="../../">
   </head>
   <body class="bg-page-background pb-28 pt-12">
@@ -53,7 +54,7 @@
         })
       })
     </script>
-    <div class="pb-safe-extra-panel fixed z-20 flex w-full justify-between overflow-hidden rounded-t-2xl border-b bg-white text-lab-black drop-shadow-top">
+    <div class="pb-safe-extra-panel fixed z-20 flex w-full justify-between overflow-hidden rounded-t-2xl border bg-white text-lab-black drop-shadow-top">
       <div class="players-panel-tab tab font-bold bg-lab-color-10 flex w-1/2 grow cursor-pointer items-center justify-center gap-1.5 py-3 " data-tab="rating"><img class="false aspect-square h-4 w-4" src="img/star-lab-color.svg">
         <div class="py-1 leading-none">Рейтинг ЛАБ</div>
       </div>
@@ -61,25 +62,35 @@
         <div class="py-1 leading-none">Статистика</div>
       </div>
     </div>
+    <!-- Статистика Buttons-->
+    <div class="stat-buttons fixed z-30 w-full bottom-24 mb-4">
+      <div class="flex justify-center border-lab-color border-2 w-fit mx-auto rounded-full overflow-hidden drop-shadow-around">
+        <button class="stat-btn bg-white pr-3 pl-4 py-1 text-lab-color text-sm">★ S</button>
+        <button class="stat-btn px-2 py-2 text-white bg-lab-color border-x text-sm">★★ D</button>
+        <button class="stat-btn bg-white pr-4 pl-3 py-1 text-lab-color text-sm">★★★ T</button>
+      </div>
+    </div>
+    <div class="tab-content hidden" id="stats"></div>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const tabs = document.querySelectorAll('.players-panel-tab')
         tabs.forEach((tab) => {
           tab.addEventListener('click', function () {
-            // Убираем активный класс и стили со всех вкладок
             tabs.forEach((t) => {
-              ;['font-bold', 'bg-lab-color-10', 'opacity-75', 'saturate-100'].forEach((className) => t.classList.remove(className))
-              // Добавляем неактивным иконкам стили
+              const img = t.querySelector('img')
+              if (t.classList.contains('font-bold')) t.classList.remove('font-bold')
+              if (t.classList.contains('bg-lab-color-10')) t.classList.remove('bg-lab-color-10')
               t.classList.add('opacity-75', 'saturate-50')
-              t.querySelector('img').classList.add('opacity-75', 'saturate-50')
+              if (img) {
+                img.classList.add('opacity-75', 'saturate-50')
+              }
             })
-      
-            // Добавляем активный класс к нажатой вкладке и удаляем стили неактивности с иконки
-            ;['font-bold', 'bg-lab-color-10', 'saturate-100'].forEach((className) => this.classList.add(className))
-            this.classList.remove('opacity-75', 'saturate-50') // Удаляем полупрозрачность и насыщенность
-            this.querySelector('img').classList.remove('opacity-75', 'saturate-50')
-      
-            // Обновляем контент в соответствии с выбранной вкладкой
+            this.classList.add('font-bold', 'bg-lab-color-10')
+            this.classList.remove('opacity-75', 'saturate-50')
+            const img = this.querySelector('img')
+            if (img) {
+              img.classList.remove('opacity-75', 'saturate-50')
+            }
             const tabId = this.getAttribute('data-tab')
             const tabContent = document.querySelectorAll('.tab-content')
             tabContent.forEach((content) => {
@@ -93,13 +104,17 @@
         })
       })
       
+      
+      
+      
+      
     </script>
     <div class="tab-content mx-auto w-screen" id="rating">
       <div class="flex items-center justify-between px-4 pt-4">
         <h1>Рейтинг ЛАБ</h1>
         <div class="flex" id="toggleButtons">
-          <button class="w-14 rounded-l-md bg-lab-color py-1 font-bold text-white">★ S</button>
-          <button class="w-16 rounded-r-md border bg-white py-1 text-lab-color">★★ D</button>
+          <button class="w-12 rounded-l-md py-1 bg-white font-bold text-sm text-lab-color">★ S</button>
+          <button class="w-14 rounded-r-md bg-lab-color border py-1 text-sm text-white">★★ D</button>
         </div>
       </div>
       <script>
@@ -807,7 +822,27 @@
       </table>
     </div>
     <div class="tab-content mx-auto hidden w-screen bg-page-background p-4" id="stats">
-      <h1 class="pb-4">Статистика</h1>
+      <div class="flex items-center justify-between py-4 sticky top-12 bg-page-background -mt-4 z-30">
+        <h1>Статистика</h1>
+        <div class="flex" id="toggleButtonsStats">
+          <button class="w-12 rounded-l-md py-1 bg-white font-bold text-sm text-lab-color">★ S</button>
+          <button class="w-14 rounded-r-md bg-lab-color border py-1 text-sm text-white">★★ D</button>
+        </div>
+      </div>
+      <script>
+        document.getElementById('toggleButtonsStats').addEventListener('click', function (event) {
+          if (event.target.tagName === 'BUTTON' || event.target.parentNode.tagName === 'BUTTON') {
+            const buttons = document.querySelectorAll('#toggleButtonsStats button')
+            buttons.forEach((button) => {
+              button.classList.remove('bg-lab-color', 'text-white', 'font-bold')
+              button.classList.add('text-lab-color', 'bg-white', 'border')
+            })
+            const targetButton = event.target.tagName === 'BUTTON' ? event.target : event.target.parentNode
+            targetButton.classList.add('bg-lab-color', 'text-white', 'font-bold')
+            targetButton.classList.remove('text-lab-color', 'bg-white', 'border')
+          }
+        })
+      </script>
       <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
         <div class="flex justify-between items-center mb-4 gap-4">
           <div class="flex gap-2 items-center">
@@ -1076,7 +1111,7 @@
       </div>
     </div>
     <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
-      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7" src="img/tabbar/players-active.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundgame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
+      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7" src="img/tabbar/players-active.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
       </div>
     </nav>
   </body>

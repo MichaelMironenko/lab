@@ -1,0 +1,66 @@
+include /components/atoms/button.pug
+include /components/atoms/stepper.pug
+include /components/tabBar.pug
+include /components/topBar.pug
+include /components/rentCourt.pug
+include /components/rentCard.pug
+include /components/inputs/select.pug
+include /components/inputs/input.pug
+include /components/inputs/switch.pug
+include /components/editLabel.pug
+include /components/selectedCourts.pug
+include /components/bottomPanel.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Данные бронирования
+        link(href="../../styles.css" rel="stylesheet")
+        base(href="../../")
+    body.bg-white.mt-12.pb-32
+        +topBar
+        .py-4.px-2.flex.gap-3.bg-white
+            img(src="img/expand-arrow.svg", alt="").rotate-90
+            div.text-lg.text-center.grow.font-bold.text-lab-black.-ml-6 Уточните данные бронирования
+        .px-4
+            +rentCard({photo: 'dynamic-img/club-1.jpg', logo: 'dynamic-img/naten-logo.png', name: 'Naten-ЮГ', stars: '4.4', reviews: '12', metro: 'Юго-Западная', metroColor: 'lab-red', distance: '1,8', courts: '6', services: ['wifi', 'shower', 'parking']}, slots, '', 'card1')
+        .p-4.max-w-420.w-full.mx-auto
+            .flex.gap-2.items-center.my-4
+                img(src="img/calendar.svg").saturate-50.opacity-60
+                div.leading-none 11 сентября, четверг
+            +selectedCourts
+            .flex.gap-2.items-center.pt-6
+                +editLabel('Ваше имя', '', true)
+                +input('')
+            .text-xs.text-right.text-lab-red Заполните имя
+            .flex.gap-2.items-center.pt-2
+                +editLabel('Телефон', '', true)
+                +input('', '', '', 'phone')
+            .text-xs.text-right.text-transparent Введите корректный телефон
+            .flex.gap-2.items-center.pt-2
+                +editLabel('Email', '', true)
+                +input('', '', '', 'email')
+            .text-xs.text-right.text-lab-red Введите корректный email
+            +switch('Абонемент', 'py-4' ,'text-lab-black-50')
+            +editLabel('Аренда ракетки')
+            div    
+                div.flex.gap-3.justify-between.items-center
+                    div
+                        span.text-sm Любительская
+                        div.text-sm.text-lab-black-50 150₽/шт 
+                    +stepper(0)
+                div.flex.gap-3.pt-4.justify-between.items-center
+                    div
+                        span.text-sm Полупрофи
+                        div.text-sm.text-lab-black-50 200₽/шт 
+                    +stepper(0)
+        +bottomPanel
+            .flex.justify-between.gap-3
+                div 
+                    div.text-lab-black-50.text-sm.text-nowrap Общая стоимость
+                    span.text-lab-color.text-lg.font-bold 1800&#8202;₽
+                +button('Далее к оплате', 'default', 'white', 'bg-lab-color', 'max-w-[60%]', '', 'pages/courts/bookingPayment.html')
+
+

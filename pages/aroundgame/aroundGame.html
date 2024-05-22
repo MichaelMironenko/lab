@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вокруг игры</title>
     <link href="../../styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&amp;display=swap">
     <base href="../../">
   </head>
   <body class="bg-page-background pb-28 pt-12">
@@ -418,7 +419,7 @@
         <div class="flex justify-between items-center mb-4 gap-4">
           <div class="flex gap-2 items-center">
             <h2 class="leading-tight">Последние видео</h2>
-          </div><a class="text-lab-color leading-none" href="allvideos">Все</a>
+          </div><a class="text-lab-color leading-none" href="pages/aroundGame/videos.html">Все</a>
         </div>
         <div class="flex overflow-x-auto -ml-4 -mr-4 px-4 gap-2 no-scrollbar">
           <div class="flex flex-col gap-2 flex-shrink-0 w-[80%] max-w-[300px]">
@@ -452,9 +453,133 @@
             }
         }
       </script>
+      <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
+        <div class="flex justify-between items-center mb-4 gap-4">
+          <div class="flex gap-2 items-center">
+            <h2 class="leading-tight">Рейтинги игроков на сайте</h2>
+          </div>
+        </div>
+        <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth -mx-4 mb-2 px-4">
+          <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+            <div>Одиночный</div>
+          </div>
+          <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+            <div>Парный</div>
+          </div>
+        </div>
+        <div class="divider mb-4"></div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">0-100</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[7%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[7%] w-[18%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">7%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">100-199</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[22%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[22%] w-[33%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">15%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">200-299</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[37%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[37%] w-[59%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">26%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">300-399</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[48%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[48%] w-[51%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">27%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">400-499</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[37%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[37%] w-[55%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">25%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">500-599</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[18%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[18%] w-[25%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">12%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">600-699</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[11%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[11%] w-[18%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">8%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">700-799</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[3%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[3%] w-[14%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">5%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">800-899</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[3%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[3%] w-[3%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">2%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">900-999</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[1%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[1%] w-[1%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">1%</div>
+        </div>
+        <div class="flex items-center mb-2">
+          <div class="w-20 text-gray-700 whitespace-nowrap shrink-0 text-sm">&gt;1000</div>
+          <div class="w-full h-6 relative bg-gray-200 rounded-md overflow-hidden">
+            <div class="bg-lab-purple h-full absolute left-0 w-[1%]"> </div>
+            <div class="bg-lab-blue h-full absolute rounded-r-md left-[1%] w-[1%]"></div>
+          </div>
+          <div class="ml-2 w-10 text-lab-black text-sm text-right">1%</div>
+        </div>
+        <div class="flex justify-start mt-4">
+          <div class="flex items-center mr-4">
+            <div class="w-4 h-4 bg-lab-purple mr-2 rounded-md"></div><span class="text-gray-700">Женщины</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-4 h-4 bg-lab-blue mr-2 rounded-md"></div><span class="text-gray-700">Мужчины</span>
+          </div>
+        </div>
+        <script>
+          const buttons = document.querySelectorAll('button')
+          buttons.forEach(button => {
+            button.addEventListener('click', () => {
+              buttons.forEach(btn => btn.classList.remove('bg-blue-600', 'text-white'))
+              button.classList.add('bg-blue-600', 'text-white')
+            })
+          })
+          
+          
+          
+        </script>
+      </div>
     </div>
     <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
-      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundgame.html"><img class="mx-auto h-7 w-7" src="img/tabbar/around-game-active.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
+      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7" src="img/tabbar/around-game-active.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
       </div>
     </nav>
   </body>
