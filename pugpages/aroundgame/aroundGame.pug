@@ -44,7 +44,7 @@ html(lang='ru')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title Вокруг игры
     link(href='../../styles.css' rel='stylesheet')
-    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap")
     base(href='../../')
   body.bg-page-background.pb-28.pt-12
     +topBar
@@ -160,7 +160,7 @@ html(lang='ru')
 
       ];
     .p-2
-      +block('Форум', { href: 'pages/aroundGame/forum.html', text: 'Все' })
+      +block('Форум', { href: 'pages/aroundgame/forum.html', text: 'Все' })
         +filterButtonsRow([ { label: 'Жизнь на сайте', active: true }, { label: 'Новости', active: false }, { label: 'Турниры', active: false }, { label: 'Статьи', active: false }], 'padding', '-mx-4 mb-2')
 
         .mt-4.grid.grid-cols-1.gap-8(class='md:grid-cols-2 lg:grid-cols-3')
@@ -182,7 +182,7 @@ html(lang='ru')
               if index >= 6 && index < 9
                 +forumRow(topic)
 
-      +block('Справочник', {href: 'pages/aroundGame/articles.html', text: 'Все статьи'})
+      +block('Справочник', {href: 'pages/aroundgame/articles.html', text: 'Все статьи'})
         .sm.grid.grid-cols-1.gap-8(class='sm:grid-cols-2 lg:grid-cols-3')
           // На всех экранах показываем первые 3 статьи
           .flex.flex-col.gap-4
@@ -202,7 +202,7 @@ html(lang='ru')
               if index >= 6 && index < 9
                 +articleRow(article)
 
-      +block('Опросы', {href: 'pages/aroundGame/polls.html', text: 'Все'})
+      +block('Опросы', {href: 'pages/aroundgame/polls.html', text: 'Все'})
         .no-scrollbar.-m-4.flex.gap-3.overflow-x-auto.p-4
           +poll('Вы знаете правила бадминтона?', [{text: 'Реально их прочитал(а) и раз в несколько лет перечитываю', percent: 36}, {text: 'Думаю, что знаю, потому что я давно играю', percent: 48}, {text: 'Я их не знаю, но знаю, что они есть', percent: 13}, {text: 'Я их не знаю, но знаю того, кто их знает и каждый раз спрашиваю', percent: 3}], false)
           +poll('Какой формат игры в бадминтон предпочитаете?', [{text: 'Одиночные', percent: 30}, {text: 'Парные', percent: 45, selected: true}, {text: 'Командные', percent: 25}], 'poll1')
@@ -280,27 +280,27 @@ html(lang='ru')
           })
         each rating in ratings
           div.flex.items-center.mb-2
-            div.w-20.text-gray-700.whitespace-nowrap.shrink-0.text-sm= rating.range
-            div.w-full.h-6.relative.bg-gray-200.rounded-md.overflow-hidden
-              div(class="bg-lab-purple h-full absolute left-0" class=`w-[${rating.relativeWomen}%]`) 
-              div(class=`bg-lab-blue h-full absolute rounded-r-md left-[${rating.relativeWomen}%]` class=`w-[${rating.relativeMen}%]`)
-            div.ml-2.w-10.text-lab-black.text-sm.text-right= `${rating.total}%`
+            div.w-20.text-lab-black.whitespace-nowrap.shrink-0.text-sm= rating.range
+            div.w-full.h-6.relative.overflow-hidden
+              div(class="bg-lab-purple h-full absolute rounded-l left-0" class=`w-[${rating.relativeWomen}%]`) 
+              div(class=`bg-lab-blue h-full absolute rounded-r left-[${rating.relativeWomen}%]` class=`w-[${rating.relativeMen}%]`)
+            div.ml-2.w-12.text-lab-black.text-sm.text-right= `${rating.total}%`
         div.flex.justify-start.mt-4
           div.flex.items-center.mr-4
-            div.w-4.h-4.bg-lab-purple.mr-2.rounded-md
-            span.text-gray-700 Женщины
+            div.w-4.h-4.bg-lab-purple.mr-2.rounded
+            span.text-sm.text-gray-700 Женщины
           div.flex.items-center
-            div.w-4.h-4.bg-lab-blue.mr-2.rounded-md
-            span.text-gray-700 Мужчины
+            div.w-4.h-4.bg-lab-blue.mr-2.rounded
+            span.text-sm.text-gray-700 Мужчины
 
-        script.
-          const buttons = document.querySelectorAll('button')
-          buttons.forEach(button => {
-            button.addEventListener('click', () => {
-              buttons.forEach(btn => btn.classList.remove('bg-blue-600', 'text-white'))
-              button.classList.add('bg-blue-600', 'text-white')
-            })
-          })
+        //- script.
+        //-   const buttons = document.querySelectorAll('button')
+        //-   buttons.forEach(button => {
+        //-     button.addEventListener('click', () => {
+        //-       buttons.forEach(btn => btn.classList.remove('bg-blue-600', 'text-white'))
+        //-       button.classList.add('bg-blue-600', 'text-white')
+        //-     })
+        //-   })
 
 
 

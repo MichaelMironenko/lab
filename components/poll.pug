@@ -1,9 +1,11 @@
-mixin poll(question, answers, voted, shadow=true, link=true)
+mixin poll(question, answers, voted, shadow=true, link=true, description)
   .poll.h-fit.min-w-72.overflow-hidden.rounded-lg.bg-white(
     data-id=id,
     class=(voted ? 'voted ' : 'not-voted ') + (shadow ? 'drop-shadow-around' : 'border')
   )
-    .bg-lab-color.px-4.py-3.text-15.font-semibold.text-white #{ question }
+    .bg-lab-color.px-4.py-3.text-white 
+      .text-15.font-semibold.mb-2 #{ question }
+      .text-xs.font-normal.opacity-70 Выберите один из вариантов ответа
     form
       each answer, index in answers
         if !voted
@@ -26,7 +28,7 @@ mixin poll(question, answers, voted, shadow=true, link=true)
     .flex.items-center.justify-between.px-4.py-3
       span.text-xs.text-lab-black-50 Голосов: 15
       if link
-        a.flex.items-center.gap-1(href='pages/aroundGame/poll.html')
+        a.flex.items-center.gap-1(href='pages/aroundgame/poll.html')
           img.size-4(src='img/comment-outlined.svg')
           span.text-xs.leading-none.text-lab-black-50 25
       else 

@@ -10,9 +10,9 @@
   <body>
     <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
-      <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
+      <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
-            <div class="text-xs font-semibold text-slate-700">nikpol</div>
+            <div class="text-xs font-semibold text-lab-color">nikpol</div>
             <div class="flex items-center justify-end"><img class="relative z-10 h-3 w-3" src="img/gradient-star.svg" alt="Rating"/><img class="relative -ml-4 h-3 w-3" src="img/gradient-star.svg" alt="Rating"/><span class="ml-1 text-xs font-bold text-lab-color">1376</span></div>
           </div>
           <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
@@ -399,9 +399,10 @@
         <div class="flex justify-between gap-3 items-center">
           <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XDF+</div>
           <h1 class="text-lg leading-6 text-lab-black flex-grow font-bold">Майский фестиваль микстов в Сколково</h1>
-          <button class="cursor-pointer shrink-0 undefined" id="bookmarkButton" onclick="toggleBookmark()"><img class="w-6 h-6" id="bookmarkIcon" src="img/bookmark-empty.svg" alt="Bookmark"/>
+          <button class="cursor-pointer shrink-0 undefined" id="bookmarkButton" onclick="toggleBookmark()"><img class="size-6" id="bookmarkIcon" src="img/bookmark-empty.svg" alt="Bookmark"/>
           </button>
-          <script>var isActive = false; // Начальное состояние закладки
+          <script>
+            var isActive = false; // Начальное состояние закладки
             function toggleBookmark() {
               isActive = !isActive; // Переключаем состояние
               var bookmarkIcon = document.getElementById('bookmarkIcon');
@@ -525,7 +526,7 @@
                   <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
                     <div><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-purple flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АН</span></div>
+                          <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АН</span></div>
                         </div></a></div>
                   </div>
                   <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Алексей Николаев</a>
@@ -621,7 +622,7 @@
                   <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
                     <div><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ДС</span></div>
+                          <div class="bg-lab-purple flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ДС</span></div>
                         </div></a></div>
                     <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer"><img class="h-full w-full rounded-full object-cover" src="dynamic-img/user-2.jpg" alt="Аватар"/>
@@ -660,7 +661,7 @@
                   <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
                     <div><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-purple flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">СР</span></div>
+                          <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">СР</span></div>
                         </div></a></div>
                   </div>
                   <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Сергей Романов</a>
@@ -721,7 +722,7 @@
                   <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
                     <div><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">НК</span></div>
+                          <div class="bg-lab-purple flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">НК</span></div>
                         </div></a></div>
                   </div>
                   <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Никита Кузнецов</a>
@@ -767,7 +768,7 @@
                   <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
                     <div><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АН</span></div>
+                          <div class="bg-lab-purple flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АН</span></div>
                         </div></a></div>
                   </div>
                   <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Алексей Николаев</a>
@@ -801,7 +802,7 @@
                   <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
                     <div><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">МД</span></div>
+                          <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">МД</span></div>
                         </div></a></div>
                   </div>
                   <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Михаил Дмитриев</a>
@@ -838,7 +839,7 @@
                         </div></a></div>
                     <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-purple flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АП</span></div>
+                          <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АП</span></div>
                         </div></a></div>
                   </div>
                   <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">Е. Иванов</span><span class="text-xs text-lab-color h-4 ml-1">★789</span></a><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined"><span class="text-lab-color">А. Петров</span><span class="text-xs text-lab-color h-4 ml-1">★654</span></a>
@@ -874,7 +875,7 @@
                   <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
                     <div><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ДС</span></div>
+                          <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ДС</span></div>
                         </div></a></div>
                     <div class="-mt-2 sm:mr-0 sm:mt-0 sm:-ml-2"><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer"><img class="h-full w-full rounded-full object-cover" src="dynamic-img/user-2.jpg" alt="Аватар"/>
@@ -950,7 +951,7 @@
                   <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
                     <div><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АФ</span></div>
+                          <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АФ</span></div>
                         </div></a></div>
                   </div>
                   <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Андрей Федоров</a>
@@ -984,7 +985,7 @@
                   <div class="flex flex-col shrink-0 items-centerl sm:flex-row flex-shrink-0">
                     <div><a href="https://badminton4u.ru/players/undefined?type=d">
                         <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                          <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">НК</span></div>
+                          <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">НК</span></div>
                         </div></a></div>
                   </div>
                   <div class="block sm:hidden"><a class="py-0.5 block" href="https://badminton4u.ru/players/undefined">Никита Кузнецов</a>
@@ -1246,21 +1247,7 @@
           </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('1')"/>
           <div class="absolute bottom-0" id="commentMenu-1">
             <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="action-menu-container" data-action="hide">
-              <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span>
-                </div>
+              <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span></a>
               </div>
               <script>
                 document.addEventListener('click', function (e) {
@@ -1349,21 +1336,7 @@
             </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('2')"/>
             <div class="absolute bottom-0" id="commentMenu-2">
               <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="action-menu-container" data-action="hide">
-                <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span>
-                  </div>
+                <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span></a>
                 </div>
                 <script>
                   document.addEventListener('click', function (e) {
@@ -1444,21 +1417,7 @@
               </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('3')"/>
               <div class="absolute bottom-0" id="commentMenu-3">
                 <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="action-menu-container" data-action="hide">
-                  <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span>
-                    </div>
+                  <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span></a>
                   </div>
                   <script>
                     document.addEventListener('click', function (e) {
@@ -1511,9 +1470,10 @@
       <div class="p-4 bg-white rounded-lg">
         <div class="flex justify-between gap-3 items-center">
           <h1 class="text-lg leading-6 text-lab-black text-center flex-grow font-bold">Майский фестиваль микстов в Сколково</h1>
-          <button class="cursor-pointer shrink-0 undefined" id="bookmarkButton" onclick="toggleBookmark()"><img class="w-6 h-6" id="bookmarkIcon" src="img/bookmark-empty.svg" alt="Bookmark"/>
+          <button class="cursor-pointer shrink-0 undefined" id="bookmarkButton" onclick="toggleBookmark()"><img class="size-6" id="bookmarkIcon" src="img/bookmark-empty.svg" alt="Bookmark"/>
           </button>
-          <script>var isActive = false; // Начальное состояние закладки
+          <script>
+            var isActive = false; // Начальное состояние закладки
             function toggleBookmark() {
               isActive = !isActive; // Переключаем состояние
               var bookmarkIcon = document.getElementById('bookmarkIcon');
@@ -1530,7 +1490,7 @@
         <div class="flex justify-between items-center mb-4 gap-4">
           <div class="flex gap-2 items-center">
             <h2 class="leading-tight">Трансляции</h2>
-          </div><a class="text-lab-color leading-none" href="pages/aroundGame/videos.html">Все</a>
+          </div><a class="text-lab-color leading-none" href="pages/aroundgame/videos.html">Все</a>
         </div>
         <div class="flex overflow-x-auto -ml-4 -mr-4 px-4 gap-2 no-scrollbar">
           <div class="flex flex-col gap-2 flex-shrink-0 w-[80%] max-w-[300px]">
@@ -1553,15 +1513,15 @@
       </div>
       <script>
         function toggleHeart(img) {
-            const heartEmpty = 'img/heart-empty.svg';
-            const heartFill = 'img/heart-fill.svg';
-            if(img.src.includes(heartEmpty)) {
-                img.src = heartFill;
-                img.classList.remove('opacity-50', 'saturate-50'); // Удаляем классы для heart-empty
-            } else {
-                img.src = heartEmpty;
-                img.classList.add('opacity-50', 'saturate-50'); // Добавляем классы обратно для heart-empty
-            }
+          const heartEmpty = 'img/heart-empty.svg';
+          const heartFill = 'img/heart-fill.svg';
+          if(img.src.includes(heartEmpty)) {
+            img.src = heartFill;
+            img.classList.remove('opacity-50', 'saturate-50'); // Удаляем классы для heart-empty
+          } else {
+            img.src = heartEmpty;
+            img.classList.add('opacity-50', 'saturate-50'); // Добавляем классы обратно для heart-empty
+          }
         }
       </script>
       <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
@@ -1933,21 +1893,7 @@
           </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('1')"/>
           <div class="absolute bottom-0" id="commentMenu-1">
             <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="action-menu-container" data-action="hide">
-              <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span>
-                </div>
+              <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span></a>
               </div>
               <script>
                 document.addEventListener('click', function (e) {
@@ -2036,21 +1982,7 @@
             </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('2')"/>
             <div class="absolute bottom-0" id="commentMenu-2">
               <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="action-menu-container" data-action="hide">
-                <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span>
-                  </div>
+                <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span></a>
                 </div>
                 <script>
                   document.addEventListener('click', function (e) {
@@ -2131,21 +2063,7 @@
               </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('3')"/>
               <div class="absolute bottom-0" id="commentMenu-3">
                 <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="action-menu-container" data-action="hide">
-                  <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span>
-                    </div>
+                  <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span></a>
                   </div>
                   <script>
                     document.addEventListener('click', function (e) {
@@ -2198,9 +2116,10 @@
       <div class="p-4 bg-white rounded-lg">
         <div class="flex justify-between gap-3 items-center">
           <h1 class="text-lg leading-6 text-lab-black text-center flex-grow font-bold">Майский фестиваль микстов в Сколково</h1>
-          <button class="cursor-pointer shrink-0 undefined" id="bookmarkButton" onclick="toggleBookmark()"><img class="w-6 h-6" id="bookmarkIcon" src="img/bookmark-empty.svg" alt="Bookmark"/>
+          <button class="cursor-pointer shrink-0 undefined" id="bookmarkButton" onclick="toggleBookmark()"><img class="size-6" id="bookmarkIcon" src="img/bookmark-empty.svg" alt="Bookmark"/>
           </button>
-          <script>var isActive = false; // Начальное состояние закладки
+          <script>
+            var isActive = false; // Начальное состояние закладки
             function toggleBookmark() {
               isActive = !isActive; // Переключаем состояние
               var bookmarkIcon = document.getElementById('bookmarkIcon');
@@ -2609,7 +2528,7 @@
         <div class="flex justify-between items-center mb-4 gap-4">
           <div class="flex gap-2 items-center">
             <h2 class="leading-tight">Фото с турнира</h2>
-          </div><a class="text-lab-color leading-none" href="pages/aroundGame/photos.html">Все</a>
+          </div><a class="text-lab-color leading-none" href="pages/aroundgame/photos.html">Все</a>
         </div>
         <div class="no-scrollbar -ml-4 -mr-4 flex gap-2 overflow-x-auto px-4">
           <div class="flex flex-shrink-0 flex-col gap-2 w-[60%] max-w-[180px]"><img class="aspect-square rounded-lg object-cover" src="dynamic-img/photo-1.jpg" alt="photo 1"/>
@@ -2646,7 +2565,7 @@
         <div class="flex justify-between items-center mb-4 gap-4">
           <div class="flex gap-2 items-center">
             <h2 class="leading-tight">Видео с турнира</h2>
-          </div><a class="text-lab-color leading-none" href="pages/aroundGame/videos.html">Все</a>
+          </div><a class="text-lab-color leading-none" href="pages/aroundgame/videos.html">Все</a>
         </div>
         <div class="flex overflow-x-auto -ml-4 -mr-4 px-4 gap-2 no-scrollbar">
           <div class="flex flex-col gap-2 flex-shrink-0 w-[80%] max-w-[300px]">
@@ -2669,15 +2588,15 @@
       </div>
       <script>
         function toggleHeart(img) {
-            const heartEmpty = 'img/heart-empty.svg';
-            const heartFill = 'img/heart-fill.svg';
-            if(img.src.includes(heartEmpty)) {
-                img.src = heartFill;
-                img.classList.remove('opacity-50', 'saturate-50'); // Удаляем классы для heart-empty
-            } else {
-                img.src = heartEmpty;
-                img.classList.add('opacity-50', 'saturate-50'); // Добавляем классы обратно для heart-empty
-            }
+          const heartEmpty = 'img/heart-empty.svg';
+          const heartFill = 'img/heart-fill.svg';
+          if(img.src.includes(heartEmpty)) {
+            img.src = heartFill;
+            img.classList.remove('opacity-50', 'saturate-50'); // Удаляем классы для heart-empty
+          } else {
+            img.src = heartEmpty;
+            img.classList.add('opacity-50', 'saturate-50'); // Добавляем классы обратно для heart-empty
+          }
         }
       </script>
       <div class="p-4 bg-white rounded-lg overflow-hidden  undefined">
@@ -2784,21 +2703,7 @@
           </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('1')"/>
           <div class="absolute bottom-0" id="commentMenu-1">
             <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="action-menu-container" data-action="hide">
-              <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span>
-                </div>
-                <div class="flex items-center gap-3 px-4 py-3" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span>
-                </div>
+              <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span></a>
               </div>
               <script>
                 document.addEventListener('click', function (e) {
@@ -2887,21 +2792,7 @@
             </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('2')"/>
             <div class="absolute bottom-0" id="commentMenu-2">
               <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="action-menu-container" data-action="hide">
-                <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span>
-                  </div>
-                  <div class="flex items-center gap-3 px-4 py-3" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span>
-                  </div>
+                <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span></a>
                 </div>
                 <script>
                   document.addEventListener('click', function (e) {
@@ -2982,21 +2873,7 @@
               </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('3')"/>
               <div class="absolute bottom-0" id="commentMenu-3">
                 <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="action-menu-container" data-action="hide">
-                  <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span>
-                    </div>
-                    <div class="flex items-center gap-3 px-4 py-3" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span>
-                    </div>
+                  <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"/><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"/><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"/><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"/><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"/><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"/><span class="flex-1 text-lab-red">Удалить</span></a>
                   </div>
                   <script>
                     document.addEventListener('click', function (e) {

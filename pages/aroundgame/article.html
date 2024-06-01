@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новинки</title>
+    <title>Редактирование фото</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
+    <base href="../../">
   </head>
-  <base href="../../">
-  <body class="bg-page-background pb-16 pt-12">
+  <body class="bg-page-background py-12 pb-32">
     <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
@@ -54,88 +54,68 @@
         })
       })
     </script>
-    <div class="px-4 pt-4">
-      <h1 class="pb-4">Новинки </h1>
-      <div class="flex items-center justify-between gap-4  undefined ">
-        <div class="flex items-center border px-3 py-2 rounded-lg gap-3 bg-white flex-grow focus-within:ring-2 focus-within:ring-lab-color"><img class="w-4 h-4" src="img/search-icon.svg" alt="Search"/>
-          <input class="flex-grow outline-none leading-none bg-transparent" id="searchBar" type="text" placeholder="Название"/>
-        </div><img class="filters-panel-button h-6 w-6" src="img/filters-icon.svg"/>
+    <nav class="p-4">
+      <ol class="flex items-center gap-1">
+        <li class="inline"><a class="text-xs whitespace-nowrap font-medium" href="pages/aroundgame/articles.html">Справочник</a>
+        </li><img class="-rotate-90 size-4" src="img/expand-arrow.svg" alt="Стрелка"/>
+        <li class="inline"><a class="text-xs whitespace-nowrap font-medium" href="pages/aroundgame/articlesSection.html">Программа проведения турниров Tournament Manager</a>
+        </li><img class="-rotate-90 size-4" src="img/expand-arrow.svg" alt="Стрелка"/>
+        <li class="inline">
+          <div class="text-xs text-lab-black-50 font-medium leading-tight">Номера кортов и время игр</div>
+        </li>
+      </ol>
+    </nav>
+    <div class="gap-4 bg-white sm: sm:flex">
+      <div class="hidden p-4 sm:block sm:w-1/4">
+        <h1 class="pb-4 text-base">Программа проведения турниров Tournament Manager</h1>
+        <h2 class="my-4 text-sm"><a class="text-lab-black" href="pages/aroundgame/article.html">Как получить программу</a></h2>
+        <h2 class="mb-4 mt-8 text-sm"><a class="text-lab-black" href="pages/aroundgame/article.html">Как установить программу</a></h2>
+        <h2 class="mb-4 mt-8 text-sm"><a class="text-lab-black" href="pages/aroundgame/article.html">Как провести турнир</a></h2>
+        <h2 class="mb-4 mt-8 text-sm"><a class="text-lab-black" href="pages/aroundgame/article.html">Схемы-форматы турниров</a></h2>
+        <div class="px-2 text-xs text-lab-black">
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Создание новой схемы</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Круговая (каждый с каждым)</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Круговая (в два круга)</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Сетки (приложение 11 или 12)</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Группы + Сетка</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Группы + два финала</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Группы + финалы вкруг с зачетом</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Группа + матч за 3 место и финал</a></h3>
+        </div>
+        <h2 class="mb-4 mt-8 text-sm"><a class="text-lab-black" href="pages/aroundgame/article.html">Регистрация участников</a></h2>
+        <div class="px-2 text-xs text-lab-black">
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Добавление новичков без рейтинга</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Изменение рейтинга для участника</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Вставка списка игроков</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Добавление игроков "вне зачета"</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Выбор типа рейтинга</a></h3>
+        </div>
+        <h2 class="mb-4 mt-8 text-sm"><a class="text-lab-black" href="pages/aroundgame/article.html">Настройки турнира</a></h2>
+        <div class="px-2 text-xs text-lab-black">
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Расчет призового фонда</a></h3>
+        </div>
+        <h2 class="mb-4 mt-8 text-sm"><a class="text-lab-black" href="pages/aroundgame/article.html">Процесс турнира</a></h2>
+        <div class="px-2 text-xs text-lab-black">
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Онлайн-трансляция на сайте</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Настройка народного монитора</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Вызов встреч</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Запись результатов встреч</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Редактирование и отмена матчей</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Запись технической победы</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Номера кортов и время игр</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Снятие по ходу турнира</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Включение в 1-й финал</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Игра "вне турнира" (на рейтинг)</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Отправка результатов</a></h3>
+          <h3><a class="text-lab-black" href="pages/aroundgame/article.html">Проведение двух и более турниров одновременно</a></h3>
+        </div>
       </div>
-      <button class="sort-button   pt-4  " type="button"><img class="inline align-middle size-4" src="img/sort.svg"/><span class="inline align-middle text-lab-color text-sm ml-1">По новизне</span></button>
-      <div class="menu-container fixed hidden inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="undefined" data-action="hide">
-        <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center text-lab-color">По новизне</span></a><a class="flex items-center gap-3 px-4 py-3 border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center text-lab-color">По популярности</span></a><a class="flex items-center gap-3 px-4 py-3" href="#" data-action="hide"><span class="flex-1 text-center text-lab-color">По количеству просмотров</span></a>
-        </div>
-        <script>
-          document.addEventListener('click', function (e) {
-            if (e.target.dataset.action === 'hide') {
-              var menuContainer = document.querySelector('.menu-container'); 
-              if (menuContainer) {
-                menuContainer.style.display = 'none';
-              }
-            }
-          });
-        </script>
+      <div class="lg bg-white p-4 w-3/4">
+        <h1 class="pb-4">Номера кортов и время игр</h1>
+        <p>В поле “Играется”, а также на картинке этапа турнира для каждой встречи отображаются номер активного корта и прошедшее с начала встречи время.</p>
+        <p>В поле “В ожидании” отображается длительность ожидания следующей встречи участником</p>
+        <p>Примеры на картинках ниже:</p><img class="my-2" src="https://rttf.ru/public/img/content/25/07-013.png" alt=""><img class="my-2" src="https://rttf.ru/public/img/content/25/07-014.png" alt="">
       </div>
-      <script>
-        document.querySelector('.sort-button').addEventListener('click', function () {
-            var menuContainer = document.querySelector('.menu-container'); 
-            if (menuContainer.style.display === 'none' || menuContainer.style.display === '') {
-                menuContainer.style.display = 'block';
-            } else {
-                menuContainer.style.display = 'none';
-            }
-        });
-      </script>
-    </div>
-    <div class="grid grid-cols-1 576:grid-cols-2 576:px-4 md:grid-cols-3 lg:grid-cols-4  gap-4 py-4"><a class="flex flex-col gap-2 flex-shrink-0 w-full" href="pages/aroundgame/video.html">
-        <div class="video-preview w-full" data-url="https://www.youtube.com/watch?v=T40FmAJKIP0"><img class="w-full h-full" src="http://img.youtube.com/vi/T40FmAJKIP0/mqdefault.jpg" alt="1000% веселых моментов в бадминтоне">
-        </div>
-        <div class="px-4 576:px-0"> 
-          <div class="text-sm font-bold text-lab-black">1000% веселых моментов в бадминтоне</div>
-          <div class="flex items-center gap-3 text-sm mt-2">
-            <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span class="text-lab-black-50">371</span></div><span class="text-lab-black-50">Сегодня, 10:34</span>
-          </div>
-        </div></a><a class="flex flex-col gap-2 flex-shrink-0 w-full" href="pages/aroundgame/video.html">
-        <div class="video-preview w-full" data-url="https://www.youtube.com/watch?v=hUO0jn7TvNw"><img class="w-full h-full" src="http://img.youtube.com/vi/hUO0jn7TvNw/mqdefault.jpg" alt="Эпические навыки - Кевин Санджая Сукамульджо">
-        </div>
-        <div class="px-4 576:px-0"> 
-          <div class="text-sm font-bold text-lab-black">Эпические навыки - Кевин Санджая Сукамульджо</div>
-          <div class="flex items-center gap-3 text-sm mt-2">
-            <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span class="text-lab-black-50">25</span></div><span class="text-lab-black-50">Вчера</span>
-          </div>
-        </div></a><a class="flex flex-col gap-2 flex-shrink-0 w-full" href="pages/aroundgame/video.html">
-        <div class="video-preview w-full" data-url="https://www.youtube.com/watch?v=iBbTqVTq8qk"><img class="w-full h-full" src="http://img.youtube.com/vi/iBbTqVTq8qk/mqdefault.jpg" alt="Match point - Viktor Axelsen vs Toma Junior Popov - MS, SF - EC 2024">
-        </div>
-        <div class="px-4 576:px-0"> 
-          <div class="text-sm font-bold text-lab-black">Match point - Viktor Axelsen vs Toma Junior Popov - MS, SF - EC 2024</div>
-          <div class="flex items-center gap-3 text-sm mt-2">
-            <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span class="text-lab-black-50">8645</span></div><span class="text-lab-black-50">3 дня назад</span>
-          </div>
-        </div></a><a class="flex flex-col gap-2 flex-shrink-0 w-full" href="pages/aroundgame/video.html">
-        <div class="video-preview w-full" data-url="https://www.youtube.com/watch?v=T40FmAJKIP0"><img class="w-full h-full" src="http://img.youtube.com/vi/T40FmAJKIP0/mqdefault.jpg" alt="1000% веселых моментов в бадминтоне">
-        </div>
-        <div class="px-4 576:px-0"> 
-          <div class="text-sm font-bold text-lab-black">1000% веселых моментов в бадминтоне</div>
-          <div class="flex items-center gap-3 text-sm mt-2">
-            <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span class="text-lab-black-50">371</span></div><span class="text-lab-black-50">2 месяца назад</span>
-          </div>
-        </div></a><a class="flex flex-col gap-2 flex-shrink-0 w-full" href="pages/aroundgame/video.html">
-        <div class="video-preview w-full" data-url="https://www.youtube.com/watch?v=hUO0jn7TvNw"><img class="w-full h-full" src="http://img.youtube.com/vi/hUO0jn7TvNw/mqdefault.jpg" alt="Эпические навыки - Кевин Санджая Сукамульджо">
-        </div>
-        <div class="px-4 576:px-0"> 
-          <div class="text-sm font-bold text-lab-black">Эпические навыки - Кевин Санджая Сукамульджо</div>
-          <div class="flex items-center gap-3 text-sm mt-2">
-            <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span class="text-lab-black-50">25</span></div><span class="text-lab-black-50">8 месяцев назад</span>
-          </div>
-        </div></a><a class="flex flex-col gap-2 flex-shrink-0 w-full" href="pages/aroundgame/video.html">
-        <div class="video-preview w-full" data-url="https://www.youtube.com/watch?v=iBbTqVTq8qk"><img class="w-full h-full" src="http://img.youtube.com/vi/iBbTqVTq8qk/mqdefault.jpg" alt="Match point - Viktor Axelsen vs Toma Junior Popov - MS, SF - EC 2024">
-        </div>
-        <div class="px-4 576:px-0"> 
-          <div class="text-sm font-bold text-lab-black">Match point - Viktor Axelsen vs Toma Junior Popov - MS, SF - EC 2024</div>
-          <div class="flex items-center gap-3 text-sm mt-2">
-            <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span class="text-lab-black-50">8645</span></div><span class="text-lab-black-50">2 года назад</span>
-          </div>
-        </div></a>
     </div>
     <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
       <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7" src="img/tabbar/around-game-active.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>

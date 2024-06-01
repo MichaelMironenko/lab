@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Видео</title>
+    <title>Ищем тренера для мини-группы - Форум - ЛАБ</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
+    <base href="../../">
   </head>
-  <base href="../../">
-  <body class="bg-page-background pb-16 pt-12">
+  <body class="bg-page-background pb-28 pt-12">
+    <div class="py-4 flex gap-3 items-center justify-between px-2"><a href="pages/aroundgame/forum.html"> <img class="rotate-90 shrink-0" src="img/expand-arrow.svg" alt=""/></a>
+      <h1 class="text-lg text-center grow mr-8 max-w-[calc(100%-24px)]">Форум</h1>
+    </div>
     <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
@@ -54,48 +57,65 @@
         })
       })
     </script>
-    <nav class="p-4">
-      <ol class="flex items-center gap-1">
-        <li class="inline"><a class="text-xs whitespace-nowrap font-medium" href="pages/aroundgame/videos.html">Видео</a>
-        </li><img class="-rotate-90 size-4" src="img/expand-arrow.svg" alt="Стрелка"/>
-        <li class="inline">
-          <div class="text-xs text-lab-black-50 font-medium leading-tight">1000% веселых моментов в бадминтоне</div>
-        </li>
-      </ol>
-    </nav>
-    <div class="w-full">
-      <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/T40FmAJKIP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="bg-white px-4 pt-4">
-      <h1 class="text-lg">1000% веселых моментов в бадминтоне</h1>
-      <div class="flex gap-4 border-b py-3 text-sm">
-        <div class="flex items-center gap-1"><img class="size-5 cursor-pointer opacity-50 saturate-50" src="img/heart-empty.svg" onclick="toggleHeart(this)"><span>13</span></div>
-        <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span>1534</span></div><a class="flex items-center gap-1" href="#comments"><img class="size-5 opacity-50 saturate-50" src="img/comment.svg"><span>3</span></a>
-      </div>
-      <script>
-        function toggleHeart(img) {
-          const heartEmpty = 'img/heart-empty.svg'
-          const heartFill = 'img/heart-fill.svg'
-          if (img.src.includes(heartEmpty)) {
-            img.src = heartFill
-            img.classList.remove('opacity-50', 'saturate-50') // Удаляем классы для heart-empty
-          } else {
-            img.src = heartEmpty
-            img.classList.add('opacity-50', 'saturate-50') // Добавляем классы обратно для heart-empty
-          }
-        }
-      </script>
-      <div class="mt-4 flex flex-col gap-4 border-b pb-4">
-        <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/cup.svg" alt=""><a href="pages/tournaments/singleTournament.html"> 
-            <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XDF</div><span class="inline ml-2">Naten-Юг</span><span class="inline ml-2">22.03.2024 12:30</span></a></div>
-        <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/home.svg" alt=""><a href="pages/courts/singleCourt.html">Naten-Юг</a></div>
-        <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/calendar.svg" alt=""><span>22.03.2024</span></div>
-        <div class="flex items-start gap-3 text-sm"><img class="size-4 opacity-50 saturate-50 mt-0.5" src="img/player.svg" alt="">
-          <div><a class="inline" href="pages/others/profile.html">Василий Артемьев, </a><a class="inline" href="pages/others/profile.html">Артур Скобелев, </a><a class="inline" href="pages/others/profile.html">Игорь Маслов</a></div>
+    <div class="p-4 bg-white">
+      <div class="flex gap-3 justify-between items-center"> 
+        <div class="px-2 py-1.5 font-semibold text-xs bg-lab-green text-white rounded-lg shadow-sm leading-none border w-fit">Всякое разное
         </div>
-        <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/camera.svg" alt=""><a href="pages/others/profile.html">Юрий Любимов</a></div>
+        <button class="cursor-pointer shrink-0 undefined" id="bookmarkButton" onclick="toggleBookmark()"><img class="size-6" id="bookmarkIcon" src="img/bookmark-empty.svg" alt="Bookmark"/>
+        </button>
+        <script>
+          var isActive = false; // Начальное состояние закладки
+          function toggleBookmark() {
+            isActive = !isActive; // Переключаем состояние
+            var bookmarkIcon = document.getElementById('bookmarkIcon');
+            bookmarkIcon.src = isActive ? 'img/bookmark-fill.svg' : 'img/bookmark-empty.svg';
+          }
+        </script>
+      </div>
+      <h1 class="py-4 leading-tight text-lg">Ищем тренера для мини-группы</h1>
+      <div class="flex gap-2 items-center justify-between">
+        <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">АИ</span></div>
+        </div><a class="block text-xs leading-none" href="pages/others/profile.html">GrayCardinal</a><span class="text-xs text-lab-black-50 leading-none grow">24 апреля 12:42</span><img src="img/three-dots.svg" alt="">
+      </div>
+      <p>Разыскивается тренер для минигруппы (4 человека) на 1 раз в неделю ВТ или СР (возможно рассмотреть и другие дни) Вечером, идеально в 19:30 или 20:00 на 2 часа. Исключительно отработка техники и тактики. территориально ЮГ Москвы условно от Серпуховской до Пражской (плюс соседние ветки метро). Пишите, звоните +7 916 812 75 93. Павел.</p>
+      <div class="flex gap-3"> 
+        <div class="flex flex-wrap gap-2">
+          <div class="bg-lab-color !text-white inline-flex items-center cursor-pointer px-2 py-1.5 h-[30px] rounded-full text-xs my-2 leading-none" role="button" tabindex="0">👍
+            <div class="text-sm px-1.5 py-0.5">3</div>
+          </div>
+          <div class="bg-slate-100 text-lab-black inline-flex items-center cursor-pointer px-2 py-1.5 h-[30px] rounded-full text-xs my-2 leading-none" role="button" tabindex="0">👎
+            <div class="text-sm px-1.5 py-0.5">2</div>
+          </div>
+          <div class="bg-slate-100 text-lab-black inline-flex items-center cursor-pointer px-2 py-1.5 h-[30px] rounded-full text-xs my-2 leading-none" role="button" tabindex="0">😂
+          </div>
+        </div>
+        <div class="relative inline-flex gap-2 items-center"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger">
+          <div class="absolute bottom-6 -left-2 hidden max-w-[80vw]" id="reactions-popup">
+            <div class="flex p-2 bg-white rounded-full overflow-x-auto no-scrollbar gap-2 border border-lab-black-10 text-xl shadow-lg">
+              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup()">👍    </button>
+              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup()">👎    </button>
+              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup()">😂    </button>
+              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup()">👏    </button>
+              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup()">😲    </button>
+              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup()">🙏🏼    </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <script>
+      function togglePopup() {
+          var popup = document.getElementById(`reactions-popup`);
+          var isDisplayed = popup.style.display === 'block';
+          popup.style.display = isDisplayed ? 'none' : 'block';
+      }
+      
+      document.getElementById(`reactions-trigger`).addEventListener('click', function() {
+          togglePopup();
+      });
+      
+    </script>
     <div class="p-4 bg-white rounded-lg overflow-hidden  undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">

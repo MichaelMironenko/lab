@@ -18,7 +18,7 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title Игры турнира
+        title Редактирование турнира
         link(href="../../styles.css" rel="stylesheet")
         base(href="../../")
     body.bg-page-background.py-12.pb-32
@@ -77,7 +77,7 @@ html(lang="ru")
                         const daysDiv = document.getElementById('days');
                         const priceDiv = document.getElementById('price');
                         const dateTimeDiv = document.getElementById('dateTime');
-                        
+
                         let dayCount = 1;
                         let pricePerDay = 100;
 
@@ -120,10 +120,10 @@ html(lang="ru")
                         updateInfo(); // Update on load
                     });
 
-                
+
             +editBlock('Участники')
                 +editLabel('Рейтинг для допуска', 'rating-info')
-                
+
                 .flex.items-center.gap-2.justify-between.mb-2
                     .flex.items-center.gap-2
                         div.flex.items-center.-space-x-2
@@ -190,7 +190,7 @@ html(lang="ru")
                 +input('Телефон', 'w-full mb-6')
                 +button('Добавить дополнительный контакт', 'default', '', 'bg-slate-100', 'border')
             +editBlock('Афиша турнира для главной страницы (+100₽)')
-                
+
                 img(src="dynamic-img/banner.png").mx-auto.w-full.pb-4
                 .flex.gap-2.mb-4
                     +button('Загрузить', 'default', 'white', 'bg-lab-color')
@@ -204,7 +204,7 @@ html(lang="ru")
                     | Пропорции - 2:1
 
             +editBlock('Онлайн-трансляции')
-                
+
                 .flex.flex-col.gap-2.mb-6
                     .flex.gap-1
                         label.text-sm.text-lab-black-50.w-16 № корта
@@ -217,7 +217,7 @@ html(lang="ru")
                     .flex.gap-3.justify-between.items-center
                         +input('', 'w-14', '', '', 'h-14 text-center', '') 
                         +textarea('https://www.youtube.com/watch?v=...', '', '', 'leading-tight grow')
-                
+
                 +button('+ Добавить трансляцию', 'default', '', 'bg-slate-100', 'border')
             +editBlock('Шаблоны', '', 'Сохранить для будущих турниров')
                 .flex.items-center.gap-1 
@@ -251,5 +251,5 @@ html(lang="ru")
                     modalInfo.style.display = 'block'; 
                 });
             });
-            
+
         +tabBar('Турниры')

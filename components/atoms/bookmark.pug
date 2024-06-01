@@ -1,10 +1,10 @@
-mixin bookmark(active = false, extraClass)
+mixin bookmark(active = false, extraClass, size=6)
   button#bookmarkButton.cursor-pointer.shrink-0(onclick="toggleBookmark()" class=`${extraClass}`)
     - var initialSrc = active ? 'img/bookmark-fill.svg' : 'img/bookmark-empty.svg'
-    img#bookmarkIcon.w-6.h-6(src=initialSrc alt="Bookmark")
+    img#bookmarkIcon(src=initialSrc alt="Bookmark" class=`size-${size}`)
 
   script.
-    var isActive = #{active}; // Начальное состояние закладки
+    var isActive = false; // Начальное состояние закладки
     function toggleBookmark() {
       isActive = !isActive; // Переключаем состояние
       var bookmarkIcon = document.getElementById('bookmarkIcon');

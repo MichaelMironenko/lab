@@ -16,23 +16,24 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Турниры - Кудайбердиев Адилет Кудайбердиевич
         link(href="../../styles.css" rel="stylesheet")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap")
         base(href="../../")
     body.bg-page-background.pt-14.pb-32.px-4.bg-lab-color-10
         +topBar
         h1.text-lg.py-2 Турниры
 
         +searchAndFilterButton('Название турнира, фамилия, клуб', true, 'py-2')
-        
-        
+
+
         div.flex.space-x-3.py-2.items-center.justify-between
-             
+
             +switch('Только призовые', '', 'text-sm text-lab-black')
             div.grow
-            img#viewCards(src="img/cards.svg", alt="").size-5
-            img#viewTable(src="img/table.svg", alt="").size-5.saturate-50.opacity-50
-          
+            img#viewCards(src="img/cards.svg" alt="").size-5
+            img#viewTable(src="img/table.svg" alt="").size-5.saturate-50.opacity-50
 
-       
+
+
 
         -
             let doublesTournamentData = {
@@ -105,7 +106,7 @@ html(lang="ru")
                     div.text-lab-black-50.text-xs.pt-2.py-0 Причина: взятка организатору
                 +accordionProfileTournamentCard(doublesTournamentData, 3)
                 +accordionProfileTournamentCard(tournamentData, 2)
-            
+
             -
                 let tournamentsData = [
                     {
@@ -237,7 +238,7 @@ html(lang="ru")
                         th.p-2(class="!font-normal") Тип
                         th.text-left(class="!font-normal") Турнир
                         th.p-2(class="hidden sm:table-cell")
-                            img(src="img/player.svg", alt="").size-3.mx-auto
+                            img(src="img/player.svg" alt="").size-3.mx-auto
                         th.p-2(class="!font-normal") ✯
 
                         th.p-2(class="!font-normal") ✯ +/-
@@ -247,7 +248,7 @@ html(lang="ru")
                     each item in tournamentsData
                         - const medalClass = item.finalPosition === '1' ? 'bg-gold' : item.finalPosition === '2' ? 'bg-silver' : item.finalPosition === '3' ? 'bg-bronze' : ''
                         - const changeColor = item.finalChange > 0 ? 'text-lab-green' : 'text-lab-red'
-                        tr.text-xs.text-lab-black.text-center(class="even:bg-slate-50 odd:bg-lab-color-10").px-2
+                        tr.text-xs.text-lab-black.text-center(class="even:bg-white odd:bg-lab-color-10").px-2
                             td.p-2.pl-3.text-left.max-w-20.text-lab-black-50= item.date
                             td
                                 .bg-lab-color-10.rounded-sm.font-medium(class="px-1").w-fit.mx-auto= item.typeBadge
@@ -260,7 +261,7 @@ html(lang="ru")
                                 span(class="text-lab-green")= item.wins 
                                 span.text-lab-black-50 –
                                 span(class="text-lab-red")= item.losses
-                            
+
                             td(class="pr-3  text-center font-semibold w-7")
                                 if item.finalPosition < '4'
                                     div(class="h-4 w-4 flex items-center border border-lab-black-10 justify-center rounded-full mx-auto " + medalClass)= item.finalPosition
@@ -272,7 +273,7 @@ html(lang="ru")
                                     table.w-full
                                         thead
                                             tr.border-b.text-lab-black-50.text-xxs.font-semibold.uppercase
-                                                th.py-2.text-left Этап
+                                                th.py-2.text-center Этап
                                                 th.py-2.text-left Соперники
                                                 th.py-2.text-center.min-w-14 ★
                                                 th.py-2.text-center.min-w-8 Счёт
@@ -286,7 +287,7 @@ html(lang="ru")
                                                             .flex.gap-1.items-center
                                                                 a(href=player.link).leading-none #{name} 
                                                                 if player.flag 
-                                                                    img(src="img/note.svg", alt="").size-3
+                                                                    img(src="img/note.svg" alt="").size-3
                                                                 br
                                                     td.text-center
                                                         +userRating(player.rating)
@@ -315,15 +316,15 @@ html(lang="ru")
                 }
 
                 function showCards() {
-                cards.style.display = 'block';
-                table.style.display = 'none';
-                updateIconStyles();
+                    cards.style.display = 'block';
+                    table.style.display = 'none';
+                    updateIconStyles();
                 }
 
                 function showTable() {
-                cards.style.display = 'none';
-                table.style.display = 'block';
-                updateIconStyles();
+                    cards.style.display = 'none';
+                    table.style.display = 'block';
+                    updateIconStyles();
                 }
 
                 viewCardsIcon.addEventListener('click', showCards);
@@ -333,5 +334,5 @@ html(lang="ru")
                 showCards();
             });
 
-                    
+
         +tabBar

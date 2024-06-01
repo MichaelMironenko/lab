@@ -1,8 +1,10 @@
 include /components/tabBar.pug
 include /components/topBar.pug
+include /components/atoms/backButtonTitle
 include /components/comments.pug
 include /components/atoms/tournamentTypeBadge.pug
 include /components/atoms/breadcrumbs.pug
+include /components/atoms/bookmark.pug
 include /components/photoTiles.pug
 
 doctype html
@@ -12,26 +14,57 @@ html(lang='ru')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title Фото
     link(href='../../styles.css' rel='stylesheet')
-      link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap")
     base(href='../../')
-  body.bg-page-background.pb-16.pt-12
+  body.relative.bg-page-background.pb-16.pt-12
     +topBar
-    +breadcrumbs([{name: 'Фото', href: 'pages/aroundGame/photos.html'}, {name: 'Турнир <320 Space Химки'}])
+    a.absolute.top-16.left-3.bg-white.bg-opacity-75.rounded-lg.p-2.pr-3.flex.gap-2.items-center.border.shadow-sm(href="pages/aroundgame/photos.html")
+      img(src="img/expand-arrow.svg" alt="").rotate-90.size-5
+      span.text-sm.leading-none.opacity-75 Все фото
+    #image-container.w-full.overflow-hidden(onclick="openModal()" class="max-h-[70vh]")
 
-    #image-container.w-full.overflow-hidden
+    #modal.fixed.inset-0.flex.items-center.justify-center.bg-black.bg-opacity-75.hidden.z-50
+      .relative.bg-white.rounded-lg.overflow-hidden.max-w-full.max-h-full
+        img(src="dynamic-img/photo-3.jpeg" alt="Фото" class="max-w-full max-h-screen object-contain")
+        button.absolute.top-2.right-2.text-white.text-2xl(font-size="2rem" onclick="closeModal()") &times;
+
+
     script.
+
+      function openModal() {
+        document.getElementById('modal').classList.remove('hidden');
+      }
+      function closeModal() {
+        document.getElementById('modal').classList.add('hidden');
+      }
+
+
       const imgContainer = document.querySelector('#image-container')
       const img = new Image()
       img.src = 'dynamic-img/photo-3.jpeg'
-      img.onload = function () {
-        const height = img.height * (window.innerWidth / img.width)
-        imgContainer.style.height = Math.min(height, window.innerWidth * 1.25) + 'px'
-        imgContainer.style.background = `url(${img.src}) center / cover no-repeat`
+      function updateImageContainer() {
+        const aspectRatio = img.width / img.height;
+        const maxWidth = 430; // Максимальная ширина изображения
+        const containerWidth = Math.min(window.innerWidth, maxWidth); // Ограничиваем ширину контейнера
+
+        const height = img.height * (containerWidth / img.width);
+        const maxVisibleHeight = img.height * 0.8; // Максимум 80% высоты изображения
+
+        imgContainer.style.width = containerWidth + 'px';
+        imgContainer.style.height = Math.min(height, maxVisibleHeight) + 'px';
+        imgContainer.style.background = `url(${img.src}) center / cover no-repeat`;
+        imgContainer.style.margin = '0 auto'; // Центрируем контейнер
       }
 
+      img.onload = function () {
+        updateImageContainer();
+        window.addEventListener('resize', updateImageContainer);
+      }
+
+
     .bg-white.px-4.pt-4
-      h1.text-base Победители
-      .flex.gap-4.border-b.pb-4.pt-2.text-sm
+
+      .flex.items-center.gap-3.text-sm.justify-between
         .flex.items-center.gap-1
           img.size-5.cursor-pointer.opacity-50.saturate-50(
             src='img/heart-empty.svg',
@@ -40,10 +73,29 @@ html(lang='ru')
           span 13
         .flex.items-center.gap-1
           img.size-5.opacity-50.saturate-50(src='img/views.svg')
-          span 1534
-        .flex.items-center.gap-1
+          span 2K
+        .flex.items-center.gap-1.grow
           img.size-5.opacity-50.saturate-50(src='img/comment.svg')
-          span 3
+          span 2
+        +bookmark('', '', 5)
+        img(src="img/three-dots.svg" alt="", onclick=`toggleCommentMenu('${photoID}')`).size-4
+
+      div(id=`photomenu-${photoID}`, class="absolute bottom-0")
+        +actionMenu([
+          { text: 'Редактировать', color: ' text-lab-color', link:'pages/aroundgame/editPhoto.html' },
+          { text: 'Убрать своё имя с фото', color: ' text-lab-color' },
+          { text: 'Меня нет на фото', color: ' text-lab-color' },
+          { text: 'Пожаловаться', color: ' text-lab-red', last: true }
+
+        ], 'action-menu-container')
+
+      script.
+        function toggleCommentMenu(photoID) {
+          var photoMenu = document.getElementById(`action-menu-container`);
+          photoMenu.classList.toggle('hidden');
+        }
+
+      h1.text-base.py-4 Победители
       script.
         function toggleHeart(img) {
           const heartEmpty = 'img/heart-empty.svg'
@@ -56,7 +108,7 @@ html(lang='ru')
             img.classList.add('opacity-50', 'saturate-50') // Добавляем классы обратно для heart-empty
           }
         }
-      .mt-4.flex.flex-col.gap-4.border-b.pb-4
+      .flex.flex-col.gap-4.border-b.pb-4
         .flex.items-center.gap-3.text-sm
           img.size-4.opacity-50.saturate-50(src='img/cup.svg' alt='')
           a(href="pages/tournaments/singleTournament.html") 
@@ -72,15 +124,35 @@ html(lang='ru')
         .flex.items-start.gap-3.text-sm
           img.size-4.opacity-50.saturate-50(src='img/player.svg' alt='' class="mt-0.5")
           div
-            a.inline(href='pages/others/profile.html') Василий Артемьев, 
-            |
-            a.inline(href='pages/others/profile.html') Артур Скобелев, 
-            |
-            a.inline(href='pages/others/profile.html') Игорь Маслов
+            div.mb-2
+              a.inline(href='pages/others/profile.html') Василий Артемьев, 
+              |
+              a.inline(href='pages/others/profile.html') Артур Скобелев, 
+              |
+              a.inline(href='pages/others/profile.html') Игорь Маслов 
+            button.flex.items-center.gap-2.bg-lab-color-10(onclick="addPlayerModal()")
+              img(src="img/plus-button.svg" alt="")
+              span Отметить игрока
         .flex.items-center.gap-3.text-sm
           img.size-4.opacity-50.saturate-50(src='img/camera.svg' alt='')
           a(href='pages/others/profile.html') Юрий Любимов
+    div.hidden.fixed.inset-0.z-50.bg-gray-800.bg-opacity-50.flex.justify-center.items-center#addPlayermodal
+      div.bg-white.p-4.rounded-lg.shadow-lg.w-96.relative
+        h2.text-lg.mb-4.text-center Отметить игрока
+        div.mb-4 Введите имя игрока, которого еще нет на фото
+        input.p-2.border.rounded.mb-4(type="text" placeholder="Имя игрока").w-full
+        div.flex.gap-2
+          +button('Отмена', 'text', 'lab-black-50', '', ' w-1/2', 'cancelButton')
+          +button('Отправить', 'default', 'white', 'bg-lab-color', ' w-1/2', 'commentSubmitButton')
+        button.absolute.top-2.right-4.text-2xl.text-lab-black(onclick="closeAddPlayerModal()") &times;
 
+    script.
+      function addPlayerModal() {
+        document.getElementById('addPlayermodal').classList.remove('hidden');
+      }
+      function closeAddPlayerModal() {
+        document.getElementById('addPlayermodal').classList.add('hidden');
+      }
     +comments
     .bg-white.px-4 
       h2.border-t.py-4 Похожие фотографии 

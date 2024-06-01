@@ -1,9 +1,9 @@
 mixin photoTiles(mt)
-    -
-        const images = ['dynamic-img/club-1.jpg', 'dynamic-img/club-2.jpg', 'dynamic-img/club-3.jpg', 'dynamic-img/club-4.jpg', 'dynamic-img/photo-2.jpg']
+  -
+    const images = ['dynamic-img/club-1.jpg', 'dynamic-img/club-2.jpg', 'dynamic-img/club-3.jpg', 'dynamic-img/club-4.jpg', 'dynamic-img/photo-2.jpg']
 
-        const repeatedImages = images.concat(images, images, images);
-    .mb-4.grid.grid-cols-3.gap-1(class=`420:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 ${mt ? 'mt-4' : ''}`)
-        each image in repeatedImages
-            a(href='pages/aroundGame/photo.html') 
-                img.aspect-square.object-cover(src=image)
+    const repeatedImages = images.concat(images, images, images);
+  .mb-4.grid.grid-cols-3.gap-1(class=`420:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 ${mt ? 'mt-4' : ''}`)
+    each image in repeatedImages
+      a(href='pages/aroundgame/photo.html') 
+        img.aspect-square.object-cover(src=image)

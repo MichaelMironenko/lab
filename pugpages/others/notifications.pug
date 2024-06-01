@@ -40,16 +40,18 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Уведомления
         link(href="../../styles.css" rel="stylesheet")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo 2:wght@100;200;300;400;500;600;700;800&:display=swap")
+
         base(href="../../")
     body.bg-white.pt-12.pb-32
         +topBar
         .flex.justify-between.gap-4.pr-4.items-center
             h1.p-4 Уведомления
             img(src="img/settings.svg" id="settingsButton").size-5
-        
+
         span.text-lab-color.text-right.px-4.text-sm Отметить все прочитанными
 
-        
+
         +actionMenu([
             { text: 'Не показывать подобные уведомления', color: ' text-lab-color' },
             { text: 'Отметить прочитанным', color: ' text-lab-color' },
@@ -57,7 +59,7 @@ html(lang="ru")
         .p-4.border-b 
             .flex.items-center.justify-between.gap-4 
                 .text-xs.text-lab-black-50 Сегодня, 13:55
-                img(src="img/three-dots.svg", alt="", class="three-dots")
+                img(src="img/three-dots.svg" alt="" class="three-dots")
             div.font-semibold.py-3.text-lab-black.text-sm Вы зарегистрировались на турнир
             .flex.gap-2.bg-lab-color-10.p-3.rounded-lg.border.items-center
                 +tournamentTypeBadge('XDF+')
@@ -67,7 +69,7 @@ html(lang="ru")
         .p-4.border-b 
             .flex.items-center.justify-between.gap-4 
                 .text-xs.text-lab-black-50 Сегодня, 12:11
-                img(src="img/three-dots.svg", alt="", class="three-dots")
+                img(src="img/three-dots.svg" alt="" class="three-dots")
             div.font-semibold.py-2.text-lab-black.text-sm Вы заняли 5-е место на турнире. Рейтинг увеличился на 8 пунктов и стал 635.
             .flex.gap-2.bg-lab-color-10.p-3.rounded-lg.border.items-center
                 +tournamentTypeBadge('XDF+')
@@ -77,7 +79,7 @@ html(lang="ru")
         .p-4.border-b 
             .flex.items-center.justify-between.gap-4 
                 .text-xs.text-lab-black-50 Вчера, 19:30
-                img(src="img/three-dots.svg", alt="", class="three-dots")
+                img(src="img/three-dots.svg" alt="" class="three-dots")
             div.font-semibold.py-2.text-lab-black.text-sm Вы зарегистрировались на тренировку
             .flex.gap-2.bg-promo-background.px-3.py-1.rounded-lg.mb-2.border.items-center
                 div.grow 
@@ -90,7 +92,7 @@ html(lang="ru")
         .p-4.border-b 
             .flex.items-center.justify-between.gap-4 
                 .text-xs.text-lab-black-50 24 мая, 22:44
-                img(src="img/three-dots.svg", alt="", class="three-dots")
+                img(src="img/three-dots.svg" alt="" class="three-dots")
             div.font-semibold.py-2.text-lab-black.text-sm Турнир, на который вы зарегистрированы, состоится уже завтра
             .flex.gap-2.bg-lab-color-10.p-3.rounded-lg.border.items-center
                 +tournamentTypeBadge('XDF+')
@@ -100,13 +102,28 @@ html(lang="ru")
         .p-4.border-b 
             .flex.items-center.justify-between.gap-4 
                 .text-xs.text-lab-black-50 21.03.2023, 12:11
-                img(src="img/three-dots.svg", alt="", class="three-dots")
+                img(src="img/three-dots.svg" alt="" class="three-dots")
             div.py-2.text-lab-black.text-sm Вы оплатили участие в турнире
             .flex.gap-2.bg-lab-color-10.p-3.rounded-lg.border.items-center
                 +tournamentTypeBadge('XDF+')
                 span.text-sm.grow.font-semibold Макс Арена
                 span.text-xs 11 сентября 
                 span.text-xs 11:00
+
+        .p-4.border-b 
+            .flex.items-center.justify-between.gap-4 
+                .text-xs.text-lab-black-50 21.03.2023, 12:11
+                img(src="img/three-dots.svg" alt="" class="three-dots")
+            div.py-2.text-lab-black.text-sm Вас отметили на 3 фотографиях
+            .flex.gap-3.items-center.overflow-x-auto.no-scrollbar.-mx-4.px-4
+                a(href="pages/aroundgame/photo.html") 
+                    img(src="dynamic-img/video-1.jpg" alt="" class="w-24 h-24 rounded-md object-cover")
+                a(href="pages/aroundgame/photo.html") 
+                    img(src="dynamic-img/photo-2.jpg" alt="" class="w-24 h-24 rounded-md object-cover")
+                a(href="pages/aroundgame/photo.html") 
+                    img(src="dynamic-img/photo-1.jpg" alt="" class="w-24 h-24 rounded-md object-cover")
+
+
 
         div(class="fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-20" id="backdrop" style="display: none;")
         .max-h-90.absolute.bottom-0.left-0.w-full.z-30.bg-white.rounded-t-2xl.flex.flex-col(id="switchPanel" style="display: none;")
@@ -126,7 +143,7 @@ html(lang="ru")
                 const settingsButton = document.getElementById('settingsButton');
                 const backdrop = document.getElementById('backdrop');
                 const switchPanel = document.getElementById('switchPanel');
-                
+
                 settingsButton.onclick = () => {
                     backdrop.style.display = 'block';
                     switchPanel.style.display = 'flex';
