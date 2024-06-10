@@ -1,16 +1,18 @@
 mixin trainerCard(avatarColor, fullName, gameRating, coachRating, reviewsCount, pricePerHour, superTrainer)
-  .flex.flex-col.p-3.items-center.gap-3.rounded-md.relative(class=`${superTrainer ? ' bg-gradient-to-br from-[#6686B0] via-[#253C59] via-[#375B8B] to-[#243956] min-w-32' : ''}`)
+  .relative.flex.flex-col.items-center.gap-3.rounded-md.p-3(
+    class=`${superTrainer ? ' min-w-32' : ''} bg-gradient-to-br from-[#6686B0] via-[#253C59] via-[#375B8B] to-[#243956]`
+  )
     - const initials = fullName.split(' ').map(name => name[0]).join('')
-    if superTrainer     
-        .absolute.px-1.py-1.top-0.right-0.bg-lab-color.shadow-md.rounded-bl.rounded-tr-md
-            .text-white.text-xxs.font-semibold.leading-none.no-wrap Супер-тренер
+    if superTrainer
+      .absolute.right-0.top-0.rounded-bl.rounded-tr-md.bg-lab-color.px-1.py-1.shadow-md
+        .no-wrap.text-xxs.font-semibold.leading-none.text-white Супер-тренер
 
     +avatar(avatarColor, initials, 64, '', 'тренер')
-    +userRating(gameRating, true, '-mt-6 shadow-sm')
-    span.text-center.text-sm.font-semibold.min-w-24(class=`${superTrainer ? ' text-white ' : ''}`) #{fullName}
-    .flex.items-center.gap-1.mb-auto
-      img(src="img/rating-star-aqua.svg").h-4.opacity-75
-      span.text-xs.font-semibold.mr-2(class=`${superTrainer ? ' text-white ' : ''}`) #{coachRating}
-      img(src="img/comment-outlined.svg").h-4.opacity-60.shadow-md
-      span.text-xs.font-semibold(class=`${superTrainer ? ' text-white ' : ''}`) #{reviewsCount}
-    span.px-2.py-1.bg-lab-light-yellow.text-xs.rounded.font-bold от #{pricePerHour}₽/ч
+    +userRating(gameRating, true, '-mt-6 shadow-sm z-[1] ')
+    span.min-w-24.text-center.text-sm.font-semibold(class=`${superTrainer ? ' ' : ''} text-white`) #{ fullName }
+    .mb-auto.flex.items-center.gap-1
+      img.h-4.opacity-75(src='img/rating-star-aqua.svg')
+      span.mr-2.text-xs.font-semibold(class=`${superTrainer ? ' ' : ''} text-white`) #{ coachRating }
+      img.h-4.opacity-60.shadow-md(src='img/comment-outlined.svg')
+      span.text-xs.font-semibold(class=`${superTrainer ? ' ' : ''} text-white`) #{ reviewsCount }
+    span.rounded.bg-lab-light-yellow.px-2.py-1.text-xs.font-bold от #{ pricePerHour }₽/ч

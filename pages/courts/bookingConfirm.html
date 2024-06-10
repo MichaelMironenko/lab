@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Данные бронирования</title>
     <link href="../../styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
     <base href="../../">
   </head>
-  <body class="bg-white mt-12 pb-32">
+  <body class="mt-12 bg-white pb-32">
     <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
@@ -53,8 +54,8 @@
         })
       })
     </script>
-    <div class="py-4 px-2 flex gap-3 bg-white"><img class="rotate-90" src="img/expand-arrow.svg" alt="">
-      <div class="text-lg text-center grow font-bold text-lab-black -ml-6">Уточните данные бронирования</div>
+    <div class="flex gap-3 bg-white px-2 py-4"><img class="rotate-90" src="img/expand-arrow.svg" alt="">
+      <div class="-ml-6 grow text-center text-lg font-bold text-lab-black">Уточните данные бронирования</div>
     </div>
     <div class="px-4">
       <div class="w-full bg-white rounded-xl shadow-md p-4 flex flex-col justify-between border">
@@ -79,8 +80,8 @@
         </div>
       </div>
     </div>
-    <div class="p-4 max-w-420 w-full mx-auto">
-      <div class="flex gap-2 items-center my-4"><img class="saturate-50 opacity-60" src="img/calendar.svg">
+    <div class="mx-auto w-full max-w-420 p-4">
+      <div class="my-4 flex items-center gap-2"><img class="opacity-60 saturate-50" src="img/calendar.svg">
         <div class="leading-none">11 сентября, четверг</div>
       </div>
       <div class="flex justify-between gap-3 py-2 max-w-sm">
@@ -139,27 +140,27 @@
             });
         });
       </script>
-      <div class="flex gap-2 items-center pt-6">
+      <div class="flex items-center gap-2 pt-6">
         <div class="flex items-center gap-2 w-full undefined">
           <label class="block text-lab-black " for="Ваше имя">Ваше имя</label>
         </div>
         <input class="border border-lab-black-30 p-2 undefined rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder=""/>
       </div>
-      <div class="text-xs text-right text-lab-red">Заполните имя</div>
-      <div class="flex gap-2 items-center pt-2">
+      <div class="text-right text-xs text-lab-red">Заполните имя</div>
+      <div class="flex items-center gap-2 pt-2">
         <div class="flex items-center gap-2 w-full undefined">
           <label class="block text-lab-black " for="Телефон">Телефон</label>
         </div>
         <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="phone" placeholder=""/>
       </div>
-      <div class="text-xs text-right text-transparent">Введите корректный телефон</div>
-      <div class="flex gap-2 items-center pt-2">
+      <div class="text-right text-xs text-transparent">Введите корректный телефон</div>
+      <div class="flex items-center gap-2 pt-2">
         <div class="flex items-center gap-2 w-full undefined">
           <label class="block text-lab-black " for="Email">Email</label>
         </div>
         <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="email" placeholder=""/>
       </div>
-      <div class="text-xs text-right text-lab-red">Введите корректный email</div>
+      <div class="text-right text-xs text-lab-red">Введите корректный email</div>
       <div class="flex items-center cursor-pointer py-4 justify-between gap-2 max-w-sm">
         <label class="flex items-center gap-3 grow leading-tight justify-between text-lab-black-50">Абонемент
           <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
@@ -169,19 +170,19 @@
       <div class="flex items-center gap-2 mb-2 undefined">
         <label class="block text-lab-black " for="Аренда ракетки">Аренда ракетки</label>
       </div>
-      <div>   
-        <div class="flex gap-3 justify-between items-center">
+      <div>
+        <div class="flex items-center justify-between gap-3">
           <div><span class="text-sm">Любительская</span>
-            <div class="text-sm text-lab-black-50">150₽/шт </div>
+            <div class="text-sm text-lab-black-50">150₽/шт</div>
           </div>
           <div class="flex items-center bg-lab-color-10 rounded-lg h-9">
             <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 h-3.5 text-center leading-none" id="courts-count">0</span>
             <button class="size-10 text-xl text-lab-black-50" id="increase-courts">+</button>
           </div>
         </div>
-        <div class="flex gap-3 pt-4 justify-between items-center">
+        <div class="flex items-center justify-between gap-3 pt-4">
           <div><span class="text-sm">Полупрофи</span>
-            <div class="text-sm text-lab-black-50">200₽/шт </div>
+            <div class="text-sm text-lab-black-50">200₽/шт</div>
           </div>
           <div class="flex items-center bg-lab-color-10 rounded-lg h-9">
             <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 h-3.5 text-center leading-none" id="courts-count">0</span>
@@ -192,8 +193,8 @@
     </div>
     <div class="fixed bottom-0 left-0 right-0 w-full z-40 p-4 rounded-t-2xl overflow-hidden bg-white drop-shadow-top pb-safe-16">
       <div class="flex justify-between gap-3">
-        <div> 
-          <div class="text-lab-black-50 text-sm text-nowrap">Общая стоимость</div><span class="text-lab-color text-lg font-bold">1800&#8202;₽</span>
+        <div>
+          <div class="text-nowrap text-sm text-lab-black-50">Общая стоимость</div><span class="text-lg font-bold text-lab-color">1800&#8202;₽</span>
         </div>
         <button class="w-full max-w-[60%] bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="window.location.href='pages/courts/bookingPayment.html'">Далее к оплате</button>
       </div>

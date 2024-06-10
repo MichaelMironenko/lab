@@ -1,36 +1,38 @@
 mixin horizontalClubCard(clubInfo)
-    a.w-full.bg-white(class=`${onMap ? 'rounded-t-2xl' : 'rounded-xl'}` href="pages/courts/singleClub.html").shadow-md.p-4.flex.flex-col.justify-between.border
-        .flex.gap-3.items-center 
-            img(src=`${clubInfo.photo}`, alt="").size-24.object-cover.rounded-md
-            div.w-full
-                .flex.items-center.mb-2
-                    if clubInfo.logo
-                        img.h-5.w-5.mr-2.rounded-sm(src=clubInfo.logo, alt="Logo")
-                    h2.text-base.font-semibold #{clubInfo.name}
-                div.flex.items-center.text-sm.mb-2
-                    span.font-semibold= clubInfo.stars
-                    img.h-4.ml-1(src="img/star.svg")
-                    span.text-lab-black-50.ml-2= clubInfo.reviews + ' отзывов'
-                .flex.items-center.mb-1.gap-3.flex-wrap
-                    if clubInfo.address
-                        div.flex
-                            img.opacity-50.saturate-50.mr-1(src="img/location-icon.svg")
-                            span.text-lab-black-50.text-sm.h-4= clubInfo.address
-                    else if clubInfo.metro
-                        div.flex.items-center
-                            div(class=`bg-${clubInfo.metroColor}`).size-2.rounded-full.mr-1.shrink-0
-                            span(class=`text-lab-black-50 leading-none text-sm`)= clubInfo.metro
-                    div.flex.items-center
-                        img(src="img/location-arrow.svg").size-4.mr-1
-                        span.text-sm.leading-none.text-lab-black-50 #{clubInfo.distance} км
-                 
-                    
-                .flex.flex-wrap.items-center.gap-x-4
-                    div
-                        img.inline.size-4.mr-1.align-middle.saturate-50.opacity-75(src="img/court.svg")
-                        span.inline.text-sm.align-middle.leading-none #{clubInfo.courts}
-                    div.inline
-                        each service in clubInfo.services
-                            img.inline.h-4.w-4.ml-1.saturate-50.opacity-75(src=`img/${service}.svg`, alt=service)
-                    span.text-sm.text-lab-color ₽₽
-                        span.text-lab-black-30 ₽
+  a.flex.w-full.flex-col.justify-between.border.bg-white.p-4.shadow-md(
+    class=`${onMap ? 'rounded-t-2xl' : 'rounded-xl'}`,
+    href='pages/courts/singleClub.html'
+  )
+    .flex.items-center.gap-3
+      img.size-24.rounded-md.object-cover(src=`${clubInfo.photo}`, alt='')
+      .w-full
+        .mb-2.flex.items-center
+          if clubInfo.logo
+            img.mr-2.h-5.w-5.rounded-sm(src=clubInfo.logo, alt='Logo')
+          h2.text-base.font-semibold #{ clubInfo.name }
+        .mb-2.flex.items-center.text-sm
+          img.h-4(src='img/star.svg')
+          span.ml-1.font-semibold= clubInfo.stars
+          span.ml-3.text-lab-black-50= clubInfo.reviews + ' отзывов'
+        .mb-1.flex.flex-wrap.items-center.gap-3
+          if clubInfo.address
+            .flex
+              img.mr-1.opacity-50.saturate-50(src='img/location-icon.svg')
+              span.h-4.text-sm.text-lab-black-50= clubInfo.address
+          else if clubInfo.metro
+            .flex.items-center
+              .mr-1.size-2.shrink-0.rounded-full(class=`bg-${clubInfo.metroColor}`)
+              span.text-sm.leading-none.text-lab-black-50= clubInfo.metro
+          .flex.items-center
+            img.mr-1.size-4(src='img/location-arrow.svg')
+            span.text-sm.leading-none.text-lab-black-50 #{ clubInfo.distance } км
+
+        .flex.flex-wrap.items-center.gap-x-4
+          div
+            img.mr-1.inline.size-4.align-middle.opacity-75.saturate-50(src='img/court.svg')
+            span.inline.align-middle.text-sm.leading-none #{ clubInfo.courts }
+          .inline
+            each service in clubInfo.services
+              img.ml-1.inline.h-4.w-4.opacity-75.saturate-50(src=`img/${service}.svg`, alt=service)
+          span.text-sm.text-lab-color ₽₽
+            span.text-lab-black-30 ₽

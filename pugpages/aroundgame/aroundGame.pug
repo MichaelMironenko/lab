@@ -41,10 +41,13 @@ doctype html
 html(lang='ru')
   head
     meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title Вокруг игры
-    link(href='../../styles.css' rel='stylesheet')
-    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap")
+    link(href='../../styles.css', rel='stylesheet')
+    link(
+      rel='stylesheet',
+      href='https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap'
+    )
     base(href='../../')
   body.bg-page-background.pb-28.pt-12
     +topBar
@@ -211,7 +214,6 @@ html(lang='ru')
 
       +block('Новости', { href:"pages/others/news.html", text:'Все'})
         .sm.grid.grid-cols-1.gap-8(class='sm:grid-cols-2 lg:grid-cols-3')
-
           .flex.flex-col.gap-4
             +newsCard('23 мая состоится студенческий турнир Москвы', 'dynamic-img/club-1.jpg', 'Naten ЮГ Ярославль', '4 апреля 16:30', '#')
             +newsCard('Открытые тренировки для всех желающих', '', 'Спартак М', '12 мая 18:00', '#')
@@ -227,7 +229,7 @@ html(lang='ru')
             +newsCard('Турнир памяти выдающихся игроков', '', 'БК Виктория', '10 сентября 15:00', '#')
             +newsCard('Бадминтонный фестиваль для всей семьи', 'dynamic-img/photo-2.jpg', 'БК Семья', '17 сентября 10:00', '#')
 
-      +block('Календарь официальных турниров')
+      +block('Календарь официальных турниров', { href:"pages/aroundgame/officialCalendar.html", text:'Все'})
         +filterButtonsRow([ { label: 'Июнь', active: true}, { label: 'Июль', active: false}, { label: 'Август', active: false}], 'padding', '-mx-4 mb-4')
         -
           var events = [
@@ -256,8 +258,8 @@ html(lang='ru')
       +videoSlider(false, false, 'Последние видео')
       +block('Рейтинги игроков на сайте')
         +filterButtonsRow([ { label: 'Одиночный', active: true }, { label: 'Парный', active: false }], 'padding', '-mx-4 mb-2')
-        div.divider.mb-4
-        - 
+        .divider.mb-4
+        -
           const maxPercent = 27
           const ratings = [
             { range: '0-100', women: 2, men: 5 },
@@ -279,18 +281,21 @@ html(lang='ru')
             rating.relativeMen = Math.floor((rating.men / maxPercent) * 100)
           })
         each rating in ratings
-          div.flex.items-center.mb-2
-            div.w-20.text-lab-black.whitespace-nowrap.shrink-0.text-sm= rating.range
-            div.w-full.h-6.relative.overflow-hidden
-              div(class="bg-lab-purple h-full absolute rounded-l left-0" class=`w-[${rating.relativeWomen}%]`) 
-              div(class=`bg-lab-blue h-full absolute rounded-r left-[${rating.relativeWomen}%]` class=`w-[${rating.relativeMen}%]`)
-            div.ml-2.w-12.text-lab-black.text-sm.text-right= `${rating.total}%`
-        div.flex.justify-start.mt-4
-          div.flex.items-center.mr-4
-            div.w-4.h-4.bg-lab-purple.mr-2.rounded
+          .mb-2.flex.items-center
+            .w-20.shrink-0.whitespace-nowrap.text-sm.text-lab-black= rating.range
+            .relative.h-6.w-full.overflow-hidden
+              .absolute.left-0.h-full.rounded-l.bg-lab-purple(class=`w-[${rating.relativeWomen}%]`) 
+              div(
+                class=`left-[${rating.relativeWomen}%] absolute h-full rounded-r bg-lab-blue`,
+                class=`w-[${rating.relativeMen}%]`
+              )
+            .ml-2.w-12.text-right.text-sm.text-lab-black= `${rating.total}%`
+        .mt-4.flex.justify-start
+          .mr-4.flex.items-center
+            .mr-2.h-4.w-4.rounded.bg-lab-purple
             span.text-sm.text-gray-700 Женщины
-          div.flex.items-center
-            div.w-4.h-4.bg-lab-blue.mr-2.rounded
+          .flex.items-center
+            .mr-2.h-4.w-4.rounded.bg-lab-blue
             span.text-sm.text-gray-700 Мужчины
 
         //- script.
@@ -301,7 +306,5 @@ html(lang='ru')
         //-       button.classList.add('bg-blue-600', 'text-white')
         //-     })
         //-   })
-
-
 
     +tabBar('Вокруг игры')

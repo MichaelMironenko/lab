@@ -14,28 +14,33 @@ include /components/bottomPanel.pug
 include /components/bookingData.pug
 
 doctype html
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title Бронирование отменено
-        link(href="../../styles.css" rel="stylesheet")
-        base(href="../../")
-    body.bg-white.mt-12.pb-32
-        +topBar
-        .p-4
-            div.text-lg.text-center.grow.font-bold.text-lab-black.pb-4 Бронирование №123456 отменено
-            +bookingData
-            div.pb-4.text-wrap
-                img(src="img/price.svg", alt="").inline-block.align-middle.saturate-50.opacity-50
-                span.inline-block.align-middle.ml-2 2000₽ 
-                span.inline-block.align-middle.py-1.px-2.bg-lab-green.text-white.ml-2.text-sm.rounded-md.font-semibold Оплачено
-                span.inline-block.align-middle.py-1.px-2.bg-lab-yellow.text-white.ml-2.text-sm.rounded-md.font-semibold.text-nowrap Оплата в клубе
-                span.inline-block.align-middle.py-1.px-2.bg-lab-color.text-white.ml-2.text-sm.rounded-md.font-semibold Абонемент
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Бронирование отменено
+    link(href='../../styles.css', rel='stylesheet')
+    link(
+      rel='stylesheet',
+      href='https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap'
+    )
+    base(href='../../')
+  body.mt-12.bg-white.pb-32
+    +topBar
+    .p-4
+      .grow.pb-4.text-center.text-lg.font-bold.text-lab-black Бронирование №123456 отменено
+      +bookingData
+      .text-wrap.pb-4
+        img.inline-block.align-middle.opacity-50.saturate-50(src='img/price.svg', alt='')
+        span.ml-2.inline-block.align-middle 2000₽
+        span.ml-2.inline-block.rounded-md.bg-lab-green.px-2.py-1.align-middle.text-sm.font-semibold.text-white Оплачено
+        span.ml-2.inline-block.text-nowrap.rounded-md.bg-lab-yellow.px-2.py-1.align-middle.text-sm.font-semibold.text-white Оплата в клубе
+        span.ml-2.inline-block.rounded-md.bg-lab-color.px-2.py-1.align-middle.text-sm.font-semibold.text-white Абонемент
 
-            p Возврат средств в размере 50% будет осуществлен на ваш счет в течение 3 рабочих дней, но обычно быстрее.
+      p Возврат средств в размере 50% будет осуществлен на ваш счет в течение 3 рабочих дней, но обычно быстрее.
 
-            p В случае возникновения вопросов, обращайтесь в нашу службу поддержки: 
-                a(href="mailto:info@badminton4u.ru") info@badminton4u.ru
+      p В случае возникновения вопросов, обращайтесь в нашу службу поддержки:
+        |
+        a(href='mailto:info@badminton4u.ru') info@badminton4u.ru
 
-            a(href="pages/courts/rentCourt.html").p-4.w-full.block.font-bold.text-center Забронировать другой корт
+      a.block.w-full.p-4.text-center.font-bold(href='pages/courts/rentCourt.html') Забронировать другой корт

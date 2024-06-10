@@ -21,8 +21,9 @@ mixin userStatusBadge(type)
         case 'фотограф':
           badgeColor = 'bg-purple-500';
           break;
-        default:
-          badgeColor = 'bg-gray-500';
+        case 'стрингер':
+          badgeColor = 'bg-lab-black';
+          break;
       }
-    div(class=`${badgeColor} text-xs px-1 py-0.5 text-white font-medium rounded w-fit z-10`)
-      | #{type}
+    div(class=`${badgeColor} z-10 w-fit rounded px-1 py-0.5 text-xs font-medium text-white`)
+      | #{ type }
