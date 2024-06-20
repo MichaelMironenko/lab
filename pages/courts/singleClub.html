@@ -72,7 +72,7 @@
       </div>
       <div class="flex items-center gap-3"><img class="size-16 rounded-md object-cover" src="dynamic-img/naten-logo.png" alt="">
         <div class="w-full">
-          <div class="mb-1 flex items-center text-sm"><span class="font-semibold leading-none">4.2</span><img class="ml-1 h-4" src="img/yellow-star-full.svg"><span class="ml-2 leading-none text-lab-black-50">15 отзывов</span></div>
+          <div class="mb-1 flex items-center text-sm"><img class="mr-1 h-4" src="img/yellow-star-full.svg"><span class="font-semibold leading-none">4.2</span><span class="ml-2 leading-none text-lab-black-50">15 отзывов</span></div>
           <div><img class="mr-1 inline h-4 w-4" src="img/wifi.svg" alt="wifi"><img class="mr-1 inline h-4 w-4" src="img/shower.svg" alt="shower"><img class="mr-1 inline h-4 w-4" src="img/water.svg" alt="water"><img class="mr-1 inline h-4 w-4" src="img/ac.svg" alt="ac">
           </div>
           <div><img class="mr-1 inline h-4 align-middle" src="img/parking.svg"><span class="inline align-middle text-sm">платная</span></div>
@@ -654,7 +654,7 @@
           <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
         </div>
       </div>
-      <div class="flex flex-grow gap-3 items-center pt-2 pb-2">
+      <div class="flex flex-grow items-center gap-3 pb-2 pt-2">
         <div class="cursor-pointer p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer"><img class="h-full w-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
         </div>
         <div class="flex flex-col gap-1">
@@ -668,29 +668,29 @@
           <div class="flex shrink-0 items-center mt-0.5"><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-empty.svg"/></div>
         </div>
       </div>
-      <div class="flex items-center gap-1 px-2 py-1 bg-lab-color-10 w-fit rounded-lg mt-1 mb-2">    <img class="size-3 saturate-50 opacity-75" src="img/reply.svg"/><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
+      <div class="mb-2 mt-1 flex w-fit items-center gap-1 rounded-lg bg-lab-color-10 px-2 py-1"><img class="size-3 opacity-75 saturate-50" src="img/reply.svg"/><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
       <p>У меня сломалась ракетка, кто может одолжить запасную? 🙏🏼</p>
       <div class="flex flex-wrap gap-2">
-        <div class="bg-lab-color !text-white inline-flex items-center cursor-pointer px-2 py-1.5 h-[30px] rounded-full text-xs my-2 leading-none" role="button" tabindex="0">👍
+        <div class="bg-lab-color !text-white my-2 inline-flex h-[30px] cursor-pointer items-center rounded-full px-2 py-1.5 text-xs leading-none" role="button" tabindex="0">👍
           <div class="text-sm px-1.5 py-0.5">3</div>
         </div>
-        <div class="bg-slate-100 text-lab-black inline-flex items-center cursor-pointer px-2 py-1.5 h-[30px] rounded-full text-xs my-2 leading-none" role="button" tabindex="0">👎
+        <div class="bg-slate-100 text-lab-black my-2 inline-flex h-[30px] cursor-pointer items-center rounded-full px-2 py-1.5 text-xs leading-none" role="button" tabindex="0">👎
           <div class="text-sm px-1.5 py-0.5">2</div>
         </div>
-        <div class="bg-slate-100 text-lab-black inline-flex items-center cursor-pointer px-2 py-1.5 h-[30px] rounded-full text-xs my-2 leading-none" role="button" tabindex="0">😂
+        <div class="bg-slate-100 text-lab-black my-2 inline-flex h-[30px] cursor-pointer items-center rounded-full px-2 py-1.5 text-xs leading-none" role="button" tabindex="0">😂
         </div>
       </div>
-      <div class="flex justify-between pt-1 pb-3">
-        <div class="relative inline-flex gap-2 items-center"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger-1"/>
+      <div class="flex justify-between pb-3 pt-1">
+        <div class="relative inline-flex items-center gap-2"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger-1"/>
           <button class="text-sm text-lab-black-50" onclick="toggleCommentForm('1')">Ответить</button>
-          <div class="absolute bottom-6 -left-2 hidden max-w-[80vw]" id="reactions-popup-1">
-            <div class="flex p-2 bg-white rounded-full overflow-x-auto no-scrollbar gap-2 border border-lab-black-10 text-xl shadow-lg">
-              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(1)">👍</button>
-              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(1)">👎</button>
-              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(1)">😂</button>
-              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(1)">👏</button>
-              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(1)">😲</button>
-              <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(1)">🙏🏼</button>
+          <div class="absolute -left-2 bottom-6 hidden max-w-[80vw]" id="reactions-popup-1">
+            <div class="no-scrollbar flex gap-2 overflow-x-auto rounded-full border border-lab-black-10 bg-white p-2 text-xl shadow-lg">
+              <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(1)">👍</button>
+              <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(1)">👎</button>
+              <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(1)">😂</button>
+              <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(1)">👏</button>
+              <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(1)">😲</button>
+              <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(1)">🙏🏼</button>
             </div>
           </div>
         </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('1')"/>
@@ -711,8 +711,8 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col flex-grow gap-3 mb-3 hidden" id="commentForm-1">
-        <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
+      <div class="mb-3 flex hidden flex-grow flex-col gap-3" id="commentForm-1">
+        <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
         <div class="flex items-center gap-4">
           <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
           <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
@@ -720,29 +720,28 @@
       </div>
       <script>
         function togglePopup(commentID) {
-            var popup = document.getElementById(`reactions-popup-${commentID}`);
-            var isDisplayed = popup.style.display === 'block';
-            popup.style.display = isDisplayed ? 'none' : 'block';
+          var popup = document.getElementById(`reactions-popup-${commentID}`)
+          var isDisplayed = popup.style.display === 'block'
+          popup.style.display = isDisplayed ? 'none' : 'block'
         }
         
-        document.getElementById(`reactions-trigger-${'1'}`).addEventListener('click', function() {
-            togglePopup('1');
-        });
+        document.getElementById(`reactions-trigger-${'1'}`).addEventListener('click', function () {
+          togglePopup('1')
+        })
         
         function toggleCommentMenu(commentID) {
-            var commentMenu = document.getElementById(`action-menu-container`);
-            console.log(commentMenu)
-            commentMenu.classList.toggle('hidden');
+          var commentMenu = document.getElementById(`action-menu-container`)
+          console.log(commentMenu)
+          commentMenu.classList.toggle('hidden')
         }
         
         function toggleCommentForm(commentID) {
-            var form = document.getElementById(`commentForm-${commentID}`);
-            form.classList.toggle('hidden');
-        
+          var form = document.getElementById(`commentForm-${commentID}`)
+          form.classList.toggle('hidden')
         }
       </script>
       <div class="border-l border-lab-black-10 pl-6">
-        <div class="flex flex-grow gap-3 items-center pt-2 pb-2">
+        <div class="flex flex-grow items-center gap-3 pb-2 pt-2">
           <div class="cursor-pointer p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(36px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div>
@@ -758,29 +757,29 @@
             <div class="flex shrink-0 items-center mt-0.5"><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-empty.svg"/></div>
           </div>
         </div>
-        <div class="flex items-center gap-1 px-2 py-1 bg-lab-color-10 w-fit rounded-lg mt-1 mb-2">    <img class="size-3 saturate-50 opacity-75" src="img/reply.svg"/><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
+        <div class="mb-2 mt-1 flex w-fit items-center gap-1 rounded-lg bg-lab-color-10 px-2 py-1"><img class="size-3 opacity-75 saturate-50" src="img/reply.svg"/><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
         <p>У меня есть, но на ней нужно подтянуть струны</p>
         <div class="flex flex-wrap gap-2">
-          <div class="bg-lab-color !text-white inline-flex items-center cursor-pointer px-2 py-1.5 h-[30px] rounded-full text-xs my-2 leading-none" role="button" tabindex="0">👏
+          <div class="bg-lab-color !text-white my-2 inline-flex h-[30px] cursor-pointer items-center rounded-full px-2 py-1.5 text-xs leading-none" role="button" tabindex="0">👏
             <div class="text-sm px-1.5 py-0.5">2</div>
           </div>
-          <div class="bg-slate-100 text-lab-black inline-flex items-center cursor-pointer px-2 py-1.5 h-[30px] rounded-full text-xs my-2 leading-none" role="button" tabindex="0">👍
+          <div class="bg-slate-100 text-lab-black my-2 inline-flex h-[30px] cursor-pointer items-center rounded-full px-2 py-1.5 text-xs leading-none" role="button" tabindex="0">👍
             <div class="text-sm px-1.5 py-0.5">2</div>
           </div>
-          <div class="bg-slate-100 text-lab-black inline-flex items-center cursor-pointer px-2 py-1.5 h-[30px] rounded-full text-xs my-2 leading-none" role="button" tabindex="0">🙏🏼
+          <div class="bg-slate-100 text-lab-black my-2 inline-flex h-[30px] cursor-pointer items-center rounded-full px-2 py-1.5 text-xs leading-none" role="button" tabindex="0">🙏🏼
           </div>
         </div>
-        <div class="flex justify-between pt-1 pb-3">
-          <div class="relative inline-flex gap-2 items-center"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger-2"/>
+        <div class="flex justify-between pb-3 pt-1">
+          <div class="relative inline-flex items-center gap-2"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger-2"/>
             <button class="text-sm text-lab-black-50" onclick="toggleCommentForm('2')">Ответить</button>
-            <div class="absolute bottom-6 -left-2 hidden max-w-[80vw]" id="reactions-popup-2">
-              <div class="flex p-2 bg-white rounded-full overflow-x-auto no-scrollbar gap-2 border border-lab-black-10 text-xl shadow-lg">
-                <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(2)">👏</button>
-                <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(2)">👍</button>
-                <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(2)">🙏🏼</button>
-                <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(2)">👎</button>
-                <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(2)">😂</button>
-                <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(2)">😲</button>
+            <div class="absolute -left-2 bottom-6 hidden max-w-[80vw]" id="reactions-popup-2">
+              <div class="no-scrollbar flex gap-2 overflow-x-auto rounded-full border border-lab-black-10 bg-white p-2 text-xl shadow-lg">
+                <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(2)">👏</button>
+                <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(2)">👍</button>
+                <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(2)">🙏🏼</button>
+                <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(2)">👎</button>
+                <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(2)">😂</button>
+                <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(2)">😲</button>
               </div>
             </div>
           </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('2')"/>
@@ -801,8 +800,8 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col flex-grow gap-3 mb-3 hidden" id="commentForm-2">
-          <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
+        <div class="mb-3 flex hidden flex-grow flex-col gap-3" id="commentForm-2">
+          <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
           <div class="flex items-center gap-4">
             <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
             <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
@@ -810,31 +809,30 @@
         </div>
         <script>
           function togglePopup(commentID) {
-              var popup = document.getElementById(`reactions-popup-${commentID}`);
-              var isDisplayed = popup.style.display === 'block';
-              popup.style.display = isDisplayed ? 'none' : 'block';
+            var popup = document.getElementById(`reactions-popup-${commentID}`)
+            var isDisplayed = popup.style.display === 'block'
+            popup.style.display = isDisplayed ? 'none' : 'block'
           }
           
-          document.getElementById(`reactions-trigger-${'2'}`).addEventListener('click', function() {
-              togglePopup('2');
-          });
+          document.getElementById(`reactions-trigger-${'2'}`).addEventListener('click', function () {
+            togglePopup('2')
+          })
           
           function toggleCommentMenu(commentID) {
-              var commentMenu = document.getElementById(`action-menu-container`);
-              console.log(commentMenu)
-              commentMenu.classList.toggle('hidden');
+            var commentMenu = document.getElementById(`action-menu-container`)
+            console.log(commentMenu)
+            commentMenu.classList.toggle('hidden')
           }
           
           function toggleCommentForm(commentID) {
-              var form = document.getElementById(`commentForm-${commentID}`);
-              form.classList.toggle('hidden');
-          
+            var form = document.getElementById(`commentForm-${commentID}`)
+            form.classList.toggle('hidden')
           }
         </script>
       </div>
       <div class="border-l border-lab-black-10 pl-6">
         <div class="border-l border-lab-black-10 pl-6">
-          <div class="flex flex-grow gap-3 items-center pt-2 pb-2">
+          <div class="flex flex-grow items-center gap-3 pb-2 pt-2">
             <div class="cursor-pointer p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer"><img class="h-full w-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
             </div>
             <div class="flex flex-col gap-1">
@@ -845,24 +843,24 @@
               </div>
               <div class="flex items-center gap-2"><span class="text-xs text-lab-black-50">12 ноября 16:43</span>
               </div>
-              <div class="flex shrink-0 items-center mt-0.5"><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-empty.svg"/></div>
+              <div class="flex shrink-0 items-center mt-1"><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-full.svg"/><img class="h-4" src="img/yellow-star-empty.svg"/></div>
             </div>
           </div>
-          <div class="flex items-center gap-1 px-2 py-1 bg-lab-color-10 w-fit rounded-lg mt-1 mb-2">    <img class="size-3 saturate-50 opacity-75" src="img/reply.svg"/><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
+          <div class="mb-2 mt-1 flex w-fit items-center gap-1 rounded-lg bg-lab-color-10 px-2 py-1"><img class="size-3 opacity-75 saturate-50" src="img/reply.svg"/><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
           <p>Подтянуть не проблема, спасибо! Когда можно с тобой встретиться?</p>
           <div class="flex flex-wrap gap-2">
           </div>
-          <div class="flex justify-between pt-1 pb-3">
-            <div class="relative inline-flex gap-2 items-center"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger-3"/>
+          <div class="flex justify-between pb-3 pt-1">
+            <div class="relative inline-flex items-center gap-2"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger-3"/>
               <button class="text-sm text-lab-black-50" onclick="toggleCommentForm('3')">Ответить</button>
-              <div class="absolute bottom-6 -left-2 hidden max-w-[80vw]" id="reactions-popup-3">
-                <div class="flex p-2 bg-white rounded-full overflow-x-auto no-scrollbar gap-2 border border-lab-black-10 text-xl shadow-lg">
-                  <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(3)">👍</button>
-                  <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(3)">👎</button>
-                  <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(3)">😂</button>
-                  <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(3)">👏</button>
-                  <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(3)">😲</button>
-                  <button class="px-2 bg-slate-100 rounded-full" onclick="togglePopup(3)">🙏🏼</button>
+              <div class="absolute -left-2 bottom-6 hidden max-w-[80vw]" id="reactions-popup-3">
+                <div class="no-scrollbar flex gap-2 overflow-x-auto rounded-full border border-lab-black-10 bg-white p-2 text-xl shadow-lg">
+                  <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(3)">👍</button>
+                  <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(3)">👎</button>
+                  <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(3)">😂</button>
+                  <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(3)">👏</button>
+                  <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(3)">😲</button>
+                  <button class="rounded-full bg-slate-100 px-2" onclick="togglePopup(3)">🙏🏼</button>
                 </div>
               </div>
             </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('3')"/>
@@ -883,8 +881,8 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col flex-grow gap-3 mb-3 hidden" id="commentForm-3">
-            <textarea class="resize-none border rounded-md border-gray-300 p-2 transition-all duration-300 ease-in-out focus:outline-none focus:border-blue-500 overflow-hidden" style="scrollbar-width: none; -ms-overflow-style: none;" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
+          <div class="mb-3 flex hidden flex-grow flex-col gap-3" id="commentForm-3">
+            <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
             <div class="flex items-center gap-4">
               <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
               <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
@@ -892,25 +890,24 @@
           </div>
           <script>
             function togglePopup(commentID) {
-                var popup = document.getElementById(`reactions-popup-${commentID}`);
-                var isDisplayed = popup.style.display === 'block';
-                popup.style.display = isDisplayed ? 'none' : 'block';
+              var popup = document.getElementById(`reactions-popup-${commentID}`)
+              var isDisplayed = popup.style.display === 'block'
+              popup.style.display = isDisplayed ? 'none' : 'block'
             }
             
-            document.getElementById(`reactions-trigger-${'3'}`).addEventListener('click', function() {
-                togglePopup('3');
-            });
+            document.getElementById(`reactions-trigger-${'3'}`).addEventListener('click', function () {
+              togglePopup('3')
+            })
             
             function toggleCommentMenu(commentID) {
-                var commentMenu = document.getElementById(`action-menu-container`);
-                console.log(commentMenu)
-                commentMenu.classList.toggle('hidden');
+              var commentMenu = document.getElementById(`action-menu-container`)
+              console.log(commentMenu)
+              commentMenu.classList.toggle('hidden')
             }
             
             function toggleCommentForm(commentID) {
-                var form = document.getElementById(`commentForm-${commentID}`);
-                form.classList.toggle('hidden');
-            
+              var form = document.getElementById(`commentForm-${commentID}`)
+              form.classList.toggle('hidden')
             }
           </script>
         </div>
@@ -1409,8 +1406,8 @@
         </tbody>
       </table>
     </div>
-    <nav class="bg-white inset-x-0 fixed bottom-0 border-t z-10 pb-safe">
-      <div class="flex justify-between"><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class="text-[10px] tracking-tighter text-nowrap ">Турниры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class="text-[10px] tracking-tighter text-nowrap ">Тренировки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7" src="img/tabbar/courts-active.svg" alt="Корты"/><span class="text-[10px] tracking-tighter text-nowrap  font-bold ">Корты</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class="text-[10px] tracking-tighter text-nowrap ">Игроки</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class="text-[10px] tracking-tighter text-nowrap ">Вокруг игры</span></a><a class="flex-1 text-center py-1 w-1/6 leading-4 text-gray-500" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class="text-[10px] tracking-tighter text-nowrap ">Маркет</span></a>
+    <nav class="pb-safe fixed inset-x-0 bottom-0 z-10 border-t bg-white">
+      <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class=" text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class=" text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7" src="img/tabbar/courts-active.svg" alt="Корты"/><span class=" font-bold  text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class=" text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
       </div>
     </nav>
   </body>

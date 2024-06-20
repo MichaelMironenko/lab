@@ -1,4 +1,35 @@
-<!DOCTYPE html>
+
+<script>
+  function toggleHint(icon) {
+    const hintBox = icon.nextElementSibling
+    const allHints = document.querySelectorAll('.hint-box')
+    allHints.forEach((hint) => {
+      if (hint !== hintBox) {
+        hint.classList.add('hidden')
+      }
+    })
+    hintBox.classList.toggle('hidden')
+  }
+  
+  document.addEventListener('click', function (event) {
+    const isClickInsideHint = event.target.closest('.hint-box') !== null
+    const isClickOnIcon = event.target.closest('.info-icon') !== null
+    if (!isClickInsideHint && !isClickOnIcon) {
+      document.querySelectorAll('.hint-box').forEach((hint) => {
+        hint.classList.add('hidden')
+      })
+    }
+  })
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.hint-box').forEach((hint) => {
+      hint.addEventListener('click', function (event) {
+        event.stopPropagation()
+        this.classList.add('hidden')
+      })
+    })
+  })
+</script><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -100,14 +131,14 @@
           <div class="p-4 text-center md:p-5"> 
             <h2>Корт №5</h2>
             <p class="text-lab-black-50 text-sm pt-0 pb-2">Стандартный  </p><img class="mt-2 rounded-sm pb-2" src="dynamic-img/court5.jpg" alt=""/>
-            <div class="flex justify-between items-center gap-2 py-1 text-sm"><span class="text-lab-black-50">Размер зала</span>
-              <div class="grow border-b-2 border-dotted h-3"></div><span class="text-right">17x10 м</span>
+            <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Размер зала</span>
+              <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">17x10 м</span>
             </div>
-            <div class="flex justify-between items-center gap-2 py-1 text-sm"><span class="text-lab-black-50">Высота потолков</span>
-              <div class="grow border-b-2 border-dotted h-3"></div><span class="text-right">8 м</span>
+            <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Высота потолков</span>
+              <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">8 м</span>
             </div>
-            <div class="flex justify-between items-center gap-2 py-1 text-sm"><span class="text-lab-black-50">Покрытие</span>
-              <div class="grow border-b-2 border-dotted h-3"></div><span class="text-right">Тарафлекс</span>
+            <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Покрытие</span>
+              <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">Тарафлекс</span>
             </div>
           </div>
         </div>
@@ -142,21 +173,21 @@
       </script>
       <div class="flex items-center gap-2 pt-6">
         <div class="flex items-center gap-2 w-full undefined">
-          <label class="block text-lab-black " for="Ваше имя">Ваше имя</label>
+          <label class="block text-lab-black" for="Ваше имя">Ваше имя</label>
         </div>
         <input class="border border-lab-black-30 p-2 undefined rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder=""/>
       </div>
       <div class="text-right text-xs text-lab-red">Заполните имя</div>
       <div class="flex items-center gap-2 pt-2">
         <div class="flex items-center gap-2 w-full undefined">
-          <label class="block text-lab-black " for="Телефон">Телефон</label>
+          <label class="block text-lab-black" for="Телефон">Телефон</label>
         </div>
         <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="phone" placeholder=""/>
       </div>
       <div class="text-right text-xs text-transparent">Введите корректный телефон</div>
       <div class="flex items-center gap-2 pt-2">
         <div class="flex items-center gap-2 w-full undefined">
-          <label class="block text-lab-black " for="Email">Email</label>
+          <label class="block text-lab-black" for="Email">Email</label>
         </div>
         <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="email" placeholder=""/>
       </div>
@@ -168,15 +199,15 @@
         </label>
       </div>
       <div class="flex items-center gap-2 mb-2 undefined">
-        <label class="block text-lab-black " for="Аренда ракетки">Аренда ракетки</label>
+        <label class="block text-lab-black" for="Аренда ракетки">Аренда ракетки</label>
       </div>
       <div>
         <div class="flex items-center justify-between gap-3">
           <div><span class="text-sm">Любительская</span>
             <div class="text-sm text-lab-black-50">150₽/шт</div>
           </div>
-          <div class="flex items-center bg-lab-color-10 rounded-lg h-9">
-            <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 h-3.5 text-center leading-none" id="courts-count">0</span>
+          <div class="flex h-9 items-center rounded-lg bg-lab-color-10">
+            <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 text-center leading-none h-3.5" id="courts-count">0</span>
             <button class="size-10 text-xl text-lab-black-50" id="increase-courts">+</button>
           </div>
         </div>
@@ -184,8 +215,8 @@
           <div><span class="text-sm">Полупрофи</span>
             <div class="text-sm text-lab-black-50">200₽/шт</div>
           </div>
-          <div class="flex items-center bg-lab-color-10 rounded-lg h-9">
-            <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 h-3.5 text-center leading-none" id="courts-count">0</span>
+          <div class="flex h-9 items-center rounded-lg bg-lab-color-10">
+            <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 text-center leading-none h-3.5" id="courts-count">0</span>
             <button class="size-10 text-xl text-lab-black-50" id="increase-courts">+</button>
           </div>
         </div>
