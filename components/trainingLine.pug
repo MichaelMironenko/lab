@@ -1,9 +1,9 @@
-mixin trainingLine(training)
-    .flex.border-b
+mixin trainingLine(training, card=false)
+    a.flex(href="pages/trainings/singleTraining.html" class=`${card ? ' rounded-lg overflow-hidden shadow-md mb-2 border' : 'border-b'}`)
         .flex.flex-col.gap-3.bg-lab-color.p-3.items-center.shrink-0.w-14
             .text-sm.text-white.text-center.font-semibold= training.time 
             .text-xs.text-white.opacity-50.text-center= training.duration
-        .flex.flex-col.gap-2.p-3
+        .flex.flex-col.gap-2.p-3.bg-white.w-full
             .flex.gap-4.items-center
                 if training.img 
                     img(src="img/lesenka.svg").h-4

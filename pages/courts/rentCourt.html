@@ -39,7 +39,7 @@
     <base href="../../">
   </head>
   <body class="bg-page-background mt-12 pb-32">
-    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -1039,71 +1039,81 @@
             </script>
           </div>
         </div>
-        <div class="fixed bottom-0 left-0 right-0 w-full z-40 p-4 rounded-t-2xl overflow-hidden bg-white drop-shadow-top pb-safe-16">
-          <h3 class="font-bold pb-2">Ваш выбор на 11 мая</h3>
-          <div class="flex justify-between gap-3 py-2 max-w-sm">
-            <div class="inline"><img class="inline align-middle saturate-50 opacity-50" src="img/time.svg" alt="Время"/><span class="inline align-middle leading-none ml-2">11:00-12:30</span></div>
-            <div class="court"><img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 5</span></div>
-            <div> <img class="inline align-middle saturate-50 opacity-50" src="img/price.svg" alt="Цена"/><span class="inline align-middle ml-2">1800&#8202;₽</span></div>
-          </div>
-          <div class="flex justify-between gap-3 py-2 max-w-sm">
-            <div class="inline"><img class="inline align-middle saturate-50 opacity-50" src="img/time.svg" alt="Время"/><span class="inline align-middle leading-none ml-2">11:00-12:30</span></div>
-            <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
-            <div> <img class="inline align-middle saturate-50 opacity-50" src="img/price.svg" alt="Цена"/><span class="inline align-middle ml-2">1800&#8202;₽</span></div>
-          </div>
-          <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="court-modal" style="display: none;">
-            <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
-              <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
-              <div class="p-4 text-center md:p-5"> 
-                <h2>Корт №5</h2>
-                <p class="text-lab-black-50 text-sm pt-0 pb-2">Стандартный  </p><img class="mt-2 rounded-sm pb-2" src="dynamic-img/court5.jpg" alt=""/>
-                <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Размер зала</span>
-                  <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">17x10 м</span>
-                </div>
-                <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Высота потолков</span>
-                  <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">8 м</span>
-                </div>
-                <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Покрытие</span>
-                  <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">Тарафлекс</span>
+        <div class="modal-container fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" onclick="hideOnClickOutside(event, this)">
+          <div class="fixed bottom-0 left-0 right-0 w-full z-40 p-4 rounded-t-2xl overflow-hidden bg-white drop-shadow-top pb-safe-16">
+            <div class="w-20 top-0 left-0 right-0 h-1 bg-lab-black-10 rounded-xl mx-auto mt-2 absolute"></div>
+            <h3 class="font-bold pb-2">Ваш выбор на 11 мая</h3>
+            <div class="flex justify-between gap-3 py-2 max-w-sm items-center">
+              <div class="inline"><img class="inline align-middle saturate-50 opacity-50" src="img/time.svg" alt="Время"/><span class="inline align-middle leading-none ml-2">11:00-12:30</span></div>
+              <div class="court"><img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 5</span></div>
+              <div> <img class="inline align-middle saturate-50 opacity-50" src="img/price.svg" alt="Цена"/><span class="inline align-middle ml-2">1800&#8202;₽</span></div>
+            </div>
+            <div class="flex justify-between gap-3 py-2 max-w-sm items-center">
+              <div class="inline"><img class="inline align-middle saturate-50 opacity-50" src="img/time.svg" alt="Время"/><span class="inline align-middle leading-none ml-2">11:00-12:30</span></div>
+              <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
+              <div> <img class="inline align-middle saturate-50 opacity-50" src="img/price.svg" alt="Цена"/><span class="inline align-middle ml-2">1800&#8202;₽</span></div>
+            </div>
+            <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="court-modal" style="display: none;">
+              <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
+                <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
+                <div class="p-4 text-center md:p-5"> 
+                  <h2>Корт №5</h2>
+                  <p class="text-lab-black-50 text-sm pt-0 pb-2">Стандартный  </p><img class="mt-2 rounded-sm pb-2" src="dynamic-img/court5.jpg" alt=""/>
+                  <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Размер зала</span>
+                    <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">17x10 м</span>
+                  </div>
+                  <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Высота потолков</span>
+                    <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">8 м</span>
+                  </div>
+                  <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Покрытие</span>
+                    <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">Тарафлекс</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const closeButton = document.querySelector('.close-modal');
-                closeButton?.addEventListener('click', function() {
-                    document.getElementById('court-modal').style.display = 'none';
-                });
-            
-                document.getElementById('court-modal').addEventListener('click', function(event) {
-                    if (event.target === this) {
-                        this.style.display = 'none';
-                    }
-                });
-            });
-          </script>
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const courtDivs = document.querySelectorAll('.court');
-            
-                courtDivs.forEach(function(div) {
-                    div.addEventListener('click', function() {
-                        const modal = document.getElementById('court-modal');
-                        if (modal) {
-                            modal.style.display = 'block';
-                        }
-                    });
-                });
-            });
-          </script>
-          <div class="flex justify-between gap-3 pt-4">
-            <div> 
-              <div class="text-lab-black-50 text-sm text-nowrap">Общая стоимость</div><span class="text-lab-color text-lg font-bold">1800&#8202;₽</span>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const closeButton = document.querySelector('.close-modal');
+                  closeButton?.addEventListener('click', function() {
+                      document.getElementById('court-modal').style.display = 'none';
+                  });
+              
+                  document.getElementById('court-modal').addEventListener('click', function(event) {
+                      if (event.target === this) {
+                          this.style.display = 'none';
+                      }
+                  });
+              });
+            </script>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const courtDivs = document.querySelectorAll('.court');
+              
+                  courtDivs.forEach(function(div) {
+                      div.addEventListener('click', function() {
+                          const modal = document.getElementById('court-modal');
+                          if (modal) {
+                              modal.style.display = 'block';
+                          }
+                      });
+                  });
+              });
+            </script>
+            <div class="flex justify-between gap-3 pt-4">
+              <div> 
+                <div class="text-lab-black-50 text-sm text-nowrap">Общая стоимость</div><span class="text-lab-color text-lg font-bold">1800&#8202;₽</span>
+              </div>
+              <button class="w-full max-w-[60%] bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Далее</button>
             </div>
-            <button class="w-full max-w-[60%] bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Далее</button>
           </div>
         </div>
+        <script>
+          function hideOnClickOutside(event, element) {
+              if (event.target === element) {
+                  element.classList.add('hidden');
+              }
+          }
+        </script>
       </div>
     </div>
   </body>

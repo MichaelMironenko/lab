@@ -8,7 +8,7 @@
     <base href="../../">
   </head>
   <body class="bg-page-background py-12 pb-32">
-    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="https://badminton4u.ru"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -69,7 +69,7 @@
           </div>
         </div>
         <div class="bg-white p-4 max-w-420 rounded-lg w-full shrink-0">
-          <div class="flex overflow-x-auto space-x-2 no-scrollbar scroll-smooth  undefined">
+          <div class="flex overflow-x-auto items-center space-x-2 no-scrollbar scroll-smooth  undefined">
             <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
               <div>Среда 14:00</div><span class="mx-2 deleteButton cursor-pointer text-white">✕</span>
             </div>
@@ -377,12 +377,10 @@
             </div>
             <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder=""/>
           </div>
-          <div class="flex items-center cursor-pointer py-4 justify-between gap-2 max-w-sm">
-            <label class="flex items-center gap-3 grow leading-tight justify-between text-lab-black-50">Регистрация сверх лимита
-              <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
-              <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
-            </label>
-          </div>
+          <label class="flex items-center gap-3 grow leading-tight text-left text-lab-black justify-between max-w-sm text-lab-black-50 py-4">Регистрация сверх лимита
+            <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
+            <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
+          </label>
           <div class="flex items-center justify-between gap-2 mt-2 mb-6">
             <div class="flex items-center gap-2 w-full undefined">
               <label class="block text-lab-black" for="Взнос с участника (руб)">Взнос с участника (руб)</label>
@@ -539,12 +537,10 @@
             </div>
             <input class="border border-lab-black-30 p-2  rounded-lg shrink-0 focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="date" placeholder=""/>
           </div>
-          <div class="flex items-center cursor-pointer py-4 justify-between gap-2 max-w-sm">
-            <label class="flex items-center gap-3 grow leading-tight justify-between text-lab-black">Закрытая регистрация
-              <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
-              <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
-            </label>
-          </div>
+          <label class="flex items-center gap-3 grow leading-tight text-left text-lab-black justify-between max-w-sm text-lab-black py-4">Закрытая регистрация
+            <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
+            <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
+          </label>
           <div class="flex items-center justify-between gap-2 mt-2">
             <div class="flex items-center gap-2 w-full undefined">
               <label class="block text-lab-black" for="Корты под турнир">Корты под турнир</label>
@@ -597,12 +593,10 @@
           </div>
         </div>
         <div class="bg-white p-4 max-w-420 rounded-lg w-full shrink-0">
-          <div class="flex items-center cursor-pointer py-0 justify-between gap-2 max-w-sm">
-            <label class="flex items-center gap-3 grow leading-tight justify-between text-lab-black">Повторить турнир через неделю
-              <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
-              <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
-            </label>
-          </div>
+          <label class="flex items-center gap-3 grow leading-tight text-left text-lab-black justify-between max-w-sm text-lab-black py-0">Повторить турнир через неделю
+            <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
+            <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
+          </label>
         </div>
       </div>
       <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">

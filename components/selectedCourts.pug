@@ -1,29 +1,31 @@
 include /components/modal.pug
 include /components/dottedLine.pug
 
-mixin selectedCourts(deleteButton) 
-    .flex.justify-between.gap-3.py-2.max-w-sm
+mixin selectedCourts(deleteButton, price=true) 
+    .flex.justify-between.gap-3.py-2.max-w-sm.items-center
         div.inline
             img(src="img/time.svg", alt="Время").inline.align-middle.saturate-50.opacity-50
             span.inline.align-middle.leading-none.ml-2 11:00-12:30
         div.court
             img(src="img/court.svg", alt="Корт").inline.align-middle.saturate-50.opacity-50
             span.inline.align-middle.ml-2.text-lab-color Корт 5
-        div 
-            img(src="img/price.svg", alt="Цена").inline.align-middle.saturate-50.opacity-50
-            span.inline.align-middle.ml-2 1800&#8202;₽
+        if price
+            div 
+                img(src="img/price.svg", alt="Цена").inline.align-middle.saturate-50.opacity-50
+                span.inline.align-middle.ml-2 1800&#8202;₽
         if deleteButton
             button(type="button").leading-none.text-lab-black-50 ✕
-    .flex.justify-between.gap-3.py-2.max-w-sm
+    .flex.justify-between.gap-3.py-2.max-w-sm.items-center
         div.inline
             img(src="img/time.svg", alt="Время").inline.align-middle.saturate-50.opacity-50
             span.inline.align-middle.leading-none.ml-2 11:00-12:30
         div.court 
             img(src="img/court.svg", alt="Корт").inline.align-middle.saturate-50.opacity-50
             span.inline.align-middle.ml-2.text-lab-color Корт 6
-        div 
-            img(src="img/price.svg", alt="Цена").inline.align-middle.saturate-50.opacity-50
-            span.inline.align-middle.ml-2 1800&#8202;₽
+        if price
+            div 
+                img(src="img/price.svg", alt="Цена").inline.align-middle.saturate-50.opacity-50
+                span.inline.align-middle.ml-2 1800&#8202;₽
         if deleteButton
             button(type="button").leading-none.text-lab-black-50 ✕
 
