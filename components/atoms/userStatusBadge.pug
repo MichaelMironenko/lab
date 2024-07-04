@@ -16,14 +16,14 @@ mixin userStatusBadge(type)
           badgeColor = 'bg-lab-blue';
           break;
         case 'тренер':
-          badgeColor = 'bg-lab-yellow';
+          badgeColor = 'bg-lab-black';
           break;
         case 'фотограф':
           badgeColor = 'bg-purple-500';
           break;
         case 'стрингер':
-          badgeColor = 'bg-lab-black';
+          badgeColor = 'bg-lab-yellow';
           break;
       }
-    div(class=`${badgeColor} z-10 w-fit rounded px-1 py-0.5 text-xs font-medium text-white`)
+    div(class=`${badgeColor} z-10 w-fit rounded px-1.5 py-0.5 text-xs font-medium text-white`)
       | #{ type }

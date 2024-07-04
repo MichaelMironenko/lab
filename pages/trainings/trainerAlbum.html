@@ -1,13 +1,20 @@
-<!DOCTYPE html>
+
+<script>
+  function togglePhotoSelection(el) {
+    const checkmark = el.querySelector('.checkmark');
+    checkmark.classList.toggle('hidden');
+  }
+</script><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сообщения - Кудайбердиев Адилет Кудайбердиевич</title>
+    <title>Фотографии тренера</title>
     <link href="../../styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo 2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
     <base href="../../">
   </head>
-  <body class="bg-page-background pt-12 pb-32">
+  <body class="bg-page-background pb-28 pt-12">
     <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
@@ -53,72 +60,14 @@
         })
       })
     </script>
-    <div class="flex justify-center bg-white py-2 items-center gap-2 pr-4 pl-2"><img class="size-5 rotate-90" src="img/expand-arrow.svg">
-      <div class="flex items-center grow gap-2 justify-center">
-        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-          <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ИП</span></div>
-        </div><span class="inline align-middle font-semibold truncate text-sm">Иван Петров</span>
-      </div><img class="size-4" src="img/three-dots.svg" onclick="toggleCommentMenu()">
+    <div class="py-4 flex gap-3 items-center justify-between px-2"><a href="pages/trainings/singleTrainer.html"> <img class="rotate-90 shrink-0" src="img/expand-arrow.svg" alt=""/></a>
+      <h1 class="text-lg text-center grow mr-8 max-w-[calc(100%-24px)]">Альбом тренера Кудайбердиева А.</h1>
+    </div><a class="block mx-auto mb-4 text-center" href="pages/trainings/editTrainerAlbum.html">Редактировать</a>
+    <div class="mb-4 grid grid-cols-3 430grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-0.5 "><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a>
     </div>
-    <div class="p-4 w-full">
-      <div class="mx-auto text-lab-black text-sm bg-lab-color-10 px-3 p-1 rounded-full w-fit mb-4">Сегодня</div>
-      <div class="flex items-center gap-2 mb-4">
-        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-          <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ИП</span></div>
-        </div>
-        <div class="bg-white px-3 p-2 rounded-lg"><span>Завтра будешь в турнире участвовать?</span></div>
-        <div class="text-right text-xs text-lab-black-50">13:41</div>
+    <nav class="pb-safe fixed inset-x-0 bottom-0 z-10 border-t bg-white">
+      <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class=" text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7" src="img/tabbar/trainings-active.svg" alt="Тренировки"/><span class=" font-bold  text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class=" text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class=" text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
       </div>
-      <div class="flex items-center gap-2 justify-end mb-4">
-        <div class="text-right text-xs text-lab-black-50">13:41</div>
-        <div class="bg-lab-color-10 text-white p-2 rounded-lg"><span>Не, меня жена не отпускает</span></div>
-      </div>
-      <div class="flex items-center gap-2 mb-2">
-        <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-          <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ИП</span></div>
-        </div>
-        <div class="bg-white px-3 p-2 rounded-lg"><span>Приходи с женой! </span></div>
-        <div class="text-right text-xs text-lab-black-50">13:42</div>
-      </div>
-      <div class="flex items-center gap-2 ml-9"> 
-        <div class="bg-white px-3 p-2 rounded-lg"><span>Она играет?</span></div>
-        <div class="text-right text-xs text-lab-black-50">13:42</div>
-      </div>
-      <div class="flex items-center gap-2 justify-end py-4">
-        <div class="text-right text-xs text-lab-black-50">13:43</div>
-        <div class="bg-lab-color-10 text-white p-2 rounded-lg"><span>Разве что сковородкой на кухне 😂</span></div>
-      </div>
-    </div>
-    <div class="flex gap-4 bg-white absolute bottom-0 w-full px-2 py-2 items-end">
-      <textarea class="border border-lab-black-30 p-2 w-full overflow-auto max-h-80 rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" id="" rows="1" placeholder="" oninput="autoResizeTextarea(this)"></textarea>
-      <script>
-        function autoResizeTextarea(elem) {
-            elem.style.height = 'auto';
-            elem.style.height = elem.scrollHeight+2 + 'px'; 
-        }
-      </script>
-      <button class="pb-3  rounded-lg font-semibold max-h-12 transition-transform duration-150 text- leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick=""> <img src="img/send-message.svg"/></button>
-    </div>
-    <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="action-menu-container" data-action="hide">
-      <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center  text-lab-color">Открыть профиль</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center  text-lab-red">Заблокировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full" href="#" data-action="hide"><span class="flex-1 text-center  text-lab-red">Удалить чат</span></a>
-      </div>
-      <script>
-        document.addEventListener('click', function (e) {
-          if (e.target.dataset.action === 'hide') {
-            var menuContainer = document.querySelector('.menu-container'); 
-            if (menuContainer) {
-              menuContainer.style.display = 'none';
-            }
-          }
-        });
-      </script>
-    </div>
-    <script>
-      function toggleCommentMenu() {
-          var commentMenu = document.getElementById(`action-menu-container`);
-          console.log(commentMenu)
-          commentMenu.classList.toggle('hidden');
-      }
-    </script>
+    </nav>
   </body>
 </html>

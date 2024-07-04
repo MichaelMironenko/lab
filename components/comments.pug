@@ -2,6 +2,7 @@ include /components/block.pug
 include /components/atoms/avatar.pug
 include /components/reactions.pug
 include /components/atoms/userRating.pug
+include /components/atoms/starRating.pug
 include /components/atoms/userStatusBadge.pug
 include /components/comment.pug
 
@@ -12,7 +13,7 @@ mixin comments(isReview = false)
 
       .relative.flex.flex-grow.flex-col.gap-3
         if isReview
-          .flex.items-center.justify-end.gap-3(class='420:ml-4 420:justify-start')
+          .flex.items-center.justify-end.gap-3(class='430:ml-4 430:justify-start')
             span.text-sm.text-lab-black-50 Ваша оценка
             +starRating(0)
         textarea#commentTextArea.hidden.resize-none.overflow-hidden.rounded-md.border.border-gray-300.p-2.transition-all.duration-300.ease-in-out(

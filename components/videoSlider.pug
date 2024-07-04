@@ -4,8 +4,8 @@ include /components/atoms/tournamentTypeBadge.pug
   var videos = [
   { date: '2 дня назад', time: '19:30', rating: 'XDF+', tournamentName: 'Сколково', playerNames: 'Демченко / Семенов — Стеженский / Богомольная', likes: 13, comments: 0, views: 2173 }, {date: '14 октября', time: '20:00', rating: 'ADF', tournamentName: 'Open Space ZP', playerNames: 'Иванов / Петров — Сидоров / Медведев', likes: 8, comments: 12, views: '23K' }]
 
-mixin videoSlider(isLive, tournamentLine, title, plusButton, allLink=true)
-  +block(title, allLink ? { href: 'pages/aroundgame/videos.html', text: 'Все' } : '', plusButton)
+mixin videoSlider(isLive, tournamentLine, title, plusButton, allLink)
+  +block(title, allLink ? { href: allLink, text: 'Все' } : { href: 'pages/aroundgame/videoCollection.html', text: 'Все' }, plusButton)
     .flex.overflow-x-auto.-ml-4.-mr-4.px-4.gap-2.no-scrollbar
       each video, index in videos
         .flex.flex-col.gap-2.flex-shrink-0(class="w-[80%] max-w-[300px]")
