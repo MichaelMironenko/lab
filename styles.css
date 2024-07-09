@@ -1000,6 +1000,11 @@ select {
   margin-bottom: 1rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -1129,6 +1134,10 @@ select {
   margin-left: 1rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -1209,10 +1218,6 @@ select {
   margin-top: 0.75rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -1223,6 +1228,10 @@ select {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-\[2px\] {
+  margin-top: 2px;
 }
 
 .mt-\[3px\] {
@@ -3085,6 +3094,10 @@ select {
 
 .pr-10 {
   padding-right: 2.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .pr-3 {

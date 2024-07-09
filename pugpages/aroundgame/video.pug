@@ -16,7 +16,6 @@ html(lang='ru')
   base(href='../../')
   body.bg-page-background.pb-16.pt-12
     +topBar
-    +breadcrumbs([ {name: 'Видео', href: 'pages/aroundgame/videos.html'}, {name: '1000% веселых моментов в бадминтоне'}])
 
     div(class="w-full")
       iframe(
@@ -29,7 +28,7 @@ html(lang='ru')
 
     .bg-white.px-4.pt-4
       h1.text-lg 1000% веселых моментов в бадминтоне
-      .flex.gap-4.border-b.py-3.text-sm
+      .flex.gap-4.py-3.text-sm
         .flex.items-center.gap-1
           img.size-5.cursor-pointer.opacity-50.saturate-50(
             src='img/heart-empty.svg',
@@ -42,6 +41,11 @@ html(lang='ru')
         a.flex.items-center.gap-1(href="#comments")
           img.size-5.opacity-50.saturate-50(src='img/comment.svg')
           span 3
+      .flex.items-center.gap-1.text-xs.pb-2.border-b
+        button.bg-lab-color-10.px-1.border.rounded-md.text-lab-black-50 Соревнования 
+        button.bg-lab-color-10.px-1.border.rounded-md.text-lab-black-50 Смешное
+        div.text-lab-color(onclick="addTagModal()") Как бы вы классифицировали это видео? 
+
       script.
         function toggleHeart(img) {
           const heartEmpty = 'img/heart-empty.svg'
@@ -55,6 +59,7 @@ html(lang='ru')
           }
         }
       .mt-4.flex.flex-col.gap-4.border-b.pb-4
+        
         .flex.items-center.gap-3.text-sm
           img.size-4.opacity-50.saturate-50(src='img/cup.svg' alt='')
           a(href="pages/tournaments/singleTournament.html") 
@@ -70,15 +75,63 @@ html(lang='ru')
         .flex.items-start.gap-3.text-sm
           img.size-4.opacity-50.saturate-50(src='img/player.svg' alt='' class="mt-0.5")
           div
-            a.inline(href='pages/others/profile.html') Василий Артемьев, 
-            |
-            a.inline(href='pages/others/profile.html') Артур Скобелев, 
-            |
-            a.inline(href='pages/others/profile.html') Игорь Маслов
+            div.mb-2
+              a.inline(href='pages/others/profile.html') Василий Артемьев, 
+              |
+              a.inline(href='pages/others/profile.html') Артур Скобелев, 
+              |
+              a.inline(href='pages/others/profile.html') Игорь Маслов 
+            button.bg-lab-color-10.px-2.border.rounded-md(onclick="addPlayerModal()") +  Отметить игрока
         .flex.items-center.gap-3.text-sm
           img.size-4.opacity-50.saturate-50(src='img/camera.svg' alt='')
           a(href='pages/others/profile.html') Юрий Любимов
+    div.hidden.fixed.inset-0.z-50.bg-gray-800.bg-opacity-50.flex.justify-center.items-center#addPlayermodal
+      div.bg-white.p-4.rounded-lg.shadow-lg.w-96.relative
+        h2.text-lg.mb-4.text-center Отметить игрока
+        div.mb-4 Введите имя игрока, которого еще нет на фото
+        input.p-2.border.rounded.mb-4(type="text" placeholder="Имя игрока").w-full
+        div.flex.gap-2
+          +button('Отмена', 'text', 'lab-black-50', '', ' w-1/2', 'cancelButton')
+          +button('Отправить', 'default', 'white', 'bg-lab-color', ' w-1/2', 'commentSubmitButton')
+        button.absolute.top-2.right-4.text-2xl.text-lab-black(onclick="closeAddPlayerModal()") &times;
 
+    div.hidden.fixed.inset-0.z-50.bg-gray-800.bg-opacity-50.flex.justify-center.items-center#addTagmodal
+        div.bg-white.p-4.rounded-lg.shadow-lg.w-96.relative
+            h2.text-lg.text-center Выберите категорию видео
+
+            select.p-2.border.my-8.rounded.w-full
+                option(value="lessons") Уроки
+                option(value="tournaments") Турниры
+                option(value="reviews") Обзоры
+                option(value="competitions") Соревнования
+                option(value="interviews") Интервью
+                option(value="trainings") Тренировки
+                option(value="history") История
+                option(value="tips") Советы
+                option(value="clubs") Клубы
+                option(value="juniors") Юниоры
+
+            div.flex.gap-2
+                +button('Отмена', 'text', 'lab-black-50', '', ' w-1/2', 'cancelButton')
+                +button('Отправить', 'default', 'white', 'bg-lab-color', ' w-1/2', 'commentSubmitButton')
+            button.absolute.top-2.right-4.text-2xl.text-lab-black(onclick="closeAddTagModal()") &times;
+
+
+    script.
+      function addPlayerModal() {
+        document.getElementById('addPlayermodal').classList.remove('hidden');
+      }
+      function closeAddPlayerModal() {
+        document.getElementById('addPlayermodal').classList.add('hidden');
+      }
+
+      function addTagModal() {
+        document.getElementById('addTagmodal').classList.remove('hidden');
+      }
+      function closeAddTagModal() {
+        document.getElementById('addTagmodal').classList.add('hidden');
+      }
+        
     +comments
 
     +tabBar('Вокруг игры')

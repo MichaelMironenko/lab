@@ -60,23 +60,19 @@
         })
       })
     </script>
-    <nav class="p-4">
-      <ol class="flex items-center gap-1">
-        <li class="inline"><a class="text-xs whitespace-nowrap font-medium" href="pages/aroundgame/videos.html">Видео</a>
-        </li><img class="-rotate-90 size-4" src="img/expand-arrow.svg" alt="Стрелка"/>
-        <li class="inline">
-          <div class="text-xs text-lab-black-50 font-medium leading-tight">1000% веселых моментов в бадминтоне</div>
-        </li>
-      </ol>
-    </nav>
     <div class="w-full">
       <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/T40FmAJKIP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="bg-white px-4 pt-4">
       <h1 class="text-lg">1000% веселых моментов в бадминтоне</h1>
-      <div class="flex gap-4 border-b py-3 text-sm">
+      <div class="flex gap-4 py-3 text-sm">
         <div class="flex items-center gap-1"><img class="size-5 cursor-pointer opacity-50 saturate-50" src="img/heart-empty.svg" onclick="toggleHeart(this)"><span>13</span></div>
         <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span>1534</span></div><a class="flex items-center gap-1" href="#comments"><img class="size-5 opacity-50 saturate-50" src="img/comment.svg"><span>3</span></a>
+      </div>
+      <div class="flex items-center gap-1 text-xs pb-2 border-b">
+        <button class="bg-lab-color-10 px-1 border rounded-md text-lab-black-50">Соревнования </button>
+        <button class="bg-lab-color-10 px-1 border rounded-md text-lab-black-50">Смешное</button>
+        <div class="text-lab-color" onclick="addTagModal()">Как бы вы классифицировали это видео? </div>
       </div>
       <script>
         function toggleHeart(img) {
@@ -97,11 +93,64 @@
         <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/home.svg" alt=""><a href="pages/courts/singleCourt.html">Naten-Юг</a></div>
         <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/calendar.svg" alt=""><span>22.03.2024</span></div>
         <div class="flex items-start gap-3 text-sm"><img class="size-4 opacity-50 saturate-50 mt-0.5" src="img/player.svg" alt="">
-          <div><a class="inline" href="pages/others/profile.html">Василий Артемьев, </a><a class="inline" href="pages/others/profile.html">Артур Скобелев, </a><a class="inline" href="pages/others/profile.html">Игорь Маслов</a></div>
+          <div>
+            <div class="mb-2"><a class="inline" href="pages/others/profile.html">Василий Артемьев, </a><a class="inline" href="pages/others/profile.html">Артур Скобелев, </a><a class="inline" href="pages/others/profile.html">Игорь Маслов </a></div>
+            <button class="bg-lab-color-10 px-2 border rounded-md" onclick="addPlayerModal()">+  Отметить игрока</button>
+          </div>
         </div>
         <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/camera.svg" alt=""><a href="pages/others/profile.html">Юрий Любимов</a></div>
       </div>
     </div>
+    <div class="hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center" id="addPlayermodal">
+      <div class="bg-white p-4 rounded-lg shadow-lg w-96 relative">
+        <h2 class="text-lg mb-4 text-center">Отметить игрока</h2>
+        <div class="mb-4">Введите имя игрока, которого еще нет на фото</div>
+        <input class="p-2 border rounded mb-4 w-full" type="text" placeholder="Имя игрока">
+        <div class="flex gap-2">
+          <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
+          <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
+        </div>
+        <button class="absolute top-2 right-4 text-2xl text-lab-black" onclick="closeAddPlayerModal()">&times;</button>
+      </div>
+    </div>
+    <div class="hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center" id="addTagmodal">
+      <div class="bg-white p-4 rounded-lg shadow-lg w-96 relative">
+        <h2 class="text-lg text-center">Выберите категорию видео</h2>
+        <select class="p-2 border my-8 rounded w-full">
+          <option value="lessons">Уроки</option>
+          <option value="tournaments">Турниры</option>
+          <option value="reviews">Обзоры</option>
+          <option value="competitions">Соревнования</option>
+          <option value="interviews">Интервью</option>
+          <option value="trainings">Тренировки</option>
+          <option value="history">История</option>
+          <option value="tips">Советы</option>
+          <option value="clubs">Клубы</option>
+          <option value="juniors">Юниоры</option>
+        </select>
+        <div class="flex gap-2">
+          <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
+          <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
+        </div>
+        <button class="absolute top-2 right-4 text-2xl text-lab-black" onclick="closeAddTagModal()">&times;</button>
+      </div>
+    </div>
+    <script>
+      function addPlayerModal() {
+        document.getElementById('addPlayermodal').classList.remove('hidden');
+      }
+      function closeAddPlayerModal() {
+        document.getElementById('addPlayermodal').classList.add('hidden');
+      }
+      
+      function addTagModal() {
+        document.getElementById('addTagmodal').classList.remove('hidden');
+      }
+      function closeAddTagModal() {
+        document.getElementById('addTagmodal').classList.add('hidden');
+      }
+        
+    </script>
     <div class="p-4 bg-white rounded-lg overflow-hidden  undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">

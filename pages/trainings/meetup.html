@@ -1,20 +1,14 @@
-
-<script>
-  function togglePhotoSelection(el) {
-    const checkmark = el.querySelector('.checkmark');
-    checkmark.classList.toggle('hidden');
-  }
-</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фото</title>
+    <title>Летний интенсив</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
     <base href="../../">
   </head>
-  <body class="relative bg-page-background pb-16 pt-12">
+  <body class="bg-page-background mt-12 pb-32 p-2">
     <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
@@ -59,52 +53,11 @@
           userMenu.classList.toggle('hidden')
         })
       })
-    </script><a class="absolute top-16 left-3 bg-white bg-opacity-75 rounded-lg p-2 pr-3 flex gap-2 items-center border shadow-sm" href="pages/aroundgame/photos.html"><img class="rotate-90 size-5" src="img/expand-arrow.svg" alt=""><span class="text-sm leading-none opacity-75">Все фото</span></a>
-    <div class="w-full overflow-hidden max-h-[70vh]" id="image-container" onclick="openModal()"></div>
-    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 hidden z-50" id="modal">
-      <div class="relative bg-white rounded-lg overflow-hidden max-w-full max-h-full"><img class="max-w-full max-h-screen object-contain" src="dynamic-img/photo-3.jpeg" alt="Фото">
-        <button class="absolute top-2 right-2 text-white text-2xl" font-size="2rem" onclick="closeModal()">&times;</button>
-      </div>
-    </div>
-    <script>
-      function openModal() {
-        document.getElementById('modal').classList.remove('hidden');
-      }
-      function closeModal() {
-        document.getElementById('modal').classList.add('hidden');
-      }
-      
-      
-      const imgContainer = document.querySelector('#image-container')
-      const img = new Image()
-      img.src = 'dynamic-img/photo-3.jpeg'
-      function updateImageContainer() {
-        const aspectRatio = img.width / img.height;
-        const maxWidth = 430; 
-        const containerWidth = Math.min(window.innerWidth, maxWidth); // Ограничиваем ширину контейнера
-      
-        const height = img.height * (containerWidth / img.width);
-        const maxVisibleHeight = img.height * 0.8; // Максимум 80% высоты изображения
-      
-        imgContainer.style.width = containerWidth + 'px';
-        imgContainer.style.height = Math.min(height, maxVisibleHeight) + 'px';
-        imgContainer.style.background = `url(${img.src}) center / cover no-repeat`;
-        imgContainer.style.margin = '0 auto'; // Центрируем контейнер
-      }
-      
-      img.onload = function () {
-        updateImageContainer();
-        window.addEventListener('resize', updateImageContainer);
-      }
-      
-      
     </script>
-    <div class="bg-white px-4 pt-4">
-      <div class="flex items-center gap-3 text-sm justify-between">
-        <div class="flex items-center gap-1"><img class="size-5 cursor-pointer opacity-50 saturate-50" src="img/heart-empty.svg" onclick="toggleHeart(this)"><span>13</span></div>
-        <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span>2K</span></div>
-        <div class="flex items-center gap-1 grow"><img class="size-5 opacity-50 saturate-50" src="img/comment.svg"><span>2</span></div>
-        <button class="cursor-pointer shrink-0" id="bookmarkButton" onclick="toggleBookmark()"><img class="size-5" id="bookmarkIcon" src="img/bookmark-empty.svg" alt="Bookmark"/>
+    <div class="p-4 bg-white rounded-lg mb-3">
+      <div class="flex justify-between gap-3 items-center">
+        <h1 class="text-lg text-center ml-6 leading-6 text-lab-black flex-grow font-semibold">Летний интенсив</h1>
+        <button class="cursor-pointer shrink-0 undefined" id="bookmarkButton" onclick="toggleBookmark()"><img class="size-6" id="bookmarkIcon" src="img/bookmark-empty.svg" alt="Bookmark"/>
         </button>
         <script>
           var isActive = false; // Начальное состояние закладки
@@ -113,120 +66,255 @@
             var bookmarkIcon = document.getElementById('bookmarkIcon');
             bookmarkIcon.src = isActive ? 'img/bookmark-fill.svg' : 'img/bookmark-empty.svg';
           }
-        </script><img class="size-4" src="img/three-dots.svg" alt="" onclick="toggleCommentMenu('undefined')">
-      </div>
-      <div class="absolute bottom-0" id="photomenu-undefined">
-        <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="action-menu-container" data-action="hide">
-          <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="pages/aroundgame/editPhoto.html" data-action="hide"><span class="flex-1 text-center  text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center  text-lab-color">Убрать своё имя с фото</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center  text-lab-color">Меня нет на фото</span></a>
-            <button class="flex items-center gap-3 px-4 py-3 w-full text-left" data-action="report"><span class="flex-1 text-center  text-lab-red">Пожаловаться</span>
-            </button>
-          </div>
-          <script>
-            document.addEventListener('click', function (e) {
-              if (e.target.dataset.action === 'hide') {
-                var menuContainer = document.querySelector('.menu-container'); 
-                if (menuContainer) {
-                  menuContainer.style.display = 'none';
-                }
-              }
-            });
-          </script>
-        </div>
-      </div>
-      <div class="modal-container fixed hidden inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
-        <div class="bg-white rounded-lg p-4 w-11/12 max-w-md">
-          <h2 class="text-lg font-semibold">Выберите тему жалобы</h2>
-          <form class="flex flex-col gap-4 pt-4 pb-0 mb-0">
-            <label class="flex items-center gap-4 text-lab-black">
-              <input class="size-5" type="radio" name="issue" value="sold">Непристойное содержание
-            </label>
-            <label class="flex items-center gap-4 text-lab-black">
-              <input class="size-5" type="radio" name="issue" value="wrong_info">Не нравится как выгляжу на фото
-            </label>
-            <label class="flex items-center gap-4 text-lab-black">
-              <input class="size-5" type="radio" name="issue" value="fraud">Спам
-            </label>
-            <label class="flex items-center gap-4 text-lab-black">
-              <input class="size-5" type="radio" name="issue" value="mass_sale">Фото не относится к турниру
-            </label>
-            <textarea class="p-2 border border-gray-300 rounded-md" placeholder="Кратко опишите суть жалобы"></textarea>
-            <div class="flex gap-2">
-              <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
-              <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <script>
-        function toggleCommentMenu(photoID) {
-          var photoMenu = document.getElementById(`action-menu-container`);
-          photoMenu.classList.toggle('hidden');
-        }
-        
-        document.addEventListener('click', function (e) {
-            var menuContainer = document.querySelector('.menu-container');
-            var modalContainer = document.querySelector('.modal-container');
-            
-            if (e.target.dataset.action === 'report') {
-                modalContainer.style.display = 'flex';
-                menuContainer.style.display = 'none';
-            }
-        
-            if (e.target.dataset.action === 'hide') {
-                if (menuContainer) menuContainer.style.display = 'none';
-                if (modalContainer) modalContainer.style.display = 'none';
-            }
-        });
-        
-      </script>
-      <h1 class="text-base py-4">Победители</h1>
-      <script>
-        function toggleHeart(img) {
-          const heartEmpty = 'img/heart-empty.svg'
-          const heartFill = 'img/heart-fill.svg'
-          if (img.src.includes(heartEmpty)) {
-            img.src = heartFill
-            img.classList.remove('opacity-50', 'saturate-50') // Удаляем классы для heart-empty
-          } else {
-            img.src = heartEmpty
-            img.classList.add('opacity-50', 'saturate-50') // Добавляем классы обратно для heart-empty
-          }
-        }
-      </script>
-      <div class="flex flex-col gap-4 border-b pb-4">
-        <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/cup.svg" alt=""><a href="pages/tournaments/singleTournament.html"> 
-            <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XDF</div><span class="inline ml-2">Naten-Юг</span><span class="inline ml-2">22.03.2024 12:30</span></a></div>
-        <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/home.svg" alt=""><a href="pages/courts/singleCourt.html">Naten-Юг</a></div>
-        <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/calendar.svg" alt=""><span>22.03.2024</span></div>
-        <div class="flex items-start gap-3 text-sm"><img class="size-4 opacity-50 saturate-50 mt-0.5" src="img/player.svg" alt="">
-          <div>
-            <div class="mb-2"><a class="inline" href="pages/others/profile.html">Василий Артемьев, </a><a class="inline" href="pages/others/profile.html">Артур Скобелев, </a><a class="inline" href="pages/others/profile.html">Игорь Маслов </a></div>
-            <button class="flex items-center gap-2 bg-lab-color-10 px-2 border rounded-lg" onclick="addPlayerModal()">+  Отметить игрока</button>
+        </script>
+      </div><img class="w-full pt-4" src="dynamic-img/camp1.png" alt="">
+      <div class="grid grid-cols-1 gap-6 mt-6 text-[15px] sm:grid-cols-2">
+        <div class="flex gap-2 justify-between items-center">
+          <div class="flex flex-col gap-3">
+            <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/calendar.svg" alt="Дата"><span>18–22 июля 2024 г.</span></div>
+            <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/price.svg" alt="Цена"><span>от 4500₽ / сутки</span></div>
+            <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/player.svg" alt="Игроки"><span>3/16</span></div>
           </div>
         </div>
-        <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/camera.svg" alt=""><a href="pages/others/profile.html">Юрий Любимов</a></div>
-      </div>
-    </div>
-    <div class="hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center" id="addPlayermodal">
-      <div class="bg-white p-4 rounded-lg shadow-lg w-96 relative">
-        <h2 class="text-lg mb-4 text-center">Отметить игрока</h2>
-        <div class="mb-4">Введите имя игрока, которого еще нет на фото</div>
-        <input class="p-2 border rounded mb-4 w-full" type="text" placeholder="Имя игрока">
-        <div class="flex gap-2">
-          <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
-          <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
+        <div class="grid grid-cols-1 xs:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-2 text-sm">
+            <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/administrator.svg" alt="Клуб"><a href="">NATEN, Ларченко Елена</a></div>
+            <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/location-icon.svg" alt="Адрес"><span>Пансионат 'Клязьма', г. Мытищи</span></div>
+            <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/phone.svg" alt="Контакты"><a href="tel:79262004022">+7-926-200-40-22</a></div>
+          </div>
+          <div class="h-full max-h-40"><img class="object-cover h-full w-full" src="dynamic-img/map.png"></div>
         </div>
-        <button class="absolute top-2 right-4 text-2xl text-lab-black" onclick="closeAddPlayerModal()">&times;</button>
+      </div>
+      <button class="w-full  bg-avatar-gradient grow my-4 rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="registerButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Регистрация</button>
+      <button class="w-full  bg-avatar-gradient grow rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="registerButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Оплатить</button>
+    </div>
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
+      <div class="flex justify-between items-center mb-4 gap-4">
+        <div class="flex gap-2 items-center">
+          <h2 class="leading-tight">Информация о сборах</h2>
+        </div>
+      </div>
+      <div class="flex overflow-x-auto items-center space-x-2 no-scrollbar scroll-smooth  undefined">
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+          <div>Общая информация</div>
+        </div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+          <div>Программа</div>
+        </div>
+        <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+          <div>Тренеры</div>
+        </div>
+      </div>
+      <p class="mt-4">Информация о сборах</p>
+    </div>
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
+      <div class="flex justify-between items-center mb-4 gap-4">
+        <div class="flex gap-2 items-center">
+          <h2 class="leading-tight">Зарегистрированные участники</h2>
+        </div>
+      </div>
+      <div class="-ml-4 -mr-4">
+        <table class="w-full">
+          <tr class="text-xs text-lab-color !font-semibold border-b">
+            <th class="pr-2">#</th>
+            <th> </th>
+            <th class="text-left py-2">Игрок</th>
+            <th>Рейтинг</th>
+            <th class="sm:table-cell hidden">Дата регистрации</th>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">1</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АН</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Алексей Николаев</span>
+                <div class="text-xs text-lab-green">Оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">945</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-01 10:00</td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">2</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">МД</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Михаил Дмитриев</span>
+                <div class="text-xs text-lab-green">Оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">876</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-02 11:00</td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">3</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ЕИ</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Егор Иванов</span>
+                <div class="text-xs text-red-500">Не оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">789</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-03 12:00</td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">4</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АП</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Антон Петров</span>
+                <div class="text-xs text-red-500">Не оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">654</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-04 13:00</td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">5</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ДС</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Денис Сергеев</span>
+                <div class="text-xs text-lab-green">Оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">832</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-05 14:00</td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">6</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АА</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Артем Александров</span>
+                <div class="text-xs text-lab-green">Оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">919</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-06 15:00</td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">7</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ВМ</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Владимир Михайлов</span>
+                <div class="text-xs text-red-500">Не оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">751</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-07 16:00</td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">8</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">СР</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Сергей Романов</span>
+                <div class="text-xs text-red-500">Не оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">668</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-08 17:00</td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">9</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АФ</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Андрей Федоров</span>
+                <div class="text-xs text-lab-green">Оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">812</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-09 18:00</td>
+          </tr>
+          <tr class="text-sm border-b border-lab-black-10">
+            <td class="py-2 text-center text-lab-black pr-2">10</td>
+            <td class="py-2 text-center max-w-16 w-10">
+              <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">НК</span></div>
+              </div>
+            </td>
+            <td class="py-2"> 
+              <div><span class="font-semibold text-lab-color">Никита Кузнецов</span>
+                <div class="text-xs text-red-500">Не оплачено</div>
+              </div>
+            </td>
+            <td class="py-2 text-center">
+              <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
+                <div class="text-center text-lab-black text-xs font-semibold leading-none">900</div>
+              </div>
+            </td>
+            <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-10 19:00</td>
+          </tr>
+        </table>
       </div>
     </div>
-    <script>
-      function addPlayerModal() {
-        document.getElementById('addPlayermodal').classList.remove('hidden');
-      }
-      function closeAddPlayerModal() {
-        document.getElementById('addPlayermodal').classList.add('hidden');
-      }
-    </script>
     <div class="p-4 bg-white rounded-lg overflow-hidden  undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
@@ -561,13 +649,8 @@
         </div>
       </div>
     </div>
-    <div class="bg-white px-4"> 
-      <h2 class="border-t py-4">Похожие фотографии </h2>
-    </div>
-    <div class="mb-4 grid grid-cols-3 430grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-0.5 "><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"/></a><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"/></a>
-    </div>
     <nav class="pb-safe fixed inset-x-0 bottom-0 z-10 border-t bg-white">
-      <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class=" text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class=" text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class=" text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7" src="img/tabbar/around-game-active.svg" alt="Вокруг игры"/><span class=" font-bold  text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
+      <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7" src="img/tabbar/tournaments-active.svg" alt="Турниры"/><span class=" font-bold  text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class=" text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class=" text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class=" text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
       </div>
     </nav>
   </body>

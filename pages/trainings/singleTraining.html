@@ -395,10 +395,10 @@
     <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
-          <h2 class="leading-tight">Информация о турнире</h2>
+          <h2 class="leading-tight">Информация о тренировке</h2>
         </div>
       </div>
-      <p class="mt-4">Информация о турнире</p>
+      <p class="mt-4">Информация о тренировке</p>
     </div>
     <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
@@ -406,12 +406,28 @@
           <h2 class="leading-tight">Зарегистрированные ученики</h2>
         </div>
       </div>
+      <div class="-ml-4 -mr-4">
+        <div class="flex overflow-x-auto items-center space-x-2 no-scrollbar scroll-smooth  undefined px-4">
+          <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
+            <div>Участники</div>
+            <div class="bg-white text-lab-black border font-semibold text-xs rounded-full px-1 min-w-6 text-center">16</div>
+          </div>
+          <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
+            <div>Резерв</div>
+            <div class="bg-white text-lab-black border font-semibold text-xs rounded-full px-1 min-w-6 text-center">2</div>
+          </div>
+        </div>
+      </div>
       <table class="w-full">
         <tr class="text-xs text-lab-color !font-semibold border-b">
-          <th class="text-left py-2" colspan="2">Игрок</th>
+          <th class="pr-2">#</th>
+          <th> </th>
+          <th class="text-left py-2">Игрок</th>
           <th>Рейтинг</th>
+          <th class="sm:table-cell hidden">Дата регистрации</th>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">1</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АН</span></div>
@@ -427,8 +443,10 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">945</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-01 10:00</td>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">2</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">МД</span></div>
@@ -444,8 +462,10 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">876</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-02 11:00</td>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">3</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ЕИ</span></div>
@@ -461,8 +481,10 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">789</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-03 12:00</td>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">4</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АП</span></div>
@@ -478,8 +500,10 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">654</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-04 13:00</td>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">5</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ДС</span></div>
@@ -495,8 +519,10 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">832</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-05 14:00</td>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">6</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АА</span></div>
@@ -512,8 +538,10 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">919</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-06 15:00</td>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">7</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">ВМ</span></div>
@@ -529,8 +557,10 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">751</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-07 16:00</td>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">8</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">СР</span></div>
@@ -546,8 +576,10 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">668</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-08 17:00</td>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">9</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">АФ</span></div>
@@ -563,8 +595,10 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">812</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-09 18:00</td>
         </tr>
         <tr class="text-sm border-b border-lab-black-10">
+          <td class="py-2 text-center text-lab-black pr-2">10</td>
           <td class="py-2 text-center max-w-16 w-10">
             <div class="cursor-pointer p-[1px] w-[28px] h-[28px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
               <div class="bg-lab-color flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(28px/2.66)] font-bold leading-none text-white">НК</span></div>
@@ -580,6 +614,7 @@
               <div class="text-center text-lab-black text-xs font-semibold leading-none">900</div>
             </div>
           </td>
+          <td class="text-center hidden sm:table-cell text-lab-black-50">2023-01-10 19:00</td>
         </tr>
       </table>
     </div>

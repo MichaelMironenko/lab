@@ -21,3 +21,9 @@ mixin adminBar(options)
         if options.delete
             a(href="#")
                 img(src="img/admin-bar-delete.svg" alt="Удалить")
+        if options.hide
+            a(href="#")
+                img(src="img/admin-bar-hide.svg" alt="Скрыть")
+        if options.editWebsite
+            a(href="#")
+                img(src="img/admin-bar-edit-website.svg" alt="Редактировать сайт")

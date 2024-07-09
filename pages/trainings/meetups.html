@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Календарь официальных турниров</title>
+    <title>Календарь сборов</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
     <base href="../../">
@@ -55,7 +55,7 @@
       })
     </script>
     <div class="sticky top-12 w-screen border-b bg-white p-4 shadow-lg">
-      <h1 class="pb-4 leading-tight">Календарь официальных турниров</h1>
+      <h1 class="pb-4 leading-tight">Календарь сборов</h1>
       <div class="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4">
         <script>
           document.addEventListener('DOMContentLoaded', () => {
@@ -66,13 +66,13 @@
             }
             document.querySelectorAll('.july-button').forEach((button) => {
               button.addEventListener('click', () => {
-                const eventsContainer = document.querySelector('#events-container')
-                const julyEvents = document.querySelector('#july-events')
-                const scrollPosition = julyEvents.offsetTop - eventsContainer.offsetTop + eventsContainer.scrollTop
-                console.log(julyEvents.offsetTop, eventsContainer.offsetTop)
+                const meetupsContainer = document.querySelector('#meetups-container')
+                const julymeetups = document.querySelector('#july-meetups')
+                const scrollPosition = julymeetups.offsetTop - meetupsContainer.offsetTop + meetupsContainer.scrollTop
+                console.log(julymeetups.offsetTop, meetupsContainer.offsetTop)
           
-                eventsContainer.scrollTo({
-                  top: julyEvents.offsetTop - eventsContainer.offsetTop,
+                meetupsContainer.scrollTo({
+                  top: julymeetups.offsetTop - meetupsContainer.offsetTop,
                   behavior: 'smooth',
                 })
               })
@@ -269,202 +269,85 @@
         </div>
       </div>
     </div>
-    <div class="no-scrollbar max-h-screen w-full overflow-y-auto bg-white p-4" id="events-container">
-      <h2 class="pb-2 pt-2">Июнь 2024</h2>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">1–4 июня</div><img class="mx-auto mt-2 size-6" src="img/euro.png" alt="logo">
-        </div>
+    <div class="no-scrollbar max-h-screen w-full overflow-y-auto bg-white" id="meetups-container">
+      <div class="p-4 flex items-center justify-between gap-4 rounded-lg border-b last:border-b-0 last:pb-0 sm:hidden">
+        <div class="w-32 shrink-0 text-center rounded overflow-hidden"><img class="mx-auto" src="dynamic-img/camp1.png" alt="logo"></div>
         <div class="grow items-center">
-          <h3 class="text-sm font-bold">Danish Junior Cup 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Дания, Видовре</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
+          <div class="w-fit text-sm text-lab-black-50 py-1">18–22 июля</div>
+          <h3 class="font-bold">Летний интенсив</h3>
+          <div class="flex items-center gap-2 py-1"> <img class="size-4 opacity-50 saturate-50" src="img/price.svg" alt="">
+            <div class="text-sm text-lab-black-50">от 4500₽ / сутки</div>
+          </div>
+          <div class="flex items-center gap-2 py-1"><img class="size-4 opacity-50 saturate-50" src="img/player.svg" alt="">
+            <div class="text-sm text-lab-black-50">8 / 20</div>
+          </div>
         </div>
       </div>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">2-4 июня</div><img class="mx-auto mt-2 size-6" src="img/nfbr.png" alt="logo">
-        </div>
+      <div class="p-4 flex items-center justify-between gap-4 rounded-lg border-b last:border-b-0 last:pb-0 sm:hidden">
+        <div class="w-32 shrink-0 text-center rounded overflow-hidden"><img class="mx-auto" src="dynamic-img/camp2.png" alt="logo"></div>
         <div class="grow items-center">
-          <h3 class="text-sm font-bold">Чемпионат Крыма среди ветеранов 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Евпатория, Россия</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
+          <div class="w-fit text-sm text-lab-black-50 py-1">19 июня –2 июля</div>
+          <h3 class="font-bold">Сборы в Светлогорске с Андреем Дегтярёвым</h3>
+          <div class="flex items-center gap-2 py-1"> <img class="size-4 opacity-50 saturate-50" src="img/price.svg" alt="">
+            <div class="text-sm text-lab-black-50">12000/чел</div>
+          </div>
+          <div class="flex items-center gap-2 py-1"><img class="size-4 opacity-50 saturate-50" src="img/player.svg" alt="">
+            <div class="text-sm text-lab-black-50">8 / 20</div>
+          </div>
         </div>
       </div>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">4–6 июня</div><img class="mx-auto mt-2 size-6" src="img/nfbr.png" alt="logo">
-        </div>
+      <div class="p-4 flex items-center justify-between gap-4 rounded-lg border-b last:border-b-0 last:pb-0 sm:hidden">
+        <div class="w-32 shrink-0 text-center rounded overflow-hidden"><img class="mx-auto" src="dynamic-img/camp3.png" alt="logo"></div>
         <div class="grow items-center">
-          <h3 class="text-sm font-bold">Самарское лето 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Самара, Россия</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
+          <div class="w-fit text-sm text-lab-black-50 py-1">24 июня – 14 июля</div>
+          <h3 class="font-bold">Летние сборы в Сукко</h3>
+          <div class="flex items-center gap-2 py-1"> <img class="size-4 opacity-50 saturate-50" src="img/price.svg" alt="">
+            <div class="text-sm text-lab-black-50">4150/день</div>
+          </div>
+          <div class="flex items-center gap-2 py-1"><img class="size-4 opacity-50 saturate-50" src="img/player.svg" alt="">
+            <div class="text-sm text-lab-black-50">2 / 14</div>
+          </div>
         </div>
       </div>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">8–11 июня</div><img class="mx-auto mt-2 size-6" src="img/nfbr.png" alt="logo">
-        </div>
-        <div class="grow items-center">
-          <h3 class="text-sm font-bold">Чемпионат России среди ветеранов 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Евпатория, Россия</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
-        </div>
-      </div>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">10–13 июня</div><img class="mx-auto mt-2 size-6" src="img/nfbr.png" alt="logo">
-        </div>
-        <div class="grow items-center">
-          <h3 class="text-sm font-bold">Белые ночи 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Гатчина, Россия</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
-        </div>
-      </div>
-      <table class="hidden w-full sm:table">
+      <table class="hidden w-full sm:table mt-4">
         <thead class="border-b text-sm text-lab-black-50">
           <tr>
-            <th class="p-2 text-left font-semibold">Дата</th>
-            <th class="px-2 text-left font-semibold">Название</th>
+            <th class="px-4 text-left font-semibold">Даты</th>
+            <th class="p-2 text-left font-semibold">Название</th>
             <th class="px-2 text-left font-semibold">Место</th>
-            <th class="px-2 text-left text-center font-semibold">Организатор</th>
-            <th class="px-2 text-center font-semibold">Уровень</th>
+            <th class="px-2 text-left font-semibold">Цена</th>
+            <th class="px-2 text-center font-semibold">Тренеры</th>
+            <th class="px-2 text-center font-semibold">Организатор</th>
+            <th class="px-2 text-center font-semibold">Участвуют</th>
           </tr>
         </thead>
         <tbody class="text-lab-black">
           <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">1–4 июня</td>
-            <td class="px-2">Danish Junior Cup 2023</td>
-            <td class="px-2">Дания, Видовре</td>
-            <td class="px-2 text-center">Badminton Europe</td>
-            <td class="px-2 text-center">U17 </td>
+            <td class="whitespace-nowrap p-4 text-lab-black">18–22 июля</td>
+            <td class="p-2">Летний интенсив</td>
+            <td class="p-2">Пансионат 'Клязьма', г. Мытищи</td>
+            <td class="p-2">от 4500₽ / сутки</td>
+            <td class="p-2 text-center">МС Ларченко Елена (★710), КМС Игошин Сергей (★879)</td>
+            <td class="p-2 text-center">NATEN, Ларченко Елена</td>
+            <td class="p-2 text-center">8 / 20</td>
           </tr>
           <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">2-4 июня</td>
-            <td class="px-2">Чемпионат Крыма среди ветеранов 2023</td>
-            <td class="px-2">Евпатория, Россия</td>
-            <td class="px-2 text-center">НФБР</td>
-            <td class="px-2 text-center">U17 </td>
+            <td class="whitespace-nowrap p-4 text-lab-black">19 июня –2 июля</td>
+            <td class="p-2">Сборы в Светлогорске с Андреем Дегтярёвым</td>
+            <td class="p-2">Яблоневая ул., 13, Светлогорск</td>
+            <td class="p-2">12000/чел</td>
+            <td class="p-2 text-center">Дегтярев Андрей (★957)</td>
+            <td class="p-2 text-center">Бадминтонный клуб Янтарный волан</td>
+            <td class="p-2 text-center">8 / 20</td>
           </tr>
           <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">4–6 июня</td>
-            <td class="px-2">Самарское лето 2023</td>
-            <td class="px-2">Самара, Россия</td>
-            <td class="px-2 text-center">НФБР</td>
-            <td class="px-2 text-center">U17 </td>
-          </tr>
-          <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">8–11 июня</td>
-            <td class="px-2">Чемпионат России среди ветеранов 2023</td>
-            <td class="px-2">Евпатория, Россия</td>
-            <td class="px-2 text-center">НФБР</td>
-            <td class="px-2 text-center">U17 </td>
-          </tr>
-          <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">10–13 июня</td>
-            <td class="px-2">Белые ночи 2023</td>
-            <td class="px-2">Гатчина, Россия</td>
-            <td class="px-2 text-center">НФБР</td>
-            <td class="px-2 text-center">U17 </td>
-          </tr>
-        </tbody>
-      </table>
-      <h2 class="pb-2 pt-4" id="july-events">Июль 2024</h2>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">1–4 июня</div><img class="mx-auto mt-2 size-6" src="img/euro.png" alt="logo">
-        </div>
-        <div class="grow items-center">
-          <h3 class="text-sm font-bold">Danish Junior Cup 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Дания, Видовре</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
-        </div>
-      </div>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">2-4 июня</div><img class="mx-auto mt-2 size-6" src="img/nfbr.png" alt="logo">
-        </div>
-        <div class="grow items-center">
-          <h3 class="text-sm font-bold">Чемпионат Крыма среди ветеранов 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Евпатория, Россия</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
-        </div>
-      </div>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">4–6 июня</div><img class="mx-auto mt-2 size-6" src="img/nfbr.png" alt="logo">
-        </div>
-        <div class="grow items-center">
-          <h3 class="text-sm font-bold">Самарское лето 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Самара, Россия</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
-        </div>
-      </div>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">8–11 июня</div><img class="mx-auto mt-2 size-6" src="img/nfbr.png" alt="logo">
-        </div>
-        <div class="grow items-center">
-          <h3 class="text-sm font-bold">Чемпионат России среди ветеранов 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Евпатория, Россия</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
-        </div>
-      </div>
-      <div class="mt-2 flex items-center justify-between gap-4 rounded-lg border-b pb-2 last:border-b-0 last:pb-0 sm:hidden">
-        <div class="w-20 shrink-0 text-center">
-          <div class="whitespace-nowrap text-sm text-lab-black">10–13 июня</div><img class="mx-auto mt-2 size-6" src="img/nfbr.png" alt="logo">
-        </div>
-        <div class="grow items-center">
-          <h3 class="text-sm font-bold">Белые ночи 2023</h3>
-          <div class="pb-2 pt-1 text-sm text-lab-black-50">Гатчина, Россия</div>
-          <div class="w-fit rounded bg-lab-color-10 px-1 text-xs text-lab-black">U17</div>
-        </div>
-      </div>
-      <table class="hidden w-full sm:table">
-        <thead class="border-b text-sm text-lab-black-50">
-          <tr>
-            <th class="p-2 text-left font-semibold">Дата</th>
-            <th class="px-2 text-left font-semibold">Название</th>
-            <th class="px-2 text-left font-semibold">Место</th>
-            <th class="px-2 text-left text-center font-semibold">Организатор</th>
-            <th class="px-2 text-center font-semibold">Уровень</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">1–4 июня</td>
-            <td class="px-2">Danish Junior Cup 2023</td>
-            <td class="px-2">Дания, Видовре</td>
-            <td class="px-2 text-center">Badminton Europe</td>
-            <td class="px-2 text-center">U17 </td>
-          </tr>
-          <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">2-4 июня</td>
-            <td class="px-2">Чемпионат Крыма среди ветеранов 2023</td>
-            <td class="px-2">Евпатория, Россия</td>
-            <td class="px-2 text-center">НФБР</td>
-            <td class="px-2 text-center">U17 </td>
-          </tr>
-          <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">4–6 июня</td>
-            <td class="px-2">Самарское лето 2023</td>
-            <td class="px-2">Самара, Россия</td>
-            <td class="px-2 text-center">НФБР</td>
-            <td class="px-2 text-center">U17 </td>
-          </tr>
-          <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">8–11 июня</td>
-            <td class="px-2">Чемпионат России среди ветеранов 2023</td>
-            <td class="px-2">Евпатория, Россия</td>
-            <td class="px-2 text-center">НФБР</td>
-            <td class="px-2 text-center">U17 </td>
-          </tr>
-          <tr class="border-b text-sm last:border-b-0">
-            <td class="whitespace-nowrap p-2 text-lab-black">10–13 июня</td>
-            <td class="px-2">Белые ночи 2023</td>
-            <td class="px-2">Гатчина, Россия</td>
-            <td class="px-2 text-center">НФБР</td>
-            <td class="px-2 text-center">U17 </td>
+            <td class="whitespace-nowrap p-4 text-lab-black">24 июня – 14 июля</td>
+            <td class="p-2">Летние сборы в Сукко</td>
+            <td class="p-2">дер. Сукко</td>
+            <td class="p-2">4150/день</td>
+            <td class="p-2 text-center">Новоселов Вадим (★1000), Сухов Иван (★683), Бакланов Михаил (★301)</td>
+            <td class="p-2 text-center">Бадминтонный клуб Красногорск, ЛАБ</td>
+            <td class="p-2 text-center">2 / 14</td>
           </tr>
         </tbody>
       </table>
