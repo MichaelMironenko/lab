@@ -18,11 +18,16 @@ html(lang='ru')
     base(href='../../')
   body.relative.bg-page-background.pb-16.pt-12
     +topBar
-    a.absolute.top-16.left-3.bg-white.bg-opacity-75.rounded-lg.p-2.pr-3.flex.gap-2.items-center.border.shadow-sm(href="pages/aroundgame/photos.html")
+    a.absolute.top-16.left-3.bg-white.bg-opacity-75.rounded-lg.p-2.pr-3.flex.gap-2.items-center.z-20.border.shadow-sm(href="pages/aroundgame/photos.html")
       img(src="img/expand-arrow.svg" alt="").rotate-90.size-5
       span.text-sm.leading-none.opacity-75 Все фото
-    #image-container.w-full.overflow-hidden(onclick="openModal()" class="max-h-[70vh]")
-
+    #image-container.w-full.overflow-hidden(onclick="openModal()" class="max-h-[70vh]").relative
+      #left-arrow.fixed.left-2(class="top-1/2 transform -translate-y-1/2").p-2.bg-white.bg-opacity-70.rounded-full.transform-gpu.drop-shadow-around.z-20
+        img(src="img/expand-arrow.svg", alt="").size-6.rotate-90
+      #right-arrow.fixed.right-2(class="top-1/2 transform -translate-y-1/2").p-2.bg-white.bg-opacity-70.rounded-full.drop-shadow-around.z-20
+        img(src="img/expand-arrow.svg", alt="").size-6.-rotate-90
+    
+    
     #modal.fixed.inset-0.flex.items-center.justify-center.bg-black.bg-opacity-75.hidden.z-50
       .relative.bg-white.rounded-lg.overflow-hidden.max-w-full.max-h-full
         img(src="dynamic-img/photo-3.jpeg" alt="Фото" class="max-w-full max-h-screen object-contain")
@@ -40,6 +45,8 @@ html(lang='ru')
 
 
       const imgContainer = document.querySelector('#image-container')
+      const leftArrow = document.querySelector('#left-arrow');
+      const rightArrow = document.querySelector('#right-arrow');
       const img = new Image()
       img.src = 'dynamic-img/photo-3.jpeg'
       function updateImageContainer() {
@@ -54,6 +61,7 @@ html(lang='ru')
         imgContainer.style.height = Math.min(height, maxVisibleHeight) + 'px';
         imgContainer.style.background = `url(${img.src}) center / cover no-repeat`;
         imgContainer.style.margin = '0 auto'; // Центрируем контейнер
+        
       }
 
       img.onload = function () {
@@ -155,7 +163,7 @@ html(lang='ru')
             span.inline.ml-2 22.03.2024 12:30
         .flex.items-center.gap-3.text-sm
           img.size-4.opacity-50.saturate-50(src='img/home.svg' alt='')
-          a(href='pages/courts/singleCourt.html') Naten-Юг
+          a(href='pages/courts/singleClub.html') Naten-Юг
         .flex.items-center.gap-3.text-sm
           img.size-4.opacity-50.saturate-50(src='img/calendar.svg' alt='')
           span 22.03.2024

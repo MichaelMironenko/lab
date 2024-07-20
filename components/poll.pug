@@ -29,7 +29,7 @@ mixin poll(question, answers, voted, shadow=true, link=true, description)
       span.text-xs.text-lab-black-50 Голосов: 15
       if link
         a.flex.items-center.gap-1(href='pages/aroundgame/poll.html')
-          img.size-4(src='img/comment-outlined.svg')
-          span.text-xs.leading-none.text-lab-black-50 25
+          img.size-4(src='img/comment-outlined.svg').saturate-50.opacity-50
+          span.text-xs.text-lab-black-50 25
       else 
         .text-xs.text-lab-black-50.inline Опрос создан  #[a.inline( href='#' ) Лаб-контент] 12.05.2024 в 10:34

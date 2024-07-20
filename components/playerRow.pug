@@ -44,11 +44,13 @@ mixin playerRow(players, showCoefficient, teamName, dateTime, medal)
                       | #{player.firstName + ' ' + player.lastName}
                     if index < players.length - 1
                       | /
+    td.text-center
+      +userRating(players[0].rating, true)
+    
     if dateTime && !showCoefficient
       td.text-center.hidden(class="sm:table-cell text-lab-black-50") #{dateTime}
 
-    td.text-center
-      +userRating(players[0].rating, true)
+   
     
     if showCoefficient
       td.text-center

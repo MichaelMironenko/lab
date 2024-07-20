@@ -9,7 +9,7 @@
     <base href="../../">
   </head>
   <body class="bg-page-background pb-28 pt-12">
-    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -33,7 +33,7 @@
             </div></a>
           <div class="flex flex-col self-stretch py-2 border-b w-full"><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myFinance.html"><img class="w-4 h-4 justify-center items-center" src="img/price-outline.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Финансы</div><span class="text-xs leading-tight">1500 ₽</span></a><a class="py-2 flex justify-between items-center gap-3" href="pages/courts/myBookings.html"><img class="w-4 h-4 justify-center items-center" src="img/booking.svg"/>
-              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myOrders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/orders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Заказы</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myBookmarks.html"><img class="w-4 h-4 justify-center items-center" src="img/bookmark-empty.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Закладки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTrainings.html"><img class="w-4 h-4 justify-center items-center" src="img/trainer.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Тренировки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/friends.html"><img class="w-4 h-4 justify-center items-center" src="img/friends.svg"/>
@@ -147,8 +147,8 @@
             <div class="flex flex-col pb-2">
               <label class="pb-3 font-bold">Рейтинг игрока</label>
               <div class="flex items-center gap-2"><span class="text-sm">От</span>
-                <input class="border border-lab-black-30 p-2 w-14 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder=""/><span class="ml-2 text-sm">до</span>
-                <input class="border border-lab-black-30 p-2 w-14 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder=""/>
+                <input class="border p-2 w-14 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder=""/><span class="ml-2 text-sm">до</span>
+                <input class="border p-2 w-14 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder=""/>
               </div>
             </div>
             <label class="mb-3 mt-4 block font-bold">Пол</label>
@@ -216,7 +216,7 @@
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ПС</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Пухов Станислав</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Пухов Станислав</a>
             <div class="text-xs text-lab-black-50">Москва</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">StanPuhov</td>
@@ -241,7 +241,7 @@
               <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">МВ</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Мальков Владимир</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Мальков Владимир</a>
             <div class="text-xs text-lab-black-50">Санкт-Петербург</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">VladMalk</td>
@@ -266,7 +266,7 @@
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ЖИ</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Жданов Илья</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Жданов Илья</a>
             <div class="text-xs text-lab-black-50">Казань</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">IlyaZhd</td>
@@ -291,7 +291,7 @@
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">МН</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Матазов Николай</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Матазов Николай</a>
             <div class="text-xs text-lab-black-50">Новосибирск</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">NikMatz</td>
@@ -316,7 +316,7 @@
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ФГ</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Федоткин Григорий</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Федоткин Григорий</a>
             <div class="text-xs text-lab-black-50">Екатеринбург</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell"></td>
@@ -341,7 +341,7 @@
               <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ИВ</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Ицков Вадим</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Ицков Вадим</a>
             <div class="text-xs text-lab-black-50">Нижний Новгород</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">VadItsk</td>
@@ -366,7 +366,7 @@
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ЯС</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Ярославцев Степан</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Ярославцев Степан</a>
             <div class="text-xs text-lab-black-50">Самара</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">StepYar</td>
@@ -391,7 +391,7 @@
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ИА</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Иванов Антон</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Иванов Антон</a>
             <div class="text-xs text-lab-black-50">Омск</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">AntIvan</td>
@@ -416,7 +416,7 @@
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">АО</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Архангельская Ольга</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Архангельская Ольга</a>
             <div class="text-xs text-lab-black-50">Челябинск</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">OlgaArkh</td>
@@ -441,7 +441,7 @@
               <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">МК</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Макишев Константин</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Макишев Константин</a>
             <div class="text-xs text-lab-black-50">Ростов-на-Дону</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">KonMak</td>
@@ -466,7 +466,7 @@
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НИ</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Никитин Иван</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Никитин Иван</a>
             <div class="text-xs text-lab-black-50">Уфа</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">IvanNik</td>
@@ -491,7 +491,7 @@
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">СД</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Супрунок Дмитрий</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Супрунок Дмитрий</a>
             <div class="text-xs text-lab-black-50">Пермь</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">DimSupr</td>
@@ -516,7 +516,7 @@
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">СВ</span></div>
             </div>
           </td>
-          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/singlePlayer.html">Слободянюк Виктория</a>
+          <td class="w-auto px-2"><a class="inline-block font-semibold text-[13px] xs:text-sm" href="pages/others/profile.html">Слободянюк Виктория</a>
             <div class="text-xs text-lab-black-50">Волгоград</div>
           </td>
           <td class="hidden w-auto px-2 text-sm text-lab-black-50 sm:table-cell">VikaSlob</td>

@@ -8,7 +8,7 @@
     <base href="../../">
   </head>
   <body class="bg-page-background py-12 pb-32">
-    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -32,7 +32,7 @@
             </div></a>
           <div class="flex flex-col self-stretch py-2 border-b w-full"><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myFinance.html"><img class="w-4 h-4 justify-center items-center" src="img/price-outline.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Финансы</div><span class="text-xs leading-tight">1500 ₽</span></a><a class="py-2 flex justify-between items-center gap-3" href="pages/courts/myBookings.html"><img class="w-4 h-4 justify-center items-center" src="img/booking.svg"/>
-              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myOrders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/orders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Заказы</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myBookmarks.html"><img class="w-4 h-4 justify-center items-center" src="img/bookmark-empty.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Закладки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTrainings.html"><img class="w-4 h-4 justify-center items-center" src="img/trainer.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Тренировки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/friends.html"><img class="w-4 h-4 justify-center items-center" src="img/friends.svg"/>
@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -157,11 +157,11 @@
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black" for="Полное название">Полное название</label>
           </div>
-          <input class="border border-lab-black-30 p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="" value="" inputmode="" placeholder="Название"/>
+          <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-red" id="" type="" value="" inputmode="" placeholder="Название"/>
           <div class="text-xs text-lab-red text-right w-full mt-1">Ошибка</div>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -210,7 +210,7 @@
             <div class="flex items-center gap-2 w-full undefined">
               <label class="block text-lab-black" for="Дата турнира">Дата турнира</label>
             </div>
-            <input class="border border-lab-black-30 p-2  rounded-lg shrink-0 focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="date" placeholder=""/>
+            <input class="border p-2  rounded-lg shrink-0 focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="date" placeholder=""/>
           </div>
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black" for="Время">Время</label>
@@ -218,15 +218,15 @@
           <div class="flex gap-1 justify-between mb-6">
             <div class="flex flex-col">
               <label class="text-sm text-lab-black-50">Начало</label>
-              <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="from" type="time" placeholder=""/>
+              <input class="border p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="from" type="time" placeholder=""/>
             </div>
             <div class="flex flex-col">
               <label class="text-sm text-lab-black-50">Конец</label>
-              <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="to" type="time" placeholder=""/>
+              <input class="border p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="to" type="time" placeholder=""/>
             </div>
             <div class="flex flex-col">
               <label class="text-sm text-lab-black-50">Разминка</label>
-              <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="warmup" type="time" placeholder=""/>
+              <input class="border p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="warmup" type="time" placeholder=""/>
             </div>
           </div>
           <div class="flex items-center gap-2 mb-2 undefined">
@@ -294,7 +294,7 @@
           </script>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -345,38 +345,38 @@
           <div class="flex items-center gap-2 justify-between mb-2">
             <div class="flex items-center gap-2">
               <div class="flex items-center -space-x-2"><span>👨🏻</span><span>👨🏻</span></div>
-              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="от"/>
-              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="до"/>
+              <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="от"/>
+              <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="до"/>
             </div>
             <div class="flex items-center gap-2"><span>👨🏻</span>
-              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="до"/>
+              <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="до"/>
             </div>
           </div>
           <div class="flex items-center gap-2 justify-between mb-4">
             <div class="flex items-center gap-2">
               <div class="flex items-center -space-x-2"><span>👩🏼</span><span>👩🏼</span></div>
-              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="от"/>
-              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="до"/>
+              <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="от"/>
+              <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="до"/>
             </div>
             <div class="flex items-center gap-2"><span>👩🏼</span>
-              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="до"/>
+              <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="до"/>
             </div>
           </div>
           <div class="flex items-center gap-2 justify-between mb-6">
             <div class="flex items-center gap-2">
               <div class="flex items-center -space-x-2"><span>👩🏼</span><span>👨🏻</span></div>
-              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="от"/>
-              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="до"/>
+              <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="от"/>
+              <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="до"/>
             </div>
             <div class="flex items-center gap-2"><span>👨🏻</span>
-              <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="до"/>
+              <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="до"/>
             </div>
           </div>
           <div class="flex items-center justify-between gap-2 mb-2">
             <div class="flex items-center gap-2 w-full undefined">
               <label class="block text-lab-black" for="Максимальное кол-во участников">Максимальное кол-во участников</label>
             </div>
-            <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder=""/>
+            <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder=""/>
           </div>
           <label class="flex items-center gap-3 grow leading-tight text-left text-lab-black justify-between max-w-sm text-lab-black-50 py-4">Регистрация сверх лимита
             <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
@@ -386,7 +386,7 @@
             <div class="flex items-center gap-2 w-full undefined">
               <label class="block text-lab-black" for="Взнос с участника (руб)">Взнос с участника (руб)</label>
             </div>
-            <input class="border border-lab-black-30 p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder=""/>
+            <input class="border p-2 w-16 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder=""/>
           </div>
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black" for="Примечание к взносу">Примечание к взносу</label>
@@ -400,7 +400,7 @@
           </script>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -487,7 +487,7 @@
           </script>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -536,7 +536,7 @@
             <div class="flex items-center gap-2 w-full undefined">
               <label class="block text-lab-black" for="Допуск по дате рейтинга">Допуск по дате рейтинга</label>
             </div>
-            <input class="border border-lab-black-30 p-2  rounded-lg shrink-0 focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="date" placeholder=""/>
+            <input class="border p-2  rounded-lg shrink-0 focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="date" placeholder=""/>
           </div>
           <label class="flex items-center gap-3 grow leading-tight text-left text-lab-black justify-between max-w-sm text-lab-black py-4">Закрытая регистрация
             <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
@@ -549,7 +549,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -600,7 +600,7 @@
           </label>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -649,15 +649,15 @@
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black" for="Имя">Имя</label>
           </div>
-          <input class="border border-lab-black-30 p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Введите имя контактного лица"/>
+          <input class="border p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Введите имя контактного лица"/>
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black" for="Телефон">Телефон</label>
           </div>
-          <input class="border border-lab-black-30 p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Телефон"/>
+          <input class="border p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Телефон"/>
           <button class="w-full border bg-slate-100 rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text- leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Добавить дополнительный контакт</button>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -708,7 +708,7 @@
           </div><span class="text-sm font-bold">Требования к афише<br></span><span class="text-xs">Не менее 200х100 пикселей<br>Формат файла - JPG, PNG, WebP<br>Пропорции - 2:1</span>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -759,7 +759,7 @@
               <label class="text-sm text-lab-black-50">Ссылка на трансляцию в Youtube</label>
             </div>
             <div class="flex gap-3 justify-between items-center">
-              <input class="border border-lab-black-30 p-2 w-14 rounded-lg h-14 text-center focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="" value="1" placeholder=""/>
+              <input class="border p-2 w-14 rounded-lg h-14 text-center focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="" value="1" placeholder=""/>
               <textarea class="border border-lab-black-30 p-2  rounded-lg leading-tight grow focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" id="" placeholder="https://www.youtube.com/watch?v=..." oninput="autoResizeTextarea(this)">https://www.youtube.com/watch?v=vJTf_NtwyUo</textarea>
               <script>
                 function autoResizeTextarea(elem) {
@@ -770,7 +770,7 @@
               <div class="text-lab-black-50">✕</div>
             </div>
             <div class="flex gap-3 justify-between items-center">
-              <input class="border border-lab-black-30 p-2 w-14 rounded-lg h-14 text-center focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="" value="" placeholder=""/>
+              <input class="border p-2 w-14 rounded-lg h-14 text-center focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="" value="" placeholder=""/>
               <textarea class="border border-lab-black-30 p-2  rounded-lg leading-tight grow focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" id="" placeholder="https://www.youtube.com/watch?v=..." oninput="autoResizeTextarea(this)"></textarea>
               <script>
                 function autoResizeTextarea(elem) {
@@ -783,7 +783,7 @@
           <button class="w-full border bg-slate-100 rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text- leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">+ Добавить трансляцию</button>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -833,11 +833,11 @@
             <div class="flex items-center gap-2 w-full undefined">
               <label class="block text-lab-black" for="Сохранить шаблон как">Сохранить шаблон как</label>
             </div>
-            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Название шаблона"/>
+            <input class="border p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Название шаблона"/>
           </div>
         </div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-template-info" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-template-info">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <div class="p-4 text-center md:p-5">
             <h3 class="font-bold mb-3">Шаблоны турниров</h3>
@@ -880,7 +880,7 @@
     <div class="fixed pb-safe-extra-panel w-full z-20 bg-white drop-shadow-top p-4 border-b">
       <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Сохранить изменения</button>
     </div>
-    <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-delete-template" style="display: none;">
+    <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-delete-template">
       <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
         <div class="p-4 text-center md:p-5">
           <div class="mt-8 mb-8 text-lg font-medium text-gray-800">Удалить шаблон</div>
@@ -905,7 +905,7 @@
           });
       });
     </script>
-    <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-info" style="display: none;">
+    <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-info">
       <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
         <div class="p-4 text-center md:p-5">
           <h3 class="font-bold mb-3">Ограничение рейтинга пар и игроков</h3>

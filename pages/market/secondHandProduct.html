@@ -40,7 +40,7 @@
     <base href="../../">
   </head>
   <body class="bg-page-background py-12 pb-32">
-    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -64,7 +64,7 @@
             </div></a>
           <div class="flex flex-col self-stretch py-2 border-b w-full"><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myFinance.html"><img class="w-4 h-4 justify-center items-center" src="img/price-outline.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Финансы</div><span class="text-xs leading-tight">1500 ₽</span></a><a class="py-2 flex justify-between items-center gap-3" href="pages/courts/myBookings.html"><img class="w-4 h-4 justify-center items-center" src="img/booking.svg"/>
-              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myOrders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/orders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Заказы</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myBookmarks.html"><img class="w-4 h-4 justify-center items-center" src="img/bookmark-empty.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Закладки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTrainings.html"><img class="w-4 h-4 justify-center items-center" src="img/trainer.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Тренировки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/friends.html"><img class="w-4 h-4 justify-center items-center" src="img/friends.svg"/>
@@ -149,21 +149,24 @@
             <div class="mb-8 flex items-center justify-between"><span class="text-sm text-lab-black-50">4 июля 2023 09:16</span><span class="text-sm text-lab-black-50">Состояние: Б/У</span></div>
           </div>
           <div>
-            <h2>Продавец</h2>
-            <div class="flex items-center gap-3 pb-2 pt-2">
-              <div class="cursor-pointer p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
-                <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(64px/2.66)] font-bold leading-none text-white">АС</span></div>
-              </div>
-              <div class="flex flex-col gap-1">
-                <div class="flex items-center gap-2"><a class="text-sm font-semibold leading-none" href="">Александр Семёнов</a>
-                  <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
-                    <div class="text-center text-lab-black text-xs font-semibold leading-none">342</div>
+            <h2>Продавец</h2><a href="pages/market/seller.html">
+              <div class="flex items-center gap-3 pb-2 pt-2">
+                <div class="cursor-pointer p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                  <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(64px/2.66)] font-bold leading-none text-white">АС</span></div>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center gap-2">
+                    <div class="text-sm font-semibold leading-none">Александр Семёнов</div>
+                    <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
+                      <div class="text-center text-lab-black text-xs font-semibold leading-none">342</div>
+                    </div>
+                  </div><span class="mb-1 text-sm text-lab-black-50">@asemenov</span>
+                  <div class="flex shrink-0 items-center"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-half.svg"><span class="ml-1 text-sm font-semibold leading-tight">4.4</span>
+                    <div class="ml-4 text-sm text-lab-black-50">12 отзывов</div>
                   </div>
-                </div><span class="mb-1 text-sm text-lab-black-50">@asemenov</span>
-                <div class="flex shrink-0 items-center"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-half.svg"><span class="ml-1 text-sm font-semibold leading-tight">4.4</span><a class="ml-4 text-sm text-lab-black-50">12 отзывов</a></div>
-              </div>
-            </div>
-            <div class="my-2 text-sm text-lab-black-50">На сайте 3 года 2 месяца</div><a class="text-sm" href="pages/market/sellerProducts.html">23 объявления</a>
+                </div>
+              </div></a>
+            <div class="my-2 text-sm text-lab-black-50">На сайте 3 года 2 месяца</div><a class="text-sm" href="pages/market/seller.html">23 объявления</a>
             <div class="mt-4 flex items-center justify-between gap-2">
               <button class="w-full rounded-lg bg-lab-color px-4 py-2 text-center font-semibold leading-none text-white transition-transform duration-150 ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="undefined">Написать
                 <div class="mt-1 flex items-center justify-center gap-1">
@@ -204,7 +207,93 @@
     <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="flex gap-2 items-center">
-          <h2 class="leading-tight">Похожие новые товары</h2>
+          <h2 class="leading-tight">Этот товар у других продавцов</h2>
+        </div><a class="text-lab-color leading-none" href="pages/market/products.html">Все</a>
+      </div>
+      <div class="no-scrollbar -mx-4 -my-4 flex gap-2 overflow-x-auto p-4"><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/lining.jpg" alt="Li-Ning Turbo Charging 75"/>
+          <div class="p-3 text-center">
+            <div class="line-clamp-3 text-sm font-semibold text-lab-color">Li-Ning Turbo Charging 75</div>
+            <div class="mt-2 text-sm font-semibold text-lab-black">10 500 ₽</div>
+            <div class="mt-2 flex items-center justify-center text-xs"><img class="mr-1 size-3 opacity-50 saturate-50" src="img/location-icon.svg"/><span class="text-lab-black-50">Санкт-Петербург</span></div>
+            <div class="mt-1 flex items-center justify-center text-xs"><span class="mr-2 h-2 w-2 rounded-full" style="background-color:blue"></span><span class="text-lab-black-50">Невский проспект</span>
+            </div>
+            <div class="mt-2 text-xs text-gray-400">3 дня назад</div>
+          </div>
+          <div class="absolute right-0 top-0">
+            <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
+          </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/victorthrustrer.webp" alt="Victor Thruster K 9900"/>
+          <div class="p-3 text-center">
+            <div class="line-clamp-3 text-sm font-semibold text-lab-color">Victor Thruster K 9900</div>
+            <div class="mt-2 text-sm font-semibold text-lab-black">13 000 ₽</div>
+            <div class="mt-2 flex items-center justify-center text-xs"><img class="mr-1 size-3 opacity-50 saturate-50" src="img/location-icon.svg"/><span class="text-lab-black-50">Казань</span></div>
+            <div class="mt-1 flex items-center justify-center text-xs"><span class="mr-2 h-2 w-2 rounded-full" style="background-color:#00ff00"></span><span class="text-lab-black-50">Площадь Тукая</span>
+            </div>
+            <div class="mt-2 text-xs text-gray-400">5 мая</div>
+          </div>
+          <div class="absolute right-0 top-0">
+            <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
+          </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/yonexzforce.jpg" alt="Yonex Voltric Z-Force II"/>
+          <div class="p-3 text-center">
+            <div class="line-clamp-3 text-sm font-semibold text-lab-color">Yonex Voltric Z-Force II</div>
+            <div class="mt-2 text-sm font-semibold text-lab-black">15 000 ₽</div>
+            <div class="mt-2 flex items-center justify-center text-xs"><img class="mr-1 size-3 opacity-50 saturate-50" src="img/location-icon.svg"/><span class="text-lab-black-50">Новосибирск</span></div>
+            <div class="mt-1 flex items-center justify-center text-xs"><span class="mr-2 h-2 w-2 rounded-full" style="background-color:#ffdd00"></span><span class="text-lab-black-50">Площадь Ленина</span>
+            </div>
+            <div class="mt-2 text-xs text-gray-400">2 декабря 2023 г.</div>
+          </div>
+          <div class="absolute right-0 top-0">
+            <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
+          </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/ziggler.jpg" alt="Apacs Z Ziggler"/>
+          <div class="p-3 text-center">
+            <div class="line-clamp-3 text-sm font-semibold text-lab-color">Apacs Z Ziggler</div>
+            <div class="mt-2 text-sm font-semibold text-lab-black">8 000 ₽</div>
+            <div class="mt-2 flex items-center justify-center text-xs"><img class="mr-1 size-3 opacity-50 saturate-50" src="img/location-icon.svg"/><span class="text-lab-black-50">Екатеринбург</span></div>
+            <div class="mt-1 flex items-center justify-center text-xs"><span class="mr-2 h-2 w-2 rounded-full" style="background-color:#ff0000"></span><span class="text-lab-black-50">Геологическая</span>
+            </div>
+            <div class="mt-2 text-xs text-gray-400">1 мая</div>
+          </div>
+          <div class="absolute right-0 top-0">
+            <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
+          </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/carlton.jpg" alt="Carlton Kinesis Rapid"/>
+          <div class="p-3 text-center">
+            <div class="line-clamp-3 text-sm font-semibold text-lab-color">Carlton Kinesis Rapid</div>
+            <div class="mt-2 text-sm font-semibold text-lab-black">9 500 ₽</div>
+            <div class="mt-2 flex items-center justify-center text-xs"><img class="mr-1 size-3 opacity-50 saturate-50" src="img/location-icon.svg"/><span class="text-lab-black-50">Нижний Новгород</span></div>
+            <div class="mt-1 flex items-center justify-center text-xs"><span class="text-lab-black-50">ул. Белинского</span>
+            </div>
+            <div class="mt-2 text-xs text-gray-400">4 дня назад</div>
+          </div>
+          <div class="absolute right-0 top-0">
+            <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
+          </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/forzapower.jpg" alt="Forza Power 988 S"/>
+          <div class="p-3 text-center">
+            <div class="line-clamp-3 text-sm font-semibold text-lab-color">Forza Power 988 S</div>
+            <div class="mt-2 text-sm font-semibold text-lab-black">11 000 ₽</div>
+            <div class="mt-2 flex items-center justify-center text-xs"><img class="mr-1 size-3 opacity-50 saturate-50" src="img/location-icon.svg"/><span class="text-lab-black-50">Красноярск</span></div>
+            <div class="mt-1 flex items-center justify-center text-xs"><span class="text-lab-black-50">ул. Мира</span>
+            </div>
+            <div class="mt-2 text-xs text-gray-400">20 апреля</div>
+          </div>
+          <div class="absolute right-0 top-0">
+            <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
+          </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/babolat.jpg" alt="Babolat Satelite Gravity 74"/>
+          <div class="p-3 text-center">
+            <div class="line-clamp-3 text-sm font-semibold text-lab-color">Babolat Satelite Gravity 74</div>
+            <div class="mt-2 text-sm font-semibold text-lab-black">14 000 ₽</div>
+            <div class="mt-2 flex items-center justify-center text-xs"><img class="mr-1 size-3 opacity-50 saturate-50" src="img/location-icon.svg"/><span class="text-lab-black-50">Самара</span></div>
+            <div class="mt-1 flex items-center justify-center text-xs"><span class="mr-2 h-2 w-2 rounded-full" style="background-color:#800080"></span><span class="text-lab-black-50">Советская</span>
+            </div>
+            <div class="mt-2 text-xs text-gray-400">10 мая</div>
+          </div>
+          <div class="absolute right-0 top-0">
+            <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
+          </div></a>
+      </div>
+    </div>
+    <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
+      <div class="flex justify-between items-center mb-4 gap-4">
+        <div class="flex gap-2 items-center">
+          <h2 class="leading-tight">Этот товар на маркете</h2>
         </div><a class="text-lab-color leading-none" href="pages/market/products.html">Все</a>
       </div>
       <div class="no-scrollbar -mx-4 -my-4 flex gap-2 overflow-x-auto p-4"><a class="relative flex w-40 shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html">

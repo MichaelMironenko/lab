@@ -40,35 +40,11 @@ html(lang="ru")
             div.text-sm.text-lab-black-50.mt-4.leading-tight Вашего зала нет в списке? 
                 a(href="addclub.html") Добавьте его бесплатно
 
-        +block('Новости клубов', { href:"pages/others/news.html", text:'Все'})
+        +block('Новости клубов', { href:"pages/aroundgame/news.html", text:'Все'})
             .flex.flex-col.gap-4
                 +newsCard('23 мая состоится студенческий турнир Москвы', 'dynamic-img/club-1.jpg', 'Naten ЮГ Ярославль', '4 апреля 16:30', '#')
                 +newsCard('Открытые тренировки для всех желающих', '', 'Спартак М', '12 мая 18:00', '#')
                 +newsCard('Финал городского чемпионата по баскетболу', 'dynamic-img/club-3.jpg', 'Динамо СПб', '20 июня 20:00', '#')
-
-        +block()
-            .flex.items-center.gap-3.justify-between
-                h2 Новые спарринг-партнёры в #[span(class="underline text-lab-color underline-offset-4 decoration-dotted") Нижнем Новгороде]
-                a(href="pages/courts/sparrings.html") Все 
-            .flex.-mx-4.p-4.overflow-x-auto.no-scrollbar.gap-3
-                mixin player(avatarClass, name, rating, isRatingActive, ratingRange, locations)
-                    a(href="player.html").flex.flex-col.w-32.items-center.gap-2.shrink-0
-                        +avatar(avatarClass, name[0] + name.split(' ')[1][0], 64)
-                        div.text-center.shrink-0.max-h-16.grow
-                            div.text-sm.text-lab-color.font-semibold.mb-1 #{name}
-                            +userRating(rating, isRatingActive)
-                        div.self-start.grow.max-h-24
-                            div.self-start.my-2
-                                img(src="img/star-lab-color.svg").inline.align-middle.opacity-50.saturate-50
-                                span.inline.align-middle.ml-2.text-sm #{ratingRange}
-                            div.flex.self-start.gap-2.items-start
-                                img(src="img/location-icon.svg" class="mt-0.5").opacity-50.saturate-50
-                                div.text-sm.flex.flex-col
-                                    each loc in locations
-                                        span #{loc}   
-                +player('bg-lab-yellow', 'Алексей Борисов', 532, true, '100-300', ['Naten-1905', 'Фили-ТТ'])
-                +player('bg-lab-green', 'Мария Иванова', 428, true, '200-400', ['Space Химки', 'Выхино', 'NATEN-Юг'])
-                +player('bg-lab-red', 'Игорь Смирнов', 600, true, '500-700', ['Impact-Луж', 'NewTon', 'WC Митино'])
             
 
         +tabBar('Корты')

@@ -40,7 +40,7 @@
     <base href="../../">
   </head>
   <body class="bg-page-background mt-12 pb-32">
-    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -64,7 +64,7 @@
             </div></a>
           <div class="flex flex-col self-stretch py-2 border-b w-full"><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myFinance.html"><img class="w-4 h-4 justify-center items-center" src="img/price-outline.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Финансы</div><span class="text-xs leading-tight">1500 ₽</span></a><a class="py-2 flex justify-between items-center gap-3" href="pages/courts/myBookings.html"><img class="w-4 h-4 justify-center items-center" src="img/booking.svg"/>
-              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myOrders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/orders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Заказы</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myBookmarks.html"><img class="w-4 h-4 justify-center items-center" src="img/bookmark-empty.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Закладки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTrainings.html"><img class="w-4 h-4 justify-center items-center" src="img/trainer.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Тренировки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/friends.html"><img class="w-4 h-4 justify-center items-center" src="img/friends.svg"/>
@@ -88,10 +88,9 @@
     <div class="bg-white pb-1">
       <div class="grid grid-cols-1 p-4 sm:grid-cols-2 gap-4">
         <div class="flex items-center justify-between gap-4">
-          <h1 class="text-lg leading-tight">Управление бронированием</h1>
-          <div class="flex items-center gap-1"><img class="shrink-0" src="img/history.svg" alt=""><a class="xs:block hidden text-sm shrink-0" href="pages/bookingAdminPanel/bookingsHistory.html">Список броней</a></div>
+          <h1 class="text-lg leading-tight">Управление бронированием</h1><a class="flex items-center gap-1" href="pages/bookingAdminPanel/bookingsHistory.html"><img class="xs:hidden shrink-0" src="img/history.svg" alt=""><a class="xs:block hidden text-sm shrink-0" href="pages/bookingAdminPanel/bookingsHistory.html">Список броней</a></a>
         </div>
-        <div class="flex w-full max-w-md rounded-lg overflow-hidden lg:justify-self-end lg:mb-0">
+        <div class="flex w-full rounded-lg overflow-hidden lg:justify-self-end lg:mb-0">
           <button class="flex-1 text-sm p-2 bg-lab-color text-white border-none outline-none" id="tabBooking">Бронирования</button>
           <button class="flex-1 text-sm p-2 bg-lab-color-10 text-gray-500 border-none outline-none" id="tabPrices">Расписание цен</button>
         </div>
@@ -186,21 +185,21 @@
                     <div class="flex items-center gap-2 w-full undefined">
                       <label class="block text-lab-black" for="Имя">Имя</label>
                     </div>
-                    <input class="border border-lab-black-30 p-2 undefined rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder=""/>
+                    <input class="border p-2 undefined rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder=""/>
                   </div>
                   <div class="text-right text-xs text-lab-red">Заполните имя</div>
                   <div class="flex items-center gap-2 pt-2">
                     <div class="flex items-center gap-2 w-full undefined">
                       <label class="block text-lab-black" for="Телефон">Телефон</label>
                     </div>
-                    <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="phone" placeholder=""/>
+                    <input class="border p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="phone" placeholder=""/>
                   </div>
                   <div class="text-right text-xs text-transparent">Введите корректный телефон</div>
                   <div class="flex items-center gap-2 pt-2">
                     <div class="flex items-center gap-2 w-full undefined">
                       <label class="block text-lab-black" for="Email">Email</label>
                     </div>
-                    <input class="border border-lab-black-30 p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="email" placeholder=""/>
+                    <input class="border p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="email" placeholder=""/>
                   </div>
                   <div class="text-right text-xs text-lab-red">Введите корректный email</div>
                   <div class="flex items-center gap-2 w-full py-2">
@@ -216,7 +215,7 @@
                     <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
                     <button class="leading-none text-lab-black-50" type="button">✕</button>
                   </div>
-                  <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="court-modal" style="display: none;">
+                  <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal">
                     <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
                       <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
                       <div class="p-4 text-center md:p-5"> 
@@ -293,7 +292,7 @@
                     <div class="flex items-center gap-2 mb-2 w-32">
                       <label class="block text-lab-black" for="Итого">Итого</label>
                     </div>
-                    <input class="border border-lab-black-30 p-2 w-20 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="" type="email" placeholder=""/>
+                    <input class="border p-2 w-20 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="email" placeholder=""/>
                     <label class="flex items-center gap-2 ml-2">
                       <input class="size-5" type="checkbox"><span class="text-sm">Оплачено</span>
                     </label>
@@ -415,161 +414,161 @@
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">09:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">09:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">10:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">10:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">11:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <td class="border min-w-16 text-center w-16 z-10 align-middle" rowspan="3" id="bookingCell">
                     <div class="font-semibold text-sm text-lab-black">Сергей М.</div>
                     <div class="py-2">8 (915) 124-15-23</div>
                     <div class="flex justify-center items-center gap-1"><img class="opacity-50 saturate-50" src="img/trainer.svg" alt=""><img class="opacity-50 saturate-50" src="img/warning.svg" alt=""><img class="opacity-50 saturate-50" src="img/racket.svg" alt=""><span>2400 ₽</span><img src="img/checkmark.svg" alt=""></div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">11:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <continue></continue>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">12:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <continue></continue>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">12:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">13:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">13:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">14:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">14:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">15:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                   <td class="border min-w-16 text-center w-16 align-middle" colspan="3">
                     <div class="font-semibold mb-2 text-sm text-lab-black">Турнир </div><span>XDE</span>
                   </td>
                   <continue></continue>
                   <continue></continue>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">15:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
@@ -581,10 +580,10 @@
                   <td class="border min-w-16 text-center w-16 align-middle" rowspan="2">
                     <div class="font-semibold mb-2 text-sm text-lab-black">Турнир </div><span>XDE</span>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
@@ -592,31 +591,31 @@
                   </td>
                   <continue></continue>
                   <continue></continue>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">17:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">17:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                   <td class="border min-w-16 text-center w-16 align-middle" rowspan="2">
                     <div class="font-semibold mb-2 text-sm text-lab-black">Тренировка</div>
                     <div class="flex items-center gap-1 justify-center"><img src="img/trainer.svg" alt=""><span>Трушкин A.</span></div>
@@ -626,126 +625,160 @@
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">18:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
                   <continue></continue>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">18:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">19:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">19:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">20:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">20:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">21:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">21:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">22:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">22:30</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">23:00</div>
                   </td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
-                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
+                  <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="actionMenuId" data-action="hide">
+            <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col">
+              <div class="bg-lab-color-10 p-3 text-center text-lab-black-50">Создать новое событие</div><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center text-lab-color">Аренда</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center text-lab-color">Турнир ЛАБ</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center text-lab-color">Тренировка ЛАБ</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center text-lab-color">Мероприятие</span></a><a class="flex items-center gap-3 px-4 py-3 w-full" href="#" data-action="hide"><span class="flex-1 text-center text-lab-color">Закрыть стол</span></a>
+            </div>
+            <script>
+              document.addEventListener('click', function (e) {
+                if (e.target.dataset.action === 'hide') {
+                  var menuContainer = document.querySelector('.menu-container'); 
+                  if (menuContainer) {
+                    menuContainer.style.display = 'none';
+                  }
+                }
+              });
+            </script>
+          </div>
+          <script>
+            document.addEventListener('click', function (e) {
+                if (e.target.dataset.action === 'show-menu') {
+                var menuContainer = document.getElementById('actionMenuId'); 
+                if (menuContainer) {
+                    menuContainer.style.display = 'block';
+                }
+                }
+                if (e.target.dataset.action === 'hide') {
+                var menuContainer = document.querySelector('.menu-container'); 
+                if (menuContainer) {
+                    menuContainer.style.display = 'none';
+                }
+                }
+            });
+            
+            
+            
+          </script>
         </div>
         <script>
           document.getElementById('bookingCell').addEventListener('click', function() {
@@ -825,18 +858,18 @@
             </div>
           </div>
         </div>
-        <label class="flex items-center gap-3 grow leading-tight text-left text-lab-black justify-between max-w-sm text-lab-black py-4">Бронирование доступно
+        <label class="flex items-center gap-3 grow leading-tight text-left text-lab-black justify-between max-w-sm text-sm py-4">Бронирование доступно
           <input class="sr-only peer" id="playerToggle" type="checkbox" value=""/>
           <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
         </label>
         <div class="flex gap-2 justify-start mb-6 items-center 430:justify-start 430:gap-2">
-          <div class="flex items-center gap-2 w-full !w-32">
+          <div class="flex items-center gap-2 w-full !w-32 text-sm">
             <label class="block text-lab-black" for="Часы работы">Часы работы</label>
           </div>
-          <input class="border border-lab-black-30 p-2 w-24 shrink-0 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="from" type="time" placeholder=""/><span>—</span>
-          <input class="border border-lab-black-30 p-2 w-24 shrink-0 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" id="to" type="time" placeholder=""/>
+          <input class="border p-2 w-24 shrink-0 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="from" type="time" placeholder=""/><span>—</span>
+          <input class="border p-2 w-24 shrink-0 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="to" type="time" placeholder=""/>
         </div>
-        <div class="flex items-center gap-4 mb-4 -mr-4"><span class="shrink-0 mr-4">Шаблоны цен</span>
+        <div class="flex items-center gap-4 mb-4 -mr-4"><span class="shrink-0 mr-4 text-sm">Шаблоны цен</span>
           <div class="flex overflow-x-auto items-center space-x-2 no-scrollbar scroll-smooth  -ml-4 pr-4">
             <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
               <div>Рабочий день</div>
@@ -852,48 +885,52 @@
             </div><img class="size-6" src="img/plus-button.svg" alt="" id="plusButton"/>
           </div>
         </div>
+        <div class="flex gap-4 w-full justify-center pb-4">
+          <div class="text-lab-color text-sm">Редактировать шаблон</div>
+          <div class="text-lab-red text-sm">Удалить шаблон</div>
+        </div>
         <div class="w-screen overflow-auto no-scrollbar bg-white -mx-4">
           <table class="table-fixed w-full text-lab-black">
             <thead class="sticky top-0 bg-white z-20 h-10 mb-4">
               <tr>
                 <th class="px-2 text-center text-xs sticky bg-white left-0 align-middle min-w-14 w-14 z-20">Корт</th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="0">
                   <div>1</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="1">
                   <div>2</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="2">
                   <div>3</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="3">
                   <div>4</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="4">
                   <div>5</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="5">
                   <div>6</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="6">
                   <div>7</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="7">
                   <div>8</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="8">
                   <div>9</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
-                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8 text-center">
+                <th class="court text-sm min-w-16 w-16 text-center align-middle sticky top-0 h-8" data-court-index="9">
                   <div>10</div>
                   <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                 </th>
@@ -1340,6 +1377,124 @@
         </div>
       </div>
     </div>
+    <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal">
+      <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
+        <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
+        <div class="p-4 text-center md:p-5"> 
+          <h2>Корт №5</h2>
+          <p class="text-lab-black-50 text-sm pt-0 pb-2">Стандартный  </p><img class="mt-2 rounded-sm pb-2" src="dynamic-img/court5.jpg" alt="">
+          <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Размер зала</span>
+            <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">17x10 м</span>
+          </div>
+          <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Высота потолков</span>
+            <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">8 м</span>
+          </div>
+          <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Покрытие</span>
+            <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">Тарафлекс</span>
+          </div>
+          <button class="mt-4 bg-blue-500 text-white rounded px-4 py-2" data-modal-target="edit-court-modal">Редактировать</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const closeButton = document.querySelector('.close-modal');
+          closeButton?.addEventListener('click', function() {
+              document.getElementById('court-modal').style.display = 'none';
+          });
+      
+          document.getElementById('court-modal').addEventListener('click', function(event) {
+              if (event.target === this) {
+                  this.style.display = 'none';
+              }
+          });
+      });
+    </script>
+    <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="edit-court-modal">
+      <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
+        <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
+        <div class="p-4 text-center md:p-5">
+          <h2>Корт №11</h2>
+          <form class="space-y-4" action="" method="post">
+            <label class="block"><span class="block text-sm font-medium text-gray-700">Корт №</span>
+              <input class="mt-1 block w-full" type="text" name="court-number" value="11" readonly>
+            </label>
+            <div class="flex space-x-4">
+              <div class="flex-grow">
+                <label class="block"><span class="block text-sm font-medium text-gray-700">Покрытие</span>
+                  <select class="mt-1 block w-full" name="surface">
+                    <option value="">Выберите</option>
+                    <option value="hard">Хард</option>
+                    <option value="clay">Грунт</option>
+                  </select>
+                </label>
+              </div>
+              <div class="flex-grow">
+                <label class="block"><span class="block text-sm font-medium text-gray-700">Описание</span>
+                  <input class="mt-1 block w-full" type="text" name="description" maxlength="30">
+                </label>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <label class="block"><span class="block text-sm font-medium text-gray-700">Доступен для брони</span>
+                <input class="mt-1 block w-full" type="date" name="available-date" value="2023-09-11">
+              </label>
+              <div class="flex items-center ml-4"><span class="text-sm font-medium text-gray-700 toggle-label">Доступен</span>
+                <input class="ml-2 toggle-checkbox" type="checkbox" name="available" checked>
+              </div>
+            </div>
+            <div class="flex justify-between mt-6">
+              <button class="bg-red-500 text-white rounded px-4 py-2">Удалить корт</button>
+              <button class="bg-green-500 text-white rounded px-4 py-2">Сохранить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const closeButton = document.querySelector('.close-modal');
+          closeButton?.addEventListener('click', function() {
+              document.getElementById('edit-court-modal').style.display = 'none';
+          });
+      
+          document.getElementById('edit-court-modal').addEventListener('click', function(event) {
+              if (event.target === this) {
+                  this.style.display = 'none';
+              }
+          });
+      });
+    </script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+          console.log('DOM fully loaded and parsed');
+          
+          const courtDivs = document.querySelectorAll('.court');
+          
+          
+          courtDivs.forEach(function(div) {
+              div.addEventListener('click', function() {
+                  const modal = document.getElementById('court-modal');
+                  if (modal) {
+                      console.log('Opening court-modal:', modal);
+                      modal.classList.remove('hidden');
+                  } else {
+                      console.error('Modal court-modal not found');
+                  }
+              });
+          });
+          const editButton = document.querySelector('[data-modal-target="edit-court-modal"]');
+          if (editButton) {
+              editButton.addEventListener('click', function() {
+                  const modal = document.getElementById('edit-court-modal');
+                  if (modal) {
+                      modal.style.removeProperty('display');
+                  }
+              });
+          }
+      });
+      
+    </script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
           const tabBooking = document.getElementById('tabBooking');

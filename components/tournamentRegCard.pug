@@ -7,7 +7,7 @@ mixin tournamentRegCard(reg, isOpen, name)
         div.flex.items-center.cursor-pointer.gap-2.mb-2
             div.w-9.flex.justify-center.shrink-0
                 +tournamentTypeBadge('XD')
-            div.text-left.leading-5.grow.text-sm.font-semibold= name
+            div.text-left.leading-5.grow.text-sm.text-lab-black.font-semibold= name
             img.w-6.z-1(src="img/expand-arrow.svg", class=(isOpen ? "rotate-180" : ""))
         if reg && !isOpen
             div.flex.items-center.gap-1.mb-1.ml-11

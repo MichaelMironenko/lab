@@ -9,7 +9,7 @@
     <base href="../../">
   </head>
   <body class="bg-page-background pb-28 pt-12">
-    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -33,7 +33,7 @@
             </div></a>
           <div class="flex flex-col self-stretch py-2 border-b w-full"><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myFinance.html"><img class="w-4 h-4 justify-center items-center" src="img/price-outline.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Финансы</div><span class="text-xs leading-tight">1500 ₽</span></a><a class="py-2 flex justify-between items-center gap-3" href="pages/courts/myBookings.html"><img class="w-4 h-4 justify-center items-center" src="img/booking.svg"/>
-              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myOrders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/orders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Заказы</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myBookmarks.html"><img class="w-4 h-4 justify-center items-center" src="img/bookmark-empty.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Закладки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTrainings.html"><img class="w-4 h-4 justify-center items-center" src="img/trainer.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Тренировки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/friends.html"><img class="w-4 h-4 justify-center items-center" src="img/friends.svg"/>
@@ -59,11 +59,11 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-8">
         <div class="flex items-center gap-3 pb-4">
           <h3 class="w-14 shrink-0 text-15">Клуб</h3>
-          <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Название"/>
+          <input class="border p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Название"/>
         </div>
         <div class="flex items-center gap-3 pb-4">
           <h3 class="w-14 shrink-0 text-15">Турнир</h3>
-          <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Название"/>
+          <input class="border p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Название"/>
         </div>
       </div>
       <div class="flex items-center gap-3 pb-4">
@@ -71,29 +71,67 @@
         <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="От" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
         <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="До" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] sm:gap-2">
+      <div class="flex mb-4" id="toggleButtonsStats">
+        <button class="w-full rounded-l-md py-2 bg-white font-bold text-sm text-lab-color">Одиночные</button>
+        <button class="w-full rounded-r-md bg-lab-color border py-2 text-sm text-white">Парные</button>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-2 hidden gap-y-3" id="singlePlayerFields">
+        <div class="flex w-full items-center gap-3">
+          <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Игрок 1"/>
+        </div>
+        <div class="flex w-full items-center gap-3">
+          <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Игрок 2"/>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] sm:gap-2 " id="doublePlayerFields">
         <div class="px-3 pt-2 bg-lab-color-10 rounded-lg mb-2">
-          <div class="pb-2 text-lab-black">Первая пара *</div>
+          <div class="pb-2 text-lab-black">Первая пара</div>
           <div class="flex w-full items-center gap-3 pb-3">
-            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Игрок 1"/>
+            <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Игрок 1"/>
           </div>
           <div class="flex w-full items-center gap-3 pb-3">
-            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Игрок 2"/>
+            <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Игрок 2"/>
           </div>
         </div>
         <div class="text-center text-lab-black-50 my-auto text-sm pb-2">против</div>
         <div class="px-3 pt-2 bg-lab-color-10 rounded-lg mb-2">
-          <div class="pb-2 text-lab-black">Вторая пара *</div>
+          <div class="pb-2 text-lab-black">Вторая пара</div>
           <div class="flex w-full items-center gap-3 pb-3">
-            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Игрок 1"/>
+            <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Игрок 1"/>
           </div>
           <div class="flex w-full items-center gap-3 pb-3">
-            <input class="border border-lab-black-30 p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm" placeholder="Игрок 2"/>
+            <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Игрок 2"/>
           </div>
         </div>
       </div>
-      <div class="text-xs text-lab-black leading-tight pb-4">* для одиночных игр оставьте поле второго игрока пустым</div>
-      <button class="w-full  w-1/2 mb-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Найти</button>
+      <button class="w-full w-1/2 my-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Найти</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const toggleButtonsStats = document.getElementById('toggleButtonsStats');
+          const singlePlayerFields = document.getElementById('singlePlayerFields');
+          const doublePlayerFields = document.getElementById('doublePlayerFields');
+        
+          toggleButtonsStats.addEventListener('click', function(event) {
+            if (event.target.tagName === 'BUTTON') {
+              const buttons = toggleButtonsStats.querySelectorAll('button');
+              buttons.forEach(button => {
+                button.classList.remove('bg-lab-color', 'text-white', 'font-bold');
+                button.classList.add('text-lab-color', 'bg-white', 'border');
+              });
+              event.target.classList.add('bg-lab-color', 'text-white', 'font-bold');
+              event.target.classList.remove('text-lab-color', 'bg-white', 'border');
+        
+              if (event.target.textContent.trim() === 'Одиночные') {
+                singlePlayerFields.style.display = 'grid';
+                doublePlayerFields.style.display = 'none';
+              } else {
+                singlePlayerFields.style.display = 'none';
+                doublePlayerFields.style.display = 'grid';
+              }
+            }
+          });
+        });
+      </script>
     </div>
     <div class="bg-white p-4">
       <div class="pt-2 border-b border-lab-black-10">

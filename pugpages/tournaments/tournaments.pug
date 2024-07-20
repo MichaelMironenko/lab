@@ -22,7 +22,7 @@ html(lang='en')
     base(href='../../')
   body.h-screen.overflow-hidden
     +topBar
-    .fixed.inset-x-0.z-30(class='top-[49px]')
+    .fixed.inset-x-0(class='top-[49px]')
       // +timezoneMessage
       // Панель сообщения о другом часовом поясе
       //  <div class="w-full h-14 px-3 py-2 bg-amber-100 border-blue-950 border-opacity-10 justify-start items-center gap-2 inline-flex">
@@ -39,7 +39,7 @@ html(lang='en')
       +tournamentsPanel("Регистрация")
     .fixed.left-0.top-0.min-h-screen.w-full.bg-page-background(class='z-[-1]')
     .no-scrollbar.h-screen.overflow-y-auto
-      #registration.tab-content.p-4(, class='pb-[50px] pt-[104px]')
+      #registration.tab-content.p-4(class='pb-[50px] pt-[104px]')
         +citySelect(true)
         .flex.flex-col.items-center
           +date("Вторник, 25 ноября")

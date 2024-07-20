@@ -70,7 +70,7 @@
     <base href="../../">
   </head>
   <body class="bg-white mt-12 pb-32">
-    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -94,7 +94,7 @@
             </div></a>
           <div class="flex flex-col self-stretch py-2 border-b w-full"><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myFinance.html"><img class="w-4 h-4 justify-center items-center" src="img/price-outline.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Финансы</div><span class="text-xs leading-tight">1500 ₽</span></a><a class="py-2 flex justify-between items-center gap-3" href="pages/courts/myBookings.html"><img class="w-4 h-4 justify-center items-center" src="img/booking.svg"/>
-              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myOrders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/orders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Заказы</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myBookmarks.html"><img class="w-4 h-4 justify-center items-center" src="img/bookmark-empty.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Закладки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTrainings.html"><img class="w-4 h-4 justify-center items-center" src="img/trainer.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Тренировки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/friends.html"><img class="w-4 h-4 justify-center items-center" src="img/friends.svg"/>
@@ -118,10 +118,8 @@
     <div class="py-4 px-2 flex gap-3 bg-white"><img class="rotate-90" src="img/expand-arrow.svg" alt="">
       <div class="text-lg text-center grow font-bold text-lab-black -ml-6">Бронирование №123456 </div>
     </div>
-    <div class="p-4"><img class="inline align-middle saturate-50 opacity-50" src="img/home.svg" alt=""/><a class="inline align-middle ml-2" href="pages/courts/singleClub.html">Натен-Юг</a>
-      <div class="flex gap-2 items-center mt-4 mb-3"><img class="saturate-50 opacity-60" src="img/calendar.svg"/>
-        <div class="leading-none">11 сентября, четверг</div>
-      </div>
+    <div class="p-4">
+      <div class="flex gap-2 items-center mt-4 mb-3"><img class="saturate-50 opacity-60" src="img/calendar.svg"/><span class="leading-none">11 сентября, четверг</span></div>
       <div class="flex justify-between gap-3 py-2 max-w-sm items-center">
         <div class="inline"><img class="inline align-middle saturate-50 opacity-50" src="img/time.svg" alt="Время"/><span class="inline align-middle leading-none ml-2">11:00-12:30</span></div>
         <div class="court"><img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 5</span></div>
@@ -132,7 +130,7 @@
         <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
         <div> <img class="inline align-middle saturate-50 opacity-50" src="img/price.svg" alt="Цена"/><span class="inline align-middle ml-2">1800&#8202;₽</span></div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="court-modal" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
           <div class="p-4 text-center md:p-5"> 
@@ -179,7 +177,7 @@
         });
       </script>
       <div class="py-2"><img class="inline align-middle saturate-50 opacity-50" src="img/player.svg" alt=""/><span class="inline align-middle ml-2">Константин</span></div>
-      <div class="py-2"><img class="inline align-middle saturate-50 opacity-50" src="img/phone.svg" alt=""/><span class="inline align-middle ml-2">+7 (093) 232-52-25</span></div>
+      <div class="py-2"><img class="inline align-middle saturate-50 opacity-50" src="img/phone.svg" alt=""/><a class="inline align-middle ml-2">+7 (093) 232-52-25</a></div>
       <div class="pt-2 pb-4"><img class="inline align-middle saturate-50 opacity-50" src="img/racket.svg" alt=""/><span class="inline align-middle ml-2">2 полупрофессиональные ракетки</span></div>
       <div class="flex justify-between pb-4 pt-4 border-t"><span>Аренда кортов</span><span>1400&#8202;₽</span></div>
       <div class="flex justify-between pb-4"><span>Аренда ракеток</span><span>600&#8202;₽</span></div>

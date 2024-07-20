@@ -4,7 +4,7 @@ include playersAndComments.pug
 include /components/atoms/tournamentTypeBadge.pug
 
 mixin tournamentLiveCard(time, group, players, comments, isReg, isDetails, title)
-    - let containerClasses = "bg-white w-full rounded-lg overflow-hidden shadow-lg max-w-sm mb-3" + (isReg ? " border-2 border-lab-color" : "")
+    - let containerClasses = "bg-white w-full rounded-lg overflow-hidden shadow-lg max-w-sm mb-2" + (isReg ? " border-2 border-lab-color" : "")
 
     div(class=containerClasses)
         div(class="flex pl-3 pr-4 pt-3 pb-2 gap-2 bg-white items-center")
@@ -16,7 +16,8 @@ mixin tournamentLiveCard(time, group, players, comments, isReg, isDetails, title
             
         div.flex.flex-row.gap-2(class="ml-[48px]").pl-3.pr-4.pt-0.pb-2.items-center.justify-between
             div.inline-flex.flex-row.gap-2.items-center.text-sm
-                div(class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded-lg bg-slate-200")= group
+                span Группа
+                div(class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded bg-slate-200")= group
                 span.shrink-0.text-lab-red.animate-pulse= time
             +playersAndComments(10, 1)
         if isReg
@@ -29,8 +30,9 @@ mixin tournamentLiveCard(time, group, players, comments, isReg, isDetails, title
                 +tournamentLiveRow('1/16', 'Клейменов Алексей', 'Григорьев-Апполонов Виктор', { player1: 3, player2: 2 }, null, true)
                 +tournamentLiveRow('1/16', 'Семенова / Коломинская', 'Соколянская / Добронравова', null, { minute: "5" }, false )
 
-        div.flex.flex-row.gap-2(class="ml-[48px]").pl-3.pr-4.pt-2.pb-3.items-center.justify-between
+        div.flex.flex-row.gap-2(class="ml-[48px]").pl-3.pr-4.pt-3.pb-3.items-center.justify-between
             div.inline-flex.flex-row.gap-2.items-center.text-sm
+                span Группа
                 div(class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded-lg bg-slate-200")= 'B'
                 span.shrink-0.text-lab-red.animate-pulse= time
             +playersAndComments(10, 1)

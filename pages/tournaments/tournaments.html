@@ -9,7 +9,7 @@
     <base href="../../">
   </head>
   <body class="h-screen overflow-hidden">
-    <div class="fixed inset-x-0 top-0 z-20 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -33,7 +33,7 @@
             </div></a>
           <div class="flex flex-col self-stretch py-2 border-b w-full"><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myFinance.html"><img class="w-4 h-4 justify-center items-center" src="img/price-outline.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Финансы</div><span class="text-xs leading-tight">1500 ₽</span></a><a class="py-2 flex justify-between items-center gap-3" href="pages/courts/myBookings.html"><img class="w-4 h-4 justify-center items-center" src="img/booking.svg"/>
-              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/myOrders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
+              <div class="text-lab-black text-sm font-normal grow leading-tight">Бронирования</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/market/orders.html"><img class="w-4 h-4 justify-center items-center" src="img/orders.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Заказы</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myBookmarks.html"><img class="w-4 h-4 justify-center items-center" src="img/bookmark-empty.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Закладки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/myTrainings.html"><img class="w-4 h-4 justify-center items-center" src="img/trainer.svg"/>
               <div class="text-lab-black text-sm font-normal grow leading-tight">Тренировки</div></a><a class="py-2 flex justify-between items-center gap-3" href="pages/others/friends.html"><img class="w-4 h-4 justify-center items-center" src="img/friends.svg"/>
@@ -54,7 +54,7 @@
         })
       })
     </script>
-    <div class="fixed inset-x-0 z-30 top-[49px]">
+    <div class="fixed inset-x-0 top-[49px]">
       <!-- +timezoneMessage-->
       <!-- Панель сообщения о другом часовом поясе-->
       <!--  <div class="w-full h-14 px-3 py-2 bg-amber-100 border-blue-950 border-opacity-10 justify-start items-center gap-2 inline-flex">
@@ -69,7 +69,7 @@
       </div>
       </div>
       -->
-      <div class="flex gap-5 justify-between px-3 text-sm leading-5 drop-shadow-xl whitespace-nowrap bg-white text-slate-900 text-opacity-50 z-120">
+      <div class="flex gap-5 justify-between px-3 text-sm leading-5 drop-shadow-xl whitespace-nowrap bg-white text-slate-900 text-opacity-50 z-20">
         <div class="tournaments-panel-tab inline-flex cursor-pointer gap-1 items-center justify-between py-2 font-bold border-t-2 border-t-transparent border-b-2 border-solid text-blue-950 border-lab-color" data-tab="registration"><img class="w-4 h-5 aspect-square " src="img/registration.svg"/>
           <div class="grow">Регистрация</div>
         </div>
@@ -86,8 +86,8 @@
     </div>
     <div class="fixed left-0 top-0 min-h-screen w-full bg-page-background z-[-1]"></div>
     <div class="no-scrollbar h-screen overflow-y-auto">
-      <div class="tab-content p-4 pb-[50px] pt-[104px]" id="registration" >
-        <div class="flex items-center gap-1 py-2"><img class="h-4 w-4" src="img/location-icon.svg"/>
+      <div class="tab-content p-4 pb-[50px] pt-[104px]" id="registration">
+        <div class="flex items-center gap-1 py-2 undefined"><img class="h-4 w-4" src="img/location-icon.svg"/>
           <select class="w-fit appearance-none rounded-2xl border-none bg-transparent bg-none p-0 text-sm font-semibold leading-none text-lab-color undefined focus-visible:outline-none">
             <option value="0" selected="selected">Все города</option>
             <option value="781">Алексин</option>
@@ -110,10 +110,10 @@
               <div class="w-9 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
               </div>
-              <div class="text-left leading-5 grow text-sm font-semibold">Майский фестиваль Микстов в Сколково</div><img class="w-6 z-1 rotate-180" src="img/expand-arrow.svg"/>
+              <div class="text-left leading-5 grow text-sm text-lab-black font-semibold">Майский фестиваль Микстов в Сколково</div><img class="w-6 z-1 rotate-180" src="img/expand-arrow.svg"/>
             </div><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">10:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">A</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">A</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-blue-500"><span>👨🏻</span><span class="text-white">200</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-blue-500"><span>👨🏻</span><span class="text-white">200</span>
@@ -126,7 +126,7 @@
               </div></a>
             <div class="flex items-center gap-1 mb-2 ml-11"><img class="w-4 h-4" src="img/checkmark.svg"/><span class="text-xs font-semibold text-lab-color">Вы играете в этой группе</span></div><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">11:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">B</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">B</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-pink-500"><span>👩</span><span class="text-white">350</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-pink-500"><span>👩</span><span class="text-white">350</span>
@@ -138,7 +138,7 @@
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>15</span></div>
               </div></a><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">12:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">C</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">C</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-gradient-to-r from-pink-500 to-blue-500"><span>👩</span><span class="-ml-3">👨🏻</span><span class="text-white">500</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-gradient-to-r from-pink-500 to-blue-500"><span>👩</span><span class="-ml-3">👨🏻</span><span class="text-white">500</span>
@@ -150,7 +150,7 @@
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>20</span></div>
               </div></a><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">13:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">D</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">D</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-blue-500"><span>👨🏻</span><span class="-ml-3">👨🏻</span><span class="text-white">600+</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-blue-500"><span>👨🏻</span><span class="-ml-3">👨🏻</span><span class="text-white">600+</span>
@@ -162,7 +162,7 @@
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>25</span></div>
               </div></a><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">14:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">E+</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">E+</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-pink-500"><span>👩</span><span class="-ml-3">👩</span><span class="text-white">400</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-pink-500"><span>👩</span><span class="-ml-3">👩</span><span class="text-white">400</span>
@@ -179,7 +179,7 @@
               <div class="w-9 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
               </div>
-              <div class="text-left leading-5 grow text-sm font-semibold">Золотой волан Татарстана 1 тур</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
+              <div class="text-left leading-5 grow text-sm text-lab-black font-semibold">Золотой волан Татарстана 1 тур</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
             </div>
           </div>
           <div class="justify-center items-center gap-2 py-4 inline-flex m-auto w-full"><img class="w-4 h-4" src="img/calendar.svg" alt="Календарь"/>
@@ -190,7 +190,7 @@
               <div class="w-9 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
               </div>
-              <div class="text-left leading-5 grow text-sm font-semibold">Первый открытый Кубок МОФБ по бадминтону среди любителей</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
+              <div class="text-left leading-5 grow text-sm text-lab-black font-semibold">Первый открытый Кубок МОФБ по бадминтону среди любителей</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
             </div>
             <div class="flex items-center gap-1 mb-1 ml-11"><img class="w-4 h-4" src="img/checkmark.svg"/><span class="text-xs font-semibold text-lab-color">Вы участвуете в этом турнире</span></div>
           </div>
@@ -198,7 +198,7 @@
       </div>
       <div class="tab-content hidden p-4 pb-[50px] pt-[104px]" id="live" >
         <div class="flex flex-col items-center">
-          <div class="bg-white w-full rounded-lg overflow-hidden shadow-lg max-w-sm mb-3 border-2 border-lab-color">
+          <div class="bg-white w-full rounded-lg overflow-hidden shadow-lg max-w-sm mb-2 border-2 border-lab-color">
             <div class="flex pl-3 pr-4 pt-3 pb-2 gap-2 bg-white items-center">
               <div class="w-10 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
@@ -206,8 +206,8 @@
             </div>
             <div class="flex items-center text-sm gap-1 shrink-0"></div>
             <div class="flex flex-row gap-2 ml-[48px] pl-3 pr-4 pt-0 pb-2 items-center justify-between">
-              <div class="inline-flex flex-row gap-2 items-center text-sm">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded-lg bg-slate-200">A</div><span class="shrink-0 text-lab-red animate-pulse">11:30</span>
+              <div class="inline-flex flex-row gap-2 items-center text-sm"><span>Группа</span>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded bg-slate-200">A</div><span class="shrink-0 text-lab-red animate-pulse">11:30</span>
               </div>
               <div class="inline-flex flex-row gap-1 text-sm">
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>10</span></div>
@@ -229,14 +229,13 @@
                 </div>
                 <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-1">
                   <div class="w-full flex justify-between items-center gap-2">
-                    <div class="flex flex-col min-w-0 flex-grow text-sm gap-1"><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Семенова / Коломинская</span><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Соколянская / Добронравова</span></div>
-                    <div class="shrink-0"><img class="h-6 w-6" src="img/youtube.svg" alt="Video icon"/></div>
+                    <div class="flex flex-col min-w-0 flex-grow text-sm gap-1"><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Семенова / Коломинская</span><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Соколянская / Добронравова</span></div><a class="shrink-0" href="pages/aroundGame/video.html"><img class="h-6 w-6" src="img/youtube.svg" alt="Video icon"/></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="flex flex-row gap-2 ml-[48px] pl-3 pr-4 pt-2 pb-3 items-center justify-between">
-              <div class="inline-flex flex-row gap-2 items-center text-sm">
+            <div class="flex flex-row gap-2 ml-[48px] pl-3 pr-4 pt-3 pb-3 items-center justify-between">
+              <div class="inline-flex flex-row gap-2 items-center text-sm"><span>Группа</span>
                 <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded-lg bg-slate-200">B</div><span class="shrink-0 text-lab-red animate-pulse">11:30</span>
               </div>
               <div class="inline-flex flex-row gap-1 text-sm">
@@ -258,14 +257,13 @@
                 </div>
                 <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-1">
                   <div class="w-full flex justify-between items-center gap-2">
-                    <div class="flex flex-col min-w-0 flex-grow text-sm gap-1"><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Медведева / Стриженов</span><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Горбачева / Васильчук</span></div>
-                    <div class="shrink-0"><img class="h-6 w-6" src="img/youtube.svg" alt="Video icon"/></div>
+                    <div class="flex flex-col min-w-0 flex-grow text-sm gap-1"><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Медведева / Стриженов</span><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Горбачева / Васильчук</span></div><a class="shrink-0" href="pages/aroundGame/video.html"><img class="h-6 w-6" src="img/youtube.svg" alt="Video icon"/></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="bg-white w-full rounded-lg overflow-hidden shadow-lg max-w-sm mb-3">
+          <div class="bg-white w-full rounded-lg overflow-hidden shadow-lg max-w-sm mb-2">
             <div class="flex pl-3 pr-4 pt-3 pb-2 gap-2 bg-white items-center">
               <div class="w-10 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
@@ -273,8 +271,8 @@
             </div>
             <div class="flex items-center text-sm gap-1 shrink-0"></div>
             <div class="flex flex-row gap-2 ml-[48px] pl-3 pr-4 pt-0 pb-2 items-center justify-between">
-              <div class="inline-flex flex-row gap-2 items-center text-sm">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded-lg bg-slate-200">B</div><span class="shrink-0 text-lab-red animate-pulse">11:30</span>
+              <div class="inline-flex flex-row gap-2 items-center text-sm"><span>Группа</span>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded bg-slate-200">B</div><span class="shrink-0 text-lab-red animate-pulse">11:30</span>
               </div>
               <div class="inline-flex flex-row gap-1 text-sm">
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>10</span></div>
@@ -295,14 +293,13 @@
                 </div>
                 <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-1">
                   <div class="w-full flex justify-between items-center gap-2">
-                    <div class="flex flex-col min-w-0 flex-grow text-sm gap-1"><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Семенова / Коломинская</span><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Соколянская / Добронравова</span></div>
-                    <div class="shrink-0"><img class="h-6 w-6" src="img/youtube.svg" alt="Video icon"/></div>
+                    <div class="flex flex-col min-w-0 flex-grow text-sm gap-1"><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Семенова / Коломинская</span><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Соколянская / Добронравова</span></div><a class="shrink-0" href="pages/aroundGame/video.html"><img class="h-6 w-6" src="img/youtube.svg" alt="Video icon"/></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="flex flex-row gap-2 ml-[48px] pl-3 pr-4 pt-2 pb-3 items-center justify-between">
-              <div class="inline-flex flex-row gap-2 items-center text-sm">
+            <div class="flex flex-row gap-2 ml-[48px] pl-3 pr-4 pt-3 pb-3 items-center justify-between">
+              <div class="inline-flex flex-row gap-2 items-center text-sm"><span>Группа</span>
                 <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded-lg bg-slate-200">B</div><span class="shrink-0 text-lab-red animate-pulse">11:30</span>
               </div>
               <div class="inline-flex flex-row gap-1 text-sm">
@@ -324,14 +321,13 @@
                 </div>
                 <div class="flex-grow flex flex-col justify-center py-2 w-full flex-shrink gap-1">
                   <div class="w-full flex justify-between items-center gap-2">
-                    <div class="flex flex-col min-w-0 flex-grow text-sm gap-1"><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Медведева / Стриженов</span><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Горбачева / Васильчук</span></div>
-                    <div class="shrink-0"><img class="h-6 w-6" src="img/youtube.svg" alt="Video icon"/></div>
+                    <div class="flex flex-col min-w-0 flex-grow text-sm gap-1"><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Медведева / Стриженов</span><span class="text-sm min-w-0 truncate max-w-full flex-shrink">Горбачева / Васильчук</span></div><a class="shrink-0" href="pages/aroundGame/video.html"><img class="h-6 w-6" src="img/youtube.svg" alt="Video icon"/></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="bg-white w-full rounded-lg overflow-hidden shadow-lg max-w-sm mb-3">
+          <div class="bg-white w-full rounded-lg overflow-hidden shadow-lg max-w-sm mb-2">
             <div class="flex pl-3 pr-4 pt-3 pb-2 gap-2 bg-white items-center">
               <div class="w-10 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
@@ -339,16 +335,16 @@
             </div>
             <div class="flex items-center text-sm gap-1 shrink-0"></div>
             <div class="flex flex-row gap-2 ml-[48px] pl-3 pr-4 pt-0 pb-2 items-center justify-between">
-              <div class="inline-flex flex-row gap-2 items-center text-sm">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded-lg bg-slate-200">C</div><span class="shrink-0 text-lab-red animate-pulse">11:30</span>
+              <div class="inline-flex flex-row gap-2 items-center text-sm"><span>Группа</span>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded bg-slate-200">C</div><span class="shrink-0 text-lab-red animate-pulse">11:30</span>
               </div>
               <div class="inline-flex flex-row gap-1 text-sm">
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>10</span></div>
                 <div class="inline-flex gap-0.5 items-center ml-2"><img class="opacity-30" src="img/comment.svg"/><span>1</span></div>
               </div>
             </div>
-            <div class="flex flex-row gap-2 ml-[48px] pl-3 pr-4 pt-2 pb-3 items-center justify-between">
-              <div class="inline-flex flex-row gap-2 items-center text-sm">
+            <div class="flex flex-row gap-2 ml-[48px] pl-3 pr-4 pt-3 pb-3 items-center justify-between">
+              <div class="inline-flex flex-row gap-2 items-center text-sm"><span>Группа</span>
                 <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded-lg bg-slate-200">B</div><span class="shrink-0 text-lab-red animate-pulse">11:30</span>
               </div>
               <div class="inline-flex flex-row gap-1 text-sm">
@@ -376,8 +372,7 @@
             <div class="text-lab-black text-sm font-semibold leading-none">Вторник, 25 ноября</div>
           </div>
         </div>
-        <div class="flex flex-wrap justify-center gap-2">
-          <div class="shadow-lg rounded-lg overflow-hidden mb-2 max-w-sm">
+        <div class="flex flex-wrap justify-center gap-2"><a class="shadow-lg rounded-lg overflow-hidden mb-2 max-w-sm border" href="pages/tournaments/singleTournament.html">
             <div class="flex pl-3 pr-4 pt-3 pb-2 gap-2 bg-white border-b border-black-10 items-center"><span class="w-10 text-sm text-center shrink-0">11:30</span>
               <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XDF</div>
               <div class="inline-flex gap-2 grow flex-wrap"><span class="text-sm font-semibold leading-sm">Сколково</span></div>
@@ -386,7 +381,7 @@
                 <div class="inline-flex gap-0.5 items-center ml-2"><img class="opacity-30" src="img/comment.svg"/><span>2</span></div>
               </div>
             </div>
-            <div class="px-3 py-2 bg-slate-100">
+            <div class="px-3 py-2 bg-slate-100 text-lab-black">
               <div class="flex items-center justify-between py-2 gap-2"><img class="w-5 h-5" src="img/medal-gold.svg" alt="gold medal"/>
                 <div class="text-sm grow leading-xs">А. Баркалов / В. Мартынов</div>
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
@@ -405,9 +400,7 @@
                   <div class="text-center text-lab-black text-xs font-semibold leading-none">377</div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="shadow-lg rounded-lg overflow-hidden mb-2 max-w-sm">
+            </div></a><a class="shadow-lg rounded-lg overflow-hidden mb-2 max-w-sm border" href="pages/tournaments/singleTournament.html">
             <div class="flex pl-3 pr-4 pt-3 pb-2 gap-2 bg-white border-b border-black-10 items-center"><span class="w-10 text-sm text-center shrink-0">11:30</span>
               <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XDB</div>
               <div class="inline-flex gap-2 grow flex-wrap"><span class="text-sm font-semibold leading-sm">Сколково</span></div>
@@ -415,7 +408,7 @@
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>10</span></div>
               </div>
             </div>
-            <div class="px-3 py-2 bg-slate-100">
+            <div class="px-3 py-2 bg-slate-100 text-lab-black">
               <div class="flex items-center justify-between py-2 gap-2"><img class="w-5 h-5" src="img/medal-gold.svg" alt="gold medal"/>
                 <div class="text-sm grow leading-xs">А. Баркалов / В. Мартынов</div>
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
@@ -434,9 +427,7 @@
                   <div class="text-center text-lab-black text-xs font-semibold leading-none">377</div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="shadow-lg rounded-lg overflow-hidden mb-2 max-w-sm">
+            </div></a><a class="shadow-lg rounded-lg overflow-hidden mb-2 max-w-sm border" href="pages/tournaments/singleTournament.html">
             <div class="flex pl-3 pr-4 pt-3 pb-2 gap-2 bg-white border-b border-black-10 items-center"><span class="w-10 text-sm text-center shrink-0">11:30</span>
               <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XDC</div>
               <div class="inline-flex gap-2 grow flex-wrap"><span class="text-sm font-semibold leading-sm">Сколково</span></div>
@@ -445,7 +436,7 @@
                 <div class="inline-flex gap-0.5 items-center ml-2"><img class="opacity-30" src="img/comment.svg"/><span>1</span></div>
               </div>
             </div>
-            <div class="px-3 py-2 bg-slate-100">
+            <div class="px-3 py-2 bg-slate-100 text-lab-black">
               <div class="flex items-center justify-between py-2 gap-2"><img class="w-5 h-5" src="img/medal-gold.svg" alt="gold medal"/>
                 <div class="text-sm grow leading-xs">А. Баркалов / В. Мартынов</div>
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/><img class="h-3 w-3 -ml-2" src="img/rating-star-aqua.svg"/>
@@ -464,8 +455,7 @@
                   <div class="text-center text-lab-black text-xs font-semibold leading-none">377</div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div></a>
         </div>
       </div>
       <div class="tab-content hidden bg-white pb-[50px] pt-[88px]" id="calendar" >
@@ -498,7 +488,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">14</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -506,7 +496,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">15</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -514,7 +504,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700 font-bold">16</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -522,7 +512,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">17</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -538,15 +528,15 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">19</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
                 <div class="text-sm text-lab-red opacity-50">Вс</div>
                 <div class="w-10 h-10 flex justify-center">
-                  <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">20</div>
+                  <div class="w-9 h-9 flex items-center justify-center rounded-full bg-lab-red text-white">20</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span>
                 </div>
               </div>
             </div>
@@ -572,7 +562,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">23</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -580,7 +570,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">24</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -588,7 +578,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">25</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -596,7 +586,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">26</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -604,7 +594,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">27</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
             </div>
@@ -614,7 +604,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">28</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -622,7 +612,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">29</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -630,7 +620,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">30</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -638,7 +628,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">31</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5">
                 </div>
               </div>
             </div>
@@ -653,10 +643,10 @@
               <div class="w-9 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
               </div>
-              <div class="text-left leading-5 grow text-sm font-semibold">Майский фестиваль Микстов в Сколково</div><img class="w-6 z-1 rotate-180" src="img/expand-arrow.svg"/>
+              <div class="text-left leading-5 grow text-sm text-lab-black font-semibold">Майский фестиваль Микстов в Сколково</div><img class="w-6 z-1 rotate-180" src="img/expand-arrow.svg"/>
             </div><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">10:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">A</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">A</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-blue-500"><span>👨🏻</span><span class="text-white">200</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-blue-500"><span>👨🏻</span><span class="text-white">200</span>
@@ -669,7 +659,7 @@
               </div></a>
             <div class="flex items-center gap-1 mb-2 ml-11"><img class="w-4 h-4" src="img/checkmark.svg"/><span class="text-xs font-semibold text-lab-color">Вы играете в этой группе</span></div><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">11:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">B</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">B</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-pink-500"><span>👩</span><span class="text-white">350</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-pink-500"><span>👩</span><span class="text-white">350</span>
@@ -681,7 +671,7 @@
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>15</span></div>
               </div></a><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">12:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">C</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">C</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-gradient-to-r from-pink-500 to-blue-500"><span>👩</span><span class="-ml-3">👨🏻</span><span class="text-white">500</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-gradient-to-r from-pink-500 to-blue-500"><span>👩</span><span class="-ml-3">👨🏻</span><span class="text-white">500</span>
@@ -693,7 +683,7 @@
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>20</span></div>
               </div></a><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">13:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">D</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">D</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-blue-500"><span>👨🏻</span><span class="-ml-3">👨🏻</span><span class="text-white">600+</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-blue-500"><span>👨🏻</span><span class="-ml-3">👨🏻</span><span class="text-white">600+</span>
@@ -705,7 +695,7 @@
                 <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg"/><span>25</span></div>
               </div></a><a class="flex items-center py-3 gap-2 border-t first:border-none" href="pages/tournaments/singleTournament.html"><span class="w-9 text-sm shrink-0">14:00</span>
               <div class="inline-flex gap-1 grow flex-wrap">
-                <div class="w-6 h-6 flex justify-center items-center text-xs font-bold rounded bg-slate-200">E+</div>
+                <div class="w-6 h-6 flex justify-center items-center text-xs text-lab-black font-bold rounded border bg-lab-color-10">E+</div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-pink-500"><span>👩</span><span class="-ml-3">👩</span><span class="text-white">400</span>
                 </div>
                 <div class="w-[52px] h-6 flex items-center justify-evenly rounded-md text-white !text-[11px] flex-shrink-0 font-semibold bg-pink-500"><span>👩</span><span class="-ml-3">👩</span><span class="text-white">400</span>
@@ -722,7 +712,7 @@
               <div class="w-9 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
               </div>
-              <div class="text-left leading-5 grow text-sm font-semibold">Золотой волан Татарстана 1 тур</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
+              <div class="text-left leading-5 grow text-sm text-lab-black font-semibold">Золотой волан Татарстана 1 тур</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
             </div>
           </div>
           <div class="pb-1 pt-3 bg-white rounded-lg z-1 shadow-md w-full max-w-sm mb-3 px-[14px]">
@@ -730,7 +720,7 @@
               <div class="w-9 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
               </div>
-              <div class="text-left leading-5 grow text-sm font-semibold">Золотой волан Татарстана 1 тур</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
+              <div class="text-left leading-5 grow text-sm text-lab-black font-semibold">Золотой волан Татарстана 1 тур</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
             </div>
           </div>
           <div class="pb-1 pt-3 bg-white rounded-lg z-1 shadow-md w-full max-w-sm mb-3 border-2 border-lab-color px-3">
@@ -738,7 +728,7 @@
               <div class="w-9 flex justify-center shrink-0">
                 <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
               </div>
-              <div class="text-left leading-5 grow text-sm font-semibold">Первый открытый Кубок МОФБ по бадминтону среди любителей</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
+              <div class="text-left leading-5 grow text-sm text-lab-black font-semibold">Первый открытый Кубок МОФБ по бадминтону среди любителей</div><img class="w-6 z-1" src="img/expand-arrow.svg"/>
             </div>
             <div class="flex items-center gap-1 mb-1 ml-11"><img class="w-4 h-4" src="img/checkmark.svg"/><span class="text-xs font-semibold text-lab-color">Вы участвуете в этом турнире</span></div>
           </div>
