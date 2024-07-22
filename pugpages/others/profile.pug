@@ -37,6 +37,10 @@ html(lang='ru')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title Кудайбердиев Адилет Кудайбердиевич
     link(href='../../styles.css', rel='stylesheet')
+    link(
+      rel='stylesheet',
+      href='https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap'
+    )
     base(href='../../')
   body.bg-page-background.px-2.pb-32.pt-14(class='xs:px-3 sm:px-4')
     +topBar
@@ -118,29 +122,29 @@ html(lang='ru')
           span Обычно играет в паре с
             |
             |
-            a(href='pages/players/player.html') Стас Ярушин
+            a(href='pages/others/profile.html') Стас Ярушин
             span ,
             |
             |
-            a(href='pages/players/player.html') Константин Сомов
+            a(href='pages/others/profile.html') Константин Сомов
             span ,
             |
             |
-            a(href='pages/players/player.html') Юрий Спиридонов
+            a(href='pages/others/profile.html') Юрий Спиридонов
         .flex.items-start.gap-4
           img.aspect-square.w-4.opacity-60.saturate-50(src='img/racket.svg', alt='Клубы', class='mt-[3px]')
           div
             .mb-1.flex.items-center.gap-2
               span Ракетка:
-              a(href='pages/market/market.html') Yonex Astrox 100 Game (KURENAI)
+              a(href='pages/market/product.html') Yonex Astrox 100 Game (KURENAI)
             .flex.items-center.gap-2
               span Струны:
-              a(href='pages/market/market.html') Yonex Aerobite Boost
+              a(href='pages/market/product.html') Yonex Aerobite Boost
       div
         .mb-2.text-center.text-xs.text-lab-black-50 Был онлайн 12.06.2023
         .flex.justify-center.gap-2.pb-4
           .relative
-            +button('img/message-white.svg', 'image', '', 'bg-lab-color', 'px-2 py-1.5')
+            +button('img/message-white.svg', 'image', '', 'bg-lab-color', 'px-2 py-1.5', '', 'pages/others/messages.html')
             span.absolute.-right-2.-top-2.rounded-full.border.border-slate-300.bg-slate-100.px-1.text-xs.font-semibold 99+
           +button('img/add-friend-white.svg', 'image', '', 'bg-lab-color', 'px-2 py-1.5')
           +button('img/history-white.svg', 'imageText', 'white', 'bg-lab-color', 'px-2 py-1.5', '', 'pages/others/gamesHistory.html', 'Мои игры с этим игроком')
@@ -170,7 +174,7 @@ html(lang='ru')
       +menuRow('comment-outlined', 'Комментарии', true, 'pages/others/myComments.html')
       +menuRow('star-outlined', 'Отзывы', true, 'pages/others/myReviews.html')
       +menuRow('forum', 'Темы на форуме', true, 'pages/others/myTopics.html')
-      +menuRow('second-hand', 'Объявления', true, 'pages/market/myClassifieds.html')
+      +menuRow('second-hand', 'Объявления', true, 'pages/market/mySells.html')
 
     +block('Рейтинг')
       .-mt-2.mb-2.text-xs.text-lab-black-50 Нажмите на рейтинг для подробной статистики
@@ -193,7 +197,7 @@ html(lang='ru')
             img.h-3(src='img/arrow-down.svg', alt='')
             span.text-xs.leading-none.text-lab-red -8.2
           span.text-xs.text-lab-black-50 Вчера 12:42
-      .mb-2.mt-6.font-semibold Последние изменения рейтинга
+      .mb-2.mt-6.font-medium.text-lab-black Последние изменения рейтинга
       .flex.items-center.gap-2.py-2
         .w-14.text-sm.text-lab-black-50 13 сен
 
@@ -217,7 +221,7 @@ html(lang='ru')
 
       .no-scrollbar.-mx-4.flex.gap-4.overflow-x-auto.px-4
         each item in inventory
-          .flex.w-24.shrink-0.flex-col.items-center.justify-center.gap-2.rounded-lg
+          a.flex.w-24.shrink-0.flex-col.items-center.justify-center.gap-2.rounded-lg(href="pages/market/product.html")
             span.text-xs.text-lab-black-50= item.type
             img.size-24.object-cover(src=`dynamic-img/${item.image}`)
             .flex.items-center(class='gap-0.5') 
@@ -235,7 +239,7 @@ html(lang='ru')
 
     +block('Ближайшие мероприятия')
       h3.pb-2.pt-2.font-bold Турниры
-      .mb-2.flex.items-center.gap-2.rounded-lg.border.bg-lab-color-10.p-3
+      a.mb-2.flex.items-center.gap-2.rounded-lg.border.bg-lab-color-10.p-3(href="pages/tournaments/singleTournament.html")
         +tournamentTypeBadge('XDF+')
         span.grow.text-sm.font-semibold Макс Арена
         span.text-sm 11 сентября
@@ -246,7 +250,7 @@ html(lang='ru')
         span.text-sm 13 сентября
         span.text-sm 18:30
       h3.pb-2.pt-4.font-bold Тренировки
-      .mb-2.flex.items-center.gap-2.rounded-lg.border.bg-promo-background.px-3.py-1
+      a.mb-2.flex.items-center.gap-2.rounded-lg.border.bg-promo-background.px-3.py-1(href="pages/trainings/singleTraining.html")
         .grow
           span.grow.text-sm.font-semibold Макс Арена
           .flex.items-center.gap-1
@@ -254,7 +258,7 @@ html(lang='ru')
             span.text-xs.text-lab-black-50 Абельмасов Игорь
         span.text-sm 11 сентября
         span.text-sm 11:00
-      .mb-2.flex.items-center.gap-2.rounded-lg.border.bg-promo-background.px-3.py-1
+      a.mb-2.flex.items-center.gap-2.rounded-lg.border.bg-promo-background.px-3.py-1(href="pages/trainings/meetup.html")
         .grow
           span.grow.text-sm.font-semibold Naten-ЮГ
           .flex.items-center.gap-1

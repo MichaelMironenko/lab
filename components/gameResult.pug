@@ -4,7 +4,7 @@ mixin gameResult({date, tournament, stage, duration, border, players, numOfPlaye
       if date
         span.text-lab-black-50= date
       if tournament
-        .flex.items-center.gap-1
+        a.flex.items-center.gap-1(href="pages/tournaments/singleTournament.html")
           span.font-semibold.text-lab-black-50 XDF
           span.font-semibold.text-lab-black-50= tournament
       span.text-lab-black-50 #{ stage }
@@ -20,10 +20,9 @@ mixin gameResult({date, tournament, stage, duration, border, players, numOfPlaye
           else if numOfPlayers == 1
             +avatar(players[0].avatarBg, players[0].initials, 24)
 
-          span.inline-flex.min-w-0.flex-shrink.flex-grow.flex-wrap.items-center.gap-1.text-sm(
-            class=player.score > player.opponentScore ? 'font-semibold' : 'text-slate-500'
-          )
-            | #{ player.name } 
+          a.inline-flex.min-w-0.flex-shrink.flex-grow.flex-wrap.items-center.gap-1.text-sm(href="pages/others/profile.html" 
+            class=player.score > player.opponentScore ? 'font-semibold' : '' 
+          ) #{ player.name } 
             +userRating(player.rating)
             span.flex-shrink-0.text-center.text-xs.leading-none(
               class=player.ratingChange > 0 ? 'text-lab-green' : 'text-lab-red'

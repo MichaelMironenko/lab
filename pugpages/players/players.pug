@@ -63,7 +63,7 @@ html(lang='ru')
     // Статистика Buttons
     - var statOptions = ['★ S', '★★ D', 'Team']
     .stat-buttons.fixed.z-30.w-full.bottom-24.mb-4
-      .flex.justify-center.border-lab-color.border-2.w-fit.mx-auto.rounded-full.overflow-hidden.drop-shadow-around
+      .flex.justify-center.border-lab-color.border-2.w-fit.mx-auto.rounded-full.overflow-hidden.drop-shadow-around.transform-gpu
         button.stat-btn.bg-white.pr-3.pl-4.py-1.text-lab-color.text-sm ★ S
         button.stat-btn.px-2.py-2.text-white.bg-lab-color.border-x.text-sm ★★ D
         button.stat-btn.bg-white.pr-4.pl-3.py-1.text-lab-color.text-sm ★★★ T
@@ -210,7 +210,7 @@ html(lang='ru')
             td: +avatar(user.color, user.initials, 32)
             td.px-2.py-1
               a.inline-block.font-semibold(
-                href='pages/others/singlePlayer.html',
+                href='pages/others/profile.html',
                 class='text-[13px] xs:text-sm'
               )= user.name
               .text-xs.text-lab-black-50= user.location

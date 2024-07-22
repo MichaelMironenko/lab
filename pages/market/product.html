@@ -51,7 +51,7 @@
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
-        <div class="max-w-full min-w-56 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-[1000] absolute top-10 right-4 drop-shadow-around"><a class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1" href="pages/others/profile.html">
+        <div class="max-w-full min-w-56 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-[1000] absolute top-10 right-4 drop-shadow-around transform-gpu"><a class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1" href="pages/others/profile.html">
             <div class="text-slate-900 font-semibold text-sm leading-tight">Никита Полянский</div>
             <div class="text-center text-lab-black-50 text-sm font-normal leading-none">@nikpol</div>
             <div class="flex flex-row gap-2 mt-1">
@@ -200,19 +200,19 @@
         <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">675 мм</span>
       </div>
       <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Жесткость</span><img class="info-icon h-4 w-4" src="img/info.svg" alt="" onclick="toggleHint(this)"/>
-        <div class="hint-box absolute left-1 top-8 z-10 hidden -translate-x-1 rounded-lg bg-white px-3 drop-shadow-around">
+        <div class="hint-box absolute left-1 top-8 z-10 hidden -translate-x-1 rounded-lg bg-white px-3 drop-shadow-around">transform-gpu
           <p class="text-sm">Жесткость ракетки влияет на управляемость. Жесткая - для сильных ударов, требует лучшего контроля. Мягкая - лучше контроль, слабее удар.</p>
         </div>
         <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">Средняя</span>
       </div>
       <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Натяжение</span><img class="info-icon h-4 w-4" src="img/info.svg" alt="" onclick="toggleHint(this)"/>
-        <div class="hint-box absolute left-1 top-8 z-10 hidden -translate-x-1 rounded-lg bg-white px-3 drop-shadow-around">
+        <div class="hint-box absolute left-1 top-8 z-10 hidden -translate-x-1 rounded-lg bg-white px-3 drop-shadow-around">transform-gpu
           <p class="text-sm">Натяжение струн: слабое (&lt; 9 кг) - больше мощность, меньше контроль; среднее (9-11 кг) - баланс мощности и контроля; сильное (&gt; 11 кг) - больше контроль, меньше мощность. Высокое натяжение требует точных ударов, низкое - увеличивает игровое пятно.</p>
         </div>
         <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">≤ 28 lbs, до 12,5 кг</span>
       </div>
       <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Баланс</span><img class="info-icon h-4 w-4" src="img/info.svg" alt="" onclick="toggleHint(this)"/>
-        <div class="hint-box absolute left-1 top-8 z-10 hidden -translate-x-1 rounded-lg bg-white px-3 drop-shadow-around">
+        <div class="hint-box absolute left-1 top-8 z-10 hidden -translate-x-1 rounded-lg bg-white px-3 drop-shadow-around">transform-gpu
           <p class="text-sm">Баланс бывает в голову, в ручку, равномерный. В голову - для силы, в ручку - для контроля, равномерный - универсальный.</p>
         </div>
         <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">В голову</span>
@@ -221,7 +221,7 @@
         <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">G5</span>
       </div>
       <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Материал</span><img class="info-icon h-4 w-4" src="img/info.svg" alt="" onclick="toggleHint(this)"/>
-        <div class="hint-box absolute left-1 top-8 z-10 hidden -translate-x-1 rounded-lg bg-white px-3 drop-shadow-around">
+        <div class="hint-box absolute left-1 top-8 z-10 hidden -translate-x-1 rounded-lg bg-white px-3 drop-shadow-around">transform-gpu
           <p class="text-sm">Материалы: графит, алюминий, сталь. Графит - легкий и прочный, алюминий - дешевый, сталь - тяжелая и прочная.</p>
         </div>
         <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">Графит</span>
@@ -328,7 +328,7 @@
           <div class="cursor-pointer p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer"><img class="h-full w-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
           </div>
           <div class="flex flex-col gap-1">
-            <div class="flex items-center gap-2"><a class="text-sm font-semibold leading-none" href="">Александр Семёнов</a>
+            <div class="flex items-center gap-2"><a class="text-sm font-semibold leading-none" href="pages/others/profile.html">Александр Семёнов</a>
               <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                 <div class="text-center text-lab-black text-xs font-semibold leading-none">342</div>
               </div>
@@ -400,7 +400,7 @@
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(36px/2.66)] font-bold leading-none text-white">НП</span></div>
             </div>
             <div class="flex flex-col gap-1">
-              <div class="flex items-center gap-2"><a class="text-sm font-semibold leading-none" href="">Никита Полянский</a>
+              <div class="flex items-center gap-2"><a class="text-sm font-semibold leading-none" href="pages/others/profile.html">Никита Полянский</a>
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg"/>
                   <div class="text-center text-lab-black text-xs font-semibold leading-none">342</div>
                 </div>
@@ -713,7 +713,7 @@
             <h2 class="leading-tight">Похожие предложения б/у</h2>
           </div><a class="text-lab-color leading-none" href="pages/market/secondHandProducts.html">Все</a>
         </div>
-        <div class="no-scrollbar -mx-4 -my-4 flex gap-2 overflow-x-auto p-4"><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/yonexastrox99.jpg" alt="Yonex Astrox 99"/>
+        <div class="no-scrollbar -mx-4 -my-4 flex gap-2 overflow-x-auto p-4"><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondHandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/yonexastrox99.jpg" alt="Yonex Astrox 99"/>
             <div class="p-3 text-center">
               <div class="line-clamp-3 text-sm font-semibold text-lab-color">Yonex Astrox 99</div>
               <div class="mt-2 text-sm font-semibold text-lab-black">12 000 ₽</div>
@@ -724,7 +724,7 @@
             </div>
             <div class="absolute right-0 top-0">
               <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
-            </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/lining.jpg" alt="Li-Ning Turbo Charging 75"/>
+            </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondHandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/lining.jpg" alt="Li-Ning Turbo Charging 75"/>
             <div class="p-3 text-center">
               <div class="line-clamp-3 text-sm font-semibold text-lab-color">Li-Ning Turbo Charging 75</div>
               <div class="mt-2 text-sm font-semibold text-lab-black">10 500 ₽</div>
@@ -735,7 +735,7 @@
             </div>
             <div class="absolute right-0 top-0">
               <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
-            </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/victorthrustrer.webp" alt="Victor Thruster K 9900"/>
+            </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondHandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/victorthrustrer.webp" alt="Victor Thruster K 9900"/>
             <div class="p-3 text-center">
               <div class="line-clamp-3 text-sm font-semibold text-lab-color">Victor Thruster K 9900</div>
               <div class="mt-2 text-sm font-semibold text-lab-black">13 000 ₽</div>
@@ -746,7 +746,7 @@
             </div>
             <div class="absolute right-0 top-0">
               <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : img.src=&quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg"/></button>
-            </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondhandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/yonexzforce.jpg" alt="Yonex Voltric Z-Force II"/>
+            </div></a><a class="relative min-w-40 overflow-hidden rounded-lg border bg-white drop-shadow-around-light" href="pages/market/secondHandProduct.html"><img class="aspect-square max-h-40 w-full object-contain" src="dynamic-img/yonexzforce.jpg" alt="Yonex Voltric Z-Force II"/>
             <div class="p-3 text-center">
               <div class="line-clamp-3 text-sm font-semibold text-lab-color">Yonex Voltric Z-Force II</div>
               <div class="mt-2 text-sm font-semibold text-lab-black">15 000 ₽</div>

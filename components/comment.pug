@@ -11,7 +11,7 @@ mixin comment(commentID, userName, userID, status, commentText, reactions, color
     .flex.flex-col.gap-1
       if userName
         .flex.items-center.gap-2
-          a.text-sm.font-semibold.leading-none(href='') #{ userName }
+          a.text-sm.font-semibold.leading-none(href='pages/others/profile.html') #{ userName }
           +userRating(342)
 
         .flex.items-center.gap-2
