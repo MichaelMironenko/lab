@@ -45,29 +45,35 @@ html(lang='ru')
     base(href='../../')
   body.bg-page-background.pb-28.pt-12
     +topBar
-    h1.p-4 История игр
+    .flex.justify-between.p-4
+        h1.mb-2 История игр
+        img(src="img/filters-icon.svg", alt="")
     .px-4
-      .grid.grid-cols-1(class="sm:grid-cols-2 sm:gap-8")
+      .opacity-50 
+        div.text-lab-red.mb-2 Эти серые поля можно убрать в фильтры
+        .grid.grid-cols-1(class="sm:grid-cols-2 sm:gap-8")
+          .flex.items-center.gap-3.pb-4
+            h3.w-14.shrink-0.text-15 Клуб
+            +input('Название', 'w-full')
+          .flex.items-center.gap-3.pb-4
+            h3.w-14.shrink-0.text-15 Турнир
+            +input('Название', 'w-full')
         .flex.items-center.gap-3.pb-4
-          h3.w-14.shrink-0.text-15 Клуб
-          +input('Название', 'w-full')
-        .flex.items-center.gap-3.pb-4
-          h3.w-14.shrink-0.text-15 Турнир
-          +input('Название', 'w-full')
-      .flex.items-center.gap-3.pb-4
-        h3.shrink-0.text-15(class='xs:w-14') Дата
-        input#dateInput.min-w-32.max-w-40.rounded-lg.border.border-lab-black-30.px-2(class="py-1.5")(
-          type='text',
-          placeholder='От',
-          onfocus='if(this.value==\'\') this.type=\'date\'',
-          onblur='if(this.value==\'\') this.type=\'text\''
-        )
-        input#dateInput.min-w-32.max-w-40.rounded-lg.border.border-lab-black-30.px-2(class="py-1.5")(
-          type='text',
-          placeholder='До',
-          onfocus='if(this.value==\'\') this.type=\'date\'',
-          onblur='if(this.value==\'\') this.type=\'text\''
-        )
+          h3.shrink-0.text-15(class='xs:w-14') Дата
+          input#dateInput.min-w-32.max-w-40.rounded-lg.border.border-lab-black-30.px-2(class="py-1.5")(
+            type='text',
+            placeholder='От',
+            onfocus='if(this.value==\'\') this.type=\'date\'',
+            onblur='if(this.value==\'\') this.type=\'text\''
+          )
+          input#dateInput.min-w-32.max-w-40.rounded-lg.border.border-lab-black-30.px-2(class="py-1.5")(
+            type='text',
+            placeholder='До',
+            onfocus='if(this.value==\'\') this.type=\'date\'',
+            onblur='if(this.value==\'\') this.type=\'text\''
+          )
+    
+
       #toggleButtonsStats.flex.mb-4
         button.w-full.rounded-l-md.py-2.bg-white.font-bold.text-sm.text-lab-color Одиночные
         button.w-full.rounded-r-md.bg-lab-color.border.py-2.text-sm.text-white Парные

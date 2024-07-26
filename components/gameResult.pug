@@ -1,10 +1,10 @@
 mixin gameResult({date, tournament, stage, duration, border, players, numOfPlayers})
-  .pt-2(class=border ? 'border-b border-lab-black-10' : '')
+  div.pt-2(class=border ? 'border-b border-lab-black-10' : '' )
     .flex.items-center.gap-3.text-xs(class='430:text-sm')
       if date
-        span.text-lab-black-50= date
+        span.text-lab-black-50(class="!pt-0")= date
       if tournament
-        a.flex.items-center.gap-1(href="pages/tournaments/singleTournament.html")
+        a.flex.items-center.gap-1.block(href="pages/tournaments/singleTournament.html")
           span.font-semibold.text-lab-black-50 XDF
           span.font-semibold.text-lab-black-50= tournament
       span.text-lab-black-50 #{ stage }

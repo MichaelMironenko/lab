@@ -255,7 +255,7 @@ html(lang='ru')
 
               .w-fit.rounded.bg-lab-color-10.px-1.text-xs.text-lab-black #{ event.level }
       +photoSlider('Последние фото', false)
-      +videoSlider(false, false, 'Последние видео')
+      +videoSlider(false, false, 'Последние видео', '', 'pages/aroundgame/videos.html')
       +block('Рейтинги игроков на сайте')
         +filterButtonsRow([ { label: 'Одиночный', active: true }, { label: 'Парный', active: false }], 'padding', '-mx-4 mb-2')
         .divider.mb-4

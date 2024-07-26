@@ -43,7 +43,9 @@ html(lang="ru")
         +topBar
         +backButtonTitle('История игр', 'pages/others/profile.html', 'px-2')
             
-
+        .w-full.text-center.pb-4.flex.items-center.gap-2.justify-center
+            img(src="img/search-icon.svg", alt="")
+            a(href="pages/players/gamesHistory.html").text-sm Выбрать других игроков
 
         .flex.gap-2.justify-around.px-4.items-center
             .flex.flex-col.gap-2.items-center(class="max-w-1/2 w-1/2")
@@ -74,8 +76,7 @@ html(lang="ru")
                 div.flex.gap-1.items-center.justify-center
                     img.size-4.opacity-60.saturate-50(src='img/hand.svg' alt='Игровая рука')
                     span.text-sm.text-lab-black-50.w-min Левая / Правая
-        .w-full.text-center.p-4     
-            a(href="pages/players/gamesHistory.html").text-sm Выбрать других игроков
+        
         img(src="dynamic-img/graph-opponents.png").px-2.w-full
 
         .p-4 

@@ -108,22 +108,22 @@ html(lang='ru')
           +poll('Любите ли вы играть в бадминтон зимой?', [{text: 'Да', percent: 20, selected: true}, {text: 'Нет', percent: 80}], 'poll2')
           +poll('Лучший бренд ракеток для бадминтона?', [{text: 'Yonex', percent: 60, selected: true}, {text: 'Li-Ning', percent: 25}, {text: 'Victor', percent: 15}], 'poll3')
 
-      +block('Новости', { href:"pages/others/news.html", text:'Все'})
+      +block('Новости', { href:"pages/aroundgame/news.html", text:'Все'})
         .sm.grid.grid-cols-1.gap-8(class='sm:grid-cols-2 lg:grid-cols-3')
           .flex.flex-col.gap-4
-            +newsCard('23 мая состоится студенческий турнир Москвы', 'dynamic-img/club-1.jpg', 'Naten ЮГ Ярославль', '4 апреля 16:30', '#')
-            +newsCard('Открытые тренировки для всех желающих', '', 'Спартак М', '12 мая 18:00', '#')
-            +newsCard('Финал городского чемпионата по бадминтону', 'dynamic-img/club-3.jpg', 'Динамо СПб', '20 июня 20:00', '#')
+            +newsCard('23 мая состоится студенческий турнир Москвы', 'dynamic-img/club-1.jpg', 'Naten ЮГ Ярославль', '4 апреля 16:30', 'pages/aroundgame/singleNews.html')
+            +newsCard('Открытые тренировки для всех желающих', '', 'Спартак М', '12 мая 18:00', 'pages/aroundgame/singleNews.html')
+            +newsCard('Финал городского чемпионата по бадминтону', 'dynamic-img/club-3.jpg', 'Динамо СПб', '20 июня 20:00', 'pages/aroundgame/singleNews.html')
 
           .hidden(class='sm:flex sm:flex-col sm:gap-4')
-            +newsCard('Запуск новой школы бадминтона в Петербурге', 'dynamic-img/photo-1.jpg', 'БК Невский', '15 июня 10:00', '#')
-            +newsCard('Летний кубок по бадминтону для детей', 'dynamic-img/club-1.jpg', 'БК Москва', '25 июля 14:00', '#')
-            +newsCard('Международный турнир по бадминтону стартует в августе', '', 'БК Интернационал', '1 августа 09:00', '#')
+            +newsCard('Запуск новой школы бадминтона в Петербурге', 'dynamic-img/photo-1.jpg', 'БК Невский', '15 июня 10:00', 'pages/aroundgame/singleNews.html')
+            +newsCard('Летний кубок по бадминтону для детей', 'dynamic-img/club-1.jpg', 'БК Москва', '25 июля 14:00', 'pages/aroundgame/singleNews.html')
+            +newsCard('Международный турнир по бадминтону стартует в августе', '', 'БК Интернационал', '1 августа 09:00', 'pages/aroundgame/singleNews.html')
 
           .hidden(class='lg:flex lg:flex-col lg:gap-4')
-            +newsCard('Семинар по тактике игры в бадминтон', 'dynamic-img/club-2.jpg', 'БК Лидер', '3 сентября 12:00', '#')
-            +newsCard('Турнир памяти выдающихся игроков', '', 'БК Виктория', '10 сентября 15:00', '#')
-            +newsCard('Бадминтонный фестиваль для всей семьи', 'dynamic-img/photo-2.jpg', 'БК Семья', '17 сентября 10:00', '#')
+            +newsCard('Семинар по тактике игры в бадминтон', 'dynamic-img/club-2.jpg', 'БК Лидер', '3 сентября 12:00', 'pages/aroundgame/singleNews.html')
+            +newsCard('Турнир памяти выдающихся игроков', '', 'БК Виктория', '10 сентября 15:00', 'pages/aroundgame/singleNews.html')
+            +newsCard('Бадминтонный фестиваль для всей семьи', 'dynamic-img/photo-2.jpg', 'БК Семья', '17 сентября 10:00', 'pages/aroundgame/singleNews.html')
       
       +block('Маркет', { href: 'pages/market/market.html', text: 'Все товары'})
           -
@@ -296,7 +296,7 @@ html(lang='ru')
       +photoSlider('Последние фото', false)
       +videoSlider(false, false, 'Последние видео')
       
-      footer.bg-white.p-4.text-center
+      footer.bg-white.p-4.text-center.rounded.overflow-hidden
         a(href="#").flex.items-center.justify-center.mb-6
           img(src="img/desktop.svg")
           span.text-lab-color.text-sm.font-semibold.ml-2 Полная версия
@@ -306,7 +306,7 @@ html(lang='ru')
         a(href="#").text-center.text-sm Правила расчёта и получения рейтинга
         div.flex.justify-around.mt-6
           div.text-left
-            h3.font-bold.text-blue-900 Сотрудничество
+            h3.font-bold.text-lab-black Сотрудничество
             ul.mt-2.text-sm
               li.mb-2
                 a(href="#") Реклама на сайте
@@ -317,7 +317,7 @@ html(lang='ru')
               li.mb-2
                 a(href="#") Представителям залов
           div.text-left
-            h3.font-bold.text-blue-900 Контакты
+            h3.font-bold.text-lab-black Контакты
             ul.text-blue-700.mt-2
               li.mb-2.text-sm
                 a(href="mailto:info@rttf.ru") info@rttf.ru

@@ -71,7 +71,7 @@
     <base href="../../">
   </head>
   <body class="bg-white mt-12 pb-32">
-    <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="pages/tournaments/tournaments.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
+    <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="logo"/>
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Notifications"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Messages"/><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="inline-flex gap-2">
           <div class="hidden text-right xs:block">
@@ -82,7 +82,7 @@
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
-        <div class="max-w-full min-w-56 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-[1000] absolute top-10 right-4 drop-shadow-around"><a class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1" href="pages/others/profile.html">
+        <div class="max-w-full min-w-56 px-4 py-4 bg-white rounded-lg flex flex-col justify-start items-start z-[1000] absolute top-10 right-4 drop-shadow-around transform-gpu"><a class="flex-col self-stretch pb-3 border-b border-blue-950 flex border-opacity-10 justify-start items-start gap-1" href="pages/others/profile.html">
             <div class="text-slate-900 font-semibold text-sm leading-tight">Никита Полянский</div>
             <div class="text-center text-lab-black-50 text-sm font-normal leading-none">@nikpol</div>
             <div class="flex flex-row gap-2 mt-1">
@@ -116,8 +116,12 @@
         })
       })
     </script>
-    <div class="p-4">
-      <div class="text-lg text-center grow font-bold text-lab-black pb-4">Бронирование №123456 </div>
+    <div class="p-2"> 
+      <div class="py-4 flex gap-3 items-center justify-between"><a href="pages/bookingAdminPanel/bookingAdminPanel.html"> <img class="rotate-90 shrink-0" src="img/expand-arrow.svg" alt=""/></a>
+        <h1 class="text-lg text-center grow mr-8 max-w-[calc(100%-24px)]">Бронирование №123456 </h1>
+      </div>
+    </div>
+    <div class="px-4">
       <div class="flex gap-2 items-center mt-4 mb-3"><img class="saturate-50 opacity-60" src="img/calendar.svg"/><span class="leading-none">11 сентября, четверг</span></div>
       <div class="flex justify-between gap-3 py-2 max-w-sm items-center">
         <div class="inline"><img class="inline align-middle saturate-50 opacity-50" src="img/time.svg" alt="Время"/><span class="inline align-middle leading-none ml-2">11:00-12:30</span></div>
@@ -129,7 +133,7 @@
         <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
         <div> <img class="inline align-middle saturate-50 opacity-50" src="img/price.svg" alt="Цена"/><span class="inline align-middle ml-2">1800&#8202;₽</span></div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="court-modal" style="display: none;">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
           <div class="p-4 text-center md:p-5"> 
@@ -184,12 +188,13 @@
       <div class="flex justify-between pb-2 items-center"><span class="grow">Статус</span>
         <div class="py-1 px-2 bg-lab-green text-white text-sm rounded-md font-semibold">Оплачено</div>
       </div>
+      <div class="text-sm py-2 text-lab-black-50">Бронирование оформил <a href="pages/others/profile.html">Евгений Ловченко</a></div>
       <div class="flex gap-2 items-center">
         <button class="w-full my-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="editButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Редактировать</button>
         <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="cancelBooking" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отменить</button>
       </div>
     </div>
-    <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="modal-delete" style="display: none;">
+    <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="modal-delete">
       <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
         <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
         <div class="p-4 text-center md:p-5">
@@ -253,7 +258,7 @@
             <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"/><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
             <button class="leading-none text-lab-black-50" type="button">✕</button>
           </div>
-          <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30" id="court-modal" style="display: none;">
+          <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal">
             <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
               <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""/><span class="sr-only">Закрыть</span></button>
               <div class="p-4 text-center md:p-5"> 

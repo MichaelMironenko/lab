@@ -69,15 +69,29 @@
         </div>
         <div class="bg-white p-4 max-w-420 rounded-lg w-full shrink-0">
           <div class="flex items-center gap-2 mb-2 undefined">
+            <label class="block text-lab-black" for="Категория">Категория</label>
+          </div>
+          <select class="block appearance-none border border-lab-black-30 p-2 rounded-lg mb-4 text-sm pr-10 max-w-sm leading-tight shadow-sm focus:outline-none focus:shadow-outline w-full">
+            <option value="" disabled="disabled" selected="selected" hidden="hidden">Выберите категорию...</option>
+            <option>Вариант 1</option>
+            <option>Вариант 2</option>
+            <option>Вариант 3</option>
+          </select>
+          <div class="flex items-center gap-2 mb-2 undefined">
+            <label class="block text-lab-black" for="Товар">Товар</label>
+          </div>
+          <input class="border p-2 w-full mb-4 rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="" value="" inputmode="" placeholder="Yonex BS-4"/>
+          <div class="flex items-center gap-2 w-full undefined">
             <label class="block text-lab-black" for="Название объявления">Название объявления</label>
           </div>
+          <div class="text-lab-black-50 text-xs mb-2">(можно не заполнять, если заполнено поле товар)</div>
           <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-red" id="" type="" value="" inputmode="" placeholder="Продам ракетку..."/>
           <div class="text-xs text-lab-red text-right w-full mt-1">Ошибка</div>
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black" for="Состояние товара">Состояние товара</label>
           </div>
           <div class="flex w-full rounded-lg overflow-hidden mb-4">
-            <button class="text-sm p-2 bg-lab-color text-white border-none outline-none" id="tabBooking">Новый (не использовался)</button>
+            <button class="grow text-sm p-2 bg-lab-color text-white border-none outline-none" id="tabBooking">Новый </button>
             <button class="grow text-sm p-2 bg-lab-color-10 text-gray-500 border-none outline-none" id="tabPrices">Б/У</button>
           </div>
           <div class="flex items-center gap-2 mb-2 undefined">

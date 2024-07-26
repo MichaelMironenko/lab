@@ -58,6 +58,11 @@
       <div class="flex gap-2 items-center">
         <h2 class="leading-tight">Новости</h2><img class="size-5" src="img/plus-button.svg">
       </div>
+      <div class="flex items-center justify-between gap-4  mt-4 ">
+        <div class="flex items-center border px-3 py-2 rounded-lg gap-3 bg-white flex-grow focus-within:ring-2 focus-within:ring-lab-color"><img class="w-4 h-4" src="img/search-icon.svg" alt="Search"/>
+          <input class="flex-grow outline-none leading-none bg-transparent" id="searchBar" type="text" placeholder="Текст или заголовок"/>
+        </div><img class="filters-panel-button h-6 w-6" src="img/filters-icon.svg"/>
+      </div>
       <div class="flex overflow-x-auto items-center space-x-2 no-scrollbar scroll-smooth  -mx-4 p-4">
         <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color text-white font-semibold">
           <div>Горячие темы</div>
@@ -70,7 +75,7 @@
         </div>
         <div class="px-2 py-2 rounded-lg cursor-pointer leading-none text-nowrap text-sm flex items-center justify-center space-x-2 bg-lab-color-10 text-lab-black">
           <div>Турниры</div>
-        </div><img class="size-6" src="img/plus-button.svg" alt="" id="plusButton"/>
+        </div>
       </div>
       <div class="grid gap-x-6 gap-y-4 pt-2" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));"><a class="flex items-center gap-3 min-h-16" href="pages/aroundgame/singleNews.html"><img class="size-16 shrink-0 rounded object-cover" src="dynamic-img/club-1.jpg"/>
           <div class="flex flex-col gap-1">

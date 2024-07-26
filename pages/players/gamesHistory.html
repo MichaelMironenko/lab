@@ -54,22 +54,27 @@
         })
       })
     </script>
-    <h1 class="p-4">История игр</h1>
+    <div class="flex justify-between p-4">
+      <h1 class="mb-2">История игр</h1><img src="img/filters-icon.svg" alt="">
+    </div>
     <div class="px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-8">
-        <div class="flex items-center gap-3 pb-4">
-          <h3 class="w-14 shrink-0 text-15">Клуб</h3>
-          <input class="border p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Название"/>
+      <div class="opacity-50"> 
+        <div class="text-lab-red mb-2">Эти серые поля можно убрать в фильтры</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-8">
+          <div class="flex items-center gap-3 pb-4">
+            <h3 class="w-14 shrink-0 text-15">Клуб</h3>
+            <input class="border p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Название"/>
+          </div>
+          <div class="flex items-center gap-3 pb-4">
+            <h3 class="w-14 shrink-0 text-15">Турнир</h3>
+            <input class="border p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Название"/>
+          </div>
         </div>
         <div class="flex items-center gap-3 pb-4">
-          <h3 class="w-14 shrink-0 text-15">Турнир</h3>
-          <input class="border p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Название"/>
+          <h3 class="shrink-0 text-15 xs:w-14">Дата</h3>
+          <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="От" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
+          <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="До" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
         </div>
-      </div>
-      <div class="flex items-center gap-3 pb-4">
-        <h3 class="shrink-0 text-15 xs:w-14">Дата</h3>
-        <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="От" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
-        <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="До" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
       </div>
       <div class="flex mb-4" id="toggleButtonsStats">
         <button class="w-full rounded-l-md py-2 bg-white font-bold text-sm text-lab-color">Одиночные</button>
@@ -135,7 +140,7 @@
     </div>
     <div class="bg-white p-4">
       <div class="pt-2 border-b border-lab-black-10">
-        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50">12.05.2023 13:00</span><a class="flex items-center gap-1" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">14 мин</span>
+        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50 !pt-0">12.05.2023 13:00</span><a class="flex items-center gap-1 block" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">14 мин</span>
         </div>
         <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
           <div class="flex items-center justify-between gap-2">
@@ -157,7 +162,7 @@
         </div>
       </div>
       <div class="pt-2 border-b border-lab-black-10">
-        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50">12.05.2023 13:00</span><a class="flex items-center gap-1" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">14 мин</span>
+        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50 !pt-0">12.05.2023 13:00</span><a class="flex items-center gap-1 block" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">14 мин</span>
         </div>
         <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
           <div class="flex items-center justify-between gap-2">
@@ -179,7 +184,7 @@
         </div>
       </div>
       <div class="pt-2 border-b border-lab-black-10">
-        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50">12.05.2023 13:00</span><a class="flex items-center gap-1" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">12 мин</span>
+        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50 !pt-0">12.05.2023 13:00</span><a class="flex items-center gap-1 block" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">12 мин</span>
         </div>
         <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
           <div class="flex items-center justify-between gap-2">
