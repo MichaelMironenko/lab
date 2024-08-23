@@ -16,7 +16,7 @@
             <div class="text-xs font-semibold text-lab-color">nikpol</div>
             <div class="flex items-center justify-end"><img class="relative z-10 h-3 w-3" src="img/gradient-star.svg" alt=""/><img class="relative -ml-4 h-3 w-3" src="img/gradient-star.svg" alt=""/><span class="ml-1 text-xs font-bold text-lab-color">1376</span></div>
           </div>
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500   relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
@@ -57,7 +57,7 @@
     <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">
       <div class="flex gap-4">
         <div class="flex flex-col items-center -space-y-4">
-          <div class="cursor-pointer p-[3px] w-[80px] h-[80px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[3px] w-[80px] h-[80px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(80px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div>
           <div class="bg-lab-red z-10 w-fit rounded px-1.5 py-0.5 text-xs font-medium text-white">Админ</div>
@@ -104,12 +104,168 @@
         <div class="mb-2 text-center text-xs text-lab-black-50">Был онлайн 12.06.2023</div>
         <div class="flex justify-center gap-2 pb-4">
           <div class="relative">
-            <button class="px-2 py-1.5 bg-lab-color rounded-lg font-semibold max-h-12 transition-transform duration-150 text- leading-none ease-in-out" id="" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="window.location.href='pages/others/messages.html'"> <img src="img/message-white.svg"/></button><span class="absolute -right-2 -top-2 rounded-full border border-slate-300 bg-slate-100 px-1 text-xs font-semibold">99+</span>
+            <button class="px-2 py-1.5 bg-lab-color rounded-lg font-semibold max-h-12 transition-transform duration-150 text- leading-none ease-in-out button-interactive" id="" data-action="window.location.href='pages/others/messages.html'"> <img src="img/message-white.svg"/></button>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const buttons = document.querySelectorAll('.button-interactive');
+              
+                  buttons.forEach(button => {
+                      button.addEventListener('mousedown', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('mouseup', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('mouseleave', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchstart', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('touchmove', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchend', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      // Handle click if there's a data-action defined
+                      button.addEventListener('click', function() {
+                          const action = this.getAttribute('data-action');
+                          if (action) {
+                              window.location.href = action;
+                          }
+                      });
+                  });
+              });
+            </script><span class="absolute -right-2 -top-2 rounded-full border border-slate-300 bg-slate-100 px-1 text-xs font-semibold">99+</span>
           </div>
-          <button class="px-2 py-1.5 bg-lab-color rounded-lg font-semibold max-h-12 transition-transform duration-150 text- leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick=""> <img src="img/add-friend-white.svg"/></button>
-          <button class="px-2 py-1.5 bg-lab-color rounded-lg font-semibold max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="window.location.href='pages/others/gamesHistory.html'"> <img class="inline align-middle" src="img/history-white.svg"/><span class="inline align-middle ml-1 text-xs text-white xs:text-sm">Мои игры с этим игроком</span></button>
+          <button class="px-2 py-1.5 bg-lab-color rounded-lg font-semibold max-h-12 transition-transform duration-150 text- leading-none ease-in-out button-interactive" id="undefined" data-action=""> <img src="img/add-friend-white.svg"/></button>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('.button-interactive');
+            
+                buttons.forEach(button => {
+                    button.addEventListener('mousedown', function() {
+                        this.classList.add('scale-97');
+                    });
+            
+                    button.addEventListener('mouseup', function() {
+                        this.classList.remove('scale-97');
+                    });
+            
+                    button.addEventListener('mouseleave', function() {
+                        this.classList.remove('scale-97');
+                    });
+            
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('scale-97');
+                    });
+            
+                    button.addEventListener('touchmove', function() {
+                        this.classList.remove('scale-97');
+                    });
+            
+                    button.addEventListener('touchend', function() {
+                        this.classList.remove('scale-97');
+                    });
+            
+                    // Handle click if there's a data-action defined
+                    button.addEventListener('click', function() {
+                        const action = this.getAttribute('data-action');
+                        if (action) {
+                            window.location.href = action;
+                        }
+                    });
+                });
+            });
+          </script>
+          <button class="px-2 py-1.5 bg-lab-color rounded-lg font-semibold max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="" data-action="window.location.href='pages/others/gamesHistory.html'"> <img class="inline align-middle" src="img/history-white.svg"/><span class="inline align-middle ml-1 text-xs text-white xs:text-sm">Мои игры с этим игроком</span></button>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('.button-interactive');
+            
+                buttons.forEach(button => {
+                    button.addEventListener('mousedown', function() {
+                        this.classList.add('scale-97');
+                    });
+            
+                    button.addEventListener('mouseup', function() {
+                        this.classList.remove('scale-97');
+                    });
+            
+                    button.addEventListener('mouseleave', function() {
+                        this.classList.remove('scale-97');
+                    });
+            
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('scale-97');
+                    });
+            
+                    button.addEventListener('touchmove', function() {
+                        this.classList.remove('scale-97');
+                    });
+            
+                    button.addEventListener('touchend', function() {
+                        this.classList.remove('scale-97');
+                    });
+            
+                    // Handle click if there's a data-action defined
+                    button.addEventListener('click', function() {
+                        const action = this.getAttribute('data-action');
+                        if (action) {
+                            window.location.href = action;
+                        }
+                    });
+                });
+            });
+          </script>
         </div>
-        <button class="px-2 py-1.5 w-full mb-4 border border-lab-color bg-white rounded-lg font-semibold max-h-12 transition-transform duration-150 text-lab-color leading-none ease-in-out" id="" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick=""> <img class="inline align-middle" src="img/edit.svg"/><span class="inline align-middle ml-1 text-xs text-lab-color xs:text-sm">Редактировать профиль</span></button>
+        <button class="px-2 py-1.5 w-full mb-4 border border-lab-color bg-white rounded-lg font-semibold max-h-12 transition-transform duration-150 text-lab-color leading-none ease-in-out button-interactive" id="" data-action=""> <img class="inline align-middle" src="img/edit.svg"/><span class="inline align-middle ml-1 text-xs text-lab-color xs:text-sm">Редактировать профиль</span></button>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const buttons = document.querySelectorAll('.button-interactive');
+          
+              buttons.forEach(button => {
+                  button.addEventListener('mousedown', function() {
+                      this.classList.add('scale-97');
+                  });
+          
+                  button.addEventListener('mouseup', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  button.addEventListener('mouseleave', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  button.addEventListener('touchstart', function() {
+                      this.classList.add('scale-97');
+                  });
+          
+                  button.addEventListener('touchmove', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  button.addEventListener('touchend', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  // Handle click if there's a data-action defined
+                  button.addEventListener('click', function() {
+                      const action = this.getAttribute('data-action');
+                      if (action) {
+                          window.location.href = action;
+                      }
+                  });
+              });
+          });
+        </script>
       </div>
       <div class="border-t pt-4">
         <div class="flex flex-wrap items-center justify-between gap-x-4">

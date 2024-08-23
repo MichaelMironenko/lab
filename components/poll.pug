@@ -18,7 +18,7 @@ mixin poll(question, answers, voted, shadow=true, link=true, description)
             span.text-sm #{ answer.text }
         else
           label.relative.flex.items-center.gap-4.border-b.px-4.py-3
-            .absolute.inset-y-0.left-0.z-0.bg-lab-color-10(class=`w-[${answer.percent}%]`) 
+            span.absolute.inset-y-0.left-0.z-0.bg-lab-color-10(class=`w-[${answer.percent}%]`) 
             span.grow.text-sm(class=answer.selected ? 'font-bold' : '') #{ answer.text }
             span.ml-auto.shrink-0.text-sm(class=answer.selected ? 'font-bold' : '') #{ answer.percent }%
 
@@ -29,7 +29,7 @@ mixin poll(question, answers, voted, shadow=true, link=true, description)
       span.text-xs.text-lab-black-50 Голосов: 15
       if link
         a.flex.items-center.gap-1(href='pages/aroundgame/poll.html')
-          img.size-4(src='img/comment-outlined.svg').saturate-50.opacity-50
+          img.size-4(src='img/comment-outlined.svg' alt="Комментариев").saturate-50.opacity-50
           span.text-xs.text-lab-black-50 25
       else 
         .text-xs.text-lab-black-50.inline Опрос создан  #[a.inline( href='#' ) Лаб-контент] 12.05.2024 в 10:34

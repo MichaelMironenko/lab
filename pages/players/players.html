@@ -16,7 +16,7 @@
             <div class="text-xs font-semibold text-lab-color">nikpol</div>
             <div class="flex items-center justify-end"><img class="relative z-10 h-3 w-3" src="img/gradient-star.svg" alt=""/><img class="relative -ml-4 h-3 w-3" src="img/gradient-star.svg" alt=""/><span class="ml-1 text-xs font-bold text-lab-color">1376</span></div>
           </div>
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500   relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
@@ -172,7 +172,46 @@
             </div>
           </div>
           <div class="w-full p-4 text-center">
-            <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Применить</button>
+            <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="undefined" data-action="">Применить</button>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const buttons = document.querySelectorAll('.button-interactive');
+              
+                  buttons.forEach(button => {
+                      button.addEventListener('mousedown', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('mouseup', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('mouseleave', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchstart', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('touchmove', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchend', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      // Handle click if there's a data-action defined
+                      button.addEventListener('click', function() {
+                          const action = this.getAttribute('data-action');
+                          if (action) {
+                              window.location.href = action;
+                          }
+                      });
+                  });
+              });
+            </script>
           </div>
         </div>
         <script>
@@ -212,7 +251,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">1</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ПС</span></div>
             </div>
           </td>
@@ -237,7 +276,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">2</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">МВ</span></div>
             </div>
           </td>
@@ -262,7 +301,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">3</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ЖИ</span></div>
             </div>
           </td>
@@ -287,7 +326,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">4</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">МН</span></div>
             </div>
           </td>
@@ -312,7 +351,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">5</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ФГ</span></div>
             </div>
           </td>
@@ -337,7 +376,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">6</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ИВ</span></div>
             </div>
           </td>
@@ -362,7 +401,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">7</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ЯС</span></div>
             </div>
           </td>
@@ -387,7 +426,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">8</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ИА</span></div>
             </div>
           </td>
@@ -412,7 +451,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">9</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">АО</span></div>
             </div>
           </td>
@@ -437,7 +476,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">10</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">МК</span></div>
             </div>
           </td>
@@ -462,7 +501,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">11</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НИ</span></div>
             </div>
           </td>
@@ -487,7 +526,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">12</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">СД</span></div>
             </div>
           </td>
@@ -512,7 +551,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">13</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">СВ</span></div>
             </div>
           </td>
@@ -550,7 +589,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">1</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ПС</span></div>
             </div>
           </td>
@@ -571,7 +610,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">2</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">МВ</span></div>
             </div>
           </td>
@@ -592,7 +631,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">3</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ЖИ</span></div>
             </div>
           </td>
@@ -613,7 +652,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">4</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">МН</span></div>
             </div>
           </td>
@@ -634,7 +673,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">5</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ФГ</span></div>
             </div>
           </td>
@@ -655,7 +694,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">6</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ИВ</span></div>
             </div>
           </td>
@@ -676,7 +715,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">7</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ЯС</span></div>
             </div>
           </td>
@@ -697,7 +736,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">8</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ИА</span></div>
             </div>
           </td>
@@ -718,7 +757,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">9</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">АО</span></div>
             </div>
           </td>
@@ -739,7 +778,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">10</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">МК</span></div>
             </div>
           </td>
@@ -760,7 +799,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">11</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НИ</span></div>
             </div>
           </td>
@@ -781,7 +820,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">12</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">СД</span></div>
             </div>
           </td>
@@ -802,7 +841,7 @@
         <tr class="border-b text-lab-black">
           <td class="px-2 text-center text-sm">13</td>
           <td>
-            <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">СВ</span></div>
             </div>
           </td>
@@ -866,7 +905,7 @@
         </div>
         <div class="no-scrollbar -mx-4 flex gap-4 overflow-x-auto px-4 pt-6">
           <div class="flex min-w-20 flex-col items-center gap-2">
-            <div class="cursor-pointer p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(48px/2.66)] font-bold leading-none text-white">НП</span></div>
             </div><span class="text-center text-sm font-semibold text-lab-color">Никита Полянский</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -874,7 +913,7 @@
             </div><span class="pt-2 text-15 font-semibold text-lab-green">+35.4</span>
           </div>
           <div class="flex min-w-20 flex-col items-center gap-2">
-            <div class="cursor-pointer p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(48px/2.66)] font-bold leading-none text-white">ГД</span></div>
             </div><span class="text-center text-sm font-semibold text-lab-color">Григорий Державин</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -882,7 +921,7 @@
             </div><span class="pt-2 text-15 font-semibold text-lab-green">+32.7</span>
           </div>
           <div class="flex min-w-20 flex-col items-center gap-2">
-            <div class="cursor-pointer p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(48px/2.66)] font-bold leading-none text-white">КБ</span></div>
             </div><span class="text-center text-sm font-semibold text-lab-color">Константин Барышников</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -890,7 +929,7 @@
             </div><span class="pt-2 text-15 font-semibold text-lab-green">+31.4</span>
           </div>
           <div class="flex min-w-20 flex-col items-center gap-2">
-            <div class="cursor-pointer p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(48px/2.66)] font-bold leading-none text-white">ЛК</span></div>
             </div><span class="text-center text-sm font-semibold text-lab-color">Людмила Кошелева</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -924,7 +963,7 @@
           </div>
           <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
             <div class="flex items-center justify-between gap-2">
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+              <div class="p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
                 <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">КА</span></div>
               </div><a class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm font-semibold" href="pages/others/profile.html">Клейменов А. 
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -932,7 +971,7 @@
                 </div><span class="flex-shrink-0 text-center text-xs leading-none text-lab-green">+14.2</span></a><span class="w-4 flex-shrink-0 text-center text-sm font-semibold">2</span>
             </div>
             <div class="flex items-center justify-between gap-2">
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+              <div class="p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
                 <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">КА</span></div>
               </div><a class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm" href="pages/others/profile.html">Преображенский В. 
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -946,7 +985,7 @@
           </div>
           <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
             <div class="flex items-center justify-between gap-2">
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+              <div class="p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
                 <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">АФ</span></div>
               </div><a class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm font-semibold" href="pages/others/profile.html">Афанасьева В. 
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -954,7 +993,7 @@
                 </div><span class="flex-shrink-0 text-center text-xs leading-none text-lab-green">+14.2</span></a><span class="w-4 flex-shrink-0 text-center text-sm font-semibold">2</span>
             </div>
             <div class="flex items-center justify-between gap-2">
-              <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+              <div class="p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
                 <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">АФ</span></div>
               </div><a class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm" href="pages/others/profile.html">Лысак О. 
                 <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -969,10 +1008,10 @@
           <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
             <div class="flex items-center justify-between gap-2">
               <div class="flex -space-x-2">
-                <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
                   <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">ГА</span></div>
                 </div>
-                <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
                   <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">БС</span></div>
                 </div>
               </div><a class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm" href="pages/others/profile.html">Гуреев А. / Богданова С. 
@@ -982,10 +1021,10 @@
             </div>
             <div class="flex items-center justify-between gap-2">
               <div class="flex -space-x-2">
-                <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
                   <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">ГА</span></div>
                 </div>
-                <div class="cursor-pointer p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+                <div class="p-[1px] w-[24px] h-[24px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
                   <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(24px/2.66)] font-bold leading-none text-white">БС</span></div>
                 </div>
               </div><a class="inline-flex min-w-0 flex-shrink flex-grow flex-wrap items-center gap-1 text-sm font-semibold" href="pages/others/profile.html">Кобыляцкий С. / Кобыляцкая Л. 
@@ -1015,7 +1054,7 @@
         </div>
         <div class="no-scrollbar -mx-4 flex gap-4 overflow-x-auto px-4 pt-6">
           <div class="flex min-w-20 flex-col items-center gap-2">
-            <div class="cursor-pointer p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(48px/2.66)] font-bold leading-none text-white">НП</span></div>
             </div><span class="text-center text-sm font-semibold text-lab-color">Никита Полянский</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -1023,7 +1062,7 @@
             </div><span class="pt-2 text-15 font-semibold text-lab-yellow">21 победа</span>
           </div>
           <div class="flex min-w-20 flex-col items-center gap-2">
-            <div class="cursor-pointer p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(48px/2.66)] font-bold leading-none text-white">ГД</span></div>
             </div><span class="text-center text-sm font-semibold text-lab-color">Григорий Державин</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -1031,7 +1070,7 @@
             </div><span class="pt-2 text-15 font-semibold text-lab-yellow">19 побед</span>
           </div>
           <div class="flex min-w-20 flex-col items-center gap-2">
-            <div class="cursor-pointer p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(48px/2.66)] font-bold leading-none text-white">КБ</span></div>
             </div><span class="text-center text-sm font-semibold text-lab-color">Константин Барышников</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -1039,7 +1078,7 @@
             </div><span class="pt-2 text-15 font-semibold text-lab-yellow">17 побед</span>
           </div>
           <div class="flex min-w-20 flex-col items-center gap-2">
-            <div class="cursor-pointer p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[2px] w-[48px] h-[48px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(48px/2.66)] font-bold leading-none text-white">ЛК</span></div>
             </div><span class="text-center text-sm font-semibold text-lab-color">Людмила Кошелева</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -1070,7 +1109,7 @@
         </div>
         <div class="no-scrollbar -mx-4 flex gap-4 overflow-x-auto px-4 pt-8">
           <div class="flex flex-col items-center gap-2">
-            <div class="cursor-pointer p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  z-10 relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  z-10 relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(64px/2.66)] font-bold leading-none text-white">НП</span></div><img class="absolute -right-2 -top-6 -z-10 h-12 w-8 rotate-[38deg]" src="img/birthday-hat.png"/>
             </div><span class="z-0 text-center text-sm font-semibold text-lab-color">Никита Полянский</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -1079,7 +1118,7 @@
             <button class="mt-2 rounded-lg bg-lab-color-10 px-2 py-1 text-15">Поздравить</button>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <div class="cursor-pointer p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  z-10 relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  z-10 relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(64px/2.66)] font-bold leading-none text-white">ГД</span></div><img class="absolute -right-2 -top-6 -z-10 h-12 w-8 rotate-[38deg]" src="img/birthday-hat.png"/>
             </div><span class="z-0 text-center text-sm font-semibold text-lab-color">Григорий Державин</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -1088,7 +1127,7 @@
             <button class="mt-2 rounded-lg bg-lab-color-10 px-2 py-1 text-15">Поздравить</button>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <div class="cursor-pointer p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  z-10 relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  z-10 relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(64px/2.66)] font-bold leading-none text-white">КБ</span></div><img class="absolute -right-2 -top-6 -z-10 h-12 w-8 rotate-[38deg]" src="img/birthday-hat.png"/>
             </div><span class="z-0 text-center text-sm font-semibold text-lab-color">Константин Барышников</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -1097,7 +1136,7 @@
             <button class="mt-2 rounded-lg bg-lab-color-10 px-2 py-1 text-15">Поздравить</button>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <div class="cursor-pointer p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  z-10 relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[3px] w-[64px] h-[64px] from-green-600 to-sky-500  z-10 relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-yellow flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(64px/2.66)] font-bold leading-none text-white">ЛК</span></div><img class="absolute -right-2 -top-6 -z-10 h-12 w-8 rotate-[38deg]" src="img/birthday-hat.png"/>
             </div><span class="z-0 text-center text-sm font-semibold text-lab-color">Людмила Кошелева</span>
             <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>

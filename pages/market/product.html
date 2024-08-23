@@ -47,7 +47,7 @@
             <div class="text-xs font-semibold text-lab-color">nikpol</div>
             <div class="flex items-center justify-end"><img class="relative z-10 h-3 w-3" src="img/gradient-star.svg" alt=""/><img class="relative -ml-4 h-3 w-3" src="img/gradient-star.svg" alt=""/><span class="ml-1 text-xs font-bold text-lab-color">1376</span></div>
           </div>
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500   relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
@@ -185,7 +185,46 @@
           
         </script>
         <div class="comparison-toggle mt-4 flex cursor-pointer items-center gap-2"><img class="size-4" src="img/add-to-comparison.svg" alt=""><span class="text-sm text-lab-black-50">Добавить к сравнению</span></div>
-        <button class="w-full my-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Положить в корзину</button>
+        <button class="w-full my-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Положить в корзину</button>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const buttons = document.querySelectorAll('.button-interactive');
+          
+              buttons.forEach(button => {
+                  button.addEventListener('mousedown', function() {
+                      this.classList.add('scale-97');
+                  });
+          
+                  button.addEventListener('mouseup', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  button.addEventListener('mouseleave', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  button.addEventListener('touchstart', function() {
+                      this.classList.add('scale-97');
+                  });
+          
+                  button.addEventListener('touchmove', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  button.addEventListener('touchend', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  // Handle click if there's a data-action defined
+                  button.addEventListener('click', function() {
+                      const action = this.getAttribute('data-action');
+                      if (action) {
+                          window.location.href = action;
+                      }
+                  });
+              });
+          });
+        </script>
         <div class="text-lab-black-50">Нет в наличии </div>
       </div>
     </div>
@@ -244,7 +283,7 @@
           </div>
         </div>
         <div class="flex items-center gap-3 pb-3" id="comments">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div>
           <div class="relative flex flex-grow flex-col gap-3">
@@ -259,8 +298,86 @@
             </div>
             <textarea class="hidden resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea" ="" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите отзыв (опционально)..."></textarea>
             <div class="flex hidden items-center gap-4"><img class="size-6" id="pasteButton" src="img/paste.svg" alt="Вставить"/>
-              <button class="text-lab-black-50 bg-transparent w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
-              <button class="w-full w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
+              <button class="text-lab-black-50 bg-transparent w-1/2 transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const buttons = document.querySelectorAll('.button-interactive');
+                
+                    buttons.forEach(button => {
+                        button.addEventListener('mousedown', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('mouseup', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('mouseleave', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchstart', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('touchmove', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchend', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        // Handle click if there's a data-action defined
+                        button.addEventListener('click', function() {
+                            const action = this.getAttribute('data-action');
+                            if (action) {
+                                window.location.href = action;
+                            }
+                        });
+                    });
+                });
+              </script>
+              <button class="w-full w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const buttons = document.querySelectorAll('.button-interactive');
+                
+                    buttons.forEach(button => {
+                        button.addEventListener('mousedown', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('mouseup', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('mouseleave', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchstart', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('touchmove', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchend', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        // Handle click if there's a data-action defined
+                        button.addEventListener('click', function() {
+                            const action = this.getAttribute('data-action');
+                            if (action) {
+                                window.location.href = action;
+                            }
+                        });
+                    });
+                });
+              </script>
             </div>
           </div>
           <script>
@@ -325,7 +442,7 @@
           </script>
         </div>
         <div class="flex flex-grow items-center gap-3 pb-2 pt-2" onclick="location.href='pages/others/profile.html'">
-          <div class="cursor-pointer p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer"><img class="h-full w-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
+          <div class="p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r"><img class="h-full w-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
           </div>
           <div class="flex flex-col gap-1">
             <div class="flex items-center gap-2"><a class="text-sm font-semibold leading-none" href="pages/others/profile.html">Александр Семёнов</a>
@@ -368,8 +485,86 @@
         <div class="mb-3 flex hidden flex-grow flex-col gap-3" id="commentForm-1">
           <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
           <div class="flex items-center gap-4">
-            <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
-            <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
+            <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const buttons = document.querySelectorAll('.button-interactive');
+              
+                  buttons.forEach(button => {
+                      button.addEventListener('mousedown', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('mouseup', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('mouseleave', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchstart', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('touchmove', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchend', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      // Handle click if there's a data-action defined
+                      button.addEventListener('click', function() {
+                          const action = this.getAttribute('data-action');
+                          if (action) {
+                              window.location.href = action;
+                          }
+                      });
+                  });
+              });
+            </script>
+            <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const buttons = document.querySelectorAll('.button-interactive');
+              
+                  buttons.forEach(button => {
+                      button.addEventListener('mousedown', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('mouseup', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('mouseleave', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchstart', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('touchmove', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchend', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      // Handle click if there's a data-action defined
+                      button.addEventListener('click', function() {
+                          const action = this.getAttribute('data-action');
+                          if (action) {
+                              window.location.href = action;
+                          }
+                      });
+                  });
+              });
+            </script>
           </div>
         </div>
         <script>
@@ -396,7 +591,7 @@
         </script>
         <div class="border-l border-lab-black-10 pl-6">
           <div class="flex flex-grow items-center gap-3 pb-2 pt-2" onclick="location.href='pages/others/profile.html'">
-            <div class="cursor-pointer p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+            <div class="p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
               <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(36px/2.66)] font-bold leading-none text-white">НП</span></div>
             </div>
             <div class="flex flex-col gap-1">
@@ -441,8 +636,86 @@
           <div class="mb-3 flex hidden flex-grow flex-col gap-3" id="commentForm-2">
             <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
             <div class="flex items-center gap-4">
-              <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
-              <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
+              <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const buttons = document.querySelectorAll('.button-interactive');
+                
+                    buttons.forEach(button => {
+                        button.addEventListener('mousedown', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('mouseup', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('mouseleave', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchstart', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('touchmove', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchend', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        // Handle click if there's a data-action defined
+                        button.addEventListener('click', function() {
+                            const action = this.getAttribute('data-action');
+                            if (action) {
+                                window.location.href = action;
+                            }
+                        });
+                    });
+                });
+              </script>
+              <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const buttons = document.querySelectorAll('.button-interactive');
+                
+                    buttons.forEach(button => {
+                        button.addEventListener('mousedown', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('mouseup', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('mouseleave', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchstart', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('touchmove', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchend', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        // Handle click if there's a data-action defined
+                        button.addEventListener('click', function() {
+                            const action = this.getAttribute('data-action');
+                            if (action) {
+                                window.location.href = action;
+                            }
+                        });
+                    });
+                });
+              </script>
             </div>
           </div>
           <script>
@@ -471,7 +744,7 @@
         <div class="border-l border-lab-black-10 pl-6">
           <div class="border-l border-lab-black-10 pl-6">
             <div class="flex flex-grow items-center gap-3 pb-2 pt-2" onclick="location.href='pages/others/profile.html'">
-              <div class="cursor-pointer p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer"><img class="h-full w-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
+              <div class="p-[2px] w-[36px] h-[36px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r"><img class="h-full w-full rounded-full object-cover" src="dynamic-img/user-1.jpg" alt="Аватар"/>
               </div>
               <div class="flex flex-col gap-1">
                 <div class="flex items-center gap-2"><a class="text-sm font-semibold leading-none" href="">@asemenov</a>
@@ -514,8 +787,86 @@
             <div class="mb-3 flex hidden flex-grow flex-col gap-3" id="commentForm-3">
               <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..." onfocus="this.rows=5; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden');" oninput="document.getElementById('commentSubmitButton-${commentID}').disabled = this.value.trim().length &lt;= 1; this.style.height = ''; this.style.height = this.scrollHeight + 'px'; if(this.value.trim().length) { document.getElementById('commentSubmitButton-${commentID}').classList.remove('hidden'); document.getElementById('cancelButton-${commentID}').classList.remove('hidden'); } else { document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden'); }" onblur="if(!this.value.trim()) {this.rows=1; this.style.height = 'auto'; this.style.overflow='hidden'; document.getElementById('commentSubmitButton-${commentID}').classList.add('hidden'); document.getElementById('cancelButton-${commentID}').classList.add('hidden');}"></textarea>
               <div class="flex items-center gap-4">
-                <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out" id="cancelButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отмена</button>
-                <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="commentSubmitButton" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Отправить</button>
+                <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                      const buttons = document.querySelectorAll('.button-interactive');
+                  
+                      buttons.forEach(button => {
+                          button.addEventListener('mousedown', function() {
+                              this.classList.add('scale-97');
+                          });
+                  
+                          button.addEventListener('mouseup', function() {
+                              this.classList.remove('scale-97');
+                          });
+                  
+                          button.addEventListener('mouseleave', function() {
+                              this.classList.remove('scale-97');
+                          });
+                  
+                          button.addEventListener('touchstart', function() {
+                              this.classList.add('scale-97');
+                          });
+                  
+                          button.addEventListener('touchmove', function() {
+                              this.classList.remove('scale-97');
+                          });
+                  
+                          button.addEventListener('touchend', function() {
+                              this.classList.remove('scale-97');
+                          });
+                  
+                          // Handle click if there's a data-action defined
+                          button.addEventListener('click', function() {
+                              const action = this.getAttribute('data-action');
+                              if (action) {
+                                  window.location.href = action;
+                              }
+                          });
+                      });
+                  });
+                </script>
+                <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                      const buttons = document.querySelectorAll('.button-interactive');
+                  
+                      buttons.forEach(button => {
+                          button.addEventListener('mousedown', function() {
+                              this.classList.add('scale-97');
+                          });
+                  
+                          button.addEventListener('mouseup', function() {
+                              this.classList.remove('scale-97');
+                          });
+                  
+                          button.addEventListener('mouseleave', function() {
+                              this.classList.remove('scale-97');
+                          });
+                  
+                          button.addEventListener('touchstart', function() {
+                              this.classList.add('scale-97');
+                          });
+                  
+                          button.addEventListener('touchmove', function() {
+                              this.classList.remove('scale-97');
+                          });
+                  
+                          button.addEventListener('touchend', function() {
+                              this.classList.remove('scale-97');
+                          });
+                  
+                          // Handle click if there's a data-action defined
+                          button.addEventListener('click', function() {
+                              const action = this.getAttribute('data-action');
+                              if (action) {
+                                  window.location.href = action;
+                              }
+                          });
+                      });
+                  });
+                </script>
               </div>
             </div>
             <script>
@@ -551,7 +902,7 @@
         </div>
         <!-- Список игроков-->
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">АП</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Андрей Петров</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -559,7 +910,7 @@
           </div>
         </div>
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ЕС</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Егор Смирнов</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -567,7 +918,7 @@
           </div>
         </div>
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">АИ</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Артур Иванов</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -575,7 +926,7 @@
           </div>
         </div>
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ИК</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Иван Кузнецов</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -583,7 +934,7 @@
           </div>
         </div>
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ПВ</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Петр Воробьев</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -591,7 +942,7 @@
           </div>
         </div>
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">СМ</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Сергей Морозов</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -599,7 +950,7 @@
           </div>
         </div>
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ДЛ</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Дмитрий Лебедев</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -607,7 +958,7 @@
           </div>
         </div>
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-red flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">АС</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Алексей Соколов</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -615,7 +966,7 @@
           </div>
         </div>
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-green flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НС</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Николай Сергеев</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -623,7 +974,7 @@
           </div>
         </div>
         <div class="flex items-center border-b py-1">
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">ВФ</span></div>
           </div><a class="ml-2 grow text-sm" href="pages/others/profile.html">Владимир Федоров</a>
           <div class="undefined items-center inline-flex px-1.5 py-1 bg-lab-color-10-solid border border-lab-color-10 gap-px w-12 shrink-0 align-middle rounded justify-center"><img class="h-3 w-3" src="img/rating-star-aqua.svg" alt=""/>
@@ -657,7 +1008,7 @@
             <h2 class="leading-tight">Похожие товары</h2>
           </div><a class="text-lab-color leading-none" href="pages/market/products.html">Все</a>
         </div>
-        <div class="no-scrollbar -mx-4 -my-4 flex gap-2 overflow-x-auto p-4"><a class="relative flex w-40 shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html">
+        <div class="no-scrollbar -mx-4 -my-4 flex gap-2 overflow-x-auto p-4"><a class="relative flex shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html">
             <div class="absolute rounded-br-lg bg-lab-color px-2 pt-1 text-xs text-white pb-1.5">Новинка</div><img class="mx-auto size-40 object-cover" src="dynamic-img/yonex-astrox.jpg" alt="Изображение товара"/>
             <div class="flex flex-grow flex-col items-center gap-3 p-2">
               <div class="flex items-center gap-1"><img class="size-3" src="img/star.svg" alt="Рейтинг"/><span class="text-xs">4.8</span><img class="ml-2 size-3" src="img/comment.svg" alt="Комментариев"/><span class="text-xs">2</span><img class="ml-2 size-3" src="img/player.svg" alt="Игроков пользуются"/><span class="text-xs">23</span></div>
@@ -667,8 +1018,31 @@
               <div class="shrink-0 rounded bg-lab-light-yellow px-2 py-1 text-sm font-semibold text-lab-black">12 800 ₽</div>
             </div>
             <div class="absolute right-0 top-0">
-              <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : &quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg" alt="Добавление в избранное"/></button>
-            </div></a><a class="relative flex w-40 shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html"><img class="mx-auto size-40 object-cover" src="dynamic-img/yonex-65x.jpg" alt="Изображение товара"/>
+              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50 cursor-pointer toggle-heart-button" data-liked="false"><img class="w-6 h-6" src="img/heart-empty.svg" alt="Добавление в избранное"/></div>
+            </div></a>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const heartButtons = document.querySelectorAll('.toggle-heart-button');
+            
+                heartButtons.forEach(button => {
+                    button.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+            
+                        const img = this.querySelector('img');
+                        const liked = this.getAttribute('data-liked') === 'true';
+            
+                        if (liked) {
+                            img.src = 'img/heart-empty.svg';
+                            this.setAttribute('data-liked', 'false');
+                        } else {
+                            img.src = 'img/heart-fill.svg';
+                            this.setAttribute('data-liked', 'true');
+                        }
+                    });
+                });
+            });
+          </script><a class="relative flex shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html"><img class="mx-auto size-40 object-cover" src="dynamic-img/yonex-65x.jpg" alt="Изображение товара"/>
             <div class="flex flex-grow flex-col items-center gap-3 p-2">
               <div class="flex items-center gap-1"><img class="size-3" src="img/star.svg" alt="Рейтинг"/><span class="text-xs">4.4</span><img class="ml-2 size-3" src="img/comment.svg" alt="Комментариев"/><span class="text-xs">0</span><img class="ml-2 size-3" src="img/player.svg" alt="Игроков пользуются"/><span class="text-xs">351</span></div>
               <div class="line-clamp-3 flex-grow text-center text-sm font-medium leading-tight text-lab-black">Yonex 65Х 3 (Navy/Blue)</div>
@@ -677,8 +1051,31 @@
               <div class="shrink-0 rounded bg-lab-light-yellow px-2 py-1 text-sm font-semibold text-lab-black">8 990 ₽</div>
             </div>
             <div class="absolute right-0 top-0">
-              <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : &quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg" alt="Добавление в избранное"/></button>
-            </div></a><a class="relative flex w-40 shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html"><img class="mx-auto size-40 object-cover" src="dynamic-img/kumpoo.jpg" alt="Изображение товара"/>
+              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50 cursor-pointer toggle-heart-button" data-liked="false"><img class="w-6 h-6" src="img/heart-empty.svg" alt="Добавление в избранное"/></div>
+            </div></a>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const heartButtons = document.querySelectorAll('.toggle-heart-button');
+            
+                heartButtons.forEach(button => {
+                    button.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+            
+                        const img = this.querySelector('img');
+                        const liked = this.getAttribute('data-liked') === 'true';
+            
+                        if (liked) {
+                            img.src = 'img/heart-empty.svg';
+                            this.setAttribute('data-liked', 'false');
+                        } else {
+                            img.src = 'img/heart-fill.svg';
+                            this.setAttribute('data-liked', 'true');
+                        }
+                    });
+                });
+            });
+          </script><a class="relative flex shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html"><img class="mx-auto size-40 object-cover" src="dynamic-img/kumpoo.jpg" alt="Изображение товара"/>
             <div class="flex flex-grow flex-col items-center gap-3 p-2">
               <div class="flex items-center gap-1"><img class="size-3" src="img/star.svg" alt="Рейтинг"/><span class="text-xs">4.3</span><img class="ml-2 size-3" src="img/comment.svg" alt="Комментариев"/><span class="text-xs">1</span><img class="ml-2 size-3" src="img/player.svg" alt="Игроков пользуются"/><span class="text-xs">764</span></div>
               <div class="line-clamp-3 flex-grow text-center text-sm font-medium leading-tight text-lab-black">KUMPOO KW-0101 (RED)</div>
@@ -687,8 +1084,31 @@
               <div class="shrink-0 rounded bg-lab-light-yellow px-2 py-1 text-sm font-semibold text-lab-black">1 800 ₽</div>
             </div>
             <div class="absolute right-0 top-0">
-              <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector(&quot;img&quot;); img.src.includes(&quot;heart-empty&quot;) ? img.src=&quot;img/heart-fill.svg&quot; : &quot;img/heart-empty.svg&quot;"><img class="size-6" src="img/heart-empty.svg" alt="Добавление в избранное"/></button>
+              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50 cursor-pointer toggle-heart-button" data-liked="false"><img class="w-6 h-6" src="img/heart-empty.svg" alt="Добавление в избранное"/></div>
             </div></a>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const heartButtons = document.querySelectorAll('.toggle-heart-button');
+            
+                heartButtons.forEach(button => {
+                    button.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+            
+                        const img = this.querySelector('img');
+                        const liked = this.getAttribute('data-liked') === 'true';
+            
+                        if (liked) {
+                            img.src = 'img/heart-empty.svg';
+                            this.setAttribute('data-liked', 'false');
+                        } else {
+                            img.src = 'img/heart-fill.svg';
+                            this.setAttribute('data-liked', 'true');
+                        }
+                    });
+                });
+            });
+          </script>
         </div>
       </div>
       <div class="p-4 bg-white rounded-lg overflow-hidden  mt-2">

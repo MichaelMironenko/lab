@@ -46,7 +46,7 @@
             <div class="text-xs font-semibold text-lab-color">nikpol</div>
             <div class="flex items-center justify-end"><img class="relative z-10 h-3 w-3" src="img/gradient-star.svg" alt=""/><img class="relative -ml-4 h-3 w-3" src="img/gradient-star.svg" alt=""/><span class="ml-1 text-xs font-bold text-lab-color">1376</span></div>
           </div>
-          <div class="cursor-pointer p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500  undefined relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
+          <div class="p-[1px] w-[32px] h-[32px] from-green-600 to-sky-500   relative flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r" id="avatarContainer">
             <div class="bg-lab-blue flex h-full w-full items-center justify-center rounded-full border border-white border-opacity-75"><span class="w-full text-center text-[calc(32px/2.66)] font-bold leading-none text-white">НП</span></div>
           </div></a></div>
       <div class="hidden" id="userMenu">
@@ -87,7 +87,7 @@
     <div class="bg-white p-4 pb-1">
       <div class="flex justify-between items-center pb-2">
         <h2 class="leading-tight">Аренда кортов в 
-          <div class="flex items-center gap-1 py-2 undefined">
+          <div class="flex items-center gap-1 undefined">
             <select class="w-fit appearance-none rounded-2xl border-none bg-transparent bg-none p-0 text-sm font-semibold leading-none text-lab-color  !underline !text-lg text-lab-color !rounded-none !underline-offset-4 !decoration-dotted  focus-visible:outline-none">
               <option value="0" selected="selected">Все города</option>
               <option value="781">Алексин</option>
@@ -172,7 +172,46 @@
             <button class="size-10 text-xl text-lab-black-50 leading-none" id="increase-time">+</button>
           </div>
         </div>
-        <button class=" undefined rounded-lg font-semibold max-h-12 transition-transform duration-150 text-undefined leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick=""> <img src="img/refresh.svg"/></button>
+        <button class=" undefined rounded-lg font-semibold max-h-12 transition-transform duration-150 text-undefined leading-none ease-in-out button-interactive" id="undefined" data-action=""> <img src="img/refresh.svg"/></button>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const buttons = document.querySelectorAll('.button-interactive');
+          
+              buttons.forEach(button => {
+                  button.addEventListener('mousedown', function() {
+                      this.classList.add('scale-97');
+                  });
+          
+                  button.addEventListener('mouseup', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  button.addEventListener('mouseleave', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  button.addEventListener('touchstart', function() {
+                      this.classList.add('scale-97');
+                  });
+          
+                  button.addEventListener('touchmove', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  button.addEventListener('touchend', function() {
+                      this.classList.remove('scale-97');
+                  });
+          
+                  // Handle click if there's a data-action defined
+                  button.addEventListener('click', function() {
+                      const action = this.getAttribute('data-action');
+                      if (action) {
+                          window.location.href = action;
+                      }
+                  });
+              });
+          });
+        </script>
       </div>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -446,7 +485,46 @@
         <option>Вариант 2</option>
         <option>Вариант 3</option>
       </select>
-      <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Хочу бронировать через ЛАБ</button>
+      <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="undefined" data-action="">Хочу бронировать через ЛАБ</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.button-interactive');
+        
+            buttons.forEach(button => {
+                button.addEventListener('mousedown', function() {
+                    this.classList.add('scale-97');
+                });
+        
+                button.addEventListener('mouseup', function() {
+                    this.classList.remove('scale-97');
+                });
+        
+                button.addEventListener('mouseleave', function() {
+                    this.classList.remove('scale-97');
+                });
+        
+                button.addEventListener('touchstart', function() {
+                    this.classList.add('scale-97');
+                });
+        
+                button.addEventListener('touchmove', function() {
+                    this.classList.remove('scale-97');
+                });
+        
+                button.addEventListener('touchend', function() {
+                    this.classList.remove('scale-97');
+                });
+        
+                // Handle click if there's a data-action defined
+                button.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    if (action) {
+                        window.location.href = action;
+                    }
+                });
+            });
+        });
+      </script>
       <div class="text-lab-green font-bold py-2">Ваше пожелание отправлено!</div>
     </div>
     <nav class="pb-safe fixed inset-x-0 bottom-0 z-10 border-t bg-white">
@@ -1103,7 +1181,46 @@
               <div> 
                 <div class="text-lab-black-50 text-sm text-nowrap">Общая стоимость</div><span class="text-lab-color text-lg font-bold">1800&#8202;₽</span>
               </div>
-              <button class="w-full max-w-[60%] bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out" id="undefined" onmousedown="this.classList.add('scale-97')" onmouseup="this.classList.remove('scale-97')" ontouchstart="this.classList.add('scale-97')" onmouseleave="this.classList.remove('scale-97')" ontouchmove="this.classList.remove('scale-97')" ontouchend="this.classList.remove('scale-97')" onclick="">Далее</button>
+              <button class="w-full max-w-[60%] bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="undefined" data-action="">Далее</button>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const buttons = document.querySelectorAll('.button-interactive');
+                
+                    buttons.forEach(button => {
+                        button.addEventListener('mousedown', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('mouseup', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('mouseleave', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchstart', function() {
+                            this.classList.add('scale-97');
+                        });
+                
+                        button.addEventListener('touchmove', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        button.addEventListener('touchend', function() {
+                            this.classList.remove('scale-97');
+                        });
+                
+                        // Handle click if there's a data-action defined
+                        button.addEventListener('click', function() {
+                            const action = this.getAttribute('data-action');
+                            if (action) {
+                                window.location.href = action;
+                            }
+                        });
+                    });
+                });
+              </script>
             </div>
           </div>
         </div>
