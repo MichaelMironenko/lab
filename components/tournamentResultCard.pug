@@ -7,7 +7,7 @@ mixin leaderboardItem(place, names, rating)
   - var medalColors = ['gold', 'silver', 'bronze']
   - var medal = medalColors[place - 1] || 'gold'
   div.flex.items-center.justify-between.py-2.gap-2
-    img(src=`img/medal-${medal}.svg` alt=`${medal} medal` class="w-5 h-5")
+    img(src=`img/medal-${medal}.svg` alt=`${place} место` class="w-5 h-5")
     .text-sm.grow.leading-xs #{names[0]} / #{names[1]}
     +userRating(rating, true)
 

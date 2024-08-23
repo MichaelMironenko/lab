@@ -5,11 +5,11 @@ mixin clubCard(image, rating, reviewsCount, title, location, courtsCount, servic
       div.font-semibold.leading-tight= title
       div.flex.items-center.text-sm
         span.font-semibold= rating
-        img.h-4.ml-1(src="img/star.svg")
+        img.h-4.ml-1(src="img/star.svg" alt="Рейтинг")
         span.text-lab-black-50.ml-2= reviewsCount + ' отзыва'
       if location.city
         div
-          img.inline.opacity-50.saturate-50.mr-1(src="img/location-icon.svg")
+          img.inline.opacity-50.saturate-50.mr-1(src="img/location-icon.svg" alt="Локация")
           span.inline.text-lab-black-50.text-sm.h-4= location.city
       else if location.metro
         div
@@ -17,7 +17,7 @@ mixin clubCard(image, rating, reviewsCount, title, location, courtsCount, servic
           span(class=`inline text-lab-black-50 leading-tight align-middle text-sm`)= location.metro
       div.flex.items-center.grow.justify-self-stretch
         div.inline
-          img.inline.size-4.mr-1.align-middle.saturate-50.opacity-75(src="img/court.svg")
+          img.inline.size-4.mr-1.align-middle.saturate-50.opacity-75(src="img/court.svg" alt="Количество кортов")
           span.inline.text-sm.align-middle.leading-none= courtsCount
         div.inline.ml-2
           each val in services

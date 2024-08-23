@@ -8,10 +8,10 @@ mixin tournamentRegCard(reg, isOpen, name)
             div.w-9.flex.justify-center.shrink-0
                 +tournamentTypeBadge('XD')
             div.text-left.leading-5.grow.text-sm.text-lab-black.font-semibold= name
-            img.w-6.z-1(src="img/expand-arrow.svg", class=(isOpen ? "rotate-180" : ""))
+            img.w-6.z-1(src="img/expand-arrow.svg", class=(isOpen ? "rotate-180" : "") alt="Развернуть карточку")
         if reg && !isOpen
             div.flex.items-center.gap-1.mb-1.ml-11
-                img(src="img/checkmark.svg" class="w-4 h-4")
+                img(src="img/checkmark.svg" class="w-4 h-4"  alt="")
                 span.text-xs.font-semibold.text-lab-color Вы участвуете в этом турнире
         if isOpen
             -

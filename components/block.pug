@@ -6,7 +6,7 @@ mixin block(title, link, button, marginBottom=true, extraClass)
           h2.leading-tight #{title}
           if button
             a(href="#")
-              img(src="img/plus-button.svg" class="size-5")
+              img(src="img/plus-button.svg" class="size-5" alt="Кнопка добавления")
         if link
           a(href=link.href class="text-lab-color leading-none") #{link.text}
     block

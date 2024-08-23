@@ -8,7 +8,7 @@ mixin forumRow(topic, card)
         a.block.text-xs(class='!leading-none')= topic.author
         .text-xs.leading-none.text-lab-black-50= topic.date
         .flex.items-center.gap-1
-          img.size-4(src='img/comment-outlined.svg')
+          img.size-4(src='img/comment-outlined.svg' alt="Комментариев").saturate-50.opacity-50
           .text-xs.leading-none.text-lab-black-50= topic.commentsCount
           |
           span.-ml-1.text-xs= '+' + topic.newComments
@@ -22,7 +22,7 @@ mixin forumRow(topic, card)
           a.block.text-xs(class='!leading-none')= topic.author
           .text-xs.leading-none.text-lab-black-50= topic.date
           .flex.items-center.gap-1
-            img.size-4(src='img/comment-outlined.svg')
+            img.size-4(src='img/comment-outlined.svg'  alt="Комментариев").saturate-50.opacity-50
             .text-xs.leading-none.text-lab-black-50= topic.commentsCount
             |
             span.-ml-1.text-xs= '+' + topic.newComments
