@@ -2,7 +2,7 @@ mixin citySelect(image, extraClass, containerClass)
   .flex.items-center.gap-1(class=`${containerClass}`)
     if image
       img.h-4.w-4(src='img/location-icon.svg' alt="")
-    label.flex.items-center.gap-1
+    label(for='city-select').flex.items-center.gap-1
       select.w-fit.appearance-none.rounded-2xl.border-none.bg-transparent.bg-none.p-0.text-sm.font-semibold.leading-none.text-lab-color(
         class=`${extraClass} focus-visible:outline-none`,
         id='city-select'
