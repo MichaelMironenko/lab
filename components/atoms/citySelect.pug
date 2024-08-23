@@ -6,6 +6,7 @@ mixin citySelect(image, extraClass, containerClass)
       select.w-fit.appearance-none.rounded-2xl.border-none.bg-transparent.bg-none.p-0.text-sm.font-semibold.leading-none.text-lab-color(
         class=`${extraClass} focus-visible:outline-none`,
         id='city-select'
+        aria-label="Выбор города"
       )
         option(value='0', selected) Все города
         option(value='781') Алексин
