@@ -88,18 +88,20 @@
       <div class="flex justify-between items-center pb-2">
         <h2 class="leading-tight">Аренда кортов в 
           <div class="flex items-center gap-1 undefined">
-            <select class="w-fit appearance-none rounded-2xl border-none bg-transparent bg-none p-0 text-sm font-semibold leading-none text-lab-color  !underline !text-lg text-lab-color !rounded-none !underline-offset-4 !decoration-dotted  focus-visible:outline-none">
-              <option value="0" selected="selected">Все города</option>
-              <option value="781">Алексин</option>
-              <option value="38">Казань</option>
-              <option value="120">Калининград</option>
-              <option value="197">Калуга</option>
-              <option value="35">Кемерово</option>
-              <option value="8">Красногорск</option>
-              <option value="1">Москва</option>
-              <option value="67">Новосибирск</option>
-              <option value="312">Одинцово</option>
-            </select>
+            <label class="flex items-center gap-1">
+              <select class="w-fit appearance-none rounded-2xl border-none bg-transparent bg-none p-0 text-sm font-semibold leading-none text-lab-color  !underline !text-lg text-lab-color !rounded-none !underline-offset-4 !decoration-dotted  focus-visible:outline-none" id="city-select">
+                <option value="0" selected="selected">Все города</option>
+                <option value="781">Алексин</option>
+                <option value="38">Казань</option>
+                <option value="120">Калининград</option>
+                <option value="197">Калуга</option>
+                <option value="35">Кемерово</option>
+                <option value="8">Красногорск</option>
+                <option value="1">Москва</option>
+                <option value="67">Новосибирск</option>
+                <option value="312">Одинцово</option>
+              </select>
+            </label>
           </div>
         </h2><a href="pages/courts/myBookings.html"> <img class="size-8 p-2 bg-lab-color-10 rounded-md" src="img/booking.svg"/></a>
       </div>
@@ -528,7 +530,7 @@
       <div class="text-lab-green font-bold py-2">Ваше пожелание отправлено!</div>
     </div>
     <nav class="pb-safe fixed inset-x-0 bottom-0 z-10 border-t bg-white">
-      <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt="Турниры"/><span class=" text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class=" text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7" src="img/tabbar/courts-active.svg" alt="Корты"/><span class=" font-bold  text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class=" text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
+      <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7" src="img/tabbar/courts-active.svg" alt=""/><span class=" font-bold  text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
       </div>
     </nav>
     <script>

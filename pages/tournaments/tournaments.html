@@ -88,18 +88,20 @@
     <div class="no-scrollbar h-screen overflow-y-auto">
       <div class="tab-content p-4 pb-[50px] pt-[104px]" id="registration">
         <div class="flex items-center gap-1 undefined"><img class="h-4 w-4" src="img/location-icon.svg" alt=""/>
-          <select class="w-fit appearance-none rounded-2xl border-none bg-transparent bg-none p-0 text-sm font-semibold leading-none text-lab-color undefined focus-visible:outline-none">
-            <option value="0" selected="selected">Все города</option>
-            <option value="781">Алексин</option>
-            <option value="38">Казань</option>
-            <option value="120">Калининград</option>
-            <option value="197">Калуга</option>
-            <option value="35">Кемерово</option>
-            <option value="8">Красногорск</option>
-            <option value="1">Москва</option>
-            <option value="67">Новосибирск</option>
-            <option value="312">Одинцово</option>
-          </select>
+          <label class="flex items-center gap-1">
+            <select class="w-fit appearance-none rounded-2xl border-none bg-transparent bg-none p-0 text-sm font-semibold leading-none text-lab-color undefined focus-visible:outline-none" id="city-select">
+              <option value="0" selected="selected">Все города</option>
+              <option value="781">Алексин</option>
+              <option value="38">Казань</option>
+              <option value="120">Калининград</option>
+              <option value="197">Калуга</option>
+              <option value="35">Кемерово</option>
+              <option value="8">Красногорск</option>
+              <option value="1">Москва</option>
+              <option value="67">Новосибирск</option>
+              <option value="312">Одинцово</option>
+            </select>
+          </label>
         </div>
         <div class="flex flex-col items-center">
           <div class="justify-center items-center gap-2 py-4 inline-flex m-auto w-full"><img class="w-4 h-4" src="img/calendar.svg" alt=""/>
@@ -488,7 +490,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">14</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5">
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -496,7 +498,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">15</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -504,7 +506,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700 font-bold">16</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -512,7 +514,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">17</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -520,7 +522,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">18</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -528,7 +530,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">19</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -536,7 +538,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">20</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
             </div>
@@ -546,7 +548,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">21</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -554,7 +556,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">22</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -562,7 +564,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full bg-lab-color text-white">23</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -570,7 +572,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">24</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -578,7 +580,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">25</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5">
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -586,7 +588,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">26</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center">
@@ -594,7 +596,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-lab-red">27</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5">
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
             </div>
@@ -628,7 +630,7 @@
                 <div class="w-10 h-10 flex justify-center">
                   <div class="w-9 h-9 flex items-center justify-center rounded-full text-gray-700">31</div>
                 </div>
-                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-lab-color opacity-100 ring-2 ring-offset-2 ring-lab-color "></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
+                <div class="flex h-2 mt-1 justify-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full  bg-lab-black-50 opacity-50"></span>
                 </div>
               </div>
             </div>
@@ -736,7 +738,7 @@
       </div>
     </div>
     <nav class="pb-safe fixed inset-x-0 bottom-0 z-10 border-t bg-white">
-      <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7" src="img/tabbar/tournaments-active.svg" alt="Турниры"/><span class=" font-bold  text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt="Тренировки"/><span class=" text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt="Корты"/><span class=" text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt="Игроки"/><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt="Вокруг игры"/><span class=" text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt="Маркет"/><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
+      <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7" src="img/tabbar/tournaments-active.svg" alt=""/><span class=" font-bold  text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt=""/><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
       </div>
     </nav>
     <script>
