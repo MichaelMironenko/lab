@@ -41,7 +41,7 @@ html(lang="ru")
             each tab, index in tabs
                 - var isActive = tab === activeTab
                 div.tournaments-panel-tab.tab(class=`flex grow cursor-pointer gap-1.5 w-1/2 items-center  ${isActive ? "font-bold bg-lab-color-10" : "opacity-75"} justify-center py-3 ` data-tab=`${tabIds[index]}`)
-                    img(src=images[index] class=`w-4 h-4 aspect-square ${tab === 'Прямой эфир' ? 'animate-pulse' : ''}`)
+                    img(src=images[index] class=`w-4 h-4 aspect-square ${tab === 'Прямой эфир' ? 'animate-pulse' : ''}` alt="")
                     div= tab
 
         script. 
@@ -109,8 +109,7 @@ html(lang="ru")
                             span 3/16
                         div.inline-flex.gap-4.items-center
                             img.w-4.h-4.aspect-square.opacity-60.saturate-50(src='img/star-lab-color.svg' alt='Рейтинг')
-                            span.inline-flex.flex-wrap.gap-2
-                                | Рейтинг пары не более 
+                            div.inline-flex.flex-wrap.gap-2.text-lab-black Рейтинг пары не более 
                                 +ratingLimit(320, 'double', 'male')
                                 +ratingLimit(320, 'double', 'female')
                                 +ratingLimit(320, 'double', 'mixed')
@@ -129,13 +128,13 @@ html(lang="ru")
                                 img.w-4.aspect-square.opacity-60.saturate-50(src='img/phone.svg' alt='Контакты')
                                 span +7-926-200-40-22
                         div.h-full.max-h-40
-                            img(src="dynamic-img/map.png" class="object-cover h-full w-full")
+                            img(src="dynamic-img/map.png" class="object-cover h-full w-full" alt="Клуб на карте")
 
 
 
                     .flex.justify-between.gap-2.grow.w-full
                         +button('Регистрация', 'default', 'white', 'bg-avatar-gradient grow', '', 'registerButton') 
-                        +button('Ищу пару', 'default', 'lab-color', 'bg-white', 'border-2 border-lab-color ')
+                        +button('Ищу пару', 'default', 'lab-color', 'bg-white', 'border-2 border-lab-color ', 'findpair')
                         script. 
                             document.addEventListener('DOMContentLoaded', function() {
                                 const registerButton = document.getElementById('registerButton');
