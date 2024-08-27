@@ -11,7 +11,7 @@ mixin rentCourt(widget)
             img(src="img/booking.svg").size-8.p-2.bg-lab-color-10.rounded-md
 
     div(class="flex overflow-x-auto -mx-4 px-4 gap-2 no-scrollbar")
-        div(class="flex-shrink-0")
+        div(class="shrink-0")
             span(class="sticky left-0 text-sm  text-lab-black-50 py-2 z-10") Март
             - var marchDays = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт']
             - var marchDates = [27, 28, 29, 30, 31]
@@ -26,7 +26,7 @@ mixin rentCourt(widget)
 
 
 
-        div(class="flex-shrink-0")
+        div(class="shrink-0")
             span(class="sticky left-0 text-sm  text-lab-black-50 py-2 z-10") Апрель
             - var aprilDays = ['Пт', 'Сб', 'Вс', 'Пн', 'Вт', 'Ср']
             - var aprilDates = [1, 2, 3, 4, 5, 6]

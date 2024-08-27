@@ -24,11 +24,11 @@ mixin gameResult({date, tournament, stage, duration, border, players, numOfPlaye
             class=player.score > player.opponentScore ? 'font-semibold' : '' 
           ) #{ player.name } 
             +userRating(player.rating)
-            span.flex-shrink-0.text-center.text-xs.leading-none(
+            span.shrink-0.text-center.text-xs.leading-none(
               class=player.ratingChange > 0 ? 'text-lab-green' : 'text-lab-red'
             ) #{ player.ratingChange > 0 ? `${player.ratingChange}` : player.ratingChange }
 
-          span.w-4.flex-shrink-0.text-center.text-sm(
+          span.w-4.shrink-0.text-center.text-sm(
             class=player.score > player.opponentScore ? 'font-semibold' : 'text-slate-500'
           ) #{ player.score }
     

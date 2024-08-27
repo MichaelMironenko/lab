@@ -2,6 +2,8 @@ mixin tournamentTypeButton(type, gender, active)
   -
     let emojis = []
     let typeText = ''
+    let id = `${type}-${gender}`
+    let labelId = `${id}-label`
 
     switch (gender) {
       case 'all':
@@ -29,9 +31,8 @@ mixin tournamentTypeButton(type, gender, active)
       }
     }
 
-    
-
-  div(class=`${active ? 'bg-lab-color' : 'bg-lab-color-10'} px-2.5 py-1.5`).rounded-lg.cursor-pointer.text-nowrap.text-sm 
+  input(type="radio" id=id name="tournamentType" class="hidden" checked=active aria-labelledby=labelId)
+  label(for=id id=labelId class=`${active ? 'bg-lab-color text-white font-semibold' : 'bg-lab-color-10 text-black'} px-2.5 py-1.5`).rounded-lg.cursor-pointer.text-nowrap.text-sm
     each emoji, index in emojis
       span(class=index === 0 ? '' : '-ml-2')= emoji
     span(class=active ? 'text-white font-semibold' : '').ml-2= typeText

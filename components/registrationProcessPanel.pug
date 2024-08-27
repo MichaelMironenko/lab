@@ -16,7 +16,7 @@ mixin registrationProcessPanel
                 .w-20.h-1.bg-slate-200.rounded-xl.mx-auto.mt-2.relative 
             .flex-1.overflow-y-auto.scroll-smooth.no-scrollbar.p-4.pt-2(id="mainContent") 
                 h2.mb-4 Добавить партнёра
-                +searchBar
+                +searchBar('Введите имя', 'searchBar')
 
                 div#partners
                     div.leading-tight.text-lab-black-50.text-sm Партнёра нет на сайте?
@@ -75,7 +75,7 @@ mixin registrationProcessPanel
                     div.flex.gap-3.items-center
                         +avatar('bg-lab-blue', 'КП', '40')
                         span.text-lab-color.font-bold Вася
-                    +button('Подтвердить', 'default', 'white', 'bg-lab-color', '!w-64')
+                    +button('Подтвердить', 'default', 'white', 'bg-lab-color', '')
 
                 .flex.flex-col.items-center.gap-4.border-t.p-8
                     span.text-right.text-xs.text-lab-black-50 Вариант для команд
@@ -121,7 +121,7 @@ mixin registrationProcessPanel
                                 }
                             });
                         });
-                    +button('Зарегистрировать команду', 'default', 'white', 'bg-lab-color', '!w-64')
+                    +button('Зарегистрировать команду', 'default', 'white', 'bg-lab-color', '')
 
 
 

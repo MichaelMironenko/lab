@@ -16,18 +16,18 @@ mixin comments(isReview = false)
           .flex.items-center.justify-end.gap-3(class='430:ml-4 430:justify-start')
             span.text-sm.text-lab-black-50 Ваша оценка
             +starRating(0)
-        textarea#commentTextArea.hidden.resize-none.overflow-hidden.rounded-md.border.border-gray-300.p-2.transition-all.duration-300.ease-in-out(
+        textarea#commentTextArea.resize-none.overflow-hidden.rounded-md.border.border-gray-300.p-2.transition-all.duration-300.ease-in-out(
           ,
           class='focus:border-blue-500 focus:outline-none',
           style='scrollbar-width: none; -ms-overflow-style: none',
           rows='1',
-          placeholder='Напишите отзыв (опционально)...'
+          placeholder='Напишите комментарий'
         )
 
-        .flex.hidden.items-center.gap-4
-          img#pasteButton.size-6(src='img/paste.svg', alt='Вставить')
-          +button('Отмена', 'text', 'lab-black-50', '', 'w-1/2', 'cancelButton')
-          +button('Отправить', 'default', 'white', 'bg-lab-color', 'w-1/2', 'commentSubmitButton')
+        .flex.items-center.gap-4
+          img#pasteButton.hidden.size-6(src='img/paste.svg', alt='Вставить')
+          +button('Отмена', 'text', 'lab-black-50', '', ' hidden', 'cancelButton')
+          +button('Отправить', 'default', 'white', 'bg-lab-color', ' hidden', 'commentSubmitButton')
 
       script.
         const textArea = document.getElementById('commentTextArea')

@@ -4,7 +4,8 @@ mixin breadcrumbs(levels, padding='p-4')
         ol.flex.items-center.gap-1.flex-wrap
             each level, index in levels
                 if index !== 0
-                    img(src="img/expand-arrow.svg" alt="Стрелка" class="-rotate-90 size-4")
+                    li.inline
+                        img(src="img/expand-arrow.svg" alt="" class="-rotate-90 size-4")
                 li.inline
                     if index !== last
                         a.text-xs.whitespace-nowrap.font-medium.block.leading-tight(href=level.href) #{level.name}

@@ -2,10 +2,10 @@ mixin compactCalendar
     div.bg-white.sticky.z-20(class="top-[90px]")
         div.flex.justify-between.items-center.pt-2.pb-2.px-3
             button
-                img(src="img/expand-arrow.svg" class="rotate-90 h-4 w-4")
+                img(src="img/expand-arrow.svg" class="rotate-90 h-4 w-4" alt="К предыдущему месяцу")
             div.text-lg.font-semibold.text-lab-color Март
             button
-                img(src="img/expand-arrow.svg" class="-rotate-90 h-4 w-4")
+                img(src="img/expand-arrow.svg" class="-rotate-90 h-4 w-4" alt="К следующему месяцу")
 
         // Список дней
         div.flex.space-x-1.overflow-x-auto.py-2.no-scrollbar.border-b
