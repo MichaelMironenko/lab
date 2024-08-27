@@ -214,11 +214,12 @@ html(lang="ru")
                         div.relative.w-12.h-7.shrink-0.bg-gray-200.rounded-full(class="peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color")
 
                 // Список с true
+            
+                .inline-flex.gap-2.items-center
+                    img(src="img/warning.svg" alt="Предупреждение").w-4.h-4.saturate-50.opacity-75
+                    span.text-xs.text-lab-black-50.leading-tight Нажимайте на кружок справа строки для выбора места или сброса голоса. После выбора трех мест нажмите кнопку "Сделать прогноз"
+                +button("Сделать прогноз", "default", "white", 'bg-lab-color', 'border-2 border-white my-2')    
                 table#playersTrue.w-full.hidden
-                    .inline-flex.gap-2.items-center
-                        img(src="img/warning.svg" alt="Предупреждение").w-4.h-4.saturate-50.opacity-75
-                        span.text-xs.text-lab-black-50.leading-tight Нажимайте на кружок справа строки для выбора места или сброса голоса. После выбора трех мест нажмите кнопку "Сделать прогноз"
-                    +button("Сделать прогноз", "default", "white", 'bg-lab-color', 'border-2 border-white my-2')    
                     tr.text-xs.text-lab-color.font-semibold.border-b
                         th.text-left.py-2 Игрок
                         
