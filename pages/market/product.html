@@ -454,22 +454,22 @@
             </div>
             <div class="flex items-center gap-2"><span class="text-xs text-lab-black-50">@asemenov</span><span class="text-xs text-lab-black-50">12 ноября 16:43</span>
             </div>
-            <div class="flex shrink-0 items-center mt-0.5"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-empty.svg"></div>
+            <div class="flex shrink-0 items-center mt-0.5"><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-empty.svg" alt=""></div>
           </div>
         </div>
-        <div class="mb-2 mt-1 flex w-fit items-center gap-1 rounded-lg bg-lab-color-10 px-2 py-1"><img class="size-3 opacity-75 saturate-50" src="img/reply.svg"><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
+        <div class="mb-2 mt-1 flex w-fit items-center gap-1 rounded-lg bg-lab-color-10 px-2 py-1"><img class="size-3 opacity-75 saturate-50" src="img/reply.svg" alt=""><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
         <p>У меня сломалась ракетка, кто может одолжить запасную? 🙏🏼</p>
         <div class="flex justify-between pb-3 pt-1">
-          <div class="relative inline-flex items-center gap-2"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger-1">
+          <div class="relative inline-flex items-center gap-2"><img class="cursor-pointer" src="img/reactions.svg" alt="Реакции" id="reactions-trigger-1">
             <button class="text-sm text-lab-black-50" onclick="toggleCommentForm('1')">Ответить</button>
             <div class="absolute -left-2 bottom-6 hidden max-w-[80vw]" id="reactions-popup-1">
               <div class="no-scrollbar flex gap-2 overflow-x-auto rounded-full border border-lab-black-10 bg-white p-2 text-xl shadow-lg">
               </div>
             </div>
-          </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('1')">
+          </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('1')" alt="Кнопка меню">
           <div class="absolute bottom-0" id="commentMenu-1">
-            <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="action-menu-container" data-action="hide">
-              <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3 w-full" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"><span class="flex-1 text-lab-red">Удалить</span></a>
+            <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="action-menu-container-${commentID}" data-action="hide">
+              <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg" alt=""><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg" alt=""><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg" alt=""><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg" alt=""><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg" alt=""><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg" alt=""><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3 w-full" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg" alt=""><span class="flex-1 text-lab-red">Удалить</span></a>
               </div>
               <script>
                 document.addEventListener('click', function (e) {
@@ -485,9 +485,9 @@
           </div>
         </div>
         <div class="mb-3 hidden flex-grow flex-col gap-3" id="commentForm-1">
-          <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
+          <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea-1" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
           <div class="flex items-center gap-4">
-            <button class="text-lab-black-50 bg-transparent   transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+            <button class="text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-1" data-action="">Отмена</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -527,7 +527,7 @@
                   });
               });
             </script>
-            <button class="w-full   bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+            <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton-1" data-action="">Отправить</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -568,64 +568,59 @@
               });
             </script>
           </div>
+          <script>document.getElementById('commentTextArea-1').addEventListener('focus', function () {
+                this.rows = 5;
+                this.style.overflow = 'hidden';
+                document.getElementById('commentSubmitButton-1').classList.remove('hidden');
+                document.getElementById('cancelButton-1').classList.remove('hidden');
+            });
+            
+            document.getElementById('commentTextArea-1').addEventListener('input', function () {
+                const submitButton = document.getElementById('commentSubmitButton-1');
+                const cancelButton = document.getElementById('cancelButton-1');
+                submitButton.disabled = this.value.trim().length <= 1;
+                this.style.height = '';
+                this.style.height = this.scrollHeight + 'px';
+                if (this.value.trim().length) {
+                    submitButton.classList.remove('hidden');
+                    cancelButton.classList.remove('hidden');
+                } else {
+                    submitButton.classList.add('hidden');
+                    cancelButton.classList.add('hidden');
+                }
+            });
+            
+            document.getElementById('commentTextArea-1').addEventListener('blur', function () {
+                if (!this.value.trim()) {
+                    this.rows = 1;
+                    this.style.height = 'auto';
+                    this.style.overflow = 'hidden';
+                    document.getElementById('commentSubmitButton-1').classList.add('hidden');
+                    document.getElementById('cancelButton-1').classList.add('hidden');
+                }
+            });
+            
+          </script>
         </div>
         <script>
-          document.querySelectorAll('textarea#commentTextArea').forEach((textArea, index) => {
-              const commentID = index + 1; // Или используйте реальный ID комментария
-              const submitButton = document.getElementById(`commentSubmitButton-${commentID}`);
-              const cancelButton = document.getElementById(`cancelButton-${commentID}`);
-          
-              textArea.addEventListener('focus', function () {
-              this.rows = 5;
-              this.style.overflow = 'hidden';
-              submitButton.classList.remove('hidden');
-              cancelButton.classList.remove('hidden');
-              });
-          
-              textArea.addEventListener('input', function () {
-              submitButton.disabled = this.value.trim().length <= 1;
-              this.style.height = '';
-              this.style.height = this.scrollHeight + 'px';
-              if (this.value.trim().length) {
-                  submitButton.classList.remove('hidden');
-                  cancelButton.classList.remove('hidden');
-              } else {
-                  submitButton.classList.add('hidden');
-                  cancelButton.classList.add('hidden');
-              }
-              });
-          
-              textArea.addEventListener('blur', function () {
-              if (!this.value.trim()) {
-                  this.rows = 1;
-                  this.style.height = 'auto';
-                  this.style.overflow = 'hidden';
-                  submitButton.classList.add('hidden');
-                  cancelButton.classList.add('hidden');
-              }
-              });
-          });
-        </script>
-        <script>
           function togglePopup(commentID) {
-            var popup = document.getElementById(`reactions-popup-${commentID}`)
-            var isDisplayed = popup.style.display === 'block'
-            popup.style.display = isDisplayed ? 'none' : 'block'
+            var popup = document.getElementById('reactions-popup-' + commentID);
+            var isDisplayed = popup.style.display === 'block';
+            popup.style.display = isDisplayed ? 'none' : 'block';
           }
           
-          document.getElementById(`reactions-trigger-${'1'}`).addEventListener('click', function () {
-            togglePopup('1')
-          })
+          document.getElementById('reactions-trigger-1').addEventListener('click', function () {
+            togglePopup('1');
+          });
           
           function toggleCommentMenu(commentID) {
-            var commentMenu = document.getElementById(`action-menu-container`)
-            console.log(commentMenu)
-            commentMenu.classList.toggle('hidden')
+            var commentMenu = document.getElementById('commentMenu-' + commentID);
+            commentMenu.classList.toggle('hidden');
           }
           
           function toggleCommentForm(commentID) {
-            var form = document.getElementById(`commentForm-${commentID}`)
-            form.classList.toggle('hidden')
+            var form = document.getElementById('commentForm-' + commentID);
+            form.classList.toggle('hidden');
             form.classList.toggle('flex');
           }
         </script>
@@ -643,22 +638,22 @@
               <div class="flex items-center gap-2">
                 <div class="bg-lab-red z-10 w-fit rounded px-1.5 py-0.5 text-xs font-medium text-white">Админ</div><span class="text-xs text-lab-black-50">@nikpol</span><span class="text-xs text-lab-black-50">12 ноября 16:43</span>
               </div>
-              <div class="flex shrink-0 items-center mt-0.5"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-empty.svg"></div>
+              <div class="flex shrink-0 items-center mt-0.5"><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-empty.svg" alt=""></div>
             </div>
           </div>
-          <div class="mb-2 mt-1 flex w-fit items-center gap-1 rounded-lg bg-lab-color-10 px-2 py-1"><img class="size-3 opacity-75 saturate-50" src="img/reply.svg"><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
+          <div class="mb-2 mt-1 flex w-fit items-center gap-1 rounded-lg bg-lab-color-10 px-2 py-1"><img class="size-3 opacity-75 saturate-50" src="img/reply.svg" alt=""><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
           <p>У меня есть, но на ней нужно подтянуть струны</p>
           <div class="flex justify-between pb-3 pt-1">
-            <div class="relative inline-flex items-center gap-2"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger-2">
+            <div class="relative inline-flex items-center gap-2"><img class="cursor-pointer" src="img/reactions.svg" alt="Реакции" id="reactions-trigger-2">
               <button class="text-sm text-lab-black-50" onclick="toggleCommentForm('2')">Ответить</button>
               <div class="absolute -left-2 bottom-6 hidden max-w-[80vw]" id="reactions-popup-2">
                 <div class="no-scrollbar flex gap-2 overflow-x-auto rounded-full border border-lab-black-10 bg-white p-2 text-xl shadow-lg">
                 </div>
               </div>
-            </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('2')">
+            </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('2')" alt="Кнопка меню">
             <div class="absolute bottom-0" id="commentMenu-2">
-              <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="action-menu-container" data-action="hide">
-                <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3 w-full" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"><span class="flex-1 text-lab-red">Удалить</span></a>
+              <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="action-menu-container-${commentID}" data-action="hide">
+                <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg" alt=""><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg" alt=""><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg" alt=""><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg" alt=""><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg" alt=""><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg" alt=""><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3 w-full" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg" alt=""><span class="flex-1 text-lab-red">Удалить</span></a>
                 </div>
                 <script>
                   document.addEventListener('click', function (e) {
@@ -674,9 +669,9 @@
             </div>
           </div>
           <div class="mb-3 hidden flex-grow flex-col gap-3" id="commentForm-2">
-            <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
+            <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea-2" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
             <div class="flex items-center gap-4">
-              <button class="text-lab-black-50 bg-transparent   transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+              <button class="text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-2" data-action="">Отмена</button>
               <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const buttons = document.querySelectorAll('.button-interactive');
@@ -716,7 +711,7 @@
                     });
                 });
               </script>
-              <button class="w-full   bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+              <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton-2" data-action="">Отправить</button>
               <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const buttons = document.querySelectorAll('.button-interactive');
@@ -757,64 +752,59 @@
                 });
               </script>
             </div>
+            <script>document.getElementById('commentTextArea-2').addEventListener('focus', function () {
+                  this.rows = 5;
+                  this.style.overflow = 'hidden';
+                  document.getElementById('commentSubmitButton-2').classList.remove('hidden');
+                  document.getElementById('cancelButton-2').classList.remove('hidden');
+              });
+              
+              document.getElementById('commentTextArea-2').addEventListener('input', function () {
+                  const submitButton = document.getElementById('commentSubmitButton-2');
+                  const cancelButton = document.getElementById('cancelButton-2');
+                  submitButton.disabled = this.value.trim().length <= 1;
+                  this.style.height = '';
+                  this.style.height = this.scrollHeight + 'px';
+                  if (this.value.trim().length) {
+                      submitButton.classList.remove('hidden');
+                      cancelButton.classList.remove('hidden');
+                  } else {
+                      submitButton.classList.add('hidden');
+                      cancelButton.classList.add('hidden');
+                  }
+              });
+              
+              document.getElementById('commentTextArea-2').addEventListener('blur', function () {
+                  if (!this.value.trim()) {
+                      this.rows = 1;
+                      this.style.height = 'auto';
+                      this.style.overflow = 'hidden';
+                      document.getElementById('commentSubmitButton-2').classList.add('hidden');
+                      document.getElementById('cancelButton-2').classList.add('hidden');
+                  }
+              });
+              
+            </script>
           </div>
           <script>
-            document.querySelectorAll('textarea#commentTextArea').forEach((textArea, index) => {
-                const commentID = index + 1; // Или используйте реальный ID комментария
-                const submitButton = document.getElementById(`commentSubmitButton-${commentID}`);
-                const cancelButton = document.getElementById(`cancelButton-${commentID}`);
-            
-                textArea.addEventListener('focus', function () {
-                this.rows = 5;
-                this.style.overflow = 'hidden';
-                submitButton.classList.remove('hidden');
-                cancelButton.classList.remove('hidden');
-                });
-            
-                textArea.addEventListener('input', function () {
-                submitButton.disabled = this.value.trim().length <= 1;
-                this.style.height = '';
-                this.style.height = this.scrollHeight + 'px';
-                if (this.value.trim().length) {
-                    submitButton.classList.remove('hidden');
-                    cancelButton.classList.remove('hidden');
-                } else {
-                    submitButton.classList.add('hidden');
-                    cancelButton.classList.add('hidden');
-                }
-                });
-            
-                textArea.addEventListener('blur', function () {
-                if (!this.value.trim()) {
-                    this.rows = 1;
-                    this.style.height = 'auto';
-                    this.style.overflow = 'hidden';
-                    submitButton.classList.add('hidden');
-                    cancelButton.classList.add('hidden');
-                }
-                });
-            });
-          </script>
-          <script>
             function togglePopup(commentID) {
-              var popup = document.getElementById(`reactions-popup-${commentID}`)
-              var isDisplayed = popup.style.display === 'block'
-              popup.style.display = isDisplayed ? 'none' : 'block'
+              var popup = document.getElementById('reactions-popup-' + commentID);
+              var isDisplayed = popup.style.display === 'block';
+              popup.style.display = isDisplayed ? 'none' : 'block';
             }
             
-            document.getElementById(`reactions-trigger-${'2'}`).addEventListener('click', function () {
-              togglePopup('2')
-            })
+            document.getElementById('reactions-trigger-2').addEventListener('click', function () {
+              togglePopup('2');
+            });
             
             function toggleCommentMenu(commentID) {
-              var commentMenu = document.getElementById(`action-menu-container`)
-              console.log(commentMenu)
-              commentMenu.classList.toggle('hidden')
+              var commentMenu = document.getElementById('commentMenu-' + commentID);
+              commentMenu.classList.toggle('hidden');
             }
             
             function toggleCommentForm(commentID) {
-              var form = document.getElementById(`commentForm-${commentID}`)
-              form.classList.toggle('hidden')
+              var form = document.getElementById('commentForm-' + commentID);
+              form.classList.toggle('hidden');
               form.classList.toggle('flex');
             }
           </script>
@@ -832,22 +822,22 @@
                 </div>
                 <div class="flex items-center gap-2"><span class="text-xs text-lab-black-50">12 ноября 16:43</span>
                 </div>
-                <div class="flex shrink-0 items-center mt-1"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-full.svg"><img class="h-4" src="img/yellow-star-empty.svg"></div>
+                <div class="flex shrink-0 items-center mt-1"><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-full.svg" alt=""><img class="h-4" src="img/yellow-star-empty.svg" alt=""></div>
               </div>
             </div>
-            <div class="mb-2 mt-1 flex w-fit items-center gap-1 rounded-lg bg-lab-color-10 px-2 py-1"><img class="size-3 opacity-75 saturate-50" src="img/reply.svg"><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
+            <div class="mb-2 mt-1 flex w-fit items-center gap-1 rounded-lg bg-lab-color-10 px-2 py-1"><img class="size-3 opacity-75 saturate-50" src="img/reply.svg" alt=""><span class="text-xs text-lab-black-50">Ответ на комментарий @semenov</span></div>
             <p>Подтянуть не проблема, спасибо! Когда можно с тобой встретиться?</p>
             <div class="flex justify-between pb-3 pt-1">
-              <div class="relative inline-flex items-center gap-2"><img class="cursor-pointer" src="img/reactions.svg" alt="Reactions" id="reactions-trigger-3">
+              <div class="relative inline-flex items-center gap-2"><img class="cursor-pointer" src="img/reactions.svg" alt="Реакции" id="reactions-trigger-3">
                 <button class="text-sm text-lab-black-50" onclick="toggleCommentForm('3')">Ответить</button>
                 <div class="absolute -left-2 bottom-6 hidden max-w-[80vw]" id="reactions-popup-3">
                   <div class="no-scrollbar flex gap-2 overflow-x-auto rounded-full border border-lab-black-10 bg-white p-2 text-xl shadow-lg">
                   </div>
                 </div>
-              </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('3')">
+              </div><img class="cursor-pointer" src="img/three-dots.svg" onclick="toggleCommentMenu('3')" alt="Кнопка меню">
               <div class="absolute bottom-0" id="commentMenu-3">
-                <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="action-menu-container" data-action="hide">
-                  <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg"><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg"><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg"><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg"><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg"><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3 w-full" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg"><span class="flex-1 text-lab-red">Удалить</span></a>
+                <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="action-menu-container-${commentID}" data-action="hide">
+                  <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/edit.svg" alt=""><span class="flex-1 text-lab-color">Редактировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/copy.svg" alt=""><span class="flex-1 text-lab-color">Скопировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/cut.svg" alt=""><span class="flex-1 text-lab-color">Вырезать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg" alt=""><span class="flex-1 text-lab-color">Игнорировать</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/hide.svg" alt=""><span class="flex-1 text-lab-color">Скрыть</span></a><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><img class="h-6 w-6" src="img/warning.svg" alt=""><span class="flex-1 text-lab-color">Пожаловаться</span></a><a class="flex items-center gap-3 px-4 py-3 w-full" href="#" data-action="hide"><img class="h-6 w-6" src="img/delete.svg" alt=""><span class="flex-1 text-lab-red">Удалить</span></a>
                   </div>
                   <script>
                     document.addEventListener('click', function (e) {
@@ -863,9 +853,9 @@
               </div>
             </div>
             <div class="mb-3 hidden flex-grow flex-col gap-3" id="commentForm-3">
-              <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
+              <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea-3" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
               <div class="flex items-center gap-4">
-                <button class="text-lab-black-50 bg-transparent   transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+                <button class="text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-3" data-action="">Отмена</button>
                 <script>
                   document.addEventListener('DOMContentLoaded', function() {
                       const buttons = document.querySelectorAll('.button-interactive');
@@ -905,7 +895,7 @@
                       });
                   });
                 </script>
-                <button class="w-full   bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+                <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton-3" data-action="">Отправить</button>
                 <script>
                   document.addEventListener('DOMContentLoaded', function() {
                       const buttons = document.querySelectorAll('.button-interactive');
@@ -946,64 +936,59 @@
                   });
                 </script>
               </div>
+              <script>document.getElementById('commentTextArea-3').addEventListener('focus', function () {
+                    this.rows = 5;
+                    this.style.overflow = 'hidden';
+                    document.getElementById('commentSubmitButton-3').classList.remove('hidden');
+                    document.getElementById('cancelButton-3').classList.remove('hidden');
+                });
+                
+                document.getElementById('commentTextArea-3').addEventListener('input', function () {
+                    const submitButton = document.getElementById('commentSubmitButton-3');
+                    const cancelButton = document.getElementById('cancelButton-3');
+                    submitButton.disabled = this.value.trim().length <= 1;
+                    this.style.height = '';
+                    this.style.height = this.scrollHeight + 'px';
+                    if (this.value.trim().length) {
+                        submitButton.classList.remove('hidden');
+                        cancelButton.classList.remove('hidden');
+                    } else {
+                        submitButton.classList.add('hidden');
+                        cancelButton.classList.add('hidden');
+                    }
+                });
+                
+                document.getElementById('commentTextArea-3').addEventListener('blur', function () {
+                    if (!this.value.trim()) {
+                        this.rows = 1;
+                        this.style.height = 'auto';
+                        this.style.overflow = 'hidden';
+                        document.getElementById('commentSubmitButton-3').classList.add('hidden');
+                        document.getElementById('cancelButton-3').classList.add('hidden');
+                    }
+                });
+                
+              </script>
             </div>
             <script>
-              document.querySelectorAll('textarea#commentTextArea').forEach((textArea, index) => {
-                  const commentID = index + 1; // Или используйте реальный ID комментария
-                  const submitButton = document.getElementById(`commentSubmitButton-${commentID}`);
-                  const cancelButton = document.getElementById(`cancelButton-${commentID}`);
-              
-                  textArea.addEventListener('focus', function () {
-                  this.rows = 5;
-                  this.style.overflow = 'hidden';
-                  submitButton.classList.remove('hidden');
-                  cancelButton.classList.remove('hidden');
-                  });
-              
-                  textArea.addEventListener('input', function () {
-                  submitButton.disabled = this.value.trim().length <= 1;
-                  this.style.height = '';
-                  this.style.height = this.scrollHeight + 'px';
-                  if (this.value.trim().length) {
-                      submitButton.classList.remove('hidden');
-                      cancelButton.classList.remove('hidden');
-                  } else {
-                      submitButton.classList.add('hidden');
-                      cancelButton.classList.add('hidden');
-                  }
-                  });
-              
-                  textArea.addEventListener('blur', function () {
-                  if (!this.value.trim()) {
-                      this.rows = 1;
-                      this.style.height = 'auto';
-                      this.style.overflow = 'hidden';
-                      submitButton.classList.add('hidden');
-                      cancelButton.classList.add('hidden');
-                  }
-                  });
-              });
-            </script>
-            <script>
               function togglePopup(commentID) {
-                var popup = document.getElementById(`reactions-popup-${commentID}`)
-                var isDisplayed = popup.style.display === 'block'
-                popup.style.display = isDisplayed ? 'none' : 'block'
+                var popup = document.getElementById('reactions-popup-' + commentID);
+                var isDisplayed = popup.style.display === 'block';
+                popup.style.display = isDisplayed ? 'none' : 'block';
               }
               
-              document.getElementById(`reactions-trigger-${'3'}`).addEventListener('click', function () {
-                togglePopup('3')
-              })
+              document.getElementById('reactions-trigger-3').addEventListener('click', function () {
+                togglePopup('3');
+              });
               
               function toggleCommentMenu(commentID) {
-                var commentMenu = document.getElementById(`action-menu-container`)
-                console.log(commentMenu)
-                commentMenu.classList.toggle('hidden')
+                var commentMenu = document.getElementById('commentMenu-' + commentID);
+                commentMenu.classList.toggle('hidden');
               }
               
               function toggleCommentForm(commentID) {
-                var form = document.getElementById(`commentForm-${commentID}`)
-                form.classList.toggle('hidden')
+                var form = document.getElementById('commentForm-' + commentID);
+                form.classList.toggle('hidden');
                 form.classList.toggle('flex');
               }
             </script>

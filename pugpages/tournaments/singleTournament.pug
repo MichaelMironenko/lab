@@ -93,7 +93,7 @@ html(lang="ru")
                 .flex.justify-between.gap-3.items-center
                     +tournamentTypeBadge('XDF+')
                     h1.text-lg.leading-6.text-lab-black.flex-grow.font-bold Майский фестиваль микстов в Сколково
-                    +bookmark(false)
+                    +bookmark(false, '', '', 'bookmark1')
 
                 div.grid.grid-cols-1.gap-6.mt-6(class="text-[15px] sm:grid-cols-2")
                     div.flex.flex-col.gap-3
@@ -150,13 +150,13 @@ html(lang="ru")
                         .inline-flex.gap-2
                             img.w-5.aspect-square.shrink-0(src='img/checkmark.svg' alt='Галочка')
                             span Вы зарегистрированы
-                        +button('Отменить', "text", 'lab-red', 'bg-lab-color')
+                        +button('Отменить', "text", 'lab-red', 'bg-lab-color', '', 'cancelreg')
 
                     div.flex.flex-grow.justify-between.items-center.gap-2
                         .inline-flex.gap-2
                             img.w-5.aspect-square.shrink-0(src='img/checkmark.svg' alt='Галочка')
                             span Вы добавлены в список ожидающих пары
-                        +button('Отменить', "text", 'lab-red', 'bg-lab-color')
+                        +button('Отменить', "text", 'lab-red', 'bg-lab-color', '', 'cancelpair')
 
                     div.w-full.text-center.bg-avatar-gradient.bg-clip-text.text-transparent
                         div Регистрация откроется 
@@ -218,7 +218,7 @@ html(lang="ru")
                 .inline-flex.gap-2.items-center
                     img(src="img/warning.svg" alt="Предупреждение").w-4.h-4.saturate-50.opacity-75
                     span.text-xs.text-lab-black-50.leading-tight Нажимайте на кружок справа строки для выбора места или сброса голоса. После выбора трех мест нажмите кнопку "Сделать прогноз"
-                +button("Сделать прогноз", "default", "white", 'bg-lab-color', 'border-2 border-white my-2')    
+                +button("Сделать прогноз", "default", "white", 'bg-lab-color', 'border-2 border-white my-2', 'makebet')    
                 table#playersTrue.w-full.hidden
                     tr.text-xs.text-lab-color.font-semibold.border-b
                         th.text-left.py-2 Игрок
@@ -318,21 +318,21 @@ html(lang="ru")
                                 each player in forecastPlayers
                                     option(class="truncate w-10") #{player}
 
-                        +button("Сделать прогноз", "default", "white", 'bg-lab-color', 'border-2 border-white mt-2')
+                        +button("Сделать прогноз", "default", "white", 'bg-lab-color', 'border-2 border-white mt-2', 'makebet1')
 
                     .flex.flex-col.justify-between.py-4(class="sm:w-1/2 sm:py-0")
                         span.font-bold Правила начисления очков                
                         .flex.flex-col.flex-grow.gap-3.py-3
                             .flex.justify-between.items-center.gap-2
-                                img(src="img/checkmark.svg" size-4)
+                                img(src="img/checkmark.svg" alt="").size-4
                                 span.text-sm.flex-grow Угадывание призера 
                                 span.text-sm 1
                             .flex.justify-between.items-center.gap-2
-                                img(src="img/forecast-win.svg" size-4)
+                                img(src="img/forecast-win.svg"  alt="").size-4
                                 span.text-sm.flex-grow Угадывание призера и занятого им места 
                                 span.text-sm 5
                             .flex.justify-between.items-center.gap-2
-                                img(src="img/forecast-bonus.svg" size-4)
+                                img(src="img/forecast-bonus.svg" alt="").size-4
                                 span.text-sm.flex-grow Бонус за угадывание всех призеров и их мест 
                                 span.text-sm 15
                         span.text-sm.text-lab-black-50 * прогнозы принимаются до 09.07.2024 10:30
@@ -344,7 +344,7 @@ html(lang="ru")
             div.p-4.bg-white.rounded-lg.mb-3
                 .flex.justify-between.gap-3.items-center
                     h1.text-lg.leading-6.text-lab-black.text-center.flex-grow.font-bold Майский фестиваль микстов в Сколково
-                    +bookmark(false)
+                    +bookmark(false, '', '', 'bookmark2')
                 div.flex.gap-4.items-center.pt-3.justify-center.text-sm
                     +tournamentTypeBadge('XDF+')
                     div.flex.gap-2
@@ -354,8 +354,8 @@ html(lang="ru")
             +videoSlider(true, false, 'Трансляции')
 
             +block('Последние результаты')
-                img(src="dynamic-img/group-table.jpg").w-full.mb-2
-                img(src="dynamic-img/tournament-grid.jpg").w-full
+                img(src="dynamic-img/group-table.jpg" alt="Таблица результатов").w-full.mb-2
+                img(src="dynamic-img/tournament-grid.jpg" alt="Турнирная сетка").w-full
 
             +block('Последние игры', { href: '/pages/tournaments/allGames.html', text: 'Все игры' })
                 +gameResult({
@@ -398,7 +398,7 @@ html(lang="ru")
             div.p-4.bg-white.rounded-lg.mb-3
                 .flex.justify-between.gap-3.items-center
                     h1.text-lg.leading-6.text-lab-black.text-center.flex-grow.font-bold Майский фестиваль микстов в Сколково
-                    +bookmark(false)
+                    +bookmark(false, '', '', 'bookmark3')
                 div.flex.gap-4.items-center.pt-3.justify-center.text-sm
                     +tournamentTypeBadge('XDF+')
                     div.flex.gap-2
@@ -644,8 +644,8 @@ html(lang="ru")
             //- ], false, true)
 
             +block('Итоговые результаты')
-                img(src="dynamic-img/group-table.jpg").w-full.mb-2
-                img(src="dynamic-img/tournament-grid.jpg").w-full
+                img(src="dynamic-img/group-table.jpg"  alt="Таблица результатов").w-full.mb-2
+                img(src="dynamic-img/tournament-grid.jpg"  alt="Турнирная сетка").w-full
             +block('Итоговая таблица')
                 +tournamentResultsTable(true)
             +block('Лучшие игры турнира', { href: '/pages/tournaments/allGames.html', text: 'Все игры' })
