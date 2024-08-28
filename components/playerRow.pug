@@ -15,35 +15,12 @@ mixin playerRow(players, showCoefficient, teamName, dateTime, medal)
     td.py-2
       div.flex.flex-col
         if teamName
-          div.font-semibold.mb-1.leading-tight.text-lab-black #{teamName}
-        .flex.gap-2.items-center
-          .flex.flex-col.shrink-0.items-centerl(class="sm:flex-row ")
-            each player, index in players
-              - var avatarClass = index > 0 ? '-mt-2' : ''
-              div(class=avatarClass class=index === 0 ? '' : "sm:mr-0 sm:mt-0 sm:-ml-2")
-                a(href="https://badminton4u.ru/players/" + player.id + "?type=d")
-                  +avatar(randomColor, player.firstName[0] + player.lastName[0], 28, player.avatar)
-
-          .block(class="sm:hidden")
-            each player in players
-              a(href="https://badminton4u.ru/players/" + player.id class="py-0.5").block
-                if players.length > 1
-                  span.text-lab-color #{player.firstName[0]}. #{player.lastName}
-                  span.text-xs.text-lab-color.h-4.ml-1 ★#{player.rating}
-                else
-                  | #{player.firstName + ' ' + player.lastName}
-          // Десктоп версия
-          .hidden(class="sm:block")
-            .flex.flex-row.gap-1
-              each player, index in players
-                div
-                  a(href="https://badminton4u.ru/players/" + player.id)
-                    if players.length > 1
-                      | #{player.firstName[0]}. #{player.lastName}
-                    else
-                      | #{player.firstName + ' ' + player.lastName}
-                    if index < players.length - 1
-                      | /
+          div.font-semibold.mb-2.leading-tight.text-lab-black #{teamName}
+        .flex.flex-wrap.gap-x-4.items-center
+          each player in players
+            a.flex.items-center.gap-2( href="https://badminton4u.ru/players/" + player.id + "?type=d").py-1
+              +avatar(randomColor, player.firstName[0] + player.lastName[0], 24, player.avatar)
+              span.text-lab-color #{player.firstName} #{player.lastName}
     td.text-center
       +userRating(players[0].rating, true)
     
