@@ -190,7 +190,7 @@
       </div>
       <div class="text-sm py-2 text-lab-black-50">Бронирование оформил <a href="pages/others/profile.html">Евгений Ловченко</a></div>
       <div class="flex gap-2 items-center">
-        <button class="w-full my-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="editButton" data-action="">Редактировать</button>
+        <button class="w-full my-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="editButton">Редактировать</button>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
               const buttons = document.querySelectorAll('.button-interactive');
@@ -230,7 +230,7 @@
               });
           });
         </script>
-        <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="cancelBooking" data-action="">Отменить</button>
+        <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="cancelBooking">Отменить</button>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
               const buttons = document.querySelectorAll('.button-interactive');
@@ -278,7 +278,7 @@
         <div class="p-4 text-center md:p-5">
           <div class="mt-8 mb-8 text-lg font-medium text-gray-800">Отменить бронирование?</div><span>До игры осталось менее 24 часов, будет возвращено 50% стоимости</span>
           <div class="flex justify-between">
-            <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="cancelButton" data-action="window.location.href='pages/courts/bookingCancelled.html'">Отменить с возвратом 50%</button>
+            <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="window.location.href='pages/courts/bookingCancelled.html'" id="cancelButton">Отменить с возвратом 50%</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -459,7 +459,7 @@
             </label>
           </div>
           <div class="flex gap-2">
-            <button class=" text-lab-red bg-transparent w-1/2 shrink-0 transition-transform duration-150 ease-in-out button-interactive" id="deleteButton" data-action="">Удалить бронь</button>
+            <button class=" text-lab-red bg-transparent w-1/2 shrink-0 transition-transform duration-150 ease-in-out button-interactive" data-action="" id="deleteButton">Удалить бронь</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -499,7 +499,7 @@
                   });
               });
             </script>
-            <button class=" w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="submitButton" data-action="">Сохранить</button>
+            <button class=" w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="submitButton">Сохранить</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');

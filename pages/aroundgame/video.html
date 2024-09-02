@@ -55,13 +55,13 @@
       })
     </script>
     <div class="w-full">
-      <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/T40FmAJKIP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/T40FmAJKIP0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="bg-white px-4 pt-4">
       <h1 class="text-lg">1000% веселых моментов в бадминтоне</h1>
       <div class="flex gap-4 py-3 text-sm">
-        <div class="flex items-center gap-1"><img class="size-5 cursor-pointer opacity-50 saturate-50" src="img/heart-empty.svg" onclick="toggleHeart(this)"><span>13</span></div>
-        <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg"><span>1534</span></div><a class="flex items-center gap-1" href="#comments"><img class="size-5 opacity-50 saturate-50" src="img/comment.svg"><span>3</span></a>
+        <div class="flex items-center gap-1"><img class="size-5 cursor-pointer opacity-50 saturate-50" src="img/heart-empty.svg" onclick="toggleHeart(this)" alt="Нравится"><span>13</span></div>
+        <div class="flex items-center gap-1"><img class="size-5 opacity-50 saturate-50" src="img/views.svg" alt="Просмотров"><span>1534</span></div><a class="flex items-center gap-1" href="#comments"><img class="size-5 opacity-50 saturate-50" src="img/comment.svg" alt="Комментариев"><span>3</span></a>
       </div>
       <div class="flex items-center gap-1 text-xs pb-2 border-b">
         <button class="bg-lab-color-10 px-1 border rounded-md text-lab-black-50">Соревнования </button>
@@ -101,7 +101,7 @@
         <div class="mb-4">Введите имя игрока, которого еще нет на фото</div>
         <input class="p-2 border rounded mb-4 w-full" type="text" placeholder="Имя игрока">
         <div class="flex gap-2">
-          <button class="w-full text-lab-black-50 bg-transparent   transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+          <button class="w-full text-lab-black-50 bg-transparent   transition-transform duration-150 ease-in-out button-interactive" data-action="">Отмена</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -141,7 +141,7 @@
                 });
             });
           </script>
-          <button class="w-full   bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+          <button class="w-full   bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="">Отправить</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -201,7 +201,7 @@
           <option value="juniors">Юниоры</option>
         </select>
         <div class="flex gap-2">
-          <button class=" text-lab-black-50 bg-transparent w-1/2  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+          <button class=" text-lab-black-50 bg-transparent w-1/2  transition-transform duration-150 ease-in-out button-interactive" data-action="">Отмена</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -241,7 +241,7 @@
                 });
             });
           </script>
-          <button class=" w-1/2  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+          <button class=" w-1/2  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="">Отправить</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -324,7 +324,7 @@
         <div class="relative flex flex-grow flex-col gap-3">
           <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea"  style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий"></textarea>
           <div class="flex items-center gap-4"><img class="hidden size-6" id="pasteButton" src="img/paste.svg" alt="Вставить">
-            <button class="w-full text-lab-black-50 bg-transparent  hidden transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+            <button class="w-full text-lab-black-50 bg-transparent  hidden transition-transform duration-150 ease-in-out button-interactive" data-action="" id="cancelButton">Отмена</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -364,7 +364,7 @@
                   });
               });
             </script>
-            <button class="w-full  hidden bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+            <button class="w-full  hidden bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="commentSubmitButton">Отправить</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -526,7 +526,7 @@
       <div class="mb-3 hidden flex-grow flex-col gap-3" id="commentForm-1">
         <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea-1" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
         <div class="flex items-center gap-4">
-          <button class="w-full text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-1" data-action="">Отмена</button>
+          <button class="w-full text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" data-action="" id="cancelButton-1">Отмена</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -566,7 +566,7 @@
                 });
             });
           </script>
-          <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton-1" data-action="">Отправить</button>
+          <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="commentSubmitButton-1">Отправить</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -725,7 +725,7 @@
         <div class="mb-3 hidden flex-grow flex-col gap-3" id="commentForm-2">
           <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea-2" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
           <div class="flex items-center gap-4">
-            <button class="w-full text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-2" data-action="">Отмена</button>
+            <button class="w-full text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" data-action="" id="cancelButton-2">Отмена</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -765,7 +765,7 @@
                   });
               });
             </script>
-            <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton-2" data-action="">Отправить</button>
+            <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="commentSubmitButton-2">Отправить</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -916,7 +916,7 @@
           <div class="mb-3 hidden flex-grow flex-col gap-3" id="commentForm-3">
             <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea-3" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
             <div class="flex items-center gap-4">
-              <button class="w-full text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-3" data-action="">Отмена</button>
+              <button class="w-full text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" data-action="" id="cancelButton-3">Отмена</button>
               <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const buttons = document.querySelectorAll('.button-interactive');
@@ -956,7 +956,7 @@
                     });
                 });
               </script>
-              <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton-3" data-action="">Отправить</button>
+              <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="commentSubmitButton-3">Отправить</button>
               <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const buttons = document.querySelectorAll('.button-interactive');

@@ -22,7 +22,7 @@
         <input class="border p-2 w-full rounded-lg pr-10 focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="password" type="password" value="" inputmode="">
         <button class="absolute right-2 top-2" type="button" onclick="togglePasswordVisibility()"><img class="h-6" src="img/eye.svg" alt="Toggle visibility"></button><a class="block text-sm text-lab-black-50 mt-2 text-right w-full" href="pages/auth/resetPassword.html">Забыли пароль?</a>
       </div>
-      <button class="w-full mt-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="editButton" data-action="">Войти</button>
+      <button class="w-full mt-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="editButton">Войти</button>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
             const buttons = document.querySelectorAll('.button-interactive');

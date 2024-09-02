@@ -201,7 +201,7 @@
       <div class="flex justify-between gap-2 pb-6"><span>Менее 12 часов</span>
         <div class="div mb-1 grow border-b-2 border-dotted"></div><span class="text-right text-lab-red">Оплата не возвращается</span>
       </div>
-      <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="cancelBooking" data-action="">Отменить бронирование</button>
+      <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="cancelBooking">Отменить бронирование</button>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
             const buttons = document.querySelectorAll('.button-interactive');
@@ -249,7 +249,7 @@
           <div class="mt-8 mb-8 text-lg font-medium text-gray-800">Отменить бронирование?</div>
           <div class="mb-8">До игры осталось менее 24 часов, будет возвращено 50% стоимости</div>
           <div class="flex justify-between">
-            <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="cancelButton" data-action="window.location.href='pages/courts/bookingCancelled.html'">Отменить с возвратом 50%</button>
+            <button class="w-full  bg-lab-red rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="window.location.href='pages/courts/bookingCancelled.html'" id="cancelButton">Отменить с возвратом 50%</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');

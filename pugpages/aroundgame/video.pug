@@ -21,7 +21,6 @@ html(lang='ru')
       iframe(
         class="w-full aspect-video"
         src="https://www.youtube.com/embed/T40FmAJKIP0"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
     )
@@ -33,13 +32,14 @@ html(lang='ru')
           img.size-5.cursor-pointer.opacity-50.saturate-50(
             src='img/heart-empty.svg',
             onclick='toggleHeart(this)'
+            alt="Нравится"
           )
           span 13
         .flex.items-center.gap-1
-          img.size-5.opacity-50.saturate-50(src='img/views.svg')
+          img.size-5.opacity-50.saturate-50(src='img/views.svg' alt="Просмотров")
           span 1534
         a.flex.items-center.gap-1(href="#comments")
-          img.size-5.opacity-50.saturate-50(src='img/comment.svg')
+          img.size-5.opacity-50.saturate-50(src='img/comment.svg'  alt="Комментариев")
           span 3
       .flex.items-center.gap-1.text-xs.pb-2.border-b
         button.bg-lab-color-10.px-1.border.rounded-md.text-lab-black-50 Соревнования 
@@ -91,8 +91,8 @@ html(lang='ru')
         div.mb-4 Введите имя игрока, которого еще нет на фото
         input.p-2.border.rounded.mb-4(type="text" placeholder="Имя игрока").w-full
         div.flex.gap-2
-          +button('Отмена', 'text', 'lab-black-50', '', ' ', 'cancelButton')
-          +button('Отправить', 'default', 'white', 'bg-lab-color', ' ', 'commentSubmitButton')
+          +button('Отмена', 'text', 'lab-black-50', '', ' ', '')
+          +button('Отправить', 'default', 'white', 'bg-lab-color', ' ', '')
         button.absolute.top-2.right-4.text-2xl.text-lab-black(onclick="closeAddPlayerModal()") &times;
 
     div.hidden.fixed.inset-0.z-50.bg-gray-800.bg-opacity-50.justify-center.items-center#addTagmodal
@@ -112,8 +112,8 @@ html(lang='ru')
           option(value="juniors") Юниоры
 
         div.flex.gap-2
-          +button('Отмена', 'text', 'lab-black-50', '', 'w-1/2 ', 'cancelButton')
-          +button('Отправить', 'default', 'white', 'bg-lab-color', 'w-1/2 ', 'commentSubmitButton')
+          +button('Отмена', 'text', 'lab-black-50', '', 'w-1/2 ', '')
+          +button('Отправить', 'default', 'white', 'bg-lab-color', 'w-1/2 ', '')
         button.absolute.top-2.right-4.text-2xl.text-lab-black(onclick="closeAddTagModal()") &times;
 
     script.
