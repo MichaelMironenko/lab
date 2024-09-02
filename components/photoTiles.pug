@@ -7,26 +7,26 @@ mixin photoTiles(mt, edit, addPhoto)
       if edit
         div.relative
           a(href='pages/aroundgame/photo.html')
-            img.aspect-square.object-cover(src=image)
+            img.aspect-square.object-cover(src=image alt="Фото")
           div.absolute.inset-x-0.bottom-0.mb-2.flex.justify-center.space-x-4
             div.bg-white.bg-opacity-75.rounded-full.p-2.shadow
-              img.w-4.h-4(src='img/edit.svg')
+              img.w-4.h-4(src='img/edit.svg' alt="Редактировать")
             div.bg-white.bg-opacity-75.rounded-full.p-2.shadow
-              img.w-4.h-4(src='img/delete.svg')
+              img.w-4.h-4(src='img/delete.svg' alt="Удалить")
       else if addPhoto
         div.relative.add-photo-container(onclick="togglePhotoSelection(this)")
-          img.aspect-square.object-cover(src=image)
+          img.aspect-square.object-cover(src=image alt="Фото")
           div.absolute.inset-0.bg-black.bg-opacity-25.hidden(class="checkmark")
-            img.w-8.h-8(src='img/checkmark-white.svg').absolute.right-1.bottom-1
+            img.w-8.h-8(src='img/checkmark-white.svg' alt="").absolute.right-1.bottom-1
       else
         a(href='pages/aroundgame/photo.html')
-          img.aspect-square.object-cover(src=image)
+          img.aspect-square.object-cover(src=image alt="Фото")
     if edit
       div.aspect-square.flex.justify-center.items-center.bg-lab-color-10(onclick="toggleActionMenu()")
-        img(src="img/simple-plus.svg", alt="")
+        img(src="img/simple-plus.svg", alt="Добавить фото")
 
-script.
-  function togglePhotoSelection(el) {
-    const checkmark = el.querySelector('.checkmark');
-    checkmark.classList.toggle('hidden');
-  }
+  script.
+    function togglePhotoSelection(el) {
+        const checkmark = el.querySelector('.checkmark');
+        checkmark.classList.toggle('hidden');
+    }

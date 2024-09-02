@@ -31,8 +31,8 @@ html(lang="ru")
                     { label: 'Вторник 17:30', active: false, number: undefined, deleteButton: true},
                 ])
             +editBlock('Основная информация')
-                +editLabel('Тип турнира')
-                .flex.gap-2.scroll-smooth.overflow-x-auto.-mx-4.px-4.no-scrollbar.mb-8
+                +editLabel('Тип турнира', '', false, '', false, 'tournamentType')
+                div(class="flex gap-2 scroll-smooth overflow-x-auto -mx-4 px-4 no-scrollbar mb-8")
                     +tournamentTypeButton('single', 'all', true)
                     +tournamentTypeButton('single', 'male', false)
                     +tournamentTypeButton('double', 'all', false)
@@ -40,35 +40,34 @@ html(lang="ru")
                     +tournamentTypeButton('double', 'female', false)
                     +tournamentTypeButton('double', 'mixed', false)
                     +tournamentTypeButton('team', 'all', false)
-                .pb-4
-                    +editLabel('Заголовок')    
+                div.pb-4
+                    +editLabel('Заголовок', '', false, '', false, 'title')
                     +select('Выберите заголовок')
-                +editLabel('Полное название')    
-                +input('Название', 'w-full', '', '', '', '', '', 'Ошибка')
+                +editLabel('Полное название', '', false, '', false, 'fullName')
+                +input('Название', 'w-full', 'fullName', '', '', '', '', 'Ошибка')
             +editBlock('Дата и время')
-                .flex.gap-1.justify-between.mb-6
-                    +editLabel('Дата турнира', '', true)
-                    +input('', '', '', 'date', 'shrink-0')
-                +editLabel('Время')
-                .flex.gap-1.justify-between.mb-6
-                    .flex.flex-col
-                        label.text-sm.text-lab-black-50 Начало
+                div(class="flex gap-1 justify-between mb-6")
+                    +editLabel('Дата турнира', '', true, '', true, 'tournamentDate')
+                    +input('', '', 'tournamentDate', 'date')
+                +editLabel('Время', '', false, '', false, 'tournamentTime')
+                div(class="flex gap-1 justify-between mb-6")
+                    div(class="flex flex-col")
+                        label(for="from" class="text-sm text-lab-black-50") Начало
                         +input('', '', 'from', 'time')
-                    .flex.flex-col
-                        label.text-sm.text-lab-black-50 Конец
+                    div(class="flex flex-col")
+                        label(for="to" class="text-sm text-lab-black-50") Конец
                         +input('', '', 'to', 'time')
-                    .flex.flex-col
-                        label.text-sm.text-lab-black-50 Разминка
+                    div(class="flex flex-col")
+                        label(for="warmup" class="text-sm text-lab-black-50") Разминка
                         +input('', '', 'warmup', 'time')
 
-
-                +editLabel('Открытие регистрации')
-                div.flex.border.border-lab-black-30.rounded-lg.overflow-hidden.mb-8
+                +editLabel('Открытие регистрации', '', false, '', false, 'registrationStart')
+                div(class="flex border border-lab-black-30 rounded-lg overflow-hidden mb-8")
                     button(class="minus-button text-2xl bg-white px-3 py-1 w-11 focus:outline-none") –
-                    div.flex.flex-col.items-center.justify-center.py-1.gap-1.flex-1.border-l.border-r.border-lab-black-30(id="info")
-                        div(id="days").text-lab-color.leading-tight за 1 день 
-                        span.text-lab-black-50.text-xs(id="dateTime") 15 мая 12:00
-                        div.text-lab-black-50.text-xs(id="price") +100₽
+                    div(class="flex flex-col items-center justify-center py-1 gap-1 flex-1 border-l border-r border-lab-black-30" id="info")
+                        div(id="days" class="text-lab-color leading-tight") за 1 день 
+                        span(class="text-lab-black-50 text-xs" id="dateTime") 15 мая 12:00
+                        div(class="text-lab-black-50 text-xs" id="price") +100₽
                     button(class="plus-button text-2xl bg-white px-3 py-1 w-11 focus:outline-none") +
                 script.
                     document.addEventListener('DOMContentLoaded', () => {
@@ -98,11 +97,10 @@ html(lang="ru")
                             dateTimeDiv.textContent = `${now.getDate()} ${months[now.getMonth()]} 12:00`;
                         }
 
-                        // Включите вызов updateDateTime в updateInfo
                         const updateInfo = () => {
                             daysDiv.textContent = `за ${dayCount} ${getDayWord(dayCount)}`;
                             priceDiv.textContent = `+${pricePerDay * dayCount}₽`;
-                            updateDateTime(); // Обновление даты и времени
+                            updateDateTime();
                         }
 
                         minusButton.addEventListener('click', () => {
@@ -117,82 +115,79 @@ html(lang="ru")
                             updateInfo();
                         });
 
-                        updateInfo(); // Update on load
+                        updateInfo();
                     });
 
-
             +editBlock('Участники')
-                +editLabel('Рейтинг для допуска', 'rating-info')
-
-                .flex.items-center.gap-2.justify-between.mb-2
-                    .flex.items-center.gap-2
-                        div.flex.items-center.-space-x-2
+                +editLabel('Рейтинг для допуска', 'rating-info', false, '', false, 'ratingAdmission')
+                div(class="flex items-center gap-2 justify-between mb-2")
+                    div(class="flex items-center gap-2")
+                        div(class="flex items-center -space-x-2")
                             span 👨🏻
                             span 👨🏻
-                        +input('от', 'w-16')
-                        +input('до', 'w-16')
-                    .flex.items-center.gap-2
+                        +input('от', 'w-16', 'ratingFrom1', 'number')
+                        +input('до', 'w-16', 'ratingTo1', 'number')
+                    div(class="flex items-center gap-2")
                         span 👨🏻
-                        +input('до', 'w-16')
-                .flex.items-center.gap-2.justify-between.mb-4
-                    .flex.items-center.gap-2
-                        div.flex.items-center.-space-x-2
+                        +input('до', 'w-16', 'ratingTo2', 'number')
+                div(class="flex items-center gap-2 justify-between mb-4")
+                    div(class="flex items-center gap-2")
+                        div(class="flex items-center -space-x-2")
                             span 👩🏼
                             span 👩🏼
-                        +input('от', 'w-16')
-                        +input('до', 'w-16')
-                    .flex.items-center.gap-2
+                        +input('от', 'w-16', 'ratingFrom2', 'number')
+                        +input('до', 'w-16', 'ratingTo3', 'number')
+                    div(class="flex items-center gap-2")
                         span 👩🏼
-                        +input('до', 'w-16')
-                .flex.items-center.gap-2.justify-between.mb-6
-                    .flex.items-center.gap-2
-                        div.flex.items-center.-space-x-2
+                        +input('до', 'w-16', 'ratingTo4', 'number')
+                div(class="flex items-center gap-2 justify-between mb-6")
+                    div(class="flex items-center gap-2")
+                        div(class="flex items-center -space-x-2")
                             span 👩🏼
                             span 👨🏻
-                        +input('от', 'w-16')
-                        +input('до', 'w-16')
-                    .flex.items-center.gap-2
+                        +input('от', 'w-16', 'ratingFrom3', 'number')
+                        +input('до', 'w-16', 'ratingTo5', 'number')
+                    div(class="flex items-center gap-2")
                         span 👨🏻
-                        +input('до', 'w-16')
-                .flex.items-center.justify-between.gap-2.mb-2
-                    +editLabel('Максимальное кол-во участников', '', true)
-                    +input('', 'w-16')
-                +switch('Регистрация сверх лимита', 'py-4', 'text-lab-black-50')
-                .flex.items-center.justify-between.gap-2.mt-2.mb-6
-                    +editLabel('Взнос с участника (руб)', '', true)
-                    +input('', 'w-16')
-                +editLabel('Примечание к взносу', '')
-                +textarea('Примечание', 'w-full')
+                        +input('до', 'w-16', 'ratingTo6', 'number')
+                div(class="flex items-center justify-between gap-2 mb-2")
+                    +editLabel('Максимальное кол-во участников', '', true, '', false, 'maxParticipants')
+                    +input('', 'w-16', 'maxParticipants', 'number')
+                +switch('Регистрация сверх лимита', 'py-4', 'text-lab-black-50', 'overLimitRegistration')
+                div(class="flex items-center justify-between gap-2 mt-2 mb-6")
+                    +editLabel('Взнос с участника (руб)', '', true, '', false, 'feePerParticipant')
+                    +input('', 'w-16', 'feePerParticipant', 'number')
+                +editLabel('Примечание к взносу', '', false, '', false, 'feeNote')
+                +textarea('Примечание', 'w-full', 'feeNote')
             +editBlock('О турнире')  
-                +editLabel('Система проведения', '')
-                +textarea('', 'w-full mb-4')
-                +editLabel('Призовой фонд', '')
-                +textarea('', 'w-full mb-4')
-                +editLabel('Описание в свободной форме', '')
-                +textarea('', 'w-full mb-4')
-                +editLabel('Положение', '')
-                +textarea('', 'w-full mb-4')
+                +editLabel('Система проведения', '', false, '', false, 'tournamentSystem')
+                +textarea('', 'w-full mb-4', 'tournamentSystem')
+                +editLabel('Призовой фонд', '', false, '', false, 'prizeFund')
+                +textarea('', 'w-full mb-4', 'prizeFund')
+                +editLabel('Описание в свободной форме', '', false, '', false, 'freeFormDescription')
+                +textarea('', 'w-full mb-4', 'freeFormDescription')
+                +editLabel('Положение', '', false, '', false, 'regulations')
+                +textarea('', 'w-full mb-4', 'regulations')
             +editBlock('Дополнительные опции')  
-                .flex.items-center.justify-between.gap-2.mb-2
-                    +editLabel('Допуск по дате рейтинга', '', true)
-                    +input('', '', '', 'date', 'shrink-0')
-                +switch('Закрытая регистрация')
-                .flex.items-center.justify-between.gap-2.mt-2
-                    +editLabel('Корты под турнир', '', true)
-                    span.shrink-0.grow №3, 4
-                    a(href="gotobooking").text-sm Изменить 
+                div(class="flex items-center justify-between gap-2 mb-2")
+                    +editLabel('Допуск по дате рейтинга', '', true, '', false, 'ratingDate')
+                    +input('', '', 'ratingDate', 'date')
+                +switch('Закрытая регистрация', '', 'closedRegistration')
+                div(class="flex items-center justify-between gap-2 mt-2")
+                    +editLabel('Корты под турнир', '', true, '', false, 'tournamentCourts')
+                    span(class="shrink-0 grow") №3, 4
+                    a(href="gotobooking" class="text-sm") Изменить 
             +editBlock('Повторять')
-                +switch('Повторить турнир через неделю', 'py-0')
+                +switch('Повторить турнир через неделю', 'py-0', 'repeatTournament')
             +editBlock('Контакты', '', 'Если не заполнено, отображается контакт клуба')
-                +editLabel('Имя')    
-                +input('Введите имя контактного лица', 'w-full mb-6')
-                +editLabel('Телефон')    
-                +input('Телефон', 'w-full mb-6')
+                +editLabel('Имя', '', false, '', false, 'contactName')
+                +input('Введите имя контактного лица', 'w-full mb-6', 'contactName')
+                +editLabel('Телефон', '', false, '', false, 'contactPhone')
+                +input('Телефон', 'w-full mb-6', 'contactPhone')
                 +button('Добавить дополнительный контакт', 'default', '', 'bg-slate-100', 'border')
             +editBlock('Афиша турнира для главной страницы (+100₽)')
-
-                img(src="dynamic-img/banner.png").mx-auto.w-full.pb-4
-                .flex.gap-2.mb-4
+                img(src="dynamic-img/banner.png" class="mx-auto w-full pb-4")
+                div(class="flex gap-2 mb-4")
                     +button('Загрузить', 'default', 'white', 'bg-lab-color')
                     +button('Удалить', 'default', 'lab-red', 'bg-white', 'border border-lab-red')
                 span.text-sm.font-bold Требования к афише
@@ -204,42 +199,44 @@ html(lang="ru")
                     | Пропорции - 2:1
 
             +editBlock('Онлайн-трансляции')
-
-                .flex.flex-col.gap-2.mb-6
-                    .flex.gap-1
-                        label.text-sm.text-lab-black-50.w-16 № корта
-                        label.text-sm.text-lab-black-50 Ссылка на трансляцию в Youtube
-                    .flex.gap-3.justify-between.items-center
-                        +input('', 'w-14', '', '', 'h-14 text-center', '1') 
-                        +textarea('https://www.youtube.com/watch?v=...', '', '', 'leading-tight grow', 'https://www.youtube.com/watch?v=vJTf_NtwyUo')
+                div(class="flex flex-col gap-2 mb-6")
+                    div(class="flex gap-1")
+                        label(class="text-sm text-lab-black-50 w-16") № корта
+                        label(class="text-sm text-lab-black-50") Ссылка на трансляцию в Youtube
+                    div(class="flex gap-3 justify-between items-center")
+                        +input('', 'w-14', 'courtNumber1', '', 'h-14 text-center', '1') 
+                        +textarea('https://www.youtube.com/watch?v=...', '', 'courtStream1', 'leading-tight grow', 'https://www.youtube.com/watch?v=vJTf_NtwyUo')
                         div.text-lab-black-50 ✕
-
-                    .flex.gap-3.justify-between.items-center
-                        +input('', 'w-14', '', '', 'h-14 text-center', '') 
-                        +textarea('https://www.youtube.com/watch?v=...', '', '', 'leading-tight grow')
+                    div(class="flex gap-3 justify-between items-center")
+                        +input('', 'w-14', 'courtNumber2', '', 'h-14 text-center') 
+                        +textarea('https://www.youtube.com/watch?v=...', '', 'courtStream2', 'leading-tight grow')
 
                 +button('+ Добавить трансляцию', 'default', '', 'bg-slate-100', 'border')
             +editBlock('Шаблоны', '', 'Сохранить для будущих турниров')
-                .flex.items-center.gap-1 
-                    +editLabel('Сохранить шаблон как', '' , true)  
-                    +input('Название шаблона', 'w-full')
+                div(class="flex items-center gap-1") 
+                    +editLabel('Сохранить шаблон как', '' , true, '', false, 'templateName')  
+                    +input('Название шаблона', 'w-full', 'templateName')
+
         div(class="fixed pb-safe-extra-panel w-full z-20 bg-white drop-shadow-top p-4 border-b")
             +button('Сохранить изменения', 'default', 'white', 'bg-lab-color')
+
         +modal('Удалить шаблон', [
             {text: 'Нет', variant: 'default', color: 'white', bgColor: 'bg-lab-color', extraClasses: 'mr-2', id: 'button1'},
             {text: 'Да', variant: 'default', color: 'white', bgColor: 'bg-lab-red', extraClasses: '', id: 'button2'}
         ], "modal-delete-template")
+
         +modal('', [], "modal-info")
             h3.font-bold.mb-3 Ограничение рейтинга пар и игроков
             p.text-sm.text-left.leading-tight Для #[strong одиночных] турниров укажите ограничение рейтинга игрока, либо оставьте поля пустыми для открытого турнира. 
             p.text-sm.text-left.leading-tight Для #[strong парных] турниров можно указать ограничение среднего рейтинга пары и максимальный рейтинг игрока в паре. 
             p.text-sm.text-left.leading-tight Рейтинг пары — среднее из рейтингов игроков в паре. 
+
         script.
             document.addEventListener('DOMContentLoaded', () => {
                 const deleteButtons = document.querySelectorAll('.deleteButton'); 
-                const modalDeleteTemplate = document.querySelector('#modal-delete-template'); // Используем идентификатор
-                const infoButton = document.querySelector('#rating-info'); // Убедитесь, что используете правильный селектор
-                const modalInfo = document.querySelector('#modal-info'); // Используем идентификатор
+                const modalDeleteTemplate = document.querySelector('#modal-delete-template');
+                const infoButton = document.querySelector('#rating-info');
+                const modalInfo = document.querySelector('#modal-info');
 
                 deleteButtons.forEach(button => {
                     button.addEventListener('click', () => {

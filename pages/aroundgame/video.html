@@ -1,10 +1,4 @@
-
-<script>
-  function togglePhotoSelection(el) {
-    const checkmark = el.querySelector('.checkmark');
-    checkmark.classList.toggle('hidden');
-  }
-</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -12,8 +6,8 @@
     <title>Видео</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
+    <base href="../../">
   </head>
-  <base href="../../">
   <body class="bg-page-background pb-16 pt-12">
     <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="Логотип">
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
@@ -101,13 +95,13 @@
         <div class="flex items-center gap-3 text-sm"><img class="size-4 opacity-50 saturate-50" src="img/camera.svg" alt=""><a href="pages/others/profile.html">Юрий Любимов</a></div>
       </div>
     </div>
-    <div class="hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center" id="addPlayermodal">
+    <div class="hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-50 justify-center items-center" id="addPlayermodal">
       <div class="bg-white p-4 rounded-lg shadow-lg w-96 relative">
         <h2 class="text-lg mb-4 text-center">Отметить игрока</h2>
         <div class="mb-4">Введите имя игрока, которого еще нет на фото</div>
         <input class="p-2 border rounded mb-4 w-full" type="text" placeholder="Имя игрока">
         <div class="flex gap-2">
-          <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+          <button class="w-full text-lab-black-50 bg-transparent   transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -147,7 +141,7 @@
                 });
             });
           </script>
-          <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+          <button class="w-full   bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -191,7 +185,7 @@
         <button class="absolute top-2 right-4 text-2xl text-lab-black" onclick="closeAddPlayerModal()">&times;</button>
       </div>
     </div>
-    <div class="hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center" id="addTagmodal">
+    <div class="hidden fixed inset-0 z-50 bg-gray-800 bg-opacity-50 justify-center items-center" id="addTagmodal">
       <div class="bg-white p-4 rounded-lg shadow-lg w-96 relative">
         <h2 class="text-lg text-center">Выберите категорию видео</h2>
         <select class="p-2 border my-8 rounded w-full">
@@ -207,7 +201,7 @@
           <option value="juniors">Юниоры</option>
         </select>
         <div class="flex gap-2">
-          <button class="text-lab-black-50 bg-transparent  w-1/2 transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+          <button class=" text-lab-black-50 bg-transparent w-1/2  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -247,7 +241,7 @@
                 });
             });
           </script>
-          <button class="w-full  w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
+          <button class=" w-1/2  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="commentSubmitButton" data-action="">Отправить</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -293,17 +287,27 @@
     </div>
     <script>
       function addPlayerModal() {
-        document.getElementById('addPlayermodal').classList.remove('hidden');
+        const modal = document.getElementById('addPlayermodal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
       }
+      
       function closeAddPlayerModal() {
-        document.getElementById('addPlayermodal').classList.add('hidden');
+        const modal = document.getElementById('addPlayermodal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
       }
       
       function addTagModal() {
-        document.getElementById('addTagmodal').classList.remove('hidden');
+        const modal = document.getElementById('addTagmodal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
       }
+      
       function closeAddTagModal() {
-        document.getElementById('addTagmodal').classList.add('hidden');
+        const modal = document.getElementById('addTagmodal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
       }
         
     </script>
@@ -320,7 +324,7 @@
         <div class="relative flex flex-grow flex-col gap-3">
           <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea"  style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий"></textarea>
           <div class="flex items-center gap-4"><img class="hidden size-6" id="pasteButton" src="img/paste.svg" alt="Вставить">
-            <button class="text-lab-black-50 bg-transparent  hidden transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
+            <button class="w-full text-lab-black-50 bg-transparent  hidden transition-transform duration-150 ease-in-out button-interactive" id="cancelButton" data-action="">Отмена</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -522,7 +526,7 @@
       <div class="mb-3 hidden flex-grow flex-col gap-3" id="commentForm-1">
         <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea-1" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
         <div class="flex items-center gap-4">
-          <button class="text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-1" data-action="">Отмена</button>
+          <button class="w-full text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-1" data-action="">Отмена</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const buttons = document.querySelectorAll('.button-interactive');
@@ -721,7 +725,7 @@
         <div class="mb-3 hidden flex-grow flex-col gap-3" id="commentForm-2">
           <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea-2" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
           <div class="flex items-center gap-4">
-            <button class="text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-2" data-action="">Отмена</button>
+            <button class="w-full text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-2" data-action="">Отмена</button>
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                   const buttons = document.querySelectorAll('.button-interactive');
@@ -912,7 +916,7 @@
           <div class="mb-3 hidden flex-grow flex-col gap-3" id="commentForm-3">
             <textarea class="resize-none overflow-hidden rounded-md border border-gray-300 p-2 transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none" id="commentTextArea-3" style="scrollbar-width: none; -ms-overflow-style: none" rows="1" placeholder="Напишите комментарий..."></textarea>
             <div class="flex items-center gap-4">
-              <button class="text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-3" data-action="">Отмена</button>
+              <button class="w-full text-lab-black-50 bg-transparent  transition-transform duration-150 ease-in-out button-interactive" id="cancelButton-3" data-action="">Отмена</button>
               <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const buttons = document.querySelectorAll('.button-interactive');

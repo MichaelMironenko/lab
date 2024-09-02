@@ -2,7 +2,7 @@ include /components/actionMenu.pug
 
 mixin sortButton(type, items, extraClasses)
     button.sort-button(type="button" class=` ${extraClasses} `)
-        img.inline.align-middle.size-4(src="img/sort.svg")
+        img.inline.align-middle.size-4(src="img/sort.svg" alt="")
         span.inline.align-middle.text-lab-color.text-sm.ml-1 #{type}
     +actionMenu(items)
 

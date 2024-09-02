@@ -8,7 +8,7 @@ mixin videoSlider(isLive, tournamentLine, title, plusButton, allLink)
   +block(title, allLink ? { href: allLink, text: 'Все' } : { href: 'pages/aroundgame/videoCollection.html', text: 'Все' }, plusButton)
     .flex.overflow-x-auto.-ml-4.-mr-4.px-4.gap-2.no-scrollbar
       each video, index in videos
-        .flex.flex-col.gap-2.shrink-0(class="w-[80%] max-w-[300px]")
+        a.flex.flex-col.gap-2.shrink-0(class="w-[80%] max-w-[300px]" href="pages/aroundgame/video.html")
           .relative
             img(src=`dynamic-img/video-${index + 1}.jpg` alt=`Видео превью` class="w-full rounded-lg")
             if isLive

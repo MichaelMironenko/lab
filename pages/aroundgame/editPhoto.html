@@ -64,7 +64,7 @@
       img.src = 'dynamic-img/photo-3.jpeg'
       function updateImageContainer() {
           const aspectRatio = img.width / img.height;
-          const maxWidth = 430:; // Максимальная ширина изображения
+          const maxWidth = 430; // Максимальная ширина изображения
           const containerWidth = Math.min(window.innerWidth, maxWidth); // Ограничиваем ширину контейнера
       
           const height = img.height * (containerWidth / img.width);
@@ -88,25 +88,25 @@
       <div class="flex items-center gap-2 mb-2 undefined">
         <label class="block text-lab-black">Название</label>
       </div>
-      <input class="border p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="">
+      <input class="border p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
       <div class="flex items-center gap-2 mb-2 undefined">
-        <label class="block text-lab-black">Автор фото</label><img class="size-4" id="(укажите, если вы не автор)" src="img/info.svg">
+        <label class="block text-lab-black">Автор фото (укажите, если вы не автор)</label>
       </div>
-      <input class="border p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Укажите только если вы не автор">
+      <input class="border p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
       <div class="flex items-center gap-2 mb-2 undefined">
         <label class="block text-lab-black">Турнир/Событие</label>
       </div>
-      <input class="border p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Введите название турнира/события">
+      <input class="border p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
       <div class="flex items-center gap-2 mb-2 undefined">
         <label class="block text-lab-black">Игроки на фото</label>
       </div>
       <div class="w-full mb-6 flex flex-wrap items-center px-2 py-2 border border-gray-300 rounded-lg" id="player-input-container">
         <input class="inline w-full outline-none mb-1" id="player-input" type="text">
-        <div class="flex flex-wrap gap-1 inline w-full pt-2 border-t" id="player-tags"></div>
+        <div class="flex flex-wrap gap-1 w-full pt-2 border-t" id="player-tags"></div>
       </div>
       <div class="text-xs -mt-2 mb-1 text-lab-black-50">
         Кликните на победителей турнира для добавления в список игроков на фото или <span class="text-lab-color" id="add-all">добавьте всех сразу</span></div>
-      <div class="flex flex-wrap gap-1 inline pt-1" id="player-list"><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(150deg,#FFCE31_0%,#FFCA21_25%,#FFE287_48%,#EAC039_78%)] rounded-md" data-player="Волосатов Игорь">Волосатов Игорь</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(150deg,#FFCE31_0%,#FFCA21_25%,#FFE287_48%,#EAC039_78%)] rounded-md" data-player="Мартыненко Евгений">Мартыненко Евгений</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(150deg,#BFCACD_0%,#F2F9FB_40%,#C8D4D8_71%,#CAE8F0_100%)] rounded-md" data-player="Сыровежко Наталья">Сыровежко Наталья</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(150deg,#BFCACD_0%,#F2F9FB_40%,#C8D4D8_71%,#CAE8F0_100%)] rounded-md" data-player="Ширяева Дарья">Ширяева Дарья</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(151deg,#D78E5D_0%,#ECCEBA_40%,#D78A56_68%,#D29A73_100%)] rounded-md" data-player="Мартыненко Иван">Мартыненко Иван</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(151deg,#D78E5D_0%,#ECCEBA_40%,#D78A56_68%,#D29A73_100%)] rounded-md" data-player="Аббясова Алина">Аббясова Алина</span>
+      <div class="flex flex-wrap gap-1 pt-1" id="player-list"><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(150deg,#FFCE31_0%,#FFCA21_25%,#FFE287_48%,#EAC039_78%)] rounded-md" data-player="Волосатов Игорь">Волосатов Игорь</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(150deg,#FFCE31_0%,#FFCA21_25%,#FFE287_48%,#EAC039_78%)] rounded-md" data-player="Мартыненко Евгений">Мартыненко Евгений</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(150deg,#BFCACD_0%,#F2F9FB_40%,#C8D4D8_71%,#CAE8F0_100%)] rounded-md" data-player="Сыровежко Наталья">Сыровежко Наталья</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(150deg,#BFCACD_0%,#F2F9FB_40%,#C8D4D8_71%,#CAE8F0_100%)] rounded-md" data-player="Ширяева Дарья">Ширяева Дарья</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(151deg,#D78E5D_0%,#ECCEBA_40%,#D78A56_68%,#D29A73_100%)] rounded-md" data-player="Мартыненко Иван">Мартыненко Иван</span><span class="player text-xxs font-medium px-2 py-1 bg-[linear-gradient(151deg,#D78E5D_0%,#ECCEBA_40%,#D78A56_68%,#D29A73_100%)] rounded-md" data-player="Аббясова Алина">Аббясова Алина</span>
       </div>
       <div class="text-lab-red w-full p-4 text-center">Удалить фото</div>
     </div>

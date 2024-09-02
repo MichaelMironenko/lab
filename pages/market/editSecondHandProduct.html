@@ -1,10 +1,4 @@
-
-<script>
-  function togglePhotoSelection(el) {
-    const checkmark = el.querySelector('.checkmark');
-    checkmark.classList.toggle('hidden');
-  }
-</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -80,12 +74,12 @@
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black">Товар</label>
           </div>
-          <input class="border p-2 w-full mb-4 rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="" value="" inputmode="" placeholder="Yonex BS-4">
+          <input class="border p-2 w-full mb-4 rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="" value="" inputmode="">
           <div class="flex items-center gap-2 w-full undefined">
             <label class="block text-lab-black">Название объявления</label>
           </div>
           <div class="text-lab-black-50 text-xs mb-2">(можно не заполнять, если заполнено поле товар)</div>
-          <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-red" id="" type="" value="" inputmode="" placeholder="Продам ракетку...">
+          <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-red" id="" type="" value="" inputmode="">
           <div class="text-xs text-lab-red text-right w-full mt-1">Ошибка</div>
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black">Состояние товара</label>
@@ -108,7 +102,7 @@
             <div class="flex items-center gap-2 w-full undefined">
               <label class="block text-lab-black">Цена</label>
             </div>
-            <input class="border p-2 w-20 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="">
+            <input class="border p-2 w-20 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
           </div>
         </div>
       </div>
@@ -235,7 +229,7 @@
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black">Адрес</label>
           </div>
-          <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-red" id="" type="" value="" inputmode="" placeholder="Город, улица, дом">
+          <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-red" id="" type="" value="" inputmode="">
           <div class="text-xs text-lab-red text-right w-full mt-1">Ошибка</div>
           <div class="flex items-center gap-2 mb-2 undefined">
             <label class="block text-lab-black">Ближайшие станции метро (необязательно)</label>
@@ -244,7 +238,7 @@
             <div class="flex items-center gap-2 w-full undefined">
               <label class="block text-lab-black">Телефон</label>
             </div>
-            <input class="border p-2  rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="tel" value="" inputmode="tel" placeholder="">
+            <input class="border p-2  rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="tel" value="" inputmode="tel">
           </div>
         </div>
       </div>
@@ -328,7 +322,7 @@
               });
           });
         </script>
-        <button class="w-full w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="submitButton" data-action="">Сохранить</button>
+        <button class=" w-1/2 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" id="submitButton" data-action="">Сохранить</button>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
               const buttons = document.querySelectorAll('.button-interactive');

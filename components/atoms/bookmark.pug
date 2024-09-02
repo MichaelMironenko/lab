@@ -9,7 +9,7 @@ mixin bookmark(active = false, extraClass, size=6, id)
       
       bookmarkButtons.forEach(function(button) {
         var bookmarkId = button.getAttribute('data-bookmark-id');
-        var isActive = #{active}; // Начальное состояние закладки
+        var isActive = false; // Начальное состояние закладки
         var bookmarkIcon = document.querySelector(`img[data-bookmark-id="${bookmarkId}"]`);
 
         button.addEventListener('click', function() {
