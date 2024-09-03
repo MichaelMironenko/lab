@@ -4,4 +4,4 @@ mixin editLabel(label, hint, oneRow, extraClass, required=false, labelName)
     if required
       span.text-red-500 *
     if hint
-      img.size-4(id=hint, src='img/info.svg' alt="Подсказка")
+      img.size-4(id=hint ? hint : undefined, src='img/info.svg' alt="Подсказка")

@@ -29,7 +29,7 @@ mixin selectedCourts(deleteButton, price=true)
         if deleteButton
             button(type="button").leading-none.text-lab-black-50 ✕
 
-    +modal('', '', 'court-modal', true)  
+    +modal('', '', 'court-modal-2', true)  
         h2 Корт №5
         p.text-lab-black-50.text-sm.pt-0.pb-2 Стандартный  
         img(src="dynamic-img/court5.jpg", alt="").mt-2.rounded-sm.pb-2
@@ -44,7 +44,7 @@ mixin selectedCourts(deleteButton, price=true)
 
             courtDivs.forEach(function(div) {
                 div.addEventListener('click', function() {
-                    const modal = document.getElementById('court-modal');
+                    const modal = document.getElementById('court-modal-2');
                     if (modal) {
                         modal.style.display = 'block';
                     }

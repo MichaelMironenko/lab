@@ -59,20 +59,20 @@
     </div>
     <div class="px-4">
       <div class="w-full bg-white rounded-xl shadow-md p-4 flex flex-col justify-between border">
-        <div class="flex gap-3 items-center"> <img class="size-24 object-cover rounded-md" src="dynamic-img/club-1.jpg" alt="">
+        <div class="flex gap-3 items-center"> <img class="size-24 object-cover rounded-md" src="dynamic-img/club-1.jpg" alt="Фото клуба">
           <div class="w-full">
-            <div class="flex items-center mb-2"><img class="h-5 w-5 mr-2 rounded-sm" src="dynamic-img/naten-logo.png" alt="Logo">
+            <div class="flex items-center mb-2"><img class="h-5 w-5 mr-2 rounded-sm" src="dynamic-img/naten-logo.png" alt="Логотип">
               <h2 class="text-base font-semibold">Naten-ЮГ</h2>
             </div>
-            <div class="flex items-center text-sm mb-2"><span>4.4</span><img class="h-4 ml-1" src="img/star.svg"><span class="text-lab-black-50 ml-2">12 отзывов</span></div>
+            <div class="flex items-center text-sm mb-2"><span>4.4</span><img class="h-4 ml-1" src="img/star.svg" alt="Рейтинг"><span class="text-lab-black-50 ml-2">12 отзывов</span></div>
             <div class="flex items-center mb-1 gap-3 flex-wrap">
               <div class="flex items-center">
                 <div class="bg-lab-red size-2 rounded-full mr-1 shrink-0"></div><span class="text-lab-black-50 leading-none text-sm">Юго-Западная</span>
               </div>
-              <div class="flex items-center"><img class="size-4 mr-1" src="img/location-arrow.svg"><span class="text-sm leading-none text-lab-black-50">1,8 км</span></div>
+              <div class="flex items-center"><img class="size-4 mr-1" src="img/location-arrow.svg" alt=""><span class="text-sm leading-none text-lab-black-50">1,8 км</span></div>
             </div>
             <div class="flex items-center">
-              <div><img class="inline size-4 mr-1 align-middle saturate-50 opacity-75" src="img/court.svg"><span class="inline text-sm align-middle leading-none">6</span></div>
+              <div><img class="inline size-4 mr-1 align-middle saturate-50 opacity-75" src="img/court.svg" alt="Кортов"><span class="inline text-sm align-middle leading-none">6</span></div>
               <div class="inline ml-3"><img class="inline h-4 w-4 ml-1" src="img/wifi.svg" alt="wifi"><img class="inline h-4 w-4 ml-1" src="img/shower.svg" alt="shower"><img class="inline h-4 w-4 ml-1" src="img/parking.svg" alt="parking">
               </div>
             </div>
@@ -94,7 +94,7 @@
         <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
         <div> <img class="inline align-middle saturate-50 opacity-50" src="img/price.svg" alt="Цена"><span class="inline align-middle ml-2">1800&#8202;₽</span></div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal-2">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""><span class="sr-only">Закрыть</span></button>
           <div class="p-4 text-center md:p-5"> 
@@ -209,10 +209,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             const closeButton = document.querySelector('.close-modal');
             closeButton?.addEventListener('click', function() {
-                document.getElementById('court-modal').style.display = 'none';
+                document.getElementById('court-modal-2').style.display = 'none';
             });
         
-            document.getElementById('court-modal').addEventListener('click', function(event) {
+            document.getElementById('court-modal-2').addEventListener('click', function(event) {
                 if (event.target === this) {
                     this.style.display = 'none';
                 }
@@ -225,7 +225,7 @@
         
             courtDivs.forEach(function(div) {
                 div.addEventListener('click', function() {
-                    const modal = document.getElementById('court-modal');
+                    const modal = document.getElementById('court-modal-2');
                     if (modal) {
                         modal.style.display = 'block';
                     }
@@ -256,7 +256,7 @@
       <div class="text-right text-xs text-lab-red">Введите корректный email</div>
       <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-lab-black-50 py-4">
         <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">Абонемент</label>
-        <input class="sr-only peer" id="playerToggle" type="checkbox" value="">
+        <input class="sr-only peer" type="checkbox" value="" id="playerToggle">
         <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
       </div>
       <div class="flex items-center gap-2 mb-2 undefined">
@@ -268,7 +268,7 @@
             <div class="text-sm text-lab-black-50">150₽/шт</div>
           </div>
           <div class="flex h-9 items-center rounded-lg bg-lab-color-10">
-            <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 text-center leading-none h-3.5" id="courts-count">0</span>
+            <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 text-center leading-none h-3.5">0</span>
             <button class="size-10 text-xl text-lab-black-50" id="increase-courts">+</button>
           </div>
         </div>
@@ -277,7 +277,7 @@
             <div class="text-sm text-lab-black-50">200₽/шт</div>
           </div>
           <div class="flex h-9 items-center rounded-lg bg-lab-color-10">
-            <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 text-center leading-none h-3.5" id="courts-count">0</span>
+            <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 text-center leading-none h-3.5">0</span>
             <button class="size-10 text-xl text-lab-black-50" id="increase-courts">+</button>
           </div>
         </div>

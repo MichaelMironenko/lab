@@ -57,7 +57,7 @@
       <div class="text-lg text-center grow font-bold text-lab-black -ml-6">Бронирование №123456 </div>
     </div>
     <div class="p-4">
-      <div class="flex gap-2 items-center mt-4 mb-3"><img class="saturate-50 opacity-60" src="img/calendar.svg"><span class="leading-none">11 сентября, четверг</span></div>
+      <div class="flex gap-2 items-center mt-4 mb-3"><img class="saturate-50 opacity-60" src="img/calendar.svg" alt="Дата"><span class="leading-none">11 сентября, четверг</span></div>
       <div class="flex justify-between gap-3 py-2 max-w-sm items-center">
         <div class="inline"><img class="inline align-middle saturate-50 opacity-50" src="img/time.svg" alt="Время"><span class="inline align-middle leading-none ml-2">11:00-12:30</span></div>
         <div class="court"><img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"><span class="inline align-middle ml-2 text-lab-color">Корт 5</span></div>
@@ -68,7 +68,7 @@
         <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
         <div> <img class="inline align-middle saturate-50 opacity-50" src="img/price.svg" alt="Цена"><span class="inline align-middle ml-2">1800&#8202;₽</span></div>
       </div>
-      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal">
+      <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal-2">
         <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
           <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""><span class="sr-only">Закрыть</span></button>
           <div class="p-4 text-center md:p-5"> 
@@ -183,10 +183,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             const closeButton = document.querySelector('.close-modal');
             closeButton?.addEventListener('click', function() {
-                document.getElementById('court-modal').style.display = 'none';
+                document.getElementById('court-modal-2').style.display = 'none';
             });
         
-            document.getElementById('court-modal').addEventListener('click', function(event) {
+            document.getElementById('court-modal-2').addEventListener('click', function(event) {
                 if (event.target === this) {
                     this.style.display = 'none';
                 }
@@ -199,7 +199,7 @@
         
             courtDivs.forEach(function(div) {
                 div.addEventListener('click', function() {
-                    const modal = document.getElementById('court-modal');
+                    const modal = document.getElementById('court-modal-2');
                     if (modal) {
                         modal.style.display = 'block';
                     }
@@ -207,9 +207,9 @@
             });
         });
       </script>
-      <div class="py-2"><img class="inline align-middle saturate-50 opacity-50" src="img/player.svg" alt=""><span class="inline align-middle ml-2">Константин</span></div>
-      <div class="py-2"><img class="inline align-middle saturate-50 opacity-50" src="img/phone.svg" alt=""><a class="inline align-middle ml-2">+7 (093) 232-52-25</a></div>
-      <div class="pt-2 pb-4"><img class="inline align-middle saturate-50 opacity-50" src="img/racket.svg" alt=""><span class="inline align-middle ml-2">2 полупрофессиональные ракетки</span></div>
+      <div class="py-2"><img class="inline align-middle saturate-50 opacity-50" src="img/player.svg" alt="Имя"><span class="inline align-middle ml-2">Константин</span></div>
+      <div class="py-2"><img class="inline align-middle saturate-50 opacity-50" src="img/phone.svg" alt="Телефон"><a class="inline align-middle ml-2">+7 (093) 232-52-25</a></div>
+      <div class="pt-2 pb-4"><img class="inline align-middle saturate-50 opacity-50" src="img/racket.svg" alt="Аренда инвентаря"><span class="inline align-middle ml-2">2 полупрофессиональные ракетки</span></div>
       <div class="flex justify-between pb-4 pt-4 border-t"><span>Аренда кортов</span><span>1400&#8202;₽</span></div>
       <div class="flex justify-between pb-4"><span>Аренда ракеток</span><span>600&#8202;₽</span></div>
       <div class="flex justify-between font-bold pb-4 items-center"><span class="grow">Итого</span><span>2000&#8202;₽</span></div>

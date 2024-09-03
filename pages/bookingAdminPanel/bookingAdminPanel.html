@@ -57,7 +57,8 @@
     <div class="bg-white pb-1">
       <div class="grid grid-cols-1 p-4 sm:grid-cols-2 gap-4">
         <div class="flex items-center justify-between gap-4">
-          <h1 class="text-lg leading-tight">Управление бронированием</h1><a class="flex items-center gap-1" href="pages/bookingAdminPanel/bookingsHistory.html"><img class="xs:hidden shrink-0" src="img/history.svg" alt=""><a class="xs:block hidden text-sm shrink-0" href="pages/bookingAdminPanel/bookingsHistory.html">Список броней</a></a>
+          <h1 class="text-lg leading-tight">Управление бронированием</h1><a class="flex items-center gap-1" href="pages/bookingAdminPanel/bookingsHistory.html"><img class="xs:hidden shrink-0" src="img/history.svg" alt="">
+            <div class="xs:block hidden text-sm shrink-0">Список броней</div></a>
         </div>
         <div class="flex w-full rounded-lg overflow-hidden lg:justify-self-end lg:mb-0">
           <button class="flex-1 text-sm p-2 bg-lab-color text-white border-none outline-none" id="tabBooking">Бронирования</button>
@@ -123,12 +124,12 @@
           <div class="lg:w-96 lg:order-2 lg:border px-4 shrink-0">
             <div class="modal-container fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden lg:static lg:max-w-96 lg:w-full lg:backdrop-blur-none  lg:border lg:bg-transparent lg:p-0 lg:shadow-none" id="personalBooking">
               <div class="fixed bottom-0 left-0 right-0 w-full z-40 p-4 rounded-t-2xl overflow-hidden bg-white drop-shadow-top pb-safe-16 lg:absolute lg:rounded-none lg:border lg:bottom-auto lg:w-96 lg:-mx-4 lg:drop-shadow-none">
-                <div class="w-20 top-0 left-0 right-0 h-1 bg-lab-black-10 rounded-xl mx-auto mt-2 absolute lg:hidden"></div><img class="top-2 right-2 absolute" src="img/close-round.svg" alt="" id="closeButton">
+                <div class="w-20 top-0 left-0 right-0 h-1 bg-lab-black-10 rounded-xl mx-auto mt-2 absolute lg:hidden"></div><img class="top-2 right-2 absolute" src="img/close-round.svg" alt="Закрыть" id="closeButton1">
                 <div class="max-w-96 mx-auto">
                   <div class="w-full text-center my-4">
                     <div class="font-semibold text-lg mb-2">Сергей Макаров</div><a href="tel:79051271542">+7 (905) 127-15-42 </a>
                   </div>
-                  <div class="flex gap-4 items-center py-2"><img class="saturate-50 opacity-60" src="img/calendar.svg">
+                  <div class="flex gap-4 items-center py-2"><img class="saturate-50 opacity-60" src="img/calendar.svg" alt="">
                     <div class="leading-none text-lab-black">11 сентября, четверг</div>
                   </div>
                   <div class="flex gap-8 py-2 max-w-sm items-center">
@@ -186,7 +187,7 @@
             </div>
             <div class="modal-container fixed inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden lg:static lg:max-w-96 lg:w-full lg:backdrop-blur-none  lg:border lg:bg-transparent lg:p-0 lg:shadow-none" id="editBooking">
               <div class="fixed bottom-0 left-0 right-0 w-full z-40 p-4 rounded-t-2xl overflow-hidden bg-white drop-shadow-top pb-safe-16 lg:absolute lg:rounded-none lg:border lg:bottom-auto lg:w-96 lg:-mx-4 lg:drop-shadow-none">
-                <div class="w-20 top-0 left-0 right-0 h-1 bg-lab-black-10 rounded-xl mx-auto mt-2 absolute lg:hidden"></div><img class="top-2 right-2 absolute" src="img/close-round.svg" alt="" id="closeButton">
+                <div class="w-20 top-0 left-0 right-0 h-1 bg-lab-black-10 rounded-xl mx-auto mt-2 absolute lg:hidden"></div><img class="top-2 right-2 absolute" src="img/close-round.svg" alt="Закрыть" id="closeButton">
                 <div class="max-w-96 mx-auto">
                   <h2>Редактирование бронирования</h2>
                   <div class="flex items-center gap-2 pt-6">
@@ -200,14 +201,14 @@
                     <div class="flex items-center gap-2 w-full undefined">
                       <label class="block text-lab-black">Телефон</label>
                     </div>
-                    <input class="border p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="phone">
+                    <input class="border p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="phone" type="tel">
                   </div>
                   <div class="text-right text-xs text-transparent">Введите корректный телефон</div>
                   <div class="flex items-center gap-2 pt-2">
                     <div class="flex items-center gap-2 w-full undefined">
                       <label class="block text-lab-black">Email</label>
                     </div>
-                    <input class="border p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="email">
+                    <input class="border p-2  rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="email" type="email">
                   </div>
                   <div class="text-right text-xs text-lab-red">Введите корректный email</div>
                   <div class="flex items-center gap-2 w-full py-2">
@@ -223,7 +224,7 @@
                     <div class="court"> <img class="inline align-middle saturate-50 opacity-50" src="img/court.svg" alt="Корт"><span class="inline align-middle ml-2 text-lab-color">Корт 6</span></div>
                     <button class="leading-none text-lab-black-50" type="button">✕</button>
                   </div>
-                  <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal">
+                  <div class="modal-container fixed inset-0 bg-gray-900  bg-opacity-50 backdrop-blur-sm p-4 z-30 hidden" id="court-modal-2">
                     <div class="relative top-1/2 -translate-y-1/2 bg-white rounded-xl shadow w-full max-w-sm mx-auto my-auto">
                       <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""><span class="sr-only">Закрыть</span></button>
                       <div class="p-4 text-center md:p-5"> 
@@ -338,10 +339,10 @@
                     document.addEventListener('DOMContentLoaded', function() {
                         const closeButton = document.querySelector('.close-modal');
                         closeButton?.addEventListener('click', function() {
-                            document.getElementById('court-modal').style.display = 'none';
+                            document.getElementById('court-modal-2').style.display = 'none';
                         });
                     
-                        document.getElementById('court-modal').addEventListener('click', function(event) {
+                        document.getElementById('court-modal-2').addEventListener('click', function(event) {
                             if (event.target === this) {
                                 this.style.display = 'none';
                             }
@@ -354,7 +355,7 @@
                     
                         courtDivs.forEach(function(div) {
                             div.addEventListener('click', function() {
-                                const modal = document.getElementById('court-modal');
+                                const modal = document.getElementById('court-modal-2');
                                 if (modal) {
                                     modal.style.display = 'block';
                                 }
@@ -363,8 +364,8 @@
                     });
                   </script>
                   <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm  py-4">
-                    <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">Абонемент</label>
-                    <input class="sr-only peer" id="playerToggle" type="checkbox" value="">
+                    <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="abonement">Абонемент</label>
+                    <input class="sr-only peer" type="checkbox" value="" id="abonement">
                     <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
                   </div>
                   <div class="flex items-center gap-2 mb-2 undefined">
@@ -376,8 +377,8 @@
                         <div class="text-sm text-lab-black-50">150₽/шт</div>
                       </div>
                       <div class="flex h-9 items-center rounded-lg bg-lab-color-10">
-                        <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 text-center leading-none h-3.5" id="courts-count">0</span>
-                        <button class="size-10 text-xl text-lab-black-50" id="increase-courts">+</button>
+                        <button class="size-10 text-xl text-lab-black-50" id="inventoryIncrease">–</button><span class="w-4 text-center leading-none h-3.5">0</span>
+                        <button class="size-10 text-xl text-lab-black-50" id="inventoryDecrease">+</button>
                       </div>
                     </div>
                     <div class="flex items-center justify-between gap-3 pt-4">
@@ -385,8 +386,8 @@
                         <div class="text-sm text-lab-black-50">200₽/шт</div>
                       </div>
                       <div class="flex h-9 items-center rounded-lg bg-lab-color-10">
-                        <button class="size-10 text-xl text-lab-black-50" id="decrease-courts">–</button><span class="w-4 text-center leading-none h-3.5" id="courts-count">0</span>
-                        <button class="size-10 text-xl text-lab-black-50" id="increase-courts">+</button>
+                        <button class="size-10 text-xl text-lab-black-50" id="inventoryIncrease2">–</button><span class="w-4 text-center leading-none h-3.5">0</span>
+                        <button class="size-10 text-xl text-lab-black-50" id="inventoryDecrease2">+</button>
                       </div>
                     </div>
                   </div>
@@ -394,7 +395,7 @@
                     <div class="flex items-center gap-2 mb-2 w-32">
                       <label class="block text-lab-black">Итого</label>
                     </div>
-                    <input class="border p-2 w-20 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="email">
+                    <input class="border p-2 w-20 rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="price" type="number" value="" inputmode="numeric">
                     <label class="flex items-center gap-2 ml-2">
                       <input class="size-5" type="checkbox"><span class="text-sm">Оплачено</span>
                     </label>
@@ -487,13 +488,13 @@
             <div id="dayEvents">
               <h2 class="py-4 border-b hidden lg:block">Вторник, 29 марта</h2>
               <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-sm py-4">
-                <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">Бронирование доступно</label>
-                <input class="sr-only peer" id="playerToggle" type="checkbox" value="">
+                <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="bookingAvailable">Бронирование доступно</label>
+                <input class="sr-only peer" type="checkbox" value="" id="bookingAvailable">
                 <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
               </div>
               <div class="flex gap-2 flex-col mt-2">
-                <div class="flex items-center gap-2 w-full !w-36 text-sm shrink-0">
-                  <label class="block text-lab-black">Турниры ЛАБ</label><img class="size-4" id src="img/info.svg" alt="Подсказка">
+                <div class="flex items-center gap-2 w-full text-sm shrink-0">
+                  <label class="block text-lab-black">Турниры ЛАБ</label><img class="size-4" id="tournaments" src="img/info.svg" alt="Подсказка">
                 </div>
                 <div class="flex overflow-x-auto items-center space-x-2 no-scrollbar scroll-smooth -mx-4 px-4">
                   <div class="opacity-50 px-2 py-1 border border-lab-black-30 rounded-md flex flex-col items-center justify-center">
@@ -524,7 +525,7 @@
               </div>
               <div class="flex gap-2 flex-col mt-6">   
                 <div class="flex items-center gap-2 w-full text-sm ">
-                  <label class="block text-lab-black">Групповые тренировки ЛАБ</label><img class="size-4" id src="img/info.svg" alt="Подсказка">
+                  <label class="block text-lab-black">Групповые тренировки ЛАБ</label><img class="size-4" id="trainings" src="img/info.svg" alt="Подсказка">
                 </div>
                 <div class="flex overflow-x-auto items-center space-x-2 no-scrollbar scroll-smooth -mx-4 px-4">
                   <div class="opacity-50 px-2 py-1 border border-lab-black-30 rounded-md flex flex-col items-center justify-center">
@@ -546,7 +547,7 @@
               </div>
               <div class="flex gap-2 flex-col mt-6 mb-6"> 
                 <div class="flex items-center gap-2 w-full text-sm ">
-                  <label class="block text-lab-black">Мероприятия</label><img class="size-4" id src="img/info.svg" alt="Подсказка">
+                  <label class="block text-lab-black">Мероприятия</label><img class="size-4" id="activities" src="img/info.svg" alt="Подсказка">
                 </div>
                 <div class="flex overflow-x-auto items-center space-x-2 no-scrollbar scroll-smooth -mr-4">
                   <div class="opacity-50 px-2 py-1 border border-lab-black-30 rounded-md flex flex-col items-center justify-center">
@@ -564,27 +565,27 @@
               <thead class="sticky top-0 bg-white z-10 h-10 mb-4">
                 <tr>
                   <th class="px-2 text-center text-xs sticky bg-white left-0 align-middle min-w-14 w-14 z-20">Корт</th>
-                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8 text-center">
+                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8">
                     <div>1</div>
                     <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                   </th>
-                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8 text-center">
+                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8">
                     <div>2</div>
                     <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                   </th>
-                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8 text-center">
+                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8">
                     <div>3</div>
                     <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                   </th>
-                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8 text-center">
+                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8">
                     <div>4</div>
                     <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                   </th>
-                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8 text-center">
+                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8">
                     <div>5</div>
                     <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                   </th>
-                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8 text-center">
+                  <th class="text-sm min-w-32 w-32 text-center align-middle sticky pt-2 top-0 h-8">
                     <div>6</div>
                     <div class="text-xs font-normal text-lab-black-50 mt-1">Обычный</div>
                   </th>
@@ -644,7 +645,7 @@
                   <td class="border min-w-16 text-center w-16 z-10 align-middle" rowspan="3" id="bookingCell">
                     <div class="font-semibold text-sm text-lab-black">Сергей М.</div>
                     <div class="py-2">8 (915) 124-15-23</div>
-                    <div class="flex justify-center items-center gap-1"><img class="opacity-50 saturate-50" src="img/trainer.svg" alt=""><img class="opacity-50 saturate-50" src="img/warning.svg" alt=""><img class="opacity-50 saturate-50" src="img/racket.svg" alt=""><span>2400 ₽</span><img src="img/checkmark.svg" alt=""></div>
+                    <div class="flex justify-center items-center gap-1"><img class="opacity-50 saturate-50" src="img/trainer.svg" alt="Тренер"><img class="opacity-50 saturate-50" src="img/warning.svg" alt="Внимание"><img class="opacity-50 saturate-50" src="img/racket.svg" alt="Аренда инвентаря"><span>2400 ₽</span><img src="img/checkmark.svg" alt="Оплачено"></div>
                   </td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
@@ -656,7 +657,6 @@
                   </td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
-                  <continue></continue>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
@@ -667,7 +667,6 @@
                   </td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
-                  <continue></continue>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-green-100" data-action="show-menu">600</td>
@@ -736,8 +735,6 @@
                   <td class="border min-w-16 text-center w-16 align-middle" colspan="3">
                     <div class="font-semibold mb-2 text-sm text-lab-black">Турнир </div><span>XDE</span>
                   </td>
-                  <continue></continue>
-                  <continue></continue>
                   <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
@@ -770,8 +767,6 @@
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
                     <div class="-mt-2.5 bg-white">16:30</div>
                   </td>
-                  <continue></continue>
-                  <continue></continue>
                   <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-blue-100" data-action="show-menu">800</td>
@@ -811,7 +806,6 @@
                   <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
                   <td class="border min-w-16 text-center w-16 align-middle bg-red-100" data-action="show-menu">1000</td>
-                  <continue></continue>
                 </tr>
                 <tr class="h-8 text-lab-black-50 text-xs">
                   <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14">
@@ -1040,12 +1034,12 @@
           </div>
         </div>
         <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-sm py-4">
-          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">Бронирование доступно</label>
-          <input class="sr-only peer" id="playerToggle" type="checkbox" value="">
+          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="bookingAvailability">Бронирование доступно</label>
+          <input class="sr-only peer" type="checkbox" value="" id="bookingAvailability">
           <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
         </div>
         <div class="flex gap-2 justify-start mb-6 items-center 430:justify-start 430:gap-2">
-          <div class="flex items-center gap-2 w-full !w-32 text-sm">
+          <div class="flex items-center gap-2 w-full text-sm">
             <label class="block text-lab-black">Часы работы</label>
           </div>
           <input class="border p-2 w-24 shrink-0 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="from" type="time"><span>—</span>
@@ -1119,7 +1113,7 @@
               </tr>
             </thead>
             <tbody class="before:content-['@'] before:text-xxs before:block before:leading-none before:text-transparent">
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">09:00</div>
                 </td>
@@ -1134,7 +1128,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">09:30</div>
                 </td>
@@ -1149,7 +1143,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">10:00</div>
                 </td>
@@ -1164,7 +1158,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">10:30</div>
                 </td>
@@ -1179,7 +1173,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">11:00</div>
                 </td>
@@ -1194,7 +1188,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">11:30</div>
                 </td>
@@ -1209,7 +1203,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">12:00</div>
                 </td>
@@ -1224,7 +1218,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">12:30</div>
                 </td>
@@ -1239,7 +1233,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-green-100">600</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">13:00</div>
                 </td>
@@ -1254,7 +1248,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">13:30</div>
                 </td>
@@ -1269,7 +1263,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">14:00</div>
                 </td>
@@ -1284,7 +1278,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">14:30</div>
                 </td>
@@ -1299,7 +1293,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">15:00</div>
                 </td>
@@ -1314,7 +1308,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">15:30</div>
                 </td>
@@ -1329,7 +1323,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">16:00</div>
                 </td>
@@ -1344,7 +1338,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">16:30</div>
                 </td>
@@ -1359,7 +1353,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">17:00</div>
                 </td>
@@ -1374,7 +1368,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">17:30</div>
                 </td>
@@ -1389,7 +1383,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">18:00</div>
                 </td>
@@ -1404,7 +1398,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">18:30</div>
                 </td>
@@ -1419,7 +1413,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">19:00</div>
                 </td>
@@ -1434,7 +1428,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">19:30</div>
                 </td>
@@ -1449,7 +1443,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">20:00</div>
                 </td>
@@ -1464,7 +1458,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">20:30</div>
                 </td>
@@ -1479,7 +1473,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-red-100">1000</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">21:00</div>
                 </td>
@@ -1494,7 +1488,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">21:30</div>
                 </td>
@@ -1509,7 +1503,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">22:00</div>
                 </td>
@@ -1524,7 +1518,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">22:30</div>
                 </td>
@@ -1539,7 +1533,7 @@
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
                 <td class="border min-w-16 text-center w-16 z-10 align-middle bg-blue-100">800</td>
               </tr>
-              <tr class="h-8 text-sm text-lab-black-50 text-xs">
+              <tr class="h-8 text-lab-black-50 text-xs">
                 <td class="sticky left-0 text-center bg-white align-top w-14 min-w-14 text-lab-black-50">
                   <div class="-mt-2.5 bg-white">23:00</div>
                 </td>
@@ -1690,7 +1684,7 @@
         <button class="close-modal absolute top-3 right-3 text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" type="button"><img src="img/close-round.svg" alt=""><span class="sr-only">Закрыть</span></button>
         <div class="p-4 text-center md:p-5">
           <h2>Корт №11</h2>
-          <form class="space-y-4" action="" method="post">
+          <form class="space-y-4">
             <label class="block"><span class="block text-sm font-medium text-gray-700">Корт №</span>
               <input class="mt-1 block w-full" type="text" name="court-number" value="11" readonly>
             </label>
