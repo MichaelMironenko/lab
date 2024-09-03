@@ -8,33 +8,33 @@ mixin dottedLine(title, value, hint)
     .h-3.grow.border-b-2.border-dotted
     span.text-right= value
 
-script.
-  function toggleHint(icon) {
-    const hintBox = icon.nextElementSibling
-    const allHints = document.querySelectorAll('.hint-box')
-    allHints.forEach((hint) => {
-      if (hint !== hintBox) {
-        hint.classList.add('hidden')
+  script.
+    function toggleHint(icon) {
+      const hintBox = icon.nextElementSibling
+      const allHints = document.querySelectorAll('.hint-box')
+      allHints.forEach((hint) => {
+        if (hint !== hintBox) {
+          hint.classList.add('hidden')
+        }
+      })
+      hintBox.classList.toggle('hidden')
+    }
+
+    document.addEventListener('click', function (event) {
+      const isClickInsideHint = event.target.closest('.hint-box') !== null
+      const isClickOnIcon = event.target.closest('.info-icon') !== null
+      if (!isClickInsideHint && !isClickOnIcon) {
+        document.querySelectorAll('.hint-box').forEach((hint) => {
+          hint.classList.add('hidden')
+        })
       }
     })
-    hintBox.classList.toggle('hidden')
-  }
 
-  document.addEventListener('click', function (event) {
-    const isClickInsideHint = event.target.closest('.hint-box') !== null
-    const isClickOnIcon = event.target.closest('.info-icon') !== null
-    if (!isClickInsideHint && !isClickOnIcon) {
+    document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.hint-box').forEach((hint) => {
-        hint.classList.add('hidden')
-      })
-    }
-  })
-
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.hint-box').forEach((hint) => {
-      hint.addEventListener('click', function (event) {
-        event.stopPropagation()
-        this.classList.add('hidden')
+        hint.addEventListener('click', function (event) {
+          event.stopPropagation()
+          this.classList.add('hidden')
+        })
       })
     })
-  })

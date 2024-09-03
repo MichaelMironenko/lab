@@ -1,66 +1,4 @@
-
-<script>
-  function toggleHint(icon) {
-    const hintBox = icon.nextElementSibling
-    const allHints = document.querySelectorAll('.hint-box')
-    allHints.forEach((hint) => {
-      if (hint !== hintBox) {
-        hint.classList.add('hidden')
-      }
-    })
-    hintBox.classList.toggle('hidden')
-  }
-  
-  document.addEventListener('click', function (event) {
-    const isClickInsideHint = event.target.closest('.hint-box') !== null
-    const isClickOnIcon = event.target.closest('.info-icon') !== null
-    if (!isClickInsideHint && !isClickOnIcon) {
-      document.querySelectorAll('.hint-box').forEach((hint) => {
-        hint.classList.add('hidden')
-      })
-    }
-  })
-  
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.hint-box').forEach((hint) => {
-      hint.addEventListener('click', function (event) {
-        event.stopPropagation()
-        this.classList.add('hidden')
-      })
-    })
-  })
-</script>
-<script>
-  function toggleHint(icon) {
-    const hintBox = icon.nextElementSibling
-    const allHints = document.querySelectorAll('.hint-box')
-    allHints.forEach((hint) => {
-      if (hint !== hintBox) {
-        hint.classList.add('hidden')
-      }
-    })
-    hintBox.classList.toggle('hidden')
-  }
-  
-  document.addEventListener('click', function (event) {
-    const isClickInsideHint = event.target.closest('.hint-box') !== null
-    const isClickOnIcon = event.target.closest('.info-icon') !== null
-    if (!isClickInsideHint && !isClickOnIcon) {
-      document.querySelectorAll('.hint-box').forEach((hint) => {
-        hint.classList.add('hidden')
-      })
-    }
-  })
-  
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.hint-box').forEach((hint) => {
-      hint.addEventListener('click', function (event) {
-        event.stopPropagation()
-        this.classList.add('hidden')
-      })
-    })
-  })
-</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -141,12 +79,105 @@
             <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Размер зала</span>
               <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">17x10 м</span>
             </div>
+            <script>
+              function toggleHint(icon) {
+                const hintBox = icon.nextElementSibling
+                const allHints = document.querySelectorAll('.hint-box')
+                allHints.forEach((hint) => {
+                  if (hint !== hintBox) {
+                    hint.classList.add('hidden')
+                  }
+                })
+                hintBox.classList.toggle('hidden')
+              }
+              
+              document.addEventListener('click', function (event) {
+                const isClickInsideHint = event.target.closest('.hint-box') !== null
+                const isClickOnIcon = event.target.closest('.info-icon') !== null
+                if (!isClickInsideHint && !isClickOnIcon) {
+                  document.querySelectorAll('.hint-box').forEach((hint) => {
+                    hint.classList.add('hidden')
+                  })
+                }
+              })
+              
+              document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('.hint-box').forEach((hint) => {
+                  hint.addEventListener('click', function (event) {
+                    event.stopPropagation()
+                    this.classList.add('hidden')
+                  })
+                })
+              })
+            </script>
             <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Высота потолков</span>
               <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">8 м</span>
             </div>
+            <script>
+              function toggleHint(icon) {
+                const hintBox = icon.nextElementSibling
+                const allHints = document.querySelectorAll('.hint-box')
+                allHints.forEach((hint) => {
+                  if (hint !== hintBox) {
+                    hint.classList.add('hidden')
+                  }
+                })
+                hintBox.classList.toggle('hidden')
+              }
+              
+              document.addEventListener('click', function (event) {
+                const isClickInsideHint = event.target.closest('.hint-box') !== null
+                const isClickOnIcon = event.target.closest('.info-icon') !== null
+                if (!isClickInsideHint && !isClickOnIcon) {
+                  document.querySelectorAll('.hint-box').forEach((hint) => {
+                    hint.classList.add('hidden')
+                  })
+                }
+              })
+              
+              document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('.hint-box').forEach((hint) => {
+                  hint.addEventListener('click', function (event) {
+                    event.stopPropagation()
+                    this.classList.add('hidden')
+                  })
+                })
+              })
+            </script>
             <div class="relative flex items-center justify-between gap-2 py-2 text-sm"><span class="text-lab-black-50">Покрытие</span>
               <div class="h-3 grow border-b-2 border-dotted"></div><span class="text-right">Тарафлекс</span>
             </div>
+            <script>
+              function toggleHint(icon) {
+                const hintBox = icon.nextElementSibling
+                const allHints = document.querySelectorAll('.hint-box')
+                allHints.forEach((hint) => {
+                  if (hint !== hintBox) {
+                    hint.classList.add('hidden')
+                  }
+                })
+                hintBox.classList.toggle('hidden')
+              }
+              
+              document.addEventListener('click', function (event) {
+                const isClickInsideHint = event.target.closest('.hint-box') !== null
+                const isClickOnIcon = event.target.closest('.info-icon') !== null
+                if (!isClickInsideHint && !isClickOnIcon) {
+                  document.querySelectorAll('.hint-box').forEach((hint) => {
+                    hint.classList.add('hidden')
+                  })
+                }
+              })
+              
+              document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('.hint-box').forEach((hint) => {
+                  hint.addEventListener('click', function (event) {
+                    event.stopPropagation()
+                    this.classList.add('hidden')
+                  })
+                })
+              })
+            </script>
           </div>
         </div>
       </div>
