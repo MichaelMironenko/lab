@@ -5,7 +5,5 @@ package-lock.json
 package.json
 tailwind.config.js
 tailwind.css
-pugpages/*
-components/*
 .prettierrc.js
 .vscode/settings.json
