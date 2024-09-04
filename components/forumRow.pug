@@ -19,7 +19,7 @@ mixin forumRow(topic, card)
         a.text-15.font-medium.text-lab-black.block(href=topic.link)= topic.title
         .mt-2.flex.flex-wrap.items-center.gap-2.leading-none
           .rounded.py-1.text-xxs.font-medium.text-white(class=topic.themeClass + ' px-1.5')= topic.theme
-          a.block.text-xs(class='!leading-none')= topic.author
+          a.block.text-xs(class='!leading-none' href="pages/others/profile.html")= topic.author
           .text-xs.leading-none.text-lab-black-50= topic.date
           .flex.items-center.gap-1
             img.size-4(src='img/comment-outlined.svg'  alt="Комментариев").saturate-50.opacity-50
@@ -29,7 +29,7 @@ mixin forumRow(topic, card)
       .max-w-80(class="md:block").hidden
         .text-xs.text-lab-black-50 Последний комментарий от 
           |
-          a.text-xs.inline(href="pages/others/profile.pug") Gorbachev 
+          a.text-xs.inline(href="pages/others/profile.html") Gorbachev 
           |
           span.text-lab-black-50 сегодня в 21:53
         a.border.bg-lab-color-10.mt-1.text-lab-black.rounded-md.text-xs.px-2.py-1.line-clamp-2(href="pages/aroundgame/topic.html") Когда мы играли в прошлом месяце в Москве, было много игроков с низким рейтингом, но было весело и интересно
