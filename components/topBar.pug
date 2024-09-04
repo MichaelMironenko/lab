@@ -17,8 +17,8 @@ mixin topBar
       a.relative.shrink-0(href='pages/others/messages.html')
         img.h-6.w-6.shrink-0(src='img/messages-icon.svg' alt='Сообщения')
         span.absolute.-right-1.-top-1.inline-block.rounded-full.bg-lab-red.px-1.text-center.text-xxs.text-white 99
-      a.inline-flex.gap-2
-        .hidden.text-right(class='xs:block')
+      div.inline-flex.gap-2
+        a.hidden.text-right(class='xs:block' href="pages/others/profile.html")
           .text-xs.font-semibold.text-lab-color nikpol
           .flex.items-center.justify-end
             img.relative.z-10.h-3.w-3(src='img/gradient-star.svg' alt='')
