@@ -5,7 +5,7 @@ mixin forumRow(topic, card)
       a.text-15.font-medium.text-lab-black.block(href=topic.link)= topic.title
       .mt-2.flex.flex-wrap.items-center.gap-2.leading-none
         .rounded.py-1.text-xxs.font-medium.text-white(class=topic.themeClass + ' px-1.5')= topic.theme
-        a.block.text-xs(class='!leading-none')= topic.author
+        a.block.text-xs(class='!leading-none' href="pages/others/profile.html")= topic.author
         .text-xs.leading-none.text-lab-black-50= topic.date
         .flex.items-center.gap-1
           img.size-4(src='img/comment-outlined.svg' alt="Комментариев").saturate-50.opacity-50
