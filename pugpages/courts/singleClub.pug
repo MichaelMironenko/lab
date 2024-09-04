@@ -55,18 +55,19 @@ html(lang='ru')
         img.size-16.rounded-md.object-cover(src='dynamic-img/naten-logo.png', alt='')
         .w-full
           .mb-1.flex.items-center.text-sm
-            img.mr-1.h-4(src='img/yellow-star-full.svg')
+            img.mr-1.h-4(src='img/yellow-star-full.svg' alt="Рейтинг клуба")
             span.font-semibold.leading-none 4.2
 
             span.ml-2.leading-none.text-lab-black-50 15 отзывов
 
           div
             - let services = ['wifi', 'shower', 'water', 'ac']
+            - let serviceNames = { wifi: 'Wi-Fi', shower: 'Душ', water: 'Вода', ac: 'Кондиционер' }
 
             each service in services
-              img.mr-1.inline.h-4.w-4(src=`img/${service}.svg`, alt=service)
+              img.mr-1.inline.h-4.w-4(src=`img/${service}.svg`, alt=serviceNames[service])
           div
-            img.mr-1.inline.h-4.align-middle(src='img/parking.svg')
+            img.mr-1.inline.h-4.align-middle(src='img/parking.svg' alt="Парковка")
             span.inline.align-middle.text-sm платная
 
       - var blocks = [{ title: 'Расположение', value: 4.8 }, { title: 'Игровое пространство', value: 4.6 }, { title: 'Уровень сервиса', value: 4.8 } ]
@@ -75,34 +76,34 @@ html(lang='ru')
             .flex.flex-col.justify-between.gap-2.rounded-lg.bg-lab-color-10.px-2.py-2
               .h-7.text-center.text-xxs.leading-tight.text-lab-black(class='xs:h-9 xs:text-xs')= block.title
               .flex.items-center.justify-center.gap-1
-                img.h-4(src='img/yellow-star-full.svg')
+                img.h-4(src='img/yellow-star-full.svg' alt="Рейтинг")
                 span.font-bold= block.value
       .mt-4.flex.flex-col.gap-4
         .flex.items-start.gap-4
-          img.mt-1.h-4.opacity-50.saturate-50(src='img/location-icon.svg')
+          img.mt-1.h-4.opacity-50.saturate-50(src='img/location-icon.svg' alt="Адрес")
           div
             span г. Москва, пр-т Вернадского, д. 78, стр. 5
             .mt-2.flex.items-center
-              img.mr-1.size-4(src='img/location-arrow.svg')
+              img.mr-1.size-4(src='img/location-arrow.svg' alt="Расстояние от вас")
               span.text-sm.leading-none.text-lab-black-50 1.5 км
 
         .flex.items-start.gap-4
-          img.mt-1.h-4.opacity-50.saturate-50(src='img/metro.svg')
+          img.mt-1.h-4.opacity-50.saturate-50(src='img/metro.svg' alt="Станция метро")
           div
             .inline-block
-              .mr-1.inline-block.shrink-0.rounded-full.bg-lab-red.align-middle(class='mr-1.5 size-2.5')
+              .inline-block.shrink-0.rounded-full.bg-lab-red.align-middle(class='mr-1.5 size-2.5')
               span.mr-4.inline.align-middle.leading-none Юго-Западная
 
             .inline-block
-              .mr-1.inline-block.shrink-0.rounded-full.bg-lab-red.align-middle(class='mr-1.5 size-2.5')
+              .inline-block.shrink-0.rounded-full.bg-lab-red.align-middle(class='mr-1.5 size-2.5')
               span.mr-4.inline.align-middle.leading-none Проспект Вернадского
 
             .inline-block
-              .mr-1.inline-block.shrink-0.rounded-full.bg-lab-yellow.align-middle(class='mr-1.5 size-2.5')
+              .inline-block.shrink-0.rounded-full.bg-lab-yellow.align-middle(class='mr-1.5 size-2.5')
               span.mr-4.inline.align-middle.leading-none Озерная
 
         .flex.items-start.gap-4
-          img.mt-1.h-4.opacity-50.saturate-50(src='img/time.svg')
+          img.mt-1.h-4.opacity-50.saturate-50(src='img/time.svg' alt="Часы работы")
           div
             .flex.items-center.gap-4
               span.w-20.text-lab-black-50 Будни:
@@ -112,27 +113,27 @@ html(lang='ru')
               span 10:00 — 0:00
 
         .flex.items-center.gap-4
-          img.size-4.opacity-50.saturate-50(src='img/court.svg')
+          img.size-4.opacity-50.saturate-50(src='img/court.svg' alt="")
           span 15 кортов
 
         .flex.items-center.gap-4
-          img.size-4.opacity-50.saturate-50(src='img/price.svg')
+          img.size-4.opacity-50.saturate-50(src='img/price.svg' alt="Цена в час")
           span от 600₽
 
         .flex.items-center.gap-4
-          img.size-4.opacity-50.saturate-50(src='img/phone.svg')
+          img.size-4.opacity-50.saturate-50(src='img/phone.svg' alt="Телефон")
           a(href='phone:79681234575') +7 (495) 123-45-75
 
         .flex.items-center.gap-4
-          img.size-4.opacity-50.saturate-50(src='img/email.svg')
+          img.size-4.opacity-50.saturate-50(src='img/email.svg' alt="Email")
           a(href='mailto:info@naten.ru') info@naten.ru
 
         .ml-8.flex.items-center.gap-4
-          img.size-8(src='img/site.svg')
-          img.size-8(src='img/vk.svg')
-          img.size-8(src='img/telegram.svg')
-          img.size-8(src='img/instagram.svg')
-          img.size-8(src='img/ok.svg')
+          img.size-8(src='img/site.svg' alt="Сайт")
+          img.size-8(src='img/vk.svg' alt="ВК")
+          img.size-8(src='img/telegram.svg' alt="Телеграм")
+          img.size-8(src='img/instagram.svg' alt="Инстаграм")
+          img.size-8(src='img/ok.svg' alt="Одноклассники")
 
         img.rounded-md.object-cover(src='dynamic-img/map.png', alt='', class='aspect-[2/1]')
 
@@ -144,7 +145,7 @@ html(lang='ru')
       .my-4.grid.w-full.grid-cols-4.gap-2
         each fastLink in fastLinks
           .flex.flex-col.items-center.justify-center.gap-2.rounded-lg.bg-white.p-2.shadow-md
-            img.size-7(src=`img/${fastLink.image}.svg`)
+            img.size-7(src=`img/${fastLink.image}.svg` alt='')
             .flex.grow.items-center.justify-center.text-center.text-xxs.leading-3.text-lab-black(
               class='xs:text-xs'
             )!= fastLink.title
@@ -153,8 +154,8 @@ html(lang='ru')
       .flex.items-center.justify-between.pb-2
         h2.leading-tight Аренда кортов в клубе
 
-        a(href='pages/courts/myBookings.html') 
-          img.size-8.rounded-md.bg-lab-color-10.p-2(src='img/booking.svg')
+        a(href='pages/courts/myBookings.html').shrink-0
+          img.size-8.rounded-md.bg-lab-color-10.p-2(src='img/booking.svg' alt='Мои бронирования')
       .no-scrollbar.-mx-4.flex.gap-2.overflow-x-auto.px-4
         .flex-shrink-0
           span.sticky.left-0.py-2.text-sm.text-lab-black-50 Март
@@ -168,10 +169,10 @@ html(lang='ru')
                   class=isActive && isWeekend ? 'bg-lab-red' : isActive ? 'bg-lab-color' : 'bg-lab-color-10'
                 )
                   div(
-                    class=isActive ? 'text-xs opacity-50' : isWeekend ? 'text-xs opacity-50' : 'text-xs text-lab-black-50 text-lab-red text-white opacity-50'
+                    class=isActive ? 'text-xs text-white opacity-50' : isWeekend ? 'text-xs opacity-50' : 'text-xs text-lab-black-50 text-lab-rede opacity-50'
                   )= day
                   div(
-                    class=isActive ? 'text-base font-semibold' : isWeekend ? 'text-base text-lab-red' : 'text-base text-lab-black text-white'
+                    class=isActive ? 'text-base text-white font-semibold' : isWeekend ? 'text-base text-lab-red' : 'text-base text-lab-black'
                   )= marchDates[index]
 
         .flex-shrink-0
@@ -182,14 +183,14 @@ html(lang='ru')
             each day, index in aprilDays
               - var isWeekend = day === 'Вс' || day === 'Сб'
               - var isActive = false
-              .flex.h-12.w-12.shrink-0.flex-col.items-center.justify-center.rounded-2xl.p-2(
-                class=isActive && isWeekend ? 'bg-lab-red' : isActive ? 'bg-lab-color' : 'bg-lab-color-10'
-              )
-                div(
-                  class=isActive ? 'text-xs opacity-50' : isWeekend ? 'text-xs opacity-50' : 'text-xs text-lab-black-50 text-lab-red text-white opacity-50'
-                )= day
-                div(
-                  class=isActive ? 'text-base font-semibold' : isWeekend ? 'text-base text-lab-red' : 'text-base text-lab-black text-white'
+              .flex.h-12.w-12.flex-col.items-center.justify-center.rounded-2xl.p-2(
+                  class=isActive && isWeekend ? 'bg-lab-red' : isActive ? 'bg-lab-color' : 'bg-lab-color-10'
+                )
+                  div(
+                    class=isActive ? 'text-xs text-white opacity-50' : isWeekend ? 'text-xs opacity-50' : 'text-xs text-lab-black-50 text-lab-rede opacity-50'
+                  )= day
+                  div(
+                    class=isActive ? 'text-base text-white font-semibold' : isWeekend ? 'text-base text-lab-red' : 'text-base text-lab-black'
                 )= aprilDates[index]
 
       .flex.items-end.gap-4.py-4
@@ -213,7 +214,7 @@ html(lang='ru')
 
         +button('img/refresh.svg', 'image')
       .my-3
-        img.mr-1.inline.size-4.opacity-50.saturate-50(src='img/warning.svg')
+        img.mr-1.inline.size-4.opacity-50.saturate-50(src='img/warning.svg' alt="Внимание")
         .inline.text-sm.text-lab-black-50 Указана полная стоимость за 1,5 часа
 
       -
@@ -232,7 +233,7 @@ html(lang='ru')
             .mb-1.text-sm.font-semibold.text-lab-color #{ slot.time }
             .text-xs.text-lab-black-50 #{ slot.price }&#8202;₽
       .selectTable.mt-auto.flex.items-center.pt-4(id=id)
-        img.mr-2.size-6(src='img/choose-table.svg')
+        img.mr-2.size-6(src='img/choose-table.svg' alt="")
         .text-sm.leading-none.text-lab-black-50 Выбрать стол (опционально)
 
     +block('О клубе')
@@ -286,31 +287,31 @@ html(lang='ru')
           .text-lab-black Расположение
           .text-xs.text-lab-black-50 Насколько удобно добираться до клуба
         .flex.shrink-0.gap-1
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-empty.svg')
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-empty.svg' alt="Звезда")
       .mb-4.flex.justify-between.gap-4
         .grow
           .text-lab-black Игровое пространство
           .text-xs.text-lab-black-50 Насколько удобно играть
         .flex.shrink-0.gap-1
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-empty.svg')
-          img.h-6(src='img/yellow-star-empty.svg')
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-empty.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-empty.svg' alt="Звезда")
       .mb-4.flex.justify-between.gap-4
         .grow
           .text-lab-black Уровень сервиса
           .text-xs.text-lab-black-50 Насколько комфортно находиться в клубе
         .flex.shrink-0.gap-1
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-full.svg')
-          img.h-6(src='img/yellow-star-empty.svg')
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-full.svg' alt="Звезда")
+          img.h-6(src='img/yellow-star-empty.svg' alt="Звезда")
 
       .relative.mb-2.flex.flex-grow.flex-col.gap-3.border-b.pb-4
         textarea#commentTextArea.resize-none.overflow-hidden.rounded-md.border.border-gray-300.p-2.transition-all.duration-300.ease-in-out(

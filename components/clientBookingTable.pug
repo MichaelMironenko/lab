@@ -11,22 +11,22 @@ mixin clientBookingTable
 
     .flex.justify-between.items-center.p-2
         button.size-8.text-left.-ml-1
-            img(src="img/expand-arrow.svg", alt="").rotate-90.size-6 
+            img(src="img/expand-arrow.svg", alt="Предыдущий день").rotate-90.size-6 
         span.text-lab-color.font-bold 11 мая 
         button.size-8.text-right.-mr-2
-            img(src="img/expand-arrow.svg", alt="").-rotate-90.size-6
+            img(src="img/expand-arrow.svg", alt="Следующий день").-rotate-90.size-6
     div.w-full.overflow-auto(class="h-[55lvh]").no-scrollbar
         table.table-fixed.w-full.text-lab-black
             thead.sticky.top-0.bg-white.z-20.h-10.mb-4
                 tr
                     th.px-2.text-center.text-xs.sticky.bg-white.left-0.align-middle.min-w-14.w-14.z-20 Корт
                     each _, index in Array(10)
-                        th.court.text-sm.min-w-16.w-16.text-center.align-middle.sticky.top-0.h-8(class="text-center")
+                        th.court.text-sm.min-w-16.w-16.text-center.align-middle.sticky.top-0.h-8
                             div #{index + 1}
                             div.text-xs.font-normal.text-lab-black-50.mt-1 Обычный
             tbody(class="before:content-['@'] before:text-xxs before:block before:leading-none before:text-transparent")
                 each time, index in timeSlots
-                    tr.h-8.text-sm.text-lab-black-50.text-xs
+                    tr.h-8.text-lab-black-50.text-xs
                         td.sticky.left-0.text-center.bg-white.align-top.w-14.min-w-14.text-lab-black-50
                             div(class="-mt-2.5 bg-white") #{time}
                         each _, courtIndex in Array(10)

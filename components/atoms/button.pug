@@ -1,5 +1,5 @@
 mixin button(text, variant="default", color, bgColor, extraClasses='', id='', href='', imageText)
-  - const onClickAction = href ? `window.location.href='${href}'` : ''
+  - const onClickAction = href ? href : ''
   - const widthClass = extraClasses.match(/\bw-\S+/) ? '' : 'w-full'
   if variant == 'default'
     button(

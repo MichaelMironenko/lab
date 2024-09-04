@@ -56,10 +56,9 @@
     </script>
     <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined"> 
       <div class="flex justify-between items-center pb-2">
-        <h2 class="leading-tight">Аренда кортов в 
-          <div class="flex items-center gap-1 undefined">
-            <label class="flex items-center gap-1" for="city-select">
-              <select class="w-fit appearance-none rounded-2xl border-none bg-transparent bg-none p-0 text-sm font-semibold leading-none text-lab-color  !underline !text-lg text-lab-color !rounded-none !underline-offset-4 !decoration-dotted  focus-visible:outline-none" id="city-select" aria-label="Выбор города">
+        <h2 class="leading-tight">Аренда кортов в&nbsp;<span class="undefined ">
+            <label for="city-select">
+              <select class="w-fit appearance-none border-none bg-transparent bg-none p-0 font-semibold leading-none text-lab-color  !underline !text-lg !underline-offset-4 !decoration-dotted  focus-visible:outline-none" id="city-select" aria-label="Выбор города">
                 <option value="0" selected>Все города</option>
                 <option value="781">Алексин</option>
                 <option value="38">Казань</option>
@@ -71,9 +70,8 @@
                 <option value="67">Новосибирск</option>
                 <option value="312">Одинцово</option>
               </select>
-            </label>
-          </div>
-        </h2><a href="pages/courts/myBookings.html"> <img class="size-8 p-2 bg-lab-color-10 rounded-md" src="img/booking.svg"></a>
+            </label></span>
+        </h2><a class="shrink-0" href="pages/courts/myBookings.html"> <img class="size-8 p-2 bg-lab-color-10 rounded-md" src="img/booking.svg" alt=""></a>
       </div>
       <div class="flex overflow-x-auto -mx-4 px-4 gap-2 no-scrollbar">
         <div class="shrink-0"><span class="sticky left-0 text-sm  text-lab-black-50 py-2 z-10">Март</span>
@@ -145,7 +143,7 @@
           </div>
         </div>
       </div>
-      <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="window.location.href='pages/courts/rentCourt.html'">Найти корты</button>
+      <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="pages/courts/rentCourt.html">Найти корты</button>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
             const buttons = document.querySelectorAll('.button-interactive');

@@ -4,11 +4,11 @@ include /components/atoms/citySelect.pug
 mixin rentCourt(widget) 
     
     .flex.justify-between.items-center.pb-2
-        h2.leading-tight Аренда кортов в 
-            +citySelect(false, ' !underline !text-lg text-lab-color !rounded-none !underline-offset-4 !decoration-dotted ') 
+        h2.leading-tight Аренда кортов в&nbsp;
+            +citySelect(false, ' !underline !text-lg !underline-offset-4 !decoration-dotted ') 
 
-        a(href="pages/courts/myBookings.html") 
-            img(src="img/booking.svg").size-8.p-2.bg-lab-color-10.rounded-md
+        a(href="pages/courts/myBookings.html").shrink-0 
+            img(src="img/booking.svg" alt="").size-8.p-2.bg-lab-color-10.rounded-md
 
     div(class="flex overflow-x-auto -mx-4 px-4 gap-2 no-scrollbar")
         div(class="shrink-0")

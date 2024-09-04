@@ -41,7 +41,7 @@ html(lang='en')
     .fixed.left-0.top-0.min-h-screen.w-full.bg-page-background(class='z-[-1]')
     .no-scrollbar.h-screen.overflow-y-auto
       #registration.tab-content.p-4(class='pb-[50px] pt-[104px]')
-        +citySelect(true)
+        +citySelect(true, ' text-sm ', '', true)
         .flex.flex-col.items-center
           +date("Вторник, 25 ноября")
           +tournamentRegCard(true, true, "Майский фестиваль Микстов в Сколково")
