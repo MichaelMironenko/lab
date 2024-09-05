@@ -31,6 +31,8 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name="description" content="Товар на сайте ЛАБ: подробные характеристики, фото, отзывы и рекомендации. Узнайте, кто играет этим товаром и где его можно купить, включая Б/у варианты.")
+
     title Yonex Astrox 99 - Маркет - ЛАБ
     link(href='../../styles.css', rel='stylesheet')
     link(
@@ -53,7 +55,7 @@ html(lang='ru')
           class=`${isActive ? "font-bold bg-lab-color-10" : "opacity-75 saturate-50"} flex grow items-center justify-center gap-1.5 border-r py-3 `,
           data-tab=`${tabIds[index]}`
         )
-          img(src=images[index], class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
+          img(src=images[index] alt=tab class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
           .py-1.leading-none= tab
 
     script.
@@ -183,25 +185,36 @@ html(lang='ru')
             a.ml-2.grow.text-sm(href='pages/others/profile.html') #{ player.name } #{ player.surname }
             +userRating(player.rating)
 
-        #button-container.mt-3
-          // Начальное состояние кнопки
-          button#choose-button.text-sm.text-lab-black-50.underline.decoration-dotted Играете этой ракеткой?
-          // Состояние кнопки при выборе ракетки
-          #selected-state.flex.hidden.justify-between.gap-2.text-sm
-            img(src='img/checkmark.svg', alt='')
-            span.grow.text-sm.font-semibold.text-lab-color Играю этой ракеткой
-            button#cancel-button.ml-4.text-lab-black-50.underline.decoration-dotted Отменить
+      #button-container.mt-3
+        // Начальное состояние кнопки
+        button#choose-button.text-sm.text-lab-black-50.underline.decoration-dotted Играете этой ракеткой?
+        // Состояние кнопки при выборе ракетки
+        #selected-state.hidden.justify-between.gap-2.text-sm
+          img(src='img/checkmark.svg', alt='')
+          span.grow.text-sm.font-semibold.text-lab-color Играю этой ракеткой
+          button#cancel-button.ml-4.text-lab-black-50.underline.decoration-dotted Отменить
 
-        script.
-          document.getElementById('choose-button').addEventListener('click', function () {
-            this.classList.add('hidden')
-            document.getElementById('selected-state').classList.remove('hidden')
-          })
-          document.getElementById('cancel-button').addEventListener('click', function () {
-            document.getElementById('choose-button').classList.remove('hidden')
-            document.getElementById('selected-state').classList.add('hidden')
-          })
+      script.
+        function toggleVisibility(elementId, show) {
+          const element = document.getElementById(elementId);
+          if (show) {
+            element.classList.remove('hidden');
+            element.classList.add('flex');
+          } else {
+            element.classList.add('hidden');
+            element.classList.remove('flex');
+          }
+        }
 
+        document.getElementById('choose-button').addEventListener('click', function () {
+          toggleVisibility('choose-button', false);
+          toggleVisibility('selected-state', true);
+        });
+
+        document.getElementById('cancel-button').addEventListener('click', function () {
+          toggleVisibility('choose-button', true);
+          toggleVisibility('selected-state', false);
+        });
         // Пример данных игроков
 
       +block('Похожие товары', { href: 'pages/market/products.html', text: 'Все'}, '', '', 'mt-2')

@@ -5,6 +5,6 @@ mixin buyCard(category, title, user, date)
     .flex.flex-wrap.items-center.gap-3.text-xs.text-lab-black-50
       div(class=`border-${categoryColor} text-${categoryColor} w-fit rounded border px-1 text-xs`) #{ category }
       .flex.items-center.gap-1
-        img.size-4(src='img/player.svg')
+        img.size-4(src='img/player.svg' alt="Пользователь")
         | #{ user }
       | #{ date }

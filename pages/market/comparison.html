@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сравнение бадминтонных товаров по характеристикам на сайте ЛАБ. Найдите идеальный инвентарь для игры, сравнивая ракетки, воланы и аксессуары по ключевым параметрам.">
     <title>Сравнение товаров</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
@@ -56,13 +57,13 @@
       })
     </script>
     <div class="pb-safe-extra-panel fixed z-20 flex w-full justify-between overflow-hidden rounded-t-2xl border bg-white text-lab-black drop-shadow-top">
-      <div class="players-panel-tab tab font-bold bg-lab-color-10 flex grow items-center justify-center gap-1.5 border-r py-3 " data-tab="market"><img class="false aspect-square h-4 w-4" src="img/market.svg">
+      <div class="players-panel-tab tab font-bold bg-lab-color-10 flex grow items-center justify-center gap-1.5 border-r py-3 " data-tab="market"><img class="false aspect-square h-4 w-4" src="img/market.svg" alt="Маркет">
         <div class="py-1 leading-none">Маркет</div>
       </div>
-      <div class="players-panel-tab tab opacity-75 saturate-50 flex grow items-center justify-center gap-1.5 border-r py-3 " data-tab="used"><img class="opacity-75 saturate-50 aspect-square h-4 w-4" src="img/price.svg">
+      <div class="players-panel-tab tab opacity-75 saturate-50 flex grow items-center justify-center gap-1.5 border-r py-3 " data-tab="used"><img class="opacity-75 saturate-50 aspect-square h-4 w-4" src="img/price.svg" alt="Б/У">
         <div class="py-1 leading-none">Б/У</div>
       </div>
-      <div class="players-panel-tab tab opacity-75 saturate-50 flex grow items-center justify-center gap-1.5 border-r py-3 " data-tab="stringers"><img class="opacity-75 saturate-50 aspect-square h-4 w-4" src="img/racket.svg">
+      <div class="players-panel-tab tab opacity-75 saturate-50 flex grow items-center justify-center gap-1.5 border-r py-3 " data-tab="stringers"><img class="opacity-75 saturate-50 aspect-square h-4 w-4" src="img/racket.svg" alt="Стрингеры">
         <div class="py-1 leading-none">Стрингеры</div>
       </div>
     </div>
@@ -127,7 +128,7 @@
               </div>
             </th>
             <th class="p-2 relative">
-              <div class="w-24 h-24 bg-white flex items-center justify-center mx-auto"><img class="w-20 h-auto" src="dynamic-img/li-ning windstorm 72.jpg" alt="Li-Ning Windstorm 72">
+              <div class="w-24 h-24 bg-white flex items-center justify-center mx-auto"><img class="w-20 h-auto" src="dynamic-img/li-ning-windstorm-72.jpg" alt="Li-Ning Windstorm 72">
                 <button class="absolute top-0 right-0 p-1"><img class="size-6" src="img/close-round.svg" alt="Close"></button>
               </div>
               <div class="sticky top-24 bg-white z-10">
@@ -148,60 +149,60 @@
         </thead>
         <tbody>
           <tr class="sm:hidden always-visible">
-            <td class="border-y" colspan="10">
+            <td class="border-y" colspan="4">
               <div class="flex items-center gap-2 w-screen p-2 justify-center"><img class="size-6 saturate-50 opacity-50" src="img/turn-icon.svg" alt=""><span class="text-xs text-lab-black-50 font-normal">Сравнение более двух товаров удобнее в альбомной ориентации</span></div>
             </td>
           </tr>
           <tr class="always-visible">
-            <td class="p-2 font-semibold" colspan="3">Технические характеристики</td>
-            <tr class="text-sm relative">
-              <td class="text-lab-black-50 p-2">
-                <div class="flex items-center">Тип
+            <td class="p-2 font-semibold" colspan="4">Технические характеристики</td>
+          </tr>
+          <tr class="text-sm">
+            <td class="text-lab-black-50 p-2">
+              <div class="flex items-center">Тип
+              </div>
+            </td>
+            <td class="text-lab-black p-2 text-center text-sm">Маневренный</td>
+            <td class="text-lab-black p-2 text-center text-sm">Маневренный</td>
+            <td class="text-lab-black p-2 text-center text-sm">Маневренный</td>
+          </tr>
+          <tr class="text-sm">
+            <td class="text-lab-black-50 p-2">
+              <div class="flex items-center">Вес
+              </div>
+            </td>
+            <td class="text-lab-black p-2 text-center text-sm">4U (80-84 г)</td>
+            <td class="text-lab-black p-2 text-center text-sm">5U (75-79 г)</td>
+            <td class="text-lab-black p-2 text-center text-sm">3U (85-89 г)</td>
+          </tr>
+          <tr class="text-sm">
+            <td class="text-lab-black-50 p-2">
+              <div class="flex items-center">Баланс
+              </div>
+            </td>
+            <td class="text-lab-black p-2 text-center text-sm">305 мм</td>
+            <td class="text-lab-black p-2 text-center text-sm">295 мм</td>
+            <td class="text-lab-black p-2 text-center text-sm">310 мм</td>
+          </tr>
+          <tr class="text-sm">
+            <td class="text-lab-black-50 p-2">
+              <div class="flex items-center">Жесткость<img class="info-icon h-4 w-4 ml-2" src="img/info.svg" alt="" onclick="toggleHint(this)">
+                <div class="hint-box w-80 absolute left-2 -top-8 z-10 hidden rounded-lg bg-white px-3 drop-shadow-around">
+                  <p class="text-sm">Жесткость ракетки влияет на управляемость. Жесткая - для сильных ударов, требует лучшего контроля. Мягкая - лучше контроль, слабее удар</p>
                 </div>
-              </td>
-              <td class="text-lab-black p-2 text-center text-sm">Маневренный</td>
-              <td class="text-lab-black p-2 text-center text-sm">Маневренный</td>
-              <td class="text-lab-black p-2 text-center text-sm">Маневренный</td>
-            </tr>
-            <tr class="text-sm relative">
-              <td class="text-lab-black-50 p-2">
-                <div class="flex items-center">Вес
-                </div>
-              </td>
-              <td class="text-lab-black p-2 text-center text-sm">4U (80-84 г)</td>
-              <td class="text-lab-black p-2 text-center text-sm">5U (75-79 г)</td>
-              <td class="text-lab-black p-2 text-center text-sm">3U (85-89 г)</td>
-            </tr>
-            <tr class="text-sm relative">
-              <td class="text-lab-black-50 p-2">
-                <div class="flex items-center">Баланс
-                </div>
-              </td>
-              <td class="text-lab-black p-2 text-center text-sm">305 мм</td>
-              <td class="text-lab-black p-2 text-center text-sm">295 мм</td>
-              <td class="text-lab-black p-2 text-center text-sm">310 мм</td>
-            </tr>
-            <tr class="text-sm relative">
-              <td class="text-lab-black-50 p-2">
-                <div class="flex items-center">Жесткость<img class="info-icon h-4 w-4 ml-2" src="img/info.svg" alt="" onclick="toggleHint(this)">
-                  <div class="hint-box w-80 absolute left-2 -top-8 z-10 hidden rounded-lg bg-white px-3 drop-shadow-around">
-                    <p class="text-sm">Жесткость ракетки влияет на управляемость. Жесткая - для сильных ударов, требует лучшего контроля. Мягкая - лучше контроль, слабее удар</p>
-                  </div>
-                </div>
-              </td>
-              <td class="text-lab-black p-2 text-center text-sm">Жесткая</td>
-              <td class="text-lab-black p-2 text-center text-sm">Средняя</td>
-              <td class="text-lab-black p-2 text-center text-sm">Жесткая</td>
-            </tr>
-            <tr class="text-sm relative">
-              <td class="text-lab-black-50 p-2">
-                <div class="flex items-center">Натяжение струн
-                </div>
-              </td>
-              <td class="text-lab-black p-2 text-center text-sm">20-28 фунтов</td>
-              <td class="text-lab-black p-2 text-center text-sm">20-30 фунтов</td>
-              <td class="text-lab-black p-2 text-center text-sm">24-32 фунтов</td>
-            </tr>
+              </div>
+            </td>
+            <td class="text-lab-black p-2 text-center text-sm">Жесткая</td>
+            <td class="text-lab-black p-2 text-center text-sm">Средняя</td>
+            <td class="text-lab-black p-2 text-center text-sm">Жесткая</td>
+          </tr>
+          <tr class="text-sm">
+            <td class="text-lab-black-50 p-2">
+              <div class="flex items-center">Натяжение струн
+              </div>
+            </td>
+            <td class="text-lab-black p-2 text-center text-sm">20-28 фунтов</td>
+            <td class="text-lab-black p-2 text-center text-sm">20-30 фунтов</td>
+            <td class="text-lab-black p-2 text-center text-sm">24-32 фунтов</td>
           </tr>
         </tbody>
       </table>

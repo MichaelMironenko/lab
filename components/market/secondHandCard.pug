@@ -8,7 +8,7 @@ mixin secondHandCard(photo, title, price, city, locationType, locationName, loca
       .line-clamp-3.text-sm.font-semibold.text-lab-color= title
       .mt-2.text-sm.font-semibold.text-lab-black= `${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} ₽`
       .mt-2.flex.items-center.justify-center.text-xs
-        img.mr-1.size-3.opacity-50.saturate-50(src='img/location-icon.svg')
+        img.mr-1.size-3.opacity-50.saturate-50(src='img/location-icon.svg' alt='Город')
         span.text-lab-black-50= city
       .mt-1.flex.items-center.justify-center.text-xs
         if locationType == 'metro'
@@ -16,7 +16,6 @@ mixin secondHandCard(photo, title, price, city, locationType, locationName, loca
         span.text-lab-black-50= locationName
       .mt-2.text-xs.text-gray-400= date
     .absolute.right-0.top-0
-      button.flex.h-8.w-8.items-center.justify-center.rounded-full.bg-white.bg-opacity-50(
-        onclick='event.preventDefault(); event.stopPropagation(); var img = this.querySelector("img"); img.src.includes("heart-empty") ? img.src="img/heart-fill.svg" : img.src="img/heart-empty.svg"'
-      )
-        img.size-6(src=liked ? 'img/heart-fill.svg' : 'img/heart-empty.svg')
+      div.flex.h-8.w-8.items-center.justify-center.rounded-full.bg-white.bg-opacity-50(
+        onclick=`event.preventDefault(); event.stopPropagation(); var img = this.querySelector('img'); img.src.includes('heart-empty') ? img.src='img/heart-fill.svg' : img.src='img/heart-empty.svg'` )
+        img.size-6(src=liked ? 'img/heart-fill.svg' : 'img/heart-empty.svg' alt='Лайк')

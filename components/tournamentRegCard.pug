@@ -2,7 +2,7 @@ include tournamentRow.pug
 include /components/atoms/tournamentTypeBadge.pug
 
 mixin tournamentRegCard(reg, isOpen, name)
-    - let containerClasses = "pb-1 pt-3 bg-white rounded-lg z-1 shadow-md w-full max-w-sm mb-3" + (reg ? " border-2 border-lab-color px-3" : " px-[14px]")
+    - let containerClasses = "pb-1 pt-3 bg-white rounded-lg z-1 shadow-md w-full max-w-sm mb-3" + (reg ? " border-2 border-lab-color px-3" : " border px-[14px]")
     div(class=containerClasses)
         div.flex.items-center.cursor-pointer.gap-2.mb-2
             div.w-9.flex.justify-center.shrink-0

@@ -91,11 +91,11 @@
       </div>
     </div>
     <div class="flex gap-4 bg-white absolute bottom-0 w-full px-2 py-2 items-end">
-      <textarea class="border border-lab-black-30 p-2 w-full overflow-auto max-h-80 rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" id="" rows="1" placeholder="" oninput="autoResizeTextarea(this)"></textarea>
+      <textarea class="border border-lab-black-30 p-2 w-full overflow-auto max-h-80 rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" id="" placeholder="" oninput="autoResizeTextarea(this)" rows="1"></textarea>
       <script>
         function autoResizeTextarea(elem) {
             elem.style.height = 'auto';
-            elem.style.height = elem.scrollHeight+2 + 'px'; 
+            elem.style.height = elem.scrollHeight + 2 + 'px'; 
         }
       </script>
       <button class="w-full pb-3  rounded-lg font-semibold max-h-12 transition-transform duration-150 text- leading-none ease-in-out button-interactive" data-action=""><img src="img/send-message.svg" alt=""></button>

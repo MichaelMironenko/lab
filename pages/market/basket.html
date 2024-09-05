@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Куплю ракетку Yonex Astrox 99 - Маркет - ЛАБ</title>
+    <meta name="description" content="Корзина интернет-магазина ЛАБ. Проверьте выбранные товары и оформите заказ на бадминтонные ракетки, воланы и аксессуары. Удобная система оформления и доставки от ЛАБ.">
+    <title>Корзина - Маркет - ЛАБ</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
     <base href="../../">
   </head>
-  <body class="bg-page-background pt-12">
+  <body class="bg-white pt-12">
     <div class="fixed inset-x-0 top-0 z-30 flex items-center justify-between border-b bg-white px-3 py-2"><a class="min-w-30 flex flex-shrink items-center space-x-2" href="index.html"><img class="h-8" src="img/lab-logo.svg" alt="Логотип">
         <div class="flex min-w-0 flex-shrink flex-col items-start gap-1"><span class="w-full whitespace-normal text-xs leading-4 tracking-tight text-slate-500 xs:overflow-visible xs:truncate xs:text-ellipsis xs:whitespace-nowrap xs:leading-none">Нижний Новгород</span></div></a>
       <div class="ml-4 flex shrink-0 flex-grow items-center justify-end gap-4"><a class="relative shrink-0" href="pages/others/notifications.html"><img class="h-6 w-6 shrink-0" src="img/notification-icon.svg" alt="Уведомления"><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a><a class="relative shrink-0" href="pages/others/messages.html"><img class="h-6 w-6 shrink-0" src="img/messages-icon.svg" alt="Сообщения"><span class="absolute -right-1 -top-1 inline-block rounded-full bg-lab-red px-1 text-center text-xxs text-white">99</span></a>
@@ -55,8 +56,8 @@
         })
       })
     </script>
-    <section class="flex flex-col gap-4 rounded-lg bg-white p-4" id="cart">
-      <header class="text-lg font-bold text-lab-black">Корзина</header>
+    <div class="flex flex-col gap-4 rounded-lg p-4" id="cart">
+      <h1 class="font-bold text-lab-black">Корзина</h1>
       <div class="flex gap-4 border-b pb-2"><img class="aspect-square w-16 shrink-0 self-start" loading="lazy" src="dynamic-img/yonexastrox99.jpg" alt="Ракетка Yonex Astrox 99 Pro">
         <div class="flex grow flex-col items-start"><span class="text-sm font-bold">Ракетка Yonex Astrox 99 Pro</span><span class="mt-2 text-xs text-lab-black-50">Вес: 4U</span>
           <div class="mt-4 flex w-full items-center justify-between gap-5">
@@ -140,107 +141,112 @@
         });
       </script>
       <button class="self-center text-sm leading-5 text-lab-color">Продолжить покупки</button>
-    </section>
-    <section class="hidden flex flex-col gap-4 rounded-lg bg-white" id="checkout">
-      <div class="container mx-auto bg-white p-4"><a class="-ml-1 flex items-center gap-1 pb-4" href="#" id="backToCart"><img class="size-5 rotate-90" src="img/expand-arrow.svg" alt=""><span class="text-sm text-lab-color">Вернуться к корзине</span></a>
+    </div>
+    <div class="hidden bg-white" id="checkout">
+      <div class="mx-auto bg-white p-4 w-full"><a class="-ml-1 flex items-center gap-1 pb-4" href="#" id="backToCart"><img class="size-5 rotate-90" src="img/expand-arrow.svg" alt=""><span class="text-sm text-lab-color">Вернуться к корзине</span></a>
         <h1 class="mb-4 font-bold">Оформление покупки</h1>
-        <form class="border-b">
-          <div class="mb-6 flex justify-between gap-1">
-            <div class="flex items-center gap-2 w-full !w-32">
-              <label class="block text-lab-black">Имя</label>
-            </div>
-            <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="name" type="text" value="Андрей">
+        <div class="flex gap-y-4 gap-x-8 flex-wrap">
+          <div class="w-full max-w-sm">
+            <form class="border-b sm:border-none">
+              <div class="relative mb-6">
+                <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg  
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" value="Андрей" id="name" placeholder=" ">
+                <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="name">Имя
+                </label>
+              </div>
+              <div class="relative mb-6">
+                <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg  
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" value="Филимонов" id="surname" placeholder=" ">
+                <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="surname">Фамилия
+                </label>
+              </div>
+              <div class="relative mb-6">
+                <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg  
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" value="" id="city" placeholder=" ">
+                <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="city">Город
+                </label>
+              </div>
+              <div class="relative mb-6">
+                <textarea class="block px-4 pt-2.5 pb-1.5 w-full text-sm bg-white border  rounded-lg  
+      border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer resize-none" id="address" placeholder=" " oninput="autoResizeTextarea(this)" rows="3"></textarea>
+                <label class="absolute text-sm text-lab-black-50 bg-white px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="address">Адрес доставки
+                </label>
+              </div>
+              <script>
+                function autoResizeTextarea(elem) {
+                    elem.style.height = 'auto';
+                    elem.style.height = elem.scrollHeight + 2 + 'px';
+                }
+              </script>
+              <div class="relative mb-6">
+                <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg  
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="tel" value="+7 (910) 314-45-50" id="phone" inputmode="tel" placeholder=" ">
+                <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="phone">Телефон
+                </label>
+              </div>
+              <div class="relative mb-6">
+                <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg  
+      border-2 border-lab-red focus:outline-none focus:ring-0 focus:border-lab-color peer" type="email" value="" id="email" inputmode="email" placeholder=" ">
+                <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="email">Email
+                </label>
+                <div class="text-xs text-lab-red text-right w-full mt-1">Поле обязательно к заполнению</div>
+              </div>
+            </form>
           </div>
-          <div class="mb-6 flex justify-between gap-1">
-            <div class="flex items-center gap-2 w-full !w-32">
-              <label class="block text-lab-black">Фамилия</label>
+          <div class="w-full max-w-sm">
+            <h2 class="text-lg font-semibold">Ваш заказ</h2>
+            <div class="mt-4 flex items-center justify-between gap-4"><span class="text-sm">Всего 4 товара на сумму:</span><span>18 480 ₽</span></div>
+            <div class="my-4 flex items-center justify-between gap-4">
+              <div><span class="text-sm">Доставка в Верхнезадрищенск</span>
+                <div class="text-lab-black-50 text-xs">Ожидаемая дата доставки: 12 июня</div>
+              </div><span>300 ₽</span>
             </div>
-            <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="surname" type="text" value="Филимонов">
-          </div>
-          <div class="mb-6 flex justify-between gap-1">
-            <div class="flex items-center gap-2 w-full !w-32">
-              <label class="block text-lab-black">Город</label>
-            </div>
-            <input class="border p-2 w-full rounded-lg border-lab-red border-2 focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="city" type="text" value="">
-          </div>
-          <div class="mb-6 flex justify-between gap-1">
-            <div class="flex items-center gap-2 w-full !w-32">
-              <label class="block text-lab-black">Адрес доставки</label>
-            </div>
-            <textarea class="border border-lab-black-30 p-2 w-full rounded-lg text focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" id="address" rows="" placeholder="Введите адрес" oninput="autoResizeTextarea(this)"></textarea>
+            <div class="flex items-center justify-between gap-4 mb-4"><span class="font-bold">Итого</span><span class="font-bold">18 480 ₽</span></div>
+            <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="toPay">Оплатить</button>
             <script>
-              function autoResizeTextarea(elem) {
-                  elem.style.height = 'auto';
-                  elem.style.height = elem.scrollHeight+2 + 'px'; 
-              }
+              document.addEventListener('DOMContentLoaded', function() {
+                  const buttons = document.querySelectorAll('.button-interactive');
+              
+                  buttons.forEach(button => {
+                      button.addEventListener('mousedown', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('mouseup', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('mouseleave', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchstart', function() {
+                          this.classList.add('scale-97');
+                      });
+              
+                      button.addEventListener('touchmove', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      button.addEventListener('touchend', function() {
+                          this.classList.remove('scale-97');
+                      });
+              
+                      // Handle click if there's a data-action defined
+                      button.addEventListener('click', function() {
+                          const action = this.getAttribute('data-action');
+                          if (action) {
+                              window.location.href = action;
+                          }
+                      });
+                  });
+              });
             </script>
           </div>
-          <div class="mb-6 flex justify-between gap-1">
-            <div class="flex items-center gap-2 w-full !w-32">
-              <label class="block text-lab-black">Телефон</label>
-            </div>
-            <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="phone" type="tel" value="+7 (910) 314-45-50" inputmode="tel">
-          </div>
-          <div class="mb-6 flex justify-between gap-1">
-            <div class="flex items-center gap-2 w-full !w-32">
-              <label class="block text-lab-black">Email</label>
-            </div>
-            <input class="border p-2 w-full rounded-lg border-lab-red border-2 focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="email" type="email" value="" inputmode="email">
-          </div>
-        </form>
-        <div class="mt-4">
-          <h2 class="text-lg font-semibold">Ваш заказ</h2>
-          <div class="mt-4 flex items-center justify-between gap-4"><span class="text-sm">Всего 4 товара на сумму:</span><span>18 480 ₽</span></div>
-          <div class="my-4 flex items-center justify-between gap-4">
-            <div><span class="text-sm">Доставка в Верхнезадрищенск</span>
-              <div class="text-lab-black-50 text-xs">Ожидаемая дата доставки: 12 июня</div>
-            </div><span>300 ₽</span>
-          </div>
-          <div class="flex items-center justify-between gap-4 mb-4"><span class="font-bold">Итого</span><span class="font-bold">18 480 ₽</span></div>
-          <button class="w-full  bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="toPay">Оплатить</button>
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const buttons = document.querySelectorAll('.button-interactive');
-            
-                buttons.forEach(button => {
-                    button.addEventListener('mousedown', function() {
-                        this.classList.add('scale-97');
-                    });
-            
-                    button.addEventListener('mouseup', function() {
-                        this.classList.remove('scale-97');
-                    });
-            
-                    button.addEventListener('mouseleave', function() {
-                        this.classList.remove('scale-97');
-                    });
-            
-                    button.addEventListener('touchstart', function() {
-                        this.classList.add('scale-97');
-                    });
-            
-                    button.addEventListener('touchmove', function() {
-                        this.classList.remove('scale-97');
-                    });
-            
-                    button.addEventListener('touchend', function() {
-                        this.classList.remove('scale-97');
-                    });
-            
-                    // Handle click if there's a data-action defined
-                    button.addEventListener('click', function() {
-                        const action = this.getAttribute('data-action');
-                        if (action) {
-                            window.location.href = action;
-                        }
-                    });
-                });
-            });
-          </script>
         </div>
       </div>
-    </section>
-    <section class="hidden flex flex-col gap-4 rounded-lg bg-white p-4" id="confirmation">
+    </div>
+    <section class="hidden flex-col gap-4 rounded-lg bg-white p-4" id="confirmation">
       <header class="text-lg font-bold text-lab-black">Ваш заказ №341203 оплачен</header>
       <h2 class="text-lg font-bold">Детали заказа</h2>
       <div class="flex gap-4 border-b pb-2"><img class="aspect-square w-16 shrink-0 self-start" loading="lazy" src="dynamic-img/yonexastrox99.jpg" alt="Ракетка Yonex Astrox 99 Pro">
@@ -275,19 +281,40 @@
     </section>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
+        // Переключение на раздел "Оформление заказа"
         document.getElementById('toCheckout').addEventListener('click', function() {
-          document.getElementById('cart').classList.add('hidden')
-          document.getElementById('checkout').classList.remove('hidden')
+          const cart = document.getElementById('cart');
+          const checkout = document.getElementById('checkout');
+      
+          cart.classList.add('hidden');
+          cart.classList.remove('flex');
+      
+          checkout.classList.remove('hidden');
+          checkout.classList.add('flex');
         });
       
+        // Переключение на раздел "Подтверждение оплаты"
         document.getElementById('toPay').addEventListener('click', function() {
-          document.getElementById('checkout').classList.add('hidden')
-          document.getElementById('confirmation').classList.remove('hidden')
+          const checkout = document.getElementById('checkout');
+          const confirmation = document.getElementById('confirmation');
+      
+          checkout.classList.add('hidden');
+          checkout.classList.remove('flex');
+      
+          confirmation.classList.remove('hidden');
+          confirmation.classList.add('flex');
         });
       
+        // Возврат в раздел "Корзина"
         document.getElementById('backToCart').addEventListener('click', function() {
-          document.getElementById('checkout').classList.add('hidden')
-          document.getElementById('cart').classList.remove('hidden')
+          const checkout = document.getElementById('checkout');
+          const cart = document.getElementById('cart');
+      
+          checkout.classList.add('hidden');
+          checkout.classList.remove('flex');
+      
+          cart.classList.remove('hidden');
+          cart.classList.add('flex');
         });
       });
     </script>

@@ -31,6 +31,7 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name="description" content="Страница стрингера на ЛАБ: контакты и отзывы. Найдите опытного специалиста для натяжки струн на вашей бадминтонной ракетке и получите профессиональные услуги.")
     title Маркет
     link(href='../../styles.css', rel='stylesheet')
     link(
@@ -49,7 +50,7 @@ html(lang='ru')
         .w-full
           h2.mb-2.text-base.font-semibold Вадим Новосёлов
           .mb-2.flex.items-center.text-sm
-            img.h-4(src='img/star.svg')
+            img.h-4(src='img/star.svg' alt='Рейтинг')
             span.ml-1.font-semibold= 4.4
             span.ml-3.text-lab-black-50= 6 + ' отзывов'
       .mt-4.flex.items-center.gap-2
@@ -63,23 +64,23 @@ html(lang='ru')
       p.mt-4 Описание тренера
 
       .mt-4.flex.items-center.gap-2
-        img.opacity-50.saturate-50(src='img/player.svg')
+        img.opacity-50.saturate-50(src='img/player.svg' alt='')
         span.h-4.text-sm.leading-none Профиль на сайте
         |
         a.text-sm.leading-none(href='pages/others/profile.html') Volan4ik
         +userRating(984)
       .mt-2.flex.items-center.gap-2
-        img.opacity-50.saturate-50(src='img/home.svg')
+        img.opacity-50.saturate-50(src='img/home.svg' alt='Тренирует в клубах')
         div
           a.text-sm.leading-none(href='pages/courts/singleClub.html') Gym Space
           span.text-sm.leading-none ,
           a.ml-1.text-sm.leading-none(href='pages/courts/singleClub.html') Сколково
 
       .mt-4.flex.items-center.gap-2
-        img.opacity-50.saturate-50(src='img/location-icon.svg')
+        img.opacity-50.saturate-50(src='img/location-icon.svg' alt='Город')
         span.h-4.text-sm.leading-none Красногорск, Москва
       .mt-4.flex.items-center.gap-2
-        img.opacity-50.saturate-50(src='img/phone.svg')
+        img.opacity-50.saturate-50(src='img/phone.svg' alt='Телефон')
         a.h-4.text-sm.leading-none(href='tel:79313952421') +7 (931) 395-24-21
     +comments(true)
     +tabBar('Маркет')

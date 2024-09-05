@@ -31,6 +31,8 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name="description" content="Объявление Б/у товара на сайте ЛАБ: фотографии, описание и похожие предложения. Найдите выгодные Б/у товары для бадминтона и сэкономьте на покупке.")
+
     title Продам ракетку Yonex Astrox 99 - Маркет - ЛАБ
     link(href='../../styles.css', rel='stylesheet')
     link(
@@ -53,7 +55,7 @@ html(lang='ru')
           class=`${isActive ? "font-bold bg-lab-color-10" : "opacity-75 saturate-50"} flex grow items-center justify-center gap-1.5 border-r py-3 `,
           data-tab=`${tabIds[index]}`
         )
-          img(src=images[index], class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
+          img(src=images[index] alt=tab class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
           .py-1.leading-none= tab
 
     script.
@@ -116,11 +118,11 @@ html(lang='ru')
                     +userRating(342)
                   span.mb-1.text-sm.text-lab-black-50 @asemenov
                   .flex.shrink-0.items-center
-                    img.h-4(src='img/yellow-star-full.svg')
-                    img.h-4(src='img/yellow-star-full.svg')
-                    img.h-4(src='img/yellow-star-full.svg')
-                    img.h-4(src='img/yellow-star-full.svg')
-                    img.h-4(src='img/yellow-star-half.svg')
+                    img.h-4(src='img/yellow-star-full.svg' alt='Рейтинг')
+                    img.h-4(src='img/yellow-star-full.svg' alt='')
+                    img.h-4(src='img/yellow-star-full.svg' alt='')
+                    img.h-4(src='img/yellow-star-full.svg' alt='')
+                    img.h-4(src='img/yellow-star-half.svg' alt='')
                     span.ml-1.text-sm.font-semibold.leading-tight 4.4
                     .ml-4.text-sm.text-lab-black-50 12 отзывов
             .my-2.text-sm.text-lab-black-50 На сайте 3 года 2 месяца
@@ -128,31 +130,23 @@ html(lang='ru')
             .mt-4.flex.items-center.justify-between.gap-2
               button.w-full.rounded-lg.bg-lab-color.px-4.py-2.text-center.font-semibold.leading-none.text-white.transition-transform.duration-150.ease-in-out(
                 id=`${id}`,
-                onmousedown='this.classList.add(\'scale-97\')',
-                onmouseup='this.classList.remove(\'scale-97\')',
-                ontouchstart='this.classList.add(\'scale-97\')',
-                onmouseleave='this.classList.remove(\'scale-97\')',
-                ontouchmove='this.classList.remove(\'scale-97\')',
-                ontouchend='this.classList.remove(\'scale-97\')',
-                onclick=`${onClickAction}`
-              ) Написать
-                .mt-1.flex.items-center.justify-center.gap-1
-                  .size-2.rounded-full.bg-green-300
-                  span.text-xs.font-normal.text-white Онлайн
+                onmousedown=`this.classList.add('scale-97')`,
+                onmouseup=`this.classList.remove('scale-97')`,
+                onmouseleave=`this.classList.remove('scale-97')`
+                ) Написать
+                span.mt-1.flex.items-center.justify-center.gap-1
+                    span.size-2.rounded-full.bg-green-300
+                    span.text-xs.font-normal.text-white Онлайн
+
               button.w-full.rounded-lg.bg-lab-color.px-4.py-2.text-center.font-semibold.leading-none.text-white.transition-transform.duration-150.ease-in-out(
-                id=`${id}`,
-                onmousedown='this.classList.add(\'scale-97\')',
-                onmouseup='this.classList.remove(\'scale-97\')',
-                ontouchstart='this.classList.add(\'scale-97\')',
-                onmouseleave='this.classList.remove(\'scale-97\')',
-                ontouchmove='this.classList.remove(\'scale-97\')',
-                ontouchend='this.classList.remove(\'scale-97\')',
-                onclick=`${onClickAction}`
-              ) Позвонить
-                .mt-1.text-center.text-xs.font-normal +7 (963) 123-45-67
+                id=`${id}-call`,
+                onmousedown=`this.classList.add('scale-97')`,
+                onmouseup=`this.classList.remove('scale-97')`
+                ) Позвонить
+                span.mt-1.text-center.text-xs.block.text-white.font-normal +7 (963) 123-45-67
             .mt-4.flex.items-center.justify-between.gap-2
               +button('Редактировать', 'default', 'white', 'bg-lab-color', 'w-1/2', 'editButton')
-              +button('Закрыть', 'default', 'white', 'bg-lab-color', 'w-1/2', 'editButton')
+              +button('Закрыть', 'default', 'white', 'bg-lab-color', 'w-1/2', 'close')
             .mt-4.flex.items-center.gap-1
               img.opacity-50.saturate-50(src='img/warning.svg', alt='')
               span.text-sm.text-lab-black-50 Пожаловаться

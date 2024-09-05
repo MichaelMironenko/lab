@@ -1,0 +1,18 @@
+mixin floatingInput(placeholder, width='', id, type, extraClass, value, inputMode, error)
+  div.relative.mb-6
+    input(
+      type=type
+      value=value
+      id=id
+      inputmode=(inputMode ? inputMode : undefined)
+      placeholder=" "
+      class=`block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white ${width ? width : 'w-full'} rounded-lg ${extraClass} 
+      ${error ? 'border-2 border-lab-red' : 'border border-lab-black-30'} focus:outline-none focus:ring-0 focus:border-lab-color peer`
+    )
+    label(
+      for=id
+      class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5"
+    )
+      = placeholder
+    if error
+      div.text-xs.text-lab-red.text-right.w-full.mt-1= error

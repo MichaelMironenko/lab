@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Редактирование объявления Б/у товара на сайте ЛАБ. Измените информацию о вашем товаре и привлеките покупателей среди бадминтонистов.">
     <title>Создание нового объявления</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
@@ -62,48 +63,52 @@
           <div class="text-lab-black-50 px-4 py-2">Основная информация
           </div>
         </div>
-        <div class="bg-white p-4 max-w-420 rounded-lg w-full shrink-0">
-          <div class="flex items-center gap-2 mb-2 undefined">
-            <label class="block text-lab-black">Категория</label>
+        <div class="bg-white p-4 max-w-420 rounded-lg w-full shrink-0"> 
+          <div class="relative mb-6">
+            <select class="block px-4 pt-2.5 pb-1.5 w-full text-sm bg-white border  mt-2 rounded-lg appearance-none  border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" id="select">
+              <option value="" disabled selected hidden>Выберите категорию...</option>
+              <option>Вариант 1</option>
+              <option>Вариант 2</option>
+              <option>Вариант 3</option>
+            </select>
+            <label class="absolute text-sm text-lab-black-50 bg-white px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="select">Выберите категорию...
+            </label>
           </div>
-          <select class="block appearance-none border border-lab-black-30 p-2 rounded-lg mb-4 text-sm pr-10 max-w-sm leading-tight shadow-sm focus:outline-none focus:shadow-outline w-full">
-            <option value="" disabled selected hidden>Выберите категорию...</option>
-            <option>Вариант 1</option>
-            <option>Вариант 2</option>
-            <option>Вариант 3</option>
-          </select>
-          <div class="flex items-center gap-2 mb-2 undefined">
-            <label class="block text-lab-black">Товар</label>
+          <div class="relative mb-6">
+            <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg mb-4 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" value="Yonex BS-4" id="product" placeholder=" ">
+            <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="product">Товар
+            </label>
           </div>
-          <input class="border p-2 w-full mb-4 rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="" value="">
-          <div class="flex items-center gap-2 w-full undefined">
-            <label class="block text-lab-black">Название объявления</label>
-          </div>
-          <div class="text-lab-black-50 text-xs mb-2">(можно не заполнять, если заполнено поле товар)</div>
-          <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-red" id="" type="" value="">
-          <div class="text-xs text-lab-red text-right w-full mt-1">Ошибка</div>
-          <div class="flex items-center gap-2 mb-2 undefined">
-            <label class="block text-lab-black">Состояние товара</label>
+          <div class="relative mb-6">
+            <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg  
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" value="Продам ракетку" id="title" placeholder=" ">
+            <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="title">Название объявления
+            </label>
           </div>
           <div class="flex w-full rounded-lg overflow-hidden mb-4">
             <button class="grow text-sm p-2 bg-lab-color text-white border-none outline-none" id="tabBooking">Новый </button>
             <button class="grow text-sm p-2 bg-lab-color-10 text-gray-500 border-none outline-none" id="tabPrices">Б/У</button>
           </div>
-          <div class="flex items-center gap-2 mb-2 undefined">
-            <label class="block text-lab-black">Описание в свободной форме</label>
+          <div class="relative mb-6">
+            <textarea class="block px-4 pt-2.5 pb-1.5 w-full text-sm bg-white border  rounded-lg mb-4 
+      border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer resize-none" id="description" placeholder=" " oninput="autoResizeTextarea(this)" rows="3"></textarea>
+            <label class="absolute text-sm text-lab-black-50 bg-white px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="description">Описание в свободной форме
+            </label>
           </div>
-          <textarea class="border border-lab-black-30 p-2 w-full mb-4 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color shadow-sm max-w-sm" placeholder="" oninput="autoResizeTextarea(this)"></textarea>
           <script>
             function autoResizeTextarea(elem) {
                 elem.style.height = 'auto';
-                elem.style.height = elem.scrollHeight+2 + 'px'; 
+                elem.style.height = elem.scrollHeight + 2 + 'px';
             }
           </script>
           <div class="flex items-center gap-2">
-            <div class="flex items-center gap-2 w-full undefined">
-              <label class="block text-lab-black">Цена</label>
+            <div class="relative mb-6">
+              <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-20 rounded-lg  
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" value="" id="price" placeholder=" ">
+              <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="price">Цена
+              </label>
             </div>
-            <input class="border p-2 w-20 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
           </div>
         </div>
       </div>
@@ -153,32 +158,32 @@
         </div>
         <div class="bg-white p-4 max-w-420 rounded-lg w-full shrink-0">
           <div class="grid grid-cols-3">
-            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg"></a>
+            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-1.jpg" alt="Фото"></a>
               <div class="absolute right-2 bottom-2">
-                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg"></div>
+                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg" alt="Удалить"></div>
               </div>
             </div>
-            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg"></a>
+            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-2.jpg" alt="Фото"></a>
               <div class="absolute right-2 bottom-2">
-                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg"></div>
+                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg" alt="Удалить"></div>
               </div>
             </div>
-            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg"></a>
+            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-3.jpg" alt="Фото"></a>
               <div class="absolute right-2 bottom-2">
-                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg"></div>
+                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg" alt="Удалить"></div>
               </div>
             </div>
-            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg"></a>
+            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/club-4.jpg" alt="Фото"></a>
               <div class="absolute right-2 bottom-2">
-                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg"></div>
+                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg" alt="Удалить"></div>
               </div>
             </div>
-            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg"></a>
+            <div class="relative"><a href="pages/aroundgame/photo.html"><img class="aspect-square object-cover" src="dynamic-img/photo-2.jpg" alt="Фото"></a>
               <div class="absolute right-2 bottom-2">
-                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg"></div>
+                <div class="bg-white bg-opacity-75 rounded-full p-2 shadow"><img class="w-4 h-4" src="img/delete.svg" alt="Удалить"></div>
               </div>
             </div>
-            <div class="aspect-square flex justify-center items-center bg-lab-color-10" onclick="toggleActionMenu()"><img src="img/simple-plus.svg" alt=""></div>
+            <div class="aspect-square flex justify-center items-center bg-lab-color-10" onclick="toggleActionMenu()"><img src="img/simple-plus.svg" alt="Добавить фото"></div>
           </div>
         </div>
       </div>
@@ -227,19 +232,19 @@
           </div>
         </div>
         <div class="bg-white p-4 max-w-420 rounded-lg w-full shrink-0">
-          <div class="flex items-center gap-2 mb-2 undefined">
-            <label class="block text-lab-black">Адрес</label>
-          </div>
-          <input class="border p-2 w-full rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-red" id="" type="" value="">
-          <div class="text-xs text-lab-red text-right w-full mt-1">Ошибка</div>
-          <div class="flex items-center gap-2 mb-2 undefined">
-            <label class="block text-lab-black">Ближайшие станции метро (необязательно)</label>
-          </div><span class="text-sm">(мультиселект выбора станций)  </span>
+          <div class="relative mb-6">
+            <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg undefined 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" id="address" placeholder=" ">
+            <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="address">Адрес
+            </label>
+          </div><span class="text-sm">(мультиселект выбора станций)</span>
           <div class="flex items-center gap-2 mt-4">  
-            <div class="flex items-center gap-2 w-full undefined">
-              <label class="block text-lab-black">Телефон</label>
+            <div class="relative mb-6">
+              <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg  
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="tel" value="" id="phone" inputmode="tel" placeholder=" ">
+              <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="phone">Телефон
+              </label>
             </div>
-            <input class="border p-2  rounded-lg  focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="" type="tel" value="" inputmode="tel">
           </div>
         </div>
       </div>

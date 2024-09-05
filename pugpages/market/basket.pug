@@ -15,9 +15,10 @@ include /components/filters/filterButtonsRow.pug
 include /components/atoms/breadcrumbs.pug
 include /components/filters/tournamentTypeButton.pug
 include /components/inputs/select.pug
-include /components/inputs/input.pug
+include /components/inputs/floatingInput.pug
 include /components/inputs/switch.pug
-include /components/inputs/textarea.pug
+include /components/inputs/floatingTextarea.pug
+
 include /components/searchAndFilterButton
 include /components/atoms/button.pug
 include /components/atoms/stepper.pug
@@ -32,7 +33,8 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Куплю ракетку Yonex Astrox 99 - Маркет - ЛАБ
+    meta(name="description" content="Корзина интернет-магазина ЛАБ. Проверьте выбранные товары и оформите заказ на бадминтонные ракетки, воланы и аксессуары. Удобная система оформления и доставки от ЛАБ.")
+    title Корзина - Маркет - ЛАБ
     link(href='../../styles.css', rel='stylesheet')
     link(
       rel='stylesheet',
@@ -40,7 +42,7 @@ html(lang='ru')
     )
 
     base(href='../../')
-  body.bg-page-background.pt-12
+  body.bg-white.pt-12
     +topBar
     -
       const items = [
@@ -49,8 +51,8 @@ html(lang='ru')
       { img: 'dynamic-img/bag.jpeg', title: 'Сумка Yonex Pro Racquet Bag', price: '7000', quantity: 1 }
       ]
 
-    section#cart.flex.flex-col.gap-4.rounded-lg.bg-white.p-4
-      header.text-lg.font-bold.text-lab-black Корзина
+    #cart.flex.flex-col.gap-4.rounded-lg.p-4
+      h1.font-bold.text-lab-black Корзина
       each item in items
         .flex.gap-4.border-b.pb-2
           img.aspect-square.w-16.shrink-0.self-start(loading='lazy', src=item.img, alt=item.title)
@@ -77,50 +79,38 @@ html(lang='ru')
       +button('Оформить заказ', 'default', 'white', 'bg-lab-color', '', 'toCheckout') 
       button.self-center.text-sm.leading-5.text-lab-color Продолжить покупки
 
-    section#checkout.hidden.flex.flex-col.gap-4.rounded-lg.bg-white
-      .container.mx-auto.bg-white.p-4
+    #checkout.hidden.bg-white
+      .mx-auto.bg-white.p-4.w-full
         a.-ml-1.flex.items-center.gap-1.pb-4(href='#', id='backToCart')
-          img.size-5.rotate-90(src='img/expand-arrow.svg', alt='')
-          span.text-sm.text-lab-color Вернуться к корзине
+            img.size-5.rotate-90(src='img/expand-arrow.svg', alt='')
+            span.text-sm.text-lab-color Вернуться к корзине
         h1.mb-4.font-bold Оформление покупки
-        form.border-b
-          .mb-6.flex.justify-between.gap-1
-            +editLabel('Имя', '', true, '!w-32')
-            +input('Введите имя', 'w-full', 'name', 'text', '', 'Андрей', '')
+        .flex.gap-y-4.gap-x-8.flex-wrap
+          .w-full.max-w-sm
+            form.border-b(class="sm:border-none")
+                +floatingInput('Имя', '', 'name', 'text', '', 'Андрей', '')
+                +floatingInput('Фамилия', '', 'surname', 'text', '', 'Филимонов', '')
+                +floatingInput('Город', '', 'city', 'text', '', '', '')
+                +floatingTextarea('Адрес доставки', '', 'address', '', '', 3, '')
+                +floatingInput('Телефон', '', 'phone', 'tel', '', '+7 (910) 314-45-50', 'tel')
+                +floatingInput('Email', '', 'email', 'email', '', '', 'email', 'Поле обязательно к заполнению')
 
-          .mb-6.flex.justify-between.gap-1
-            +editLabel('Фамилия', '', true, '!w-32')
-            +input('Введите фамилию', 'w-full', 'surname', 'text', '', 'Филимонов', '')
+          .w-full.max-w-sm
+            h2.text-lg.font-semibold Ваш заказ
+            .mt-4.flex.items-center.justify-between.gap-4
+              span.text-sm Всего 4 товара на сумму:
+              span 18 480 ₽
+            .my-4.flex.items-center.justify-between.gap-4
+              div
+                span.text-sm Доставка в Верхнезадрищенск
+                div.text-lab-black-50.text-xs Ожидаемая дата доставки: 12 июня
+              span 300 ₽
+            .flex.items-center.justify-between.gap-4.mb-4
+                span.font-bold Итого
+                span.font-bold 18 480 ₽
+            +button('Оплатить', 'default', 'white', 'bg-lab-color', '', 'toPay') 
 
-          .mb-6.flex.justify-between.gap-1
-            +editLabel('Город', '', true, '!w-32')
-            +input('Введите город', 'w-full', 'city', 'text', 'border-lab-red border-2', '', '')
-          .mb-6.flex.justify-between.gap-1
-            +editLabel('Адрес доставки', '', true, '!w-32')
-            +textarea('Введите адрес', 'w-full', 'address', 'text', '', '', '')
-          .mb-6.flex.justify-between.gap-1
-            +editLabel('Телефон', '', true, '!w-32')
-            +input('', 'w-full', 'phone', 'tel', '', '+7 (910) 314-45-50', 'tel')
-          .mb-6.flex.justify-between.gap-1
-            +editLabel('Email', '', true, '!w-32')
-            +input('Введите email', 'w-full', 'email', 'email', 'border-lab-red border-2', '', 'email')
-
-        .mt-4
-          h2.text-lg.font-semibold Ваш заказ
-          .mt-4.flex.items-center.justify-between.gap-4
-            span.text-sm Всего 4 товара на сумму:
-            span 18 480 ₽
-          .my-4.flex.items-center.justify-between.gap-4
-            div
-              span.text-sm Доставка в Верхнезадрищенск
-              div.text-lab-black-50.text-xs Ожидаемая дата доставки: 12 июня
-            span 300 ₽
-          .flex.items-center.justify-between.gap-4.mb-4
-              span.font-bold Итого
-              span.font-bold 18 480 ₽
-          +button('Оплатить', 'default', 'white', 'bg-lab-color', '', 'toPay') 
-
-    section#confirmation.hidden.flex.flex-col.gap-4.rounded-lg.bg-white.p-4
+    section#confirmation.hidden.flex-col.gap-4.rounded-lg.bg-white.p-4
       header.text-lg.font-bold.text-lab-black Ваш заказ №341203 оплачен
       h2.text-lg.font-bold Детали заказа
       each item in items
@@ -155,19 +145,39 @@ html(lang='ru')
 
     script.
       document.addEventListener('DOMContentLoaded', function () {
+        // Переключение на раздел "Оформление заказа"
         document.getElementById('toCheckout').addEventListener('click', function() {
-          document.getElementById('cart').classList.add('hidden')
-          document.getElementById('checkout').classList.remove('hidden')
+          const cart = document.getElementById('cart');
+          const checkout = document.getElementById('checkout');
+
+          cart.classList.add('hidden');
+          cart.classList.remove('flex');
+
+          checkout.classList.remove('hidden');
+          checkout.classList.add('flex');
         });
 
+        // Переключение на раздел "Подтверждение оплаты"
         document.getElementById('toPay').addEventListener('click', function() {
-          document.getElementById('checkout').classList.add('hidden')
-          document.getElementById('confirmation').classList.remove('hidden')
+          const checkout = document.getElementById('checkout');
+          const confirmation = document.getElementById('confirmation');
+
+          checkout.classList.add('hidden');
+          checkout.classList.remove('flex');
+
+          confirmation.classList.remove('hidden');
+          confirmation.classList.add('flex');
         });
 
+        // Возврат в раздел "Корзина"
         document.getElementById('backToCart').addEventListener('click', function() {
-          document.getElementById('checkout').classList.add('hidden')
-          document.getElementById('cart').classList.remove('hidden')
+          const checkout = document.getElementById('checkout');
+          const cart = document.getElementById('cart');
+
+          checkout.classList.add('hidden');
+          checkout.classList.remove('flex');
+
+          cart.classList.remove('hidden');
+          cart.classList.add('flex');
         });
       });
-

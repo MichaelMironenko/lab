@@ -31,6 +31,8 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name="description" content="Сравнение бадминтонных товаров по характеристикам на сайте ЛАБ. Найдите идеальный инвентарь для игры, сравнивая ракетки, воланы и аксессуары по ключевым параметрам.")
+
     title Сравнение товаров
     link(href='../../styles.css', rel='stylesheet')
     link(
@@ -53,7 +55,7 @@ html(lang='ru')
           class=`${isActive ? "font-bold bg-lab-color-10" : "opacity-75 saturate-50"} flex grow items-center justify-center gap-1.5 border-r py-3 `,
           data-tab=`${tabIds[index]}`
         )
-          img(src=images[index], class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
+          img(src=images[index], alt=tab class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
           .py-1.leading-none= tab
 
     script.
@@ -92,7 +94,7 @@ html(lang='ru')
     - 
       var products = [
        { name: "Yonex Astrox 100 ZZ", price: "15 000₽", type: "Маневренный", weight: "4U (80-84 г)", balance: "305 мм", stiffness: "Жесткая", stringTension: "20-28 фунтов", image: "dynamic-img/yonex-astrox-100-zz.jpg" },
-       { name: "Li-Ning Windstorm 72", price: "10 000₽", type: "Маневренный", weight: "5U (75-79 г)", balance: "295 мм", stiffness: "Средняя", stringTension: "20-30 фунтов", image: "dynamic-img/li-ning windstorm 72.jpg" },
+       { name: "Li-Ning Windstorm 72", price: "10 000₽", type: "Маневренный", weight: "5U (75-79 г)", balance: "295 мм", stiffness: "Средняя", stringTension: "20-30 фунтов", image: "dynamic-img/li-ning-windstorm-72.jpg" },
        { name: "Victor Thruster K 9900", price: "13 500₽", type: "Маневренный", weight: "3U (85-89 г)", balance: "310 мм", stiffness: "Жесткая", stringTension: "24-32 фунтов", image: "dynamic-img/victor-thruster.jpg" }
       ]
 
@@ -125,25 +127,25 @@ html(lang='ru')
           - var characteristics = ["Тип", "Вес", "Баланс", "Жесткость", "Натяжение струн"]
           - var keys = ["type", "weight", "balance", "stiffness", "stringTension"]
           tr(class="sm:hidden").always-visible
-            td(colspan="10").border-y
+            td(colspan=4).border-y
               .flex.items-center.gap-2.w-screen.p-2.justify-center
                 img(src="img/turn-icon.svg", alt="").size-6.saturate-50.opacity-50
                 span.text-xs.text-lab-black-50.font-normal Сравнение более двух товаров удобнее в альбомной ориентации
                   
           tr.always-visible
-            td.p-2.font-semibold(colspan=3) Технические характеристики
-            each characteristic, index in characteristics
-              tr.text-sm.relative
-                td.text-lab-black-50.p-2
-                  .flex.items-center
-                    = characteristic
-                    if characteristic === "Жесткость"
-                      img.info-icon.h-4.w-4(src='img/info.svg', alt='', onclick='toggleHint(this)').ml-2
-                      .hint-box.w-80.absolute.left-2.-top-8.z-10.hidden.rounded-lg.bg-white.px-3.drop-shadow-around
-                        p.text-sm Жесткость ракетки влияет на управляемость. Жесткая - для сильных ударов, требует лучшего контроля. Мягкая - лучше контроль, слабее удар
-                
-                each product in products
-                  td.text-lab-black.p-2.text-center.text-sm= product[keys[index]]
+            td.p-2.font-semibold(colspan=4) Технические характеристики
+          each characteristic, index in characteristics
+            tr.text-sm
+              td.text-lab-black-50.p-2
+                .flex.items-center
+                  = characteristic
+                  if characteristic === "Жесткость"
+                    img.info-icon.h-4.w-4(src='img/info.svg', alt='', onclick='toggleHint(this)').ml-2
+                    .hint-box.w-80.absolute.left-2.-top-8.z-10.hidden.rounded-lg.bg-white.px-3.drop-shadow-around
+                      p.text-sm Жесткость ракетки влияет на управляемость. Жесткая - для сильных ударов, требует лучшего контроля. Мягкая - лучше контроль, слабее удар
+
+              each product in products
+                td.text-lab-black.p-2.text-center.text-sm= product[keys[index]]
 
 
 

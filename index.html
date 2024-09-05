@@ -162,7 +162,7 @@
                     <div class="inline-flex gap-0.5 items-center"><img class="opacity-30" src="img/player.svg" alt="Игроков"><span>18</span></div>
                   </div></a>
               </div>
-              <div class="pb-1 pt-3 bg-white rounded-lg z-1 shadow-md w-full max-w-sm mb-3 px-[14px]">
+              <div class="pb-1 pt-3 bg-white rounded-lg z-1 shadow-md w-full max-w-sm mb-3 border px-[14px]">
                 <div class="flex items-center cursor-pointer gap-2 mb-2">
                   <div class="w-9 flex justify-center shrink-0">
                     <div class="px-1 py-0.5 text-xs text-white inline text-center font-bold shrink-0 rounded min-w-6 w-fit bg-avatar-gradient h-5">XD</div>
@@ -661,31 +661,8 @@
               <div class="shrink-0 rounded bg-lab-light-yellow px-2 py-1 text-sm font-semibold text-lab-black">12 800 ₽</div>
             </div>
             <div class="absolute right-0 top-0">
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50 cursor-pointer toggle-heart-button" data-liked="false"><img class="w-6 h-6" src="img/heart-empty.svg" alt="Добавление в избранное"></div>
-            </div></a>
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const heartButtons = document.querySelectorAll('.toggle-heart-button');
-            
-                heartButtons.forEach(button => {
-                    button.addEventListener('click', function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-            
-                        const img = this.querySelector('img');
-                        const liked = this.getAttribute('data-liked') === 'true';
-            
-                        if (liked) {
-                            img.src = 'img/heart-empty.svg';
-                            this.setAttribute('data-liked', 'false');
-                        } else {
-                            img.src = 'img/heart-fill.svg';
-                            this.setAttribute('data-liked', 'true');
-                        }
-                    });
-                });
-            });
-          </script><a class="relative flex shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html"><img class="mx-auto size-40 object-cover" src="dynamic-img/yonex-65x.jpg" alt="Изображение товара">
+              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector('img'); img.src.includes('heart-empty') ? img.src='img/heart-fill.svg' : img.src='img/heart-empty.svg'"><img class="size-6" src="img/heart-empty.svg" alt="Нравится"></div>
+            </div></a><a class="relative flex shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html"><img class="mx-auto size-40 object-cover" src="dynamic-img/yonex-65x.jpg" alt="Изображение товара">
             <div class="flex flex-grow flex-col items-center gap-3 p-2">
               <div class="flex items-center gap-1"><img class="size-3" src="img/star.svg" alt="Рейтинг"><span class="text-xs">4.4</span><img class="ml-2 size-3" src="img/comment.svg" alt="Комментариев"><span class="text-xs">0</span><img class="ml-2 size-3" src="img/player.svg" alt="Игроков пользуются"><span class="text-xs">351</span></div>
               <div class="line-clamp-3 flex-grow text-center text-sm font-medium leading-tight text-lab-black">Yonex 65Х 3 (Navy/Blue)</div>
@@ -694,31 +671,8 @@
               <div class="shrink-0 rounded bg-lab-light-yellow px-2 py-1 text-sm font-semibold text-lab-black">8 990 ₽</div>
             </div>
             <div class="absolute right-0 top-0">
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50 cursor-pointer toggle-heart-button" data-liked="false"><img class="w-6 h-6" src="img/heart-empty.svg" alt="Добавление в избранное"></div>
-            </div></a>
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const heartButtons = document.querySelectorAll('.toggle-heart-button');
-            
-                heartButtons.forEach(button => {
-                    button.addEventListener('click', function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-            
-                        const img = this.querySelector('img');
-                        const liked = this.getAttribute('data-liked') === 'true';
-            
-                        if (liked) {
-                            img.src = 'img/heart-empty.svg';
-                            this.setAttribute('data-liked', 'false');
-                        } else {
-                            img.src = 'img/heart-fill.svg';
-                            this.setAttribute('data-liked', 'true');
-                        }
-                    });
-                });
-            });
-          </script><a class="relative flex shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html"><img class="mx-auto size-40 object-cover" src="dynamic-img/kumpoo.jpg" alt="Изображение товара">
+              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector('img'); img.src.includes('heart-empty') ? img.src='img/heart-fill.svg' : img.src='img/heart-empty.svg'"><img class="size-6" src="img/heart-empty.svg" alt="Нравится"></div>
+            </div></a><a class="relative flex shrink-0 flex-col overflow-hidden rounded-lg bg-white transform-gpu drop-shadow-around-light w-40" href="pages/market/product.html"><img class="mx-auto size-40 object-cover" src="dynamic-img/kumpoo.jpg" alt="Изображение товара">
             <div class="flex flex-grow flex-col items-center gap-3 p-2">
               <div class="flex items-center gap-1"><img class="size-3" src="img/star.svg" alt="Рейтинг"><span class="text-xs">4.3</span><img class="ml-2 size-3" src="img/comment.svg" alt="Комментариев"><span class="text-xs">1</span><img class="ml-2 size-3" src="img/player.svg" alt="Игроков пользуются"><span class="text-xs">764</span></div>
               <div class="line-clamp-3 flex-grow text-center text-sm font-medium leading-tight text-lab-black">KUMPOO KW-0101 (RED)</div>
@@ -727,31 +681,8 @@
               <div class="shrink-0 rounded bg-lab-light-yellow px-2 py-1 text-sm font-semibold text-lab-black">1 800 ₽</div>
             </div>
             <div class="absolute right-0 top-0">
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50 cursor-pointer toggle-heart-button" data-liked="false"><img class="w-6 h-6" src="img/heart-empty.svg" alt="Добавление в избранное"></div>
+              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white bg-opacity-50" onclick="event.preventDefault(); event.stopPropagation(); var img = this.querySelector('img'); img.src.includes('heart-empty') ? img.src='img/heart-fill.svg' : img.src='img/heart-empty.svg'"><img class="size-6" src="img/heart-empty.svg" alt="Нравится"></div>
             </div></a>
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const heartButtons = document.querySelectorAll('.toggle-heart-button');
-            
-                heartButtons.forEach(button => {
-                    button.addEventListener('click', function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-            
-                        const img = this.querySelector('img');
-                        const liked = this.getAttribute('data-liked') === 'true';
-            
-                        if (liked) {
-                            img.src = 'img/heart-empty.svg';
-                            this.setAttribute('data-liked', 'false');
-                        } else {
-                            img.src = 'img/heart-fill.svg';
-                            this.setAttribute('data-liked', 'true');
-                        }
-                    });
-                });
-            });
-          </script>
         </div>
       </div>
       <div class="p-4 bg-white rounded-lg overflow-hidden mb-3 undefined">

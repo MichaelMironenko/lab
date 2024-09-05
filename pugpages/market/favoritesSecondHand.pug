@@ -31,6 +31,8 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name="description" content="Избранные Б/у товары на сайте ЛАБ. Сравните и выберите выгодные предложения б/у инвентаря для бадминтона. Легко вернитесь к интересующим товарам.")
+
     title Избранное - Б/У
     link(href='../../styles.css', rel='stylesheet')
     link(
@@ -53,7 +55,7 @@ html(lang='ru')
           class=`${isActive ? "font-bold bg-lab-color-10" : "opacity-75 saturate-50"} flex grow items-center justify-center gap-1.5 border-r py-3 `,
           data-tab=`${tabIds[index]}`
         )
-          img(src=images[index], class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
+          img(src=images[index] alt=tab class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
           .py-1.leading-none= tab
 
     script.
@@ -109,7 +111,7 @@ html(lang='ru')
           .text-center.text-xs.font-semibold.text-lab-black Воланы для эйрбадминтона KAWASAKI AirShuttle 2.0
           .mb-4.text-center.text-xs.text-lab-black больше не в Избранном
           a.text-xs Восстановить
-          img.absolute.right-2.top-2(src='img/close.svg', alt='')
+          img.absolute.right-2.top-2(src='img/close.svg', alt='Закрыть')
         +secondHandCard('lining.jpg', 'Li-Ning Turbo Charging 75', 10500, 'Санкт-Петербург', 'metro', 'Невский проспект', 'blue', '3 дня назад')
         +secondHandCard('victorthrustrer.webp', 'Victor Thruster K 9900', 13000, 'Казань', 'metro', 'Площадь Тукая', '#00ff00', '5 мая')
         +secondHandCard('yonexzforce.jpg', 'Yonex Voltric Z-Force II', 15000, 'Новосибирск', 'metro', 'Площадь Ленина', '#ffdd00', '2 декабря 2023 г.')

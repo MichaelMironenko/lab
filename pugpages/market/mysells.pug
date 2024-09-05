@@ -31,6 +31,7 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name="description" content="Мои продажи Б/у товаров на сайте ЛАБ: отслеживайте свои объявления и продавайте бадминтонные товары. Управляйте своими продажами и находите покупателей легко и быстро.")
     title Мои объявления - Б/У маркет - ЛАБ
     link(href='../../styles.css', rel='stylesheet')
     link(
@@ -53,7 +54,7 @@ html(lang='ru')
           class=`${isActive ? "font-bold bg-lab-color-10" : "opacity-75 saturate-50"} flex grow items-center justify-center gap-1.5 border-r py-3 `,
           data-tab=`${tabIds[index]}`
         )
-          img(src=images[index], class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
+          img(src=images[index] alt=tab class=`${!isActive && 'opacity-75 saturate-50'} aspect-square h-4 w-4`)
           .py-1.leading-none= tab
 
     script.
@@ -98,11 +99,11 @@ html(lang='ru')
             +userRating(342)
           span.mb-1.text-sm.text-lab-black-50 @asemenov
           .flex.shrink-0.items-center
-            img.h-4(src='img/yellow-star-full.svg')
-            img.h-4(src='img/yellow-star-full.svg')
-            img.h-4(src='img/yellow-star-full.svg')
-            img.h-4(src='img/yellow-star-full.svg')
-            img.h-4(src='img/yellow-star-half.svg')
+            img.h-4(src='img/yellow-star-full.svg' alt='')
+            img.h-4(src='img/yellow-star-full.svg' alt='')
+            img.h-4(src='img/yellow-star-full.svg' alt='')
+            img.h-4(src='img/yellow-star-full.svg' alt='')
+            img.h-4(src='img/yellow-star-half.svg' alt='')
             span.ml-1.text-sm.font-semibold.leading-tight 4.4
             a.ml-4.text-sm.text-lab-black-50 12 отзывов
       .my-4.flex.items-center.gap-4

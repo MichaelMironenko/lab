@@ -32,6 +32,7 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name="description" content="Страница клуба на сайте ЛАБ: фото, контакты, информация об аренде кортов, турниры и тренировки. Узнайте больше о клубах и бронируйте корты для игры.")
     title Корты
     link(href='../../styles.css', rel='stylesheet')
     link(
@@ -265,12 +266,15 @@ html(lang='ru')
           +trainingLine({ time: training.time, duration: training.duration + ' ч', title: training.title, initials: training.initials, trainerName: training.trainerName, club: training.club, color: training.color, img: training.img, players: training.players })
 
     +block('Ближайшие турниры', {href: 'pages/tournaments/tournaments.html', text: 'Все'}, true)
-      .-mx-4.-mb-6.flex.flex-col.items-center.bg-slate-100
-        +date("Вторник, 25 ноября")
-        +tournamentRegCard(true, true, "Майский фестиваль Микстов в Сколково")
-        +tournamentRegCard(false, false, "Золотой волан Татарстана 1 тур")
-        +date("Четверг, 27 ноября")
-        +tournamentRegCard(true, false, "Первый открытый Кубок МОФБ по бадминтону среди любителей")
+      .div(class="justify-center items-center gap-2 px-4 py-2 w-fit my-3 mx-auto rounded-full flex bg-lab-color-10")
+        img(src="img/calendar.svg" alt="").w-4.h-4
+        div(class="text-lab-black text-sm font-semibold leading-none") 11 сентября 
+      +tournamentRegCard(true, true, "Майский фестиваль Микстов в Сколково")
+      +tournamentRegCard(false, false, "Золотой волан Татарстана 1 тур")
+      .div(class="justify-center items-center gap-2 px-4 py-2 w-fit my-3 mx-auto rounded-full flex bg-lab-color-10")
+        img(src="img/calendar.svg" alt="").w-4.h-4
+        div(class="text-lab-black text-sm font-semibold leading-none") 13 сентября 
+      +tournamentRegCard(true, false, "Первый открытый Кубок МОФБ по бадминтону среди любителей")
 
     +block('Новости клуба', { href:"pages/courts/clubNews.html", text:'Все'})
       .flex.flex-col.gap-4
@@ -334,9 +338,10 @@ html(lang='ru')
         .border-l.border-lab-black-10.pl-6
           +comment('3', '', 'asemenov', '', 'Подтянуть не проблема, спасибо! Когда можно с тобой встретиться?', [ { count: 0, emoji: '👍' }, { count: 0, emoji: '👎' }, { count: 0, emoji: '😂' }, { count: 0, emoji: '👏' }, { count: 0, emoji: '😲' }, { count: 0, emoji: '🙏🏼' } ], 'bg-lab-green', 'dynamic-img/user-1.jpg', true)
     +block('Последние результаты', {href: 'pages/tournaments/tournaments.html', text: 'Все'})
-      .-mx-4.bg-slate-100
-        +date("Вторник, 25 ноября")
-      .-mx-4.-mb-6.flex.flex-wrap.justify-center.gap-2.bg-slate-100
+      div(class="justify-center items-center gap-2 px-4 py-2 w-fit my-3 mx-auto rounded-full flex bg-lab-color-10")
+        img(src="img/calendar.svg" alt="").w-4.h-4
+        div(class="text-lab-black text-sm font-semibold leading-none") 11 сентября 
+      .-mb-6.flex.flex-wrap.justify-center.gap-1
         +tournamentResultCard('11:30', 'XDF', 'Сколково', 12, 2)
         +tournamentResultCard('11:30', 'XDB', 'Сколково', 10, 0)
         +tournamentResultCard('11:30', 'XDC', 'Сколково', 22, 1)
