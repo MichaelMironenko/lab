@@ -6,31 +6,31 @@ mixin bet(selfBet, winners, allWinners)
                     +tournamentTypeBadge('XDF+')
                     span.text-sm.grow.font-semibold Макс Арена
                 .flex.gap-2
-                    img(src="img/calendar.svg").saturate-50.opacity-60            
+                    img(src="img/calendar.svg" alt='Дата').saturate-50.opacity-60            
                     span.text-sm 11 сентября 
                     span.text-sm 11:00
         
         div.flex.items-center.justify-between.gap-2
-            img(src="img/medal-gold.svg", alt="Gold Medal", class="w-4 h-4")
+            img(src="img/medal-gold.svg", alt="1 место", class="w-4 h-4")
             span.text-sm.flex-grow Варнек / Саблинский
             if winners 
-                img(src=allWinners ? "img/forecast-bonus.svg" : "img/checkmark.svg").size-4
+                img(src=allWinners ? "img/forecast-bonus.svg" : "img/checkmark.svg" alt=allWinners ? 'Бонус за угадывание всех игроков' : 'Угаданы').size-4
             else 
                 span.text-sm.text-lab-black-50 x1,5
 
         div.flex.items-center.justify-between.gap-2
-            img(src="img/medal-silver.svg", alt="Silver Medal", class="w-4 h-4")
+            img(src="img/medal-silver.svg", alt="2 место", class="w-4 h-4")
             span.text-sm.flex-grow Войнич / Газманов
             if winners 
-                img(src=allWinners ? "img/forecast-bonus.svg" : "img/forecast-win.svg").size-4
+                img(src=allWinners ? "img/forecast-bonus.svg" : "img/checkmark.svg" alt=allWinners ? 'Бонус за угадывание всех игроков' : 'Угаданы').size-4
             else
                 span.text-sm.text-lab-black-50 x1,21
 
         div.flex.items-center.justify-between.gap-2
-            img(src="img/medal-bronze.svg", alt="Bronze Medal", class="w-4 h-4")
+            img(src="img/medal-bronze.svg", alt="3 место", class="w-4 h-4")
             span.text-sm.flex-grow Толстой / Дусмухаметов
             if winners 
-                img(src=allWinners ? "img/forecast-bonus.svg" : "img/forecast-win.svg").size-4
+                img(src=allWinners ? "img/forecast-bonus.svg" : "img/checkmark.svg" alt=allWinners ? 'Бонус за угадывание всех игроков' : 'Угаданы').size-4
             else
                 span.text-sm.text-lab-black-50 x1,13
 

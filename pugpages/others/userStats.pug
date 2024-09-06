@@ -37,6 +37,7 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Статистика игр и достижений игрока на сайте ЛАБ.")
         title Статистика - Кудайбердиев Адилет Кудайбердиевич
         link(href="../../styles.css" rel="stylesheet")
         base(href="../../")
@@ -131,21 +132,21 @@ html(lang="ru")
                         span.text-lab-black-50.text-sm.ml-none(class="xs:ml-1") 19:00
                 +tournamentTypeBadge('XDF+')
                 span.text-sm.grow.font-semibold Макс Арена
-                img(src="img/medal-gold.svg").h-5
+                img(src="img/medal-gold.svg" alt='1 место').h-5
             .flex.gap-2.items-center.py-3
                 div.text-lab-black-50.w-14(class="xs:w-24")
                     div.text-sm 4 сен 
                         span.text-lab-black-50.text-sm.ml-none(class="xs:ml-1") 14:00
                 +tournamentTypeBadge('XDF+')
                 span.text-sm.grow.font-semibold Макс Арена
-                img(src="img/medal-bronze.svg").h-5
+                img(src="img/medal-bronze.svg"  alt='2 место').h-5
             .flex.gap-2.items-center.py-3
                 div.text-lab-black-50.w-14(class="xs:w-24")
                     div.text-sm 22 авг 
                         span.text-lab-black-50.text-sm.ml-none(class="xs:ml-1") 13:00
                 +tournamentTypeBadge('XDF+')
                 span.text-sm.grow.font-semibold Макс Арена
-                img(src="img/medal-silver.svg").h-5
+                img(src="img/medal-silver.svg"  alt='3 место').h-5
         
             
             - 
@@ -239,7 +240,7 @@ html(lang="ru")
                             td.p-2.text-center.pr-4
                                 span(class=player.change > 0 ? 'text-lab-green' : player.change < 0 ? 'text-lab-red' : 'text-lab-black-50') #{player.change}
                 tr.text-sm.text-lab-black-50.bg-slate-50
-                    td.px-3.p-2.underline.decoration-dotted.w-full(colspan="5") Показать еще 10 соперников
+                    td.px-3.p-2.underline.decoration-dotted.w-full(colspan="6") Показать еще 10 соперников
                 tr.text-sm.text-lab-black.font-semibold.bg-lab-color-10.border
                         td(class="px-3 py-2 text-left leading-5" colspan=2) Всего
                         td(class="p-2 text-center ") 95

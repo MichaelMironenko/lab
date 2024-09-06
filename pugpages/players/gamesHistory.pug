@@ -12,6 +12,7 @@ include /components/filters/filtersPanel.pug
 include /components/filters/playerRating.pug
 include /components/modal.pug
 include /components/atoms/sortButton.pug
+include /components/inputs/floatingInput.pug
 include /components/inputs/select.pug
 include /components/searchAndFilterButton.pug
 include /components/rentCourt.pug
@@ -39,6 +40,7 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name="description" content='История одиночных и парных игр в турнирах ЛАБ')
     title История игр
     link(href='../../styles.css' rel='stylesheet')
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap")
@@ -49,55 +51,44 @@ html(lang='ru')
         h1.mb-2 История игр
         img(src="img/filters-icon.svg", alt="")
     .px-4
-      .opacity-50 
-        div.text-lab-red.mb-2 Эти серые поля можно убрать в фильтры
-        .grid.grid-cols-1(class="sm:grid-cols-2 sm:gap-8")
-          .flex.items-center.gap-3.pb-4
-            h3.w-14.shrink-0.text-15 Клуб
-            +input('Название', 'w-full')
-          .flex.items-center.gap-3.pb-4
-            h3.w-14.shrink-0.text-15 Турнир
-            +input('Название', 'w-full')
-        .flex.items-center.gap-3.pb-4
-          h3.shrink-0.text-15(class='xs:w-14') Дата
-          input#dateInput.min-w-32.max-w-40.rounded-lg.border.border-lab-black-30.px-2(class="py-1.5")(
-            type='text',
-            placeholder='От',
-            onfocus='if(this.value==\'\') this.type=\'date\'',
-            onblur='if(this.value==\'\') this.type=\'text\''
-          )
-          input#dateInput.min-w-32.max-w-40.rounded-lg.border.border-lab-black-30.px-2(class="py-1.5")(
-            type='text',
-            placeholder='До',
-            onfocus='if(this.value==\'\') this.type=\'date\'',
-            onblur='if(this.value==\'\') this.type=\'text\''
-          )
+      div.text-lab-red.mb-2 Эти серые поля можно убрать в фильтры
+      .grid.grid-cols-1(class="sm:grid-cols-2 sm:gap-8")
+          +floatingInput('Клуб', '')
+          +floatingInput('Турнир', '')
+      .flex.items-center.gap-3.pb-4
+        h3.shrink-0.text-15(class='xs:w-14') Дата
+        input#dateInputFrom.min-w-32.max-w-40.rounded-lg.border.border-lab-black-30.px-2(class="py-1.5" 
+          type='text',
+          placeholder='От',
+          onfocus='if(this.value==\'\') this.type=\'date\'',
+          onblur='if(this.value==\'\') this.type=\'text\''
+        )
+        input#dateInputTo.min-w-32.max-w-40.rounded-lg.border.border-lab-black-30.px-2(class="py-1.5" 
+          type='text',
+          placeholder='До',
+          onfocus='if(this.value==\'\') this.type=\'date\'',
+          onblur='if(this.value==\'\') this.type=\'text\''
+        )
     
 
       #toggleButtonsStats.flex.mb-4
         button.w-full.rounded-l-md.py-2.bg-white.font-bold.text-sm.text-lab-color Одиночные
         button.w-full.rounded-r-md.bg-lab-color.border.py-2.text-sm.text-white Парные
 
-      .grid.grid-cols-1#singlePlayerFields(class="sm:grid-cols-2 sm:gap-2 hidden").gap-y-3
-        .flex.w-full.items-center.gap-3
-          +input('Игрок 1', 'w-full !max-w-none')
-        .flex.w-full.items-center.gap-3
-          +input('Игрок 2', 'w-full !max-w-none')
+      .grid-cols-1#singlePlayerFields(class="sm:grid-cols-2 sm:gap-2 hidden")
+        +floatingInput('Игрок 1', 'w-full !max-w-none')
+        +floatingInput('Игрок 2', 'w-full !max-w-none')
 
       .grid.grid-cols-1#doublePlayerFields(class="sm:grid-cols-[1fr_auto_1fr] sm:gap-2 ")
-        .px-3.pt-2.bg-lab-color-10.rounded-lg.mb-2
-          div.pb-2.text-lab-black Первая пара
-          .flex.w-full.items-center.gap-3.pb-3
-            +input('Игрок 1', 'w-full !max-w-none')
-          .flex.w-full.items-center.gap-3.pb-3
-            +input('Игрок 2', 'w-full !max-w-none')
+        .px-3.pt-2.border.rounded-lg.mb-2.bg-white
+          div.pb-2.text-lab-black.my-1.text-sm Первая пара
+          +floatingInput('Игрок 1', '', 'player1', 'text')
+          +floatingInput('Игрок 2', '', 'player2', 'text')
         div.text-center.text-lab-black-50.my-auto.text-sm.pb-2 против
-        .px-3.pt-2.bg-lab-color-10.rounded-lg.mb-2
-          div.pb-2.text-lab-black Вторая пара
-          .flex.w-full.items-center.gap-3.pb-3
-            +input('Игрок 1', 'w-full !max-w-none')
-          .flex.w-full.items-center.gap-3.pb-3
-            +input('Игрок 2', 'w-full !max-w-none')
+        .px-3.pt-2.bg-white.rounded-lg.mb-2
+          div.pb-2.text-lab-black.my-1.text-sm Вторая пара
+          +floatingInput('Игрок 1', '', 'player3', 'text')
+          +floatingInput('Игрок 2', '', 'player4', 'text')
 
       +button('Найти', 'default', 'white', 'bg-lab-color', 'w-1/2 my-4', 'commentSubmitButton')
 

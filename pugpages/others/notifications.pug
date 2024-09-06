@@ -38,16 +38,17 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Личные уведомления пользователя о событиях и активности на сайте ЛАБ")
         title Уведомления
         link(href="../../styles.css" rel="stylesheet")
-        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo 2:wght@100;200;300;400;500;600;700;800&:display=swap")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap")
 
         base(href="../../")
     body.bg-white.pt-12.pb-32
         +topBar
         .flex.justify-between.gap-4.pr-4.items-center
             h1.p-4 Уведомления
-            img(src="img/settings.svg" id="settingsButton").size-5
+            img(src="img/settings.svg" id="settingsButton" alt='Настройки уведомлений').size-5
 
         span.text-lab-color.text-right.px-4.text-sm Отметить все прочитанными
 
@@ -85,7 +86,7 @@ html(lang="ru")
                 div.grow 
                     span.text-sm.grow.font-semibold Naten-ЮГ
                     .flex.items-center.gap-1 
-                        img(src="img/trainer.svg").saturate-50.opacity-50.size-3
+                        img(src="img/trainer.svg" alt='Тренер').saturate-50.opacity-50.size-3
                         span.text-xs.text-lab-black-50 Леонид Слуцкий
                 span.text-xs  14 сентября 
                 span.text-xs  15:00
@@ -130,13 +131,13 @@ html(lang="ru")
             .pb-2
                 .w-20.h-1.bg-slate-200.rounded-xl.mx-auto.mt-2.relative
             .flex-1.overflow-y-auto.scroll-smooth.no-scrollbar.px-4
-                +switch('События в турнирах', 'py-2')
-                +switch('События в тренировках', 'py-2')
-                +switch('Маркет', 'py-2')
-                +switch('Фото со мной', 'py-2')
-                +switch('Видео со мной', 'py-2')
-                +switch('Комментарии', 'py-2')
-                +switch('Дни рождения', 'py-2')
+                +switch('События в турнирах', 'py-2', '', 'tournamentEventsSwitch')
+                +switch('События в тренировках', 'py-2', '', 'trainingEventsSwitch')
+                +switch('Маркет', 'py-2', '', 'marketSwitch')
+                +switch('Фото со мной', 'py-2', '', 'photosWithMeSwitch')
+                +switch('Видео со мной', 'py-2', '', 'videosWithMeSwitch')
+                +switch('Комментарии', 'py-2', '', 'commentsSwitch')
+                +switch('Дни рождения', 'py-2', '', 'birthdaysSwitch')
 
         script.
             document.addEventListener('DOMContentLoaded', function() {

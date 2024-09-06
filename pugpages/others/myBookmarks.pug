@@ -20,6 +20,7 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Список закладок: сохраненные статьи, турниры и другие материалы.")
         title Мои закладки
         link(href="../../styles.css" rel="stylesheet")
         base(href="../../")
@@ -40,19 +41,19 @@ html(lang="ru")
             
             .grid.grid-cols-3(class="430:grid-cols-4 sm:grid-cols-5 lg:grid-cols-6").mb-4.gap-1
                 .relative 
-                    img(src="dynamic-img/club-1.jpg").object-cover.aspect-square
+                    img(src="dynamic-img/club-1.jpg" alt='Фото').object-cover.aspect-square
                     +bookmark(true, 'absolute right-2 bottom-2 drop-shadow-sharp')
                 .relative 
-                    img(src="dynamic-img/club-2.jpg").object-cover.aspect-square
+                    img(src="dynamic-img/club-2.jpg" alt='Фото').object-cover.aspect-square
                     +bookmark(true, 'absolute right-2 bottom-2 drop-shadow-sharp')
                 .relative 
-                    img(src="dynamic-img/club-3.jpg").object-cover.aspect-square
+                    img(src="dynamic-img/club-3.jpg" alt='Фото').object-cover.aspect-square
                     +bookmark(true, 'absolute right-2 bottom-2 drop-shadow-sharp')
                 .relative 
-                    img(src="dynamic-img/club-4.jpg").object-cover.aspect-square
+                    img(src="dynamic-img/club-4.jpg" alt='Фото').object-cover.aspect-square
                     +bookmark(true, 'absolute right-2 bottom-2 drop-shadow-sharp')
                 .relative 
-                    img(src="dynamic-img/photo-2.jpg").object-cover.aspect-square
+                    img(src="dynamic-img/photo-2.jpg" alt='Фото').object-cover.aspect-square
                     +bookmark(true, 'absolute right-2 bottom-2 drop-shadow-sharp')
             .flex.justify-between.gap-3.mb-3
                 .flex.gap-2.bg-lab-color-10.p-3.rounded-lg.border.items-center.grow
@@ -66,7 +67,7 @@ html(lang="ru")
                     div.grow 
                         span.text-sm.grow.font-semibold Макс Арена
                         .flex.items-center.gap-1 
-                            img(src="img/trainer.svg").saturate-50.opacity-50.size-3
+                            img(src="img/trainer.svg" alt='Тренер').saturate-50.opacity-50.size-3
                             span.text-xs.text-lab-black-50 Абельмасов Игорь
                     span.text-sm.text-lab-black-50 11 сентября 
                     span.text-sm.text-lab-black-50 11:00
@@ -79,7 +80,7 @@ html(lang="ru")
                     p.font-semibold Вы смотрите на рейтинг своего соперника перед игрой?
                     .flex.items-center.gap-3
                         a.text-xs(href="#") goldStone76
-                        img(src="img/comment-outlined.svg").h-4.saturate-50.opacity-70
+                        img(src="img/comment-outlined.svg" alt='Комментариев').h-4.saturate-50.opacity-70
                         span.text-xs.text-lab-black-50.-ml-2 32/#[span.font-semibold 5]
                 +bookmark(true)
 

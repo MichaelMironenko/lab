@@ -16,17 +16,20 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Чат для общения с другими игроками и участниками сообщества ЛАБ.")
+
         title Сообщения - Кудайбердиев Адилет Кудайбердиевич
         link(href="../../styles.css" rel="stylesheet")
         base(href="../../")
     body.bg-page-background.pt-12.pb-32
         +topBar
         .flex.justify-center.bg-white.py-2.items-center.gap-2.pr-4.pl-2
-            img(src="img/expand-arrow.svg").size-5.rotate-90
+            a(href="pages/others/messages.html") 
+                img(src="img/expand-arrow.svg" alt='Назад').size-5.rotate-90
             .flex.items-center.grow.gap-2.justify-center
                 +avatar('bg-lab-green', 'ИП', 28) 
                 span.inline.align-middle.font-semibold.truncate.text-sm Иван Петров
-            img(src="img/three-dots.svg" onclick=`toggleCommentMenu()`).size-4
+            img(src="img/three-dots.svg" alt='Меню чата' onclick=`toggleCommentMenu()`).size-4
         div(class="p-4 w-full")
             div(class="mx-auto text-lab-black text-sm bg-lab-color-10 px-3 p-1 rounded-full w-fit mb-4") Сегодня
             div.flex.items-center.gap-2.mb-4
@@ -55,7 +58,7 @@ html(lang="ru")
                 div(class="bg-lab-color-10 text-white p-2 rounded-lg")
                     span Разве что сковородкой на кухне 😂
         .flex.gap-4.bg-white.absolute.bottom-0.w-full.px-2.py-2.items-end
-            +textarea('', 'w-full overflow-auto max-h-80', '', '', '', 1)
+            +textarea('', 'w-full overflow-auto max-h-80', 'textarea', '', '', 1)
             +button('img/send-message.svg', 'image', '', '', 'pb-3')
         +actionMenu([
             { text: 'Открыть профиль', color: ' text-lab-color' },

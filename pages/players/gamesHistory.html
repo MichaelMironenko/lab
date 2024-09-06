@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="История одиночных и парных игр в турнирах ЛАБ">
     <title>История игр</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
@@ -59,54 +60,74 @@
       <h1 class="mb-2">История игр</h1><img src="img/filters-icon.svg" alt="">
     </div>
     <div class="px-4">
-      <div class="opacity-50"> 
-        <div class="text-lab-red mb-2">Эти серые поля можно убрать в фильтры</div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-8">
-          <div class="flex items-center gap-3 pb-4">
-            <h3 class="w-14 shrink-0 text-15">Клуб</h3>
-            <input class="border p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
-          </div>
-          <div class="flex items-center gap-3 pb-4">
-            <h3 class="w-14 shrink-0 text-15">Турнир</h3>
-            <input class="border p-2 w-full rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
-          </div>
+      <div class="text-lab-red mb-2">Эти серые поля можно убрать в фильтры</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-8">
+        <div class="relative mb-6">
+          <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg undefined 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" placeholder=" ">
+          <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5">Клуб
+          </label>
         </div>
-        <div class="flex items-center gap-3 pb-4">
-          <h3 class="shrink-0 text-15 xs:w-14">Дата</h3>
-          <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="От" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
-          <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInput" type="text" placeholder="До" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
+        <div class="relative mb-6">
+          <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg undefined 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" placeholder=" ">
+          <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5">Турнир
+          </label>
         </div>
+      </div>
+      <div class="flex items-center gap-3 pb-4">
+        <h3 class="shrink-0 text-15 xs:w-14">Дата</h3>
+        <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInputFrom" type="text" placeholder="От" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
+        <input class="min-w-32 max-w-40 rounded-lg border border-lab-black-30 px-2 py-1.5" id="dateInputTo" type="text" placeholder="До" onfocus="if(this.value=='') this.type='date'" onblur="if(this.value=='') this.type='text'">
       </div>
       <div class="flex mb-4" id="toggleButtonsStats">
         <button class="w-full rounded-l-md py-2 bg-white font-bold text-sm text-lab-color">Одиночные</button>
         <button class="w-full rounded-r-md bg-lab-color border py-2 text-sm text-white">Парные</button>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-2 hidden gap-y-3" id="singlePlayerFields">
-        <div class="flex w-full items-center gap-3">
-          <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
+      <div class="grid-cols-1 sm:grid-cols-2 sm:gap-2 hidden" id="singlePlayerFields">
+        <div class="relative mb-6">
+          <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full !max-w-none rounded-lg undefined 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" placeholder=" ">
+          <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5">Игрок 1
+          </label>
         </div>
-        <div class="flex w-full items-center gap-3">
-          <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
+        <div class="relative mb-6">
+          <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full !max-w-none rounded-lg undefined 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" placeholder=" ">
+          <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5">Игрок 2
+          </label>
         </div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] sm:gap-2 " id="doublePlayerFields">
-        <div class="px-3 pt-2 bg-lab-color-10 rounded-lg mb-2">
-          <div class="pb-2 text-lab-black">Первая пара</div>
-          <div class="flex w-full items-center gap-3 pb-3">
-            <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
+        <div class="px-3 pt-2 border rounded-lg mb-2 bg-white">
+          <div class="pb-2 text-lab-black my-1 text-sm">Первая пара</div>
+          <div class="relative mb-6">
+            <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg undefined 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" id="player1" placeholder=" ">
+            <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="player1">Игрок 1
+            </label>
           </div>
-          <div class="flex w-full items-center gap-3 pb-3">
-            <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
+          <div class="relative mb-6">
+            <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg undefined 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" id="player2" placeholder=" ">
+            <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="player2">Игрок 2
+            </label>
           </div>
         </div>
         <div class="text-center text-lab-black-50 my-auto text-sm pb-2">против</div>
-        <div class="px-3 pt-2 bg-lab-color-10 rounded-lg mb-2">
-          <div class="pb-2 text-lab-black">Вторая пара</div>
-          <div class="flex w-full items-center gap-3 pb-3">
-            <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
+        <div class="px-3 pt-2 bg-white rounded-lg mb-2">
+          <div class="pb-2 text-lab-black my-1 text-sm">Вторая пара</div>
+          <div class="relative mb-6">
+            <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg undefined 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" id="player3" placeholder=" ">
+            <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="player3">Игрок 1
+            </label>
           </div>
-          <div class="flex w-full items-center gap-3 pb-3">
-            <input class="border p-2 w-full !max-w-none rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30">
+          <div class="relative mb-6">
+            <input class="block px-4 pt-2.5 pb-1.5 h-10 text-sm bg-white w-full rounded-lg undefined 
+      border border-lab-black-30 focus:outline-none focus:ring-0 focus:border-lab-color peer" type="text" id="player4" placeholder=" ">
+            <label class="absolute text-sm text-lab-black-50 bg-white rounded px-2 duration-300 transform -translate-y-5 scale-75 top-2.5 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:text-lab-color peer-focus:scale-75 peer-focus:-translate-y-5" for="player4">Игрок 2
+            </label>
           </div>
         </div>
       </div>
@@ -180,7 +201,7 @@
     </div>
     <div class="bg-white p-4">
       <div class="pt-2 border-b border-lab-black-10">
-        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50 !pt-0">12.05.2023 13:00</span><a class="flex items-center gap-1 block" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">14 мин</span>
+        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50 !pt-0">12.05.2023 13:00</span><a class="flex items-center gap-1" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">14 мин</span>
         </div>
         <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
           <div class="flex items-center justify-between gap-2">
@@ -202,7 +223,7 @@
         </div>
       </div>
       <div class="pt-2 border-b border-lab-black-10">
-        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50 !pt-0">12.05.2023 13:00</span><a class="flex items-center gap-1 block" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">14 мин</span>
+        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50 !pt-0">12.05.2023 13:00</span><a class="flex items-center gap-1" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">14 мин</span>
         </div>
         <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
           <div class="flex items-center justify-between gap-2">
@@ -224,7 +245,7 @@
         </div>
       </div>
       <div class="pt-2 border-b border-lab-black-10">
-        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50 !pt-0">12.05.2023 13:00</span><a class="flex items-center gap-1 block" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">12 мин</span>
+        <div class="flex items-center gap-3 text-xs 430:text-sm"><span class="text-lab-black-50 !pt-0">12.05.2023 13:00</span><a class="flex items-center gap-1" href="pages/tournaments/singleTournament.html"><span class="font-semibold text-lab-black-50">XDF</span><span class="font-semibold text-lab-black-50">Лига ПРО</span></a><span class="text-lab-black-50">1/16</span><span class="whitespace-nowrap text-lab-black-50">12 мин</span>
         </div>
         <div class="flex w-full flex-shrink flex-grow flex-col justify-center gap-3 py-3">
           <div class="flex items-center justify-between gap-2">

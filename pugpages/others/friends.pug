@@ -17,6 +17,7 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Лента активности друзей: обновления, результаты игр, достижения и события.")
         title Друзья
         link(href="../../styles.css" rel="stylesheet")
         base(href="../../")
@@ -32,7 +33,7 @@ html(lang="ru")
             each tab, index in tabs
                 - var isActive = tab === activeTab
                 div.tournaments-panel-tab.tab(class=`flex grow cursor-pointer gap-1.5 w-1/2 items-center ${isActive ? "font-bold bg-lab-color-10" : "opacity-75 saturate-50"} justify-center py-3 ` data-tab=`${tabIds[index]}`)
-                    img(src=images[index] class=`w-4 h-4 aspect-square ${!isActive && 'opacity-75 saturate-50'}`)
+                    img(src=images[index] alt='' class=`w-4 h-4 aspect-square ${!isActive && 'opacity-75 saturate-50'}`)
                     div= tab
 
         script. 
@@ -108,7 +109,7 @@ html(lang="ru")
                         div.grow 
                             span.text-sm.grow.font-semibold Макс Арена
                             .flex.items-center.gap-1 
-                                img(src="img/trainer.svg").saturate-50.opacity-50.size-3
+                                img(src="img/trainer.svg" alt='Тренер').saturate-50.opacity-50.size-3
                                 span.text-xs.text-lab-black-50 Абельмасов Игорь
                         span.text-sm.text-lab-black-50 11 сентября 
                         span.text-sm.text-lab-black-50 11:00
@@ -134,7 +135,7 @@ html(lang="ru")
                         +avatar('bg-lab-color', 'НП', 32)
                         span.text-sm #[a.font-semibold(href='#') Анна Семёнова] добавила ракетку в свой инвентарь
                     div.flex.gap-4.p-2.rounded-lg.border
-                        img(src=`dynamic-img/yonex-astrox.jpg`).size-12.object-cover
+                        img(src=`dynamic-img/yonex-astrox.jpg` alt='Фото товара').size-12.object-cover
                         
                         div.grow
                             div.text-lab-black.text-sm.font-medium.line-clamp-1.mb-2 Yonex Astrox 100 Game (KURENAI) amazing version  
@@ -154,9 +155,9 @@ html(lang="ru")
                         +avatar('bg-lab-color', 'НП', 32)
                         span.text-sm #[a.font-semibold(href='#') Валерий Гаркалин] написал новую тему на форуме
                     .flex.gap-1.p-2.border.rounded-lg.items-center.justify-between
-                        img(src="img/forum.svg").size-5
+                        img(src="img/forum.svg" alt='Тема').size-5
                         a(href="#").text-sm.font-semibold.grow.ml-2 Выбор ракетки до 10000 ₽. Обзор производителей
-                        img(src="img/comment-outlined.svg").size-4
+                        img(src="img/comment-outlined.svg" alt='Комментариев').size-4
                         span.text-sm 3
 
 

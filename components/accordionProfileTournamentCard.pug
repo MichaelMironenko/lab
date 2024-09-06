@@ -7,7 +7,7 @@ mixin accordionProfileTournamentCard(tournament, id)
                     div(class="flex items-center gap-0.5 pt-1")
                         +tournamentTypeBadge(tournament.typeBadge)
                         a(href=tournament.link).text-sm.px-2.font-semibold.text-ellipsis #{tournament.clubName}
-                        img(src=tournament.playerIcon).saturate-50.opacity-50.hidden.detail-section
+                        img(src=tournament.playerIcon alt='Участников').saturate-50.opacity-50.hidden.detail-section
                         span.text-sm.hidden.detail-section #{tournament.playersCount}
                 .flex.flex-col.items-center.gap-2.pt-1.detail-section.text-center
                     div.text-xxs.uppercase.text-lab-black-50 Место
@@ -29,7 +29,7 @@ mixin accordionProfileTournamentCard(tournament, id)
                     div.text-sm.font-semibold.h-5(class=tournament.finalChange[0] === '+' ? 'text-lab-green' : 'text-lab-red') #{tournament.finalChange}
             button.toggle-details.text-sm.text-lab-black-50.underline.decoration-dotted.text-center.w-full(data-target=id)
                 span.text.text-lab-black-50 Показать подробности
-                img(src="img/expand-arrow.svg").inline.align-middle.size-4.ml-2.arrow      
+                img(src="img/expand-arrow.svg" alt='Развернуть').inline.align-middle.size-4.ml-2.arrow      
         div.border-lab-black-10.pl-4.pr-3.hidden.detail-section(data-accordion-id=id)
             table.w-full
                 thead
@@ -70,7 +70,7 @@ mixin accordionProfileTournamentCard(tournament, id)
                                 | место
                         else
                             | #{tournament.finalPosition} место
-
+                    td.hidden
                     td.text-center
                         span.text-lab-green #{tournament.wins}
                         span.text-lab-black-30(class="mx-0.5") /

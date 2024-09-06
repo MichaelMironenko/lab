@@ -14,6 +14,7 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Список прошедших и будущих турниров игрока, статистика, результаты, игры")
         title Турниры - Кудайбердиев Адилет Кудайбердиевич
         link(href="../../styles.css" rel="stylesheet")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap")
@@ -29,8 +30,8 @@ html(lang="ru")
 
             +switch('Только призовые', '', 'text-sm text-lab-black')
             div.grow
-            img#viewCards(src="img/cards.svg" alt="").size-5
-            img#viewTable(src="img/table.svg" alt="").size-5.saturate-50.opacity-50
+            img#viewCards(src="img/cards.svg" alt="Показать в виде карточек").size-5
+            img#viewTable(src="img/table.svg" alt="Показать в виде таблицы").size-5.saturate-50.opacity-50
 
 
 
@@ -48,7 +49,7 @@ html(lang="ru")
                     { stage: '1/8', names: ['Артемьев Б.', 'Косолапенко Р.'], link: 'players/doublePlayer.html', flag: false, rating: '380', score: '2 : 1', change: '+2.1' },
                     { stage: '1/4', names: ['Джабраилов К.', 'Савельев А.'], link: 'players/doublePlayer.html', flag: true, rating: '420', score: '0 : 2', change: '-4.8' },
                     { stage: '1/2', names: ['Кузнецов П.', 'Новиков Д.'], link: 'players/doublePlayer.html', flag: false, rating: '410', score: '2 : 1', change: '+1.4' },
-                    { stage: 'Фин', names: ['Смирнов М.', 'Козлов Ю.'], link: 'players/doublePlayer.html', flag: false, rating: '430:', score: '2 : 0', change: '+5.6' }
+                    { stage: 'Фин', names: ['Смирнов М.', 'Козлов Ю.'], link: 'players/doublePlayer.html', flag: false, rating: '430', score: '2 : 0', change: '+5.6' }
                 ],
                 finalPosition: '1',
                 wins: 5,
@@ -252,7 +253,7 @@ html(lang="ru")
                             td.p-2.pl-3.text-left.max-w-20.text-lab-black-50= item.date
                             td
                                 .bg-lab-color-10.rounded-sm.font-medium(class="px-1").w-fit.mx-auto= item.typeBadge
-                            td.p-2.text-left= item.clubName
+                            td.text-left= item.clubName
                             td.p-2(class="hidden sm:table-cell")= item.playersCount
                             td
                                 +userRating(item.ratingAfter)
@@ -294,7 +295,7 @@ html(lang="ru")
                                                     td.text-center.tracking-tighter #{player.score}
                                                     td.text-center.px-2(class=player.change[0] === '+' ? 'text-lab-green' : 'text-lab-red') #{player.change}
                                             tr 
-                                                td(colspan="8").text-center.py-2
+                                                td(colspan="5").text-center.py-2
                                                     a(href="pages/tournaments/singleTournament.html").text-xs Перейти к странице турнира
 
 

@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личные уведомления пользователя о событиях и активности на сайте ЛАБ">
     <title>Уведомления</title>
     <link href="../../styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo 2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
     <base href="../../">
   </head>
   <body class="bg-white pt-12 pb-32">
@@ -56,7 +57,7 @@
       })
     </script>
     <div class="flex justify-between gap-4 pr-4 items-center">
-      <h1 class="p-4">Уведомления</h1><img class="size-5" src="img/settings.svg" id="settingsButton">
+      <h1 class="p-4">Уведомления</h1><img class="size-5" src="img/settings.svg" id="settingsButton" alt="Настройки уведомлений">
     </div><span class="text-lab-color text-right px-4 text-sm">Отметить все прочитанными</span>
     <div class="menu-container fixed hidden pb-safe inset-0 bg-gray-900 bg-opacity-50 backdrop-blur-sm z-40" id="menu" data-action="hide">
       <div class="max-h-90 absolute bottom-0 left-0 w-full z-30 bg-white rounded-t-2xl flex flex-col"><a class="flex items-center gap-3 px-4 py-3 w-full border-b border-lab-black-10" href="#" data-action="hide"><span class="flex-1 text-center  text-lab-color">Не показывать подобные уведомления</span></a><a class="flex items-center gap-3 px-4 py-3 w-full" href="#" data-action="hide"><span class="flex-1 text-center  text-lab-color">Отметить прочитанным</span></a>
@@ -97,7 +98,7 @@
       <div class="font-semibold py-2 text-lab-black text-sm">Вы зарегистрировались на тренировку</div>
       <div class="flex gap-2 bg-promo-background px-3 py-1 rounded-lg mb-2 border items-center">
         <div class="grow"> <span class="text-sm grow font-semibold">Naten-ЮГ</span>
-          <div class="flex items-center gap-1"> <img class="saturate-50 opacity-50 size-3" src="img/trainer.svg"><span class="text-xs text-lab-black-50">Леонид Слуцкий</span></div>
+          <div class="flex items-center gap-1"> <img class="saturate-50 opacity-50 size-3" src="img/trainer.svg" alt="Тренер"><span class="text-xs text-lab-black-50">Леонид Слуцкий</span></div>
         </div><span class="text-xs"> 14 сентября </span><span class="text-xs"> 15:00</span>
       </div>
     </div>
@@ -132,39 +133,39 @@
         <div class="w-20 h-1 bg-slate-200 rounded-xl mx-auto mt-2 relative"></div>
       </div>
       <div class="flex-1 overflow-y-auto scroll-smooth no-scrollbar px-4">
-        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-lab-black py-2">
-          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">События в турнирах</label>
-          <input class="sr-only peer" type="checkbox" value="" id="playerToggle">
+        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm  py-2">
+          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="tournamentEventsSwitch">События в турнирах</label>
+          <input class="sr-only peer" type="checkbox" value="" id="tournamentEventsSwitch">
           <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
         </div>
-        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-lab-black py-2">
-          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">События в тренировках</label>
-          <input class="sr-only peer" type="checkbox" value="" id="playerToggle">
+        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm  py-2">
+          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="trainingEventsSwitch">События в тренировках</label>
+          <input class="sr-only peer" type="checkbox" value="" id="trainingEventsSwitch">
           <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
         </div>
-        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-lab-black py-2">
-          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">Маркет</label>
-          <input class="sr-only peer" type="checkbox" value="" id="playerToggle">
+        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm  py-2">
+          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="marketSwitch">Маркет</label>
+          <input class="sr-only peer" type="checkbox" value="" id="marketSwitch">
           <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
         </div>
-        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-lab-black py-2">
-          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">Фото со мной</label>
-          <input class="sr-only peer" type="checkbox" value="" id="playerToggle">
+        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm  py-2">
+          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="photosWithMeSwitch">Фото со мной</label>
+          <input class="sr-only peer" type="checkbox" value="" id="photosWithMeSwitch">
           <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
         </div>
-        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-lab-black py-2">
-          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">Видео со мной</label>
-          <input class="sr-only peer" type="checkbox" value="" id="playerToggle">
+        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm  py-2">
+          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="videosWithMeSwitch">Видео со мной</label>
+          <input class="sr-only peer" type="checkbox" value="" id="videosWithMeSwitch">
           <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
         </div>
-        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-lab-black py-2">
-          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">Комментарии</label>
-          <input class="sr-only peer" type="checkbox" value="" id="playerToggle">
+        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm  py-2">
+          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="commentsSwitch">Комментарии</label>
+          <input class="sr-only peer" type="checkbox" value="" id="commentsSwitch">
           <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
         </div>
-        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm text-lab-black py-2">
-          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="playerToggle">Дни рождения</label>
-          <input class="sr-only peer" type="checkbox" value="" id="playerToggle">
+        <div class="flex items-center gap-3 grow leading-tight text-left justify-between max-w-sm  py-2">
+          <label class="flex items-center gap-3 text-sm text-lab-black cursor-pointer" for="birthdaysSwitch">Дни рождения</label>
+          <input class="sr-only peer" type="checkbox" value="" id="birthdaysSwitch">
           <div class="relative w-12 h-7 flex-shrink-0 bg-gray-200 rounded-full peer-focus:outline-none dark:peer-focus:ring-blue-800 dark:bg-slate-200 peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-lab-color"></div>
         </div>
       </div>

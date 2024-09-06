@@ -13,6 +13,7 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Все игры, в которых игрок занимал призовые места на турнирах и соревнованиях.")
         title Все призовые турниры - Кудайбердиев Адилет Кудайбердиевич
         link(href="../../styles.css" rel="stylesheet")
         base(href="../../")
@@ -33,31 +34,31 @@ html(lang="ru")
                 { date: '2024-09-01 12:00', typeBadge: 'MD', link: '/tournament9', clubName: 'Club 9', finalPosition: '4', finalChange: '+18.2', rating: 610 },
                 { date: '2024-10-01 16:00', typeBadge: 'XD', link: '/tournament10', clubName: 'Club 10', finalPosition: '5', finalChange: '+5.7', rating: 630 }
             ]
-        div
-            table.table-auto.w-full.text-xs
-                thead.tr.bg-page-background.sticky.top-24.text-lab-black-50.uppercase.border-b
-                    th.text-left.pl-4.p-2 Турнир
-                    th.text-center.p-2 Место
-                    th.text-center.p-2 ★ +/- 
-                    th.text-center.p-2 ★ после
-                tbody
-                    for tournament in tournaments
-                        tr.bg-white.border-b
-                            td.py-2.pl-4
-                                span.text-sm.text-lab-black-50 #{tournament.date}
-                                div(class="flex items-center pt-1")
-                                    +tournamentTypeBadge(tournament.typeBadge)
-                                    a(href=tournament.link).text-sm.px-2.font-semibold.text-ellipsis #{tournament.clubName}
-                            td.text-center(class="pb-0.5")
-                                if tournament.finalPosition == '1'
-                                    div.bg-gold.rounded-full.text-sm.font-semibold.size-5.text-center.border.mx-auto #{tournament.finalPosition}
-                                else if tournament.finalPosition == '2'
-                                    div.bg-silver.rounded-full.text-sm.font-semibold.size-5.text-center.border.mx-auto #{tournament.finalPosition}
-                                else if tournament.finalPosition == '3'
-                                    div.bg-bronze.rounded-full.text-sm.font-semibold.size-5.text-center.border.mx-auto #{tournament.finalPosition}
-                                else
-                                    span.text-sm.text-lab-black.font-semibold.size-5.text-center #{tournament.finalPosition} 
-                            td.text-sm.font-semibold.h-5.text-center(class=tournament.finalChange[0] === '+' ? 'text-lab-green' : 'text-lab-red') #{tournament.finalChange}
-                            td.text-center
-                                +userRating(tournament.rating)
+        table.table-auto.w-full.text-xs
+          thead
+            tr.bg-page-background.sticky.top-24.text-lab-black-50.uppercase.border-b
+              th.text-left.pl-4.p-2 Турнир
+              th.text-center.p-2 Место
+              th.text-center.p-2 ★ +/- 
+              th.text-center.p-2 ★ после
+          tbody
+            for tournament in tournaments
+              tr.bg-white.border-b
+                td.py-2.pl-4
+                  span.text-sm.text-lab-black-50 #{tournament.date}
+                  div(class="flex items-center pt-1")
+                    +tournamentTypeBadge(tournament.typeBadge)
+                    a(href=tournament.link).text-sm.px-2.font-semibold.text-ellipsis #{tournament.clubName}
+                td.text-center(class="pb-0.5")
+                  if tournament.finalPosition == '1'
+                    div.bg-gold.rounded-full.text-sm.font-semibold.size-5.text-center.border.mx-auto #{tournament.finalPosition}
+                  else if tournament.finalPosition == '2'
+                    div.bg-silver.rounded-full.text-sm.font-semibold.size-5.text-center.border.mx-auto #{tournament.finalPosition}
+                  else if tournament.finalPosition == '3'
+                    div.bg-bronze.rounded-full.text-sm.font-semibold.size-5.text-center.border.mx-auto #{tournament.finalPosition}
+                  else
+                    span.text-sm.text-lab-black.font-semibold.size-5.text-center #{tournament.finalPosition} 
+                td.text-sm.font-semibold.h-5.text-center(class=tournament.finalChange[0] === '+' ? 'text-lab-green' : 'text-lab-red') #{tournament.finalChange}
+                td.text-center
+                  +userRating(tournament.rating)
         +tabBar
