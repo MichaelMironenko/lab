@@ -12,6 +12,8 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Список всех объявлений о поиске спарринг-партнеров для игры в бадминтон.")
+
         title Корты
         link(href="../../styles.css" rel="stylesheet")
         base(href="../../")
@@ -31,10 +33,10 @@ html(lang="ru")
                         +userRating(rating, true)
                     span.text-sm.text-lab-black-50.mb-1= ageCity
                     div.mb-1
-                        img(src="img/star-lab-color.svg").inline.align-middle.opacity-50.saturate-50
+                        img(src="img/star-lab-color.svg" alt='Рейтинг').inline.align-middle.opacity-50.saturate-50
                         span.inline.align-middle.ml-2.text-sm #{ratingRange}
                     div.flex.self-start.gap-2.items-start
-                        img(src="img/location-icon.svg" class="mt-0.5").opacity-50.saturate-50
+                        img(src="img/location-icon.svg" alt='Место' class="mt-0.5").opacity-50.saturate-50
                         div.text-sm.flex.text-lab-black.flex-wrap= locations
                                        
         +player('bg-lab-yellow', 'Алексей Борисов', 532, '28 лет, Москва', '100-300', ['Naten-1905 ', ' Фили-ТТ'])

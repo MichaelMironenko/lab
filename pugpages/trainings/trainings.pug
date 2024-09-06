@@ -35,6 +35,7 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Раздел тренировок: расписание, тренеры, видеоуроки, статьи о тренировках и выездные сборы.")
         title Тренировки
         link(href="../../styles.css" rel="stylesheet")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&:display=swap")
@@ -97,7 +98,7 @@ html(lang="ru")
                         { title: "Летние сборы в Суко", img: 'camp3.png', dates: "24 июня – 14 июля", location: "дер. Суко", price: "4150/день", coaches: "Новоселов Вадим (★1000), Сухов Иван (★683), Бакланов Михаил (★301)", organizer: "Бадминтонный клуб Красногорск, ЛАБ", slots: "2 / 14" }
                     ]
                 .flex.items-center.gap-2.pb-4
-                    img(src="img/calendar.svg") 
+                    img(src="img/calendar.svg" alt='')  
                     span.leading-tight.text-sm.text-lab-color Показать расписание 
 
                 .flex.overflow-x-auto.gap-4.no-scrollbar.p-4.-m-4
@@ -108,22 +109,22 @@ html(lang="ru")
                                 h2.font-bold.leading-tight.mb-4= camp.title
                                 .text-sm.text-lab-black
                                     div.flex.items-center.gap-3.mb-3
-                                        img(src="img/calendar.svg").size-4
+                                        img(src="img/calendar.svg" alt='Дата').size-4
                                         span= camp.dates
                                     div.flex.items-center.gap-3.mb-3
-                                        img(src="img/location-icon.svg").size-4
+                                        img(src="img/location-icon.svg"  alt='Место').size-4
                                         span= camp.location
                                     div.flex.items-center.gap-3.mb-3
-                                        img(src="img/price.svg").size-4
+                                        img(src="img/price.svg" alt='Цена').size-4
                                         span= camp.price
                                     div.flex.items-center.gap-3.mb-3
-                                        img(src="img/trainer.svg").size-4
+                                        img(src="img/trainer.svg"  alt='Тренеры').size-4
                                         span= camp.coaches
                                     div.flex.items-center.gap-3.mb-3
-                                        img(src="img/administrator.svg").size-4
+                                        img(src="img/administrator.svg"  alt='Организатор').size-4
                                         span= camp.organizer
                                     div.flex.items-center.gap-3
-                                        img(src="img/player.svg").size-4
+                                        img(src="img/player.svg"  alt='Участников').size-4
                                         span= camp.slots
 
             +block()
@@ -139,10 +140,10 @@ html(lang="ru")
                                 +userRating(rating, isRatingActive)
                             div.self-start.grow.max-h-24
                                 div.self-start.my-2
-                                    img(src="img/star-lab-color.svg").inline.align-middle.opacity-50.saturate-50
+                                    img(src="img/star-lab-color.svg"  alt='Рейтинг').inline.align-middle.opacity-50.saturate-50
                                     span.inline.align-middle.ml-2.text-sm #{ratingRange}
                                 div.flex.self-start.gap-2.items-start
-                                    img(src="img/location-icon.svg" class="mt-0.5").opacity-50.saturate-50
+                                    img(src="img/location-icon.svg"  alt='Клуб' class="mt-0.5").opacity-50.saturate-50
                                     div.text-sm.flex.flex-col
                                         each loc in locations
                                             span #{loc}   

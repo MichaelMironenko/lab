@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Информация о тренировке: дата, время, контакты, список участников, регистрация и обсуждение">
     <title>Страница тренировки</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
@@ -511,7 +512,7 @@
             <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/location-icon.svg" alt="Адрес"><span>г. Москва, ул. Ярославское шоссе, д. 21, корп. 12</span></div>
             <div class="flex gap-4 items-center"><img class="w-4 aspect-square opacity-60 saturate-50" src="img/phone.svg" alt="Контакты"><a href="tel:79262004022">+7-926-200-40-22</a></div>
           </div>
-          <div class="h-full max-h-40"><img class="object-cover h-full w-full" src="dynamic-img/map.png"></div>
+          <div class="h-full max-h-40"><img class="object-cover h-full w-full" src="dynamic-img/map.png" alt="Карта"></div>
         </div>
       </div>
       <button class="w-full  bg-avatar-gradient grow my-4 rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="registerButton">Регистрация</button>
@@ -554,7 +555,7 @@
             });
         });
       </script>
-      <button class="w-full  bg-avatar-gradient grow rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="registerButton">Оплатить тренировку</button>
+      <button class="w-full  bg-avatar-gradient grow rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="payButton">Оплатить тренировку</button>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
             const buttons = document.querySelectorAll('.button-interactive');

@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Редактирование фотоальбома тренера: добавление и удаление фотографий, управление альбомом.">
     <title>Редактирование альбома</title>
     <link href="../../styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo 2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
     <base href="../../">
   </head>
   <body class="bg-page-background pb-28 pt-12">
@@ -332,30 +333,30 @@
       <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7" src="img/tabbar/trainings-active.svg" alt=""><span class=" font-bold  text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
       </div>
     </nav>
+    <script>
+      function toggleActionMenu() {
+          var menu = document.getElementById('action-menu-container');
+          menu.classList.toggle('hidden');
+      }  
+      
+      document.addEventListener('click', function (e) {
+          if (e.target.dataset.action === 'hide') {
+              var menuContainer = document.querySelector('.menu-container'); 
+              if (menuContainer) {
+                  menuContainer.style.display = 'none';
+              }
+          }
+          if (e.target.dataset.action === 'showModal') {
+              var modal = document.getElementById('add-photo-modal');
+              if (modal) {
+                  modal.classList.remove('hidden');
+              }
+              var menuContainer = document.querySelector('.menu-container'); 
+              if (menuContainer) {
+                  menuContainer.style.display = 'none';
+              }
+          }
+      });
+    </script>
   </body>
-  <script>
-    function toggleActionMenu() {
-        var menu = document.getElementById('action-menu-container');
-        menu.classList.toggle('hidden');
-    }  
-    
-    document.addEventListener('click', function (e) {
-        if (e.target.dataset.action === 'hide') {
-            var menuContainer = document.querySelector('.menu-container'); 
-            if (menuContainer) {
-                menuContainer.style.display = 'none';
-            }
-        }
-        if (e.target.dataset.action === 'showModal') {
-            var modal = document.getElementById('add-photo-modal');
-            if (modal) {
-                modal.classList.remove('hidden');
-            }
-            var menuContainer = document.querySelector('.menu-container'); 
-            if (menuContainer) {
-                menuContainer.style.display = 'none';
-            }
-        }
-    });
-  </script>
 </html>
