@@ -3,24 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход - ЛАБ </title>
+    <title>Вход - ЛАБ</title>
     <link href="../../styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;:display=swap">
     <base href="../../">
   </head>
-  <body class="bg-white pt-8"><img class="size-24 mx-auto my-4" src="img/lab-logo.svg" alt="">
-    <h1 class="font-semibold text-center">Вход на сайт ЛАБ</h1>
-    <div class="p-4 max-w-420 mx-auto mt-8">
-      <div class="flex items-center gap-2 mb-2 undefined">
-        <label class="block text-lab-black">Логин</label>
-      </div>
-      <input class="border p-2 w-full mb-6 rounded-lg undefined focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" placeholder="Введите логин или email">
-      <div class="flex items-center gap-2 mb-2 undefined">
-        <label class="block text-lab-black">Пароль</label>
+  <body class="bg-white pt-8"><img class="mx-auto my-4 size-24" src="img/lab-logo.svg" alt="">
+    <h1 class="text-center font-semibold">Вход на сайт ЛАБ</h1>
+    <div class="mx-auto mt-8 max-w-420 p-4">
+      <div class="relative mb-6">
+        <input class="w-full pr-10 border-2 border-lab-red peer 
+      block h-10 rounded-lg bg-white px-4 pb-1.5 pt-2.5 focus:border-lab-color focus:outline-none focus:ring-0" type="login" value="" id="login" placeholder=" ">
+        <label class="absolute z-10 -translate-y-5 transform rounded bg-white px-2 text-sm text-lab-black-50 duration-300 left-2.5 top-2.5 origin-[0] scale-[0.8] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-[0.8] peer-focus:text-lab-color" for="login">Введите логин или email
+        </label>
+        <div class="mt-1 w-full text-right text-xs text-lab-red">Пользователь с таким логином не найден</div>
       </div>
       <div class="relative w-full">
-        <input class="border p-2 w-full rounded-lg pr-10 focus:outline-none focus:ring-1 focus:ring-lab-color bg-white leading-none shadow-sm max-w-sm border-lab-black-30" id="password" type="password" placeholder="Введите пароль">
-        <button class="absolute right-2 top-2" type="button" onclick="togglePasswordVisibility()"><img class="h-6" src="img/eye.svg" alt="Toggle visibility"></button><a class="block text-sm text-lab-black-50 mt-2 text-right w-full" href="pages/auth/resetPassword.html">Забыли пароль?</a>
+        <div class="relative mb-6">
+          <input class="w-full pr-10 border border-lab-black-30 peer 
+      block h-10 rounded-lg bg-white px-4 pb-1.5 pt-2.5 focus:border-lab-color focus:outline-none focus:ring-0" type="password" id="password" placeholder=" ">
+          <label class="absolute z-10 -translate-y-5 transform rounded bg-white px-2 text-sm text-lab-black-50 duration-300 left-2.5 top-2.5 origin-[0] scale-[0.8] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-[0.8] peer-focus:text-lab-color" for="password">Введите пароль
+          </label>
+        </div>
+        <button class="absolute right-2 top-2" type="button" onclick="togglePasswordVisibility()"><img class="h-6" src="img/eye.svg" alt="Toggle visibility"></button><a class="block w-full text-center text-sm text-lab-black-50" href="pages/auth/resetPassword.html">Забыли пароль?</a>
       </div>
       <button class="w-full mt-4 bg-lab-color rounded-lg font-semibold py-3 px-4 max-h-12 transition-transform duration-150 text-white leading-none ease-in-out button-interactive" data-action="" id="editButton">Войти</button>
       <script>
@@ -64,20 +69,27 @@
       </script>
       <div class="p-4 text-center">
         <p class="text-lab-black-50">или войдите через</p>
-        <div class="flex items-center gap-4 justify-center"><img class="size-10" src="img/vk-round.svg" alt=""><img class="size-10" src="img/google-round.svg" alt=""><img class="size-10" src="img/yandex-round.svg" alt=""></div>
+        <div class="flex items-center justify-center gap-4"><img class="size-10" src="img/vk-round.svg" alt=""><img class="size-10" src="img/google-round.svg" alt=""><img class="size-10" src="img/yandex-round.svg" alt=""></div>
       </div>
-      <div class="text-center mt-4">Нет аккаунта? <a href="pages/auth/signup.html">Зарегистрируйтесь! </a></div>
+      <div class="mt-4 text-center">
+        Нет аккаунта?
+        <a href="pages/auth/signup.html">Зарегистрируйтесь!</a>
+      </div>
     </div>
+    <nav class="pb-safe fixed inset-x-0 bottom-0 z-10 border-t bg-white">
+      <div class="flex justify-between"><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/tournaments/tournaments.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/tournaments.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Турниры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/trainings/trainings.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/trainings.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Тренировки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/courts/courts.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/courts.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Корты</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/players/players.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/players.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Игроки</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/aroundgame/aroundGame.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/around-game.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Вокруг игры</span></a><a class="flex flex-col gap-1 py-1 text-center text-lab-black-50 w-1/6" href="pages/market/market.html"><img class="mx-auto h-7 w-7 opacity-80" src="img/tabbar/market.svg" alt=""><span class=" text-nowrap text-[10px] tracking-tighter">Маркет</span></a>
+      </div>
+    </nav>
     <script>
       function togglePasswordVisibility() {
-        const passwordInput = document.getElementById('password');
-        const eyeIcon = document.querySelector('button img');
+        const passwordInput = document.getElementById('password')
+        const eyeIcon = document.querySelector('button img')
         if (passwordInput.type === 'password') {
-          passwordInput.type = 'text';
-          eyeIcon.src = 'img/hide.svg';
+          passwordInput.type = 'text'
+          eyeIcon.src = 'img/hide.svg'
         } else {
-          passwordInput.type = 'password';
-          eyeIcon.src = 'img/eye.svg';
+          passwordInput.type = 'password'
+          eyeIcon.src = 'img/eye.svg'
         }
       }
     </script>
