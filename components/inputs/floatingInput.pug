@@ -7,11 +7,11 @@ mixin floatingInput(placeholder, width='', id, type, extraClass, value, inputMod
       inputmode=inputMode ? inputMode : undefined,
       placeholder=' ',
       class=`${width ? width : 'w-full'} ${extraClass} ${error ? 'border-2 border-lab-red' : 'border border-lab-black-30'} peer 
-      block h-10 rounded-lg bg-white px-4 pb-1.5 pt-2.5 focus:border-lab-color focus:outline-none focus:ring-0`
+      block h-11 rounded-lg bg-white px-4 pb-1.5 pt-2.5 focus:border-2 focus:border-lab-color focus:outline-none focus:ring-0`
     )
-    label.absolute.z-10.-translate-y-5.transform.rounded.bg-white.px-2.text-sm.text-lab-black-50.duration-300(
+    label.absolute.top-3.z-10.-translate-y-5.transform.rounded.bg-white.px-2.text-sm.text-lab-black-50.duration-300(
       for=id,
-      class='left-2.5 top-2.5 origin-[0] scale-[0.8] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-[0.8] peer-focus:text-lab-color'
+      class='left-2.5 origin-[0] scale-[0.8] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-[0.8] peer-focus:text-lab-color'
     )
       = placeholder
     if error
